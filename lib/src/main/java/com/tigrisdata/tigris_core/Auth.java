@@ -7,7 +7,7 @@ import com.tigrisdata.tigris_core.utils.JSON;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 
-public class Authentication {
+public class Auth {
 	
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
@@ -16,7 +16,7 @@ public class Authentication {
 	private String _sdkVersion;
 	private String _genVersion;
 
-	public Authentication(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
+	public Auth(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
 		this._defaultClient = defaultClient;
 		this._securityClient = securityClient;
 		this._serverUrl = serverUrl;
@@ -27,13 +27,13 @@ public class Authentication {
 	
     
     /**
-     * authGetAccessToken - Access Token
+     * get - Access Token
      *
      * Endpoint for receiving access token from Tigris Server. The endpoint requires Grant Type(`grant_type`) which has
      *  two possible values <i>"REFRESH_TOKEN"</i> or <i>"CLIENT_CREDENTIALS"</i> based on which either Refresh token(`refresh_token`)
      *  needs to be set or client credentials(`client_id`, `client_secret`).
     **/
-    public com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse authGetAccessToken() throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse get() throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/auth/token");
         

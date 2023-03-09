@@ -36,9 +36,9 @@ public class Cache {
 	
     
     /**
-     * cacheCreateCache - Creates the cache
+     * create - Creates the cache
     **/
-    public com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse cacheCreateCache(com.tigrisdata.tigris_core.models.operations.CacheCreateCacheRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse create(com.tigrisdata.tigris_core.models.operations.CacheCreateCacheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/caches/{name}/create", request.pathParams);
         
@@ -86,59 +86,9 @@ public class Cache {
 	
     
     /**
-     * cacheDel - Deletes an entry from cache
+     * delete - Deletes the cache
     **/
-    public com.tigrisdata.tigris_core.models.operations.CacheDelResponse cacheDel(com.tigrisdata.tigris_core.models.operations.CacheDelRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/caches/{name}/{key}/delete", request.pathParams);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
-        if (serializedRequestBody == null) {
-            throw new Exception("Request body is required");
-        }
-        req.setBody(serializedRequestBody);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.CacheDelResponse res = new com.tigrisdata.tigris_core.models.operations.CacheDelResponse() {{
-            delResponse = null;
-            status = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.DelResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.DelResponse.class);
-                res.delResponse = out;
-            }
-        }
-        else {
-            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.Status out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.Status.class);
-                res.status = out;
-            }
-        }
-
-        return res;
-    }
-	
-    
-    /**
-     * cacheDeleteCache - Deletes the cache
-    **/
-    public com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheResponse cacheDeleteCache(com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheResponse delete(com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/caches/{name}/delete", request.pathParams);
         
@@ -186,9 +136,59 @@ public class Cache {
 	
     
     /**
-     * cacheGet - Reads an entry from cache
+     * deleteKeys - Deletes an entry from cache
     **/
-    public com.tigrisdata.tigris_core.models.operations.CacheGetResponse cacheGet(com.tigrisdata.tigris_core.models.operations.CacheGetRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.CacheDelResponse deleteKeys(com.tigrisdata.tigris_core.models.operations.CacheDelRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/caches/{name}/{key}/delete", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.tigrisdata.tigris_core.models.operations.CacheDelResponse res = new com.tigrisdata.tigris_core.models.operations.CacheDelResponse() {{
+            delResponse = null;
+            status = null;
+        }};
+        res.statusCode = httpRes.statusCode();
+        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.tigrisdata.tigris_core.models.shared.DelResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.DelResponse.class);
+                res.delResponse = out;
+            }
+        }
+        else {
+            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.tigrisdata.tigris_core.models.shared.Status out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.Status.class);
+                res.status = out;
+            }
+        }
+
+        return res;
+    }
+	
+    
+    /**
+     * getKey - Reads an entry from cache
+    **/
+    public com.tigrisdata.tigris_core.models.operations.CacheGetResponse getKey(com.tigrisdata.tigris_core.models.operations.CacheGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/caches/{name}/{key}/get", request.pathParams);
         
@@ -231,9 +231,9 @@ public class Cache {
 	
     
     /**
-     * cacheGetSet - Sets an entry in the cache and returns the previous value if exists
+     * getSetKey - Sets an entry in the cache and returns the previous value if exists
     **/
-    public com.tigrisdata.tigris_core.models.operations.CacheGetSetResponse cacheGetSet(com.tigrisdata.tigris_core.models.operations.CacheGetSetRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.CacheGetSetResponse getSetKey(com.tigrisdata.tigris_core.models.operations.CacheGetSetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/caches/{name}/{key}/getset", request.pathParams);
         
@@ -281,9 +281,54 @@ public class Cache {
 	
     
     /**
-     * cacheKeys - Lists all the key for this cache
+     * list - Lists all the caches for the given project
     **/
-    public com.tigrisdata.tigris_core.models.operations.CacheKeysResponse cacheKeys(com.tigrisdata.tigris_core.models.operations.CacheKeysRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse list(com.tigrisdata.tigris_core.models.operations.CacheListCachesRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/caches/list", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse res = new com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse() {{
+            listCachesResponse = null;
+            status = null;
+        }};
+        res.statusCode = httpRes.statusCode();
+        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.tigrisdata.tigris_core.models.shared.ListCachesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.ListCachesResponse.class);
+                res.listCachesResponse = out;
+            }
+        }
+        else {
+            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.tigrisdata.tigris_core.models.shared.Status out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.Status.class);
+                res.status = out;
+            }
+        }
+
+        return res;
+    }
+	
+    
+    /**
+     * listKeys - Lists all the key for this cache
+    **/
+    public com.tigrisdata.tigris_core.models.operations.CacheKeysResponse listKeys(com.tigrisdata.tigris_core.models.operations.CacheKeysRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/caches/{name}/keys", request.pathParams);
         
@@ -332,54 +377,9 @@ public class Cache {
 	
     
     /**
-     * cacheListCaches - Lists all the caches for the given project
+     * setKey - Sets an entry in the cache
     **/
-    public com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse cacheListCaches(com.tigrisdata.tigris_core.models.operations.CacheListCachesRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/caches/list", request.pathParams);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse res = new com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse() {{
-            listCachesResponse = null;
-            status = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.ListCachesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.ListCachesResponse.class);
-                res.listCachesResponse = out;
-            }
-        }
-        else {
-            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.Status out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.Status.class);
-                res.status = out;
-            }
-        }
-
-        return res;
-    }
-	
-    
-    /**
-     * cacheSet - Sets an entry in the cache
-    **/
-    public com.tigrisdata.tigris_core.models.operations.CacheSetResponse cacheSet(com.tigrisdata.tigris_core.models.operations.CacheSetRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.CacheSetResponse setKey(com.tigrisdata.tigris_core.models.operations.CacheSetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/caches/{name}/{key}/set", request.pathParams);
         

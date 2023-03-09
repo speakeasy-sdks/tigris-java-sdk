@@ -36,13 +36,13 @@ public class Database {
 	
     
     /**
-     * tigrisBeginTransaction - Begin a transaction
+     * beginTransaction - Begin a transaction
      *
      * Starts a new transaction and returns a transactional object. All reads/writes performed
      *  within a transaction will run with serializable isolation. Tigris offers global transactions,
      *  with ACID properties and strict serializability.
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionResponse tigrisBeginTransaction(com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionResponse beginTransaction(com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/transactions/begin", request.pathParams);
         
@@ -90,12 +90,12 @@ public class Database {
 	
     
     /**
-     * tigrisCommitTransaction - Commit a Transaction
+     * commitTransaction - Commit a Transaction
      *
      * Atomically commit all the changes performed in the context of the transaction. Commit provides all
      *  or nothing semantics by ensuring no partial updates are in the project due to a transaction failure.
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionResponse tigrisCommitTransaction(com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionResponse commitTransaction(com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/transactions/commit", request.pathParams);
         
@@ -143,11 +143,11 @@ public class Database {
 	
     
     /**
-     * tigrisCreateBranch - Create a database branch
+     * createBranch - Create a database branch
      *
      * Creates a new database branch, if not already existing.
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchResponse tigrisCreateBranch(com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchResponse createBranch(com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/branches/{branch}/create", request.pathParams);
         
@@ -195,12 +195,12 @@ public class Database {
 	
     
     /**
-     * tigrisDeleteBranch - Delete a database branch
+     * deleteBranch - Delete a database branch
      *
      * Deletes a database branch, if exists.
      *  Throws 400 Bad Request if "main" branch is being deleted
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchResponse tigrisDeleteBranch(com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchResponse deleteBranch(com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/branches/{branch}/delete", request.pathParams);
         
@@ -248,12 +248,12 @@ public class Database {
 	
     
     /**
-     * tigrisDescribeDatabase - Describe database
+     * describe - Describe database
      *
      * This API returns information related to the project along with all the collections inside the project.
      *  This can be used to retrieve the size of the project or to retrieve schemas, branches and the size of all the collections present in this project.
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseResponse tigrisDescribeDatabase(com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseResponse describe(com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/describe", request.pathParams);
         
@@ -301,58 +301,11 @@ public class Database {
 	
     
     /**
-     * tigrisListBranches - List database branches
-     *
-     * List database branches
-    **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisListBranchesResponse tigrisListBranches(com.tigrisdata.tigris_core.models.operations.TigrisListBranchesRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/branches", request.pathParams);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisListBranchesResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisListBranchesResponse() {{
-            listBranchesResponse = null;
-            status = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.ListBranchesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.ListBranchesResponse.class);
-                res.listBranchesResponse = out;
-            }
-        }
-        else {
-            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.Status out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.Status.class);
-                res.status = out;
-            }
-        }
-
-        return res;
-    }
-	
-    
-    /**
-     * tigrisListCollections - List Collections
+     * listCollections - List Collections
      *
      * List all the collections present in the project passed in the request.
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsResponse tigrisListCollections(com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsResponse listCollections(com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections", request.pathParams);
         
@@ -401,12 +354,12 @@ public class Database {
 	
     
     /**
-     * tigrisRollbackTransaction - Rollback a transaction
+     * rollbackTransaction - Rollback a transaction
      *
      * Rollback transaction discards all the changes
      *  performed in the transaction
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionResponse tigrisRollbackTransaction(com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionResponse rollbackTransaction(com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/transactions/rollback", request.pathParams);
         
@@ -439,6 +392,53 @@ public class Database {
                 ObjectMapper mapper = JSON.getMapper();
                 com.tigrisdata.tigris_core.models.shared.RollbackTransactionResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.RollbackTransactionResponse.class);
                 res.rollbackTransactionResponse = out;
+            }
+        }
+        else {
+            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.tigrisdata.tigris_core.models.shared.Status out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.Status.class);
+                res.status = out;
+            }
+        }
+
+        return res;
+    }
+	
+    
+    /**
+     * tigrisListBranches - List database branches
+     *
+     * List database branches
+    **/
+    public com.tigrisdata.tigris_core.models.operations.TigrisListBranchesResponse tigrisListBranches(com.tigrisdata.tigris_core.models.operations.TigrisListBranchesRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/branches", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.tigrisdata.tigris_core.models.operations.TigrisListBranchesResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisListBranchesResponse() {{
+            listBranchesResponse = null;
+            status = null;
+        }};
+        res.statusCode = httpRes.statusCode();
+        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.tigrisdata.tigris_core.models.shared.ListBranchesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.ListBranchesResponse.class);
+                res.listBranchesResponse = out;
             }
         }
         else {

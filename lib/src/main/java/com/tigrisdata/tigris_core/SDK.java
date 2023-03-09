@@ -67,24 +67,25 @@ public class SDK {
 		"http://localhost:8081",
 	};
   	
-  	public ApplicationKeys applicationKeys;
-  	public Authentication authentication;
+  	public AppKey appKey;
+  	public Auth auth;
   	public Cache cache;
-  	public Collections collections;
+  	public Channel channel;
+  	public Collection collection;
   	public Database database;
-  	public Management management;
-  	public Observability observability;
-  	public Projects projects;
-  	public Realtime realtime;
-  	public Search search;	
+  	public Namespace namespace;
+  	public Project project;
+  	public Search search;
+  	public System system;
+  	public User user;	
 
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
 	private com.tigrisdata.tigris_core.models.shared.Security _security;
 	private String _serverUrl;
 	private String _language = "java";
-	private String _sdkVersion = "0.1.0";
-	private String _genVersion = "1.9.0";
+	private String _sdkVersion = "0.0.1";
+	private String _genVersion = "1.9.1";
 
 	public static class Builder {
 		private HTTPClient client;
@@ -149,7 +150,7 @@ public class SDK {
 			this._serverUrl = SERVERS[0];
 		}
 		
-		this.applicationKeys = new ApplicationKeys(
+		this.appKey = new AppKey(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,
@@ -158,7 +159,7 @@ public class SDK {
 			this._genVersion
 		);
 		
-		this.authentication = new Authentication(
+		this.auth = new Auth(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,
@@ -176,7 +177,16 @@ public class SDK {
 			this._genVersion
 		);
 		
-		this.collections = new Collections(
+		this.channel = new Channel(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.collection = new Collection(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,
@@ -194,7 +204,7 @@ public class SDK {
 			this._genVersion
 		);
 		
-		this.management = new Management(
+		this.namespace = new Namespace(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,
@@ -203,25 +213,7 @@ public class SDK {
 			this._genVersion
 		);
 		
-		this.observability = new Observability(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion
-		);
-		
-		this.projects = new Projects(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion
-		);
-		
-		this.realtime = new Realtime(
+		this.project = new Project(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,
@@ -231,6 +223,24 @@ public class SDK {
 		);
 		
 		this.search = new Search(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.system = new System(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.user = new User(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,

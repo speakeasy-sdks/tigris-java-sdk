@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.tigrisdata.tigris_core:tigris-data:0.1.0'
+implementation 'com.tigrisdata.tigris_core:tigris-data:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -17,10 +17,10 @@ package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
 import com.tigrisdata.tigris_core.models.shared.Security;
-import com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyPathParams;
-import com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyRequest;
-import com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse;
-import com.tigrisdata.tigris_core.models.shared.CreateAppKeyRequest;
+import com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyPathParams;
+import com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyRequest;
+import com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse;
+import com.tigrisdata.tigris_core.models.shared.DeleteAppKeyRequest;
 
 public class Application {
     public static void main(String[] args) {
@@ -37,19 +37,18 @@ public class Application {
 
             SDK sdk = builder.build();
 
-            TigrisCreateAppKeyRequest req = new TigrisCreateAppKeyRequest() {{
-                pathParams = new TigrisCreateAppKeyPathParams() {{
+            TigrisDeleteAppKeyRequest req = new TigrisDeleteAppKeyRequest() {{
+                pathParams = new TigrisDeleteAppKeyPathParams() {{
                     project = "unde";
                 }};
-                request = new CreateAppKeyRequest() {{
-                    description = "deserunt";
-                    name = "porro";
+                request = new DeleteAppKeyRequest() {{
+                    id = "deserunt";
                 }};
             }};
 
-            TigrisCreateAppKeyResponse res = sdk.applicationKeys.tigrisCreateAppKey(req);
+            TigrisDeleteAppKeyResponse res = sdk.appKey.delete(req);
 
-            if (res.createAppKeyResponse.isPresent()) {
+            if (res.deleteAppKeyResponse.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {
@@ -62,102 +61,105 @@ public class Application {
 ## SDK Available Operations
 
 
-### applicationKeys
+### appKey
 
+* `delete` - Deletes the app key
+* `list` - List all the app keys
+* `rotate` - Rotates the app key secret
 * `tigrisCreateAppKey` - Creates the app key
-* `tigrisDeleteAppKey` - Deletes the app key
-* `tigrisListAppKeys` - List all the app keys
-* `tigrisRotateAppKeySecret` - Rotates the app key secret
-* `tigrisUpdateAppKey` - Updates the description of the app key
+* `update` - Updates the description of the app key
 
-### authentication
+### auth
 
-* `authGetAccessToken` - Access Token
+* `get` - Access Token
 
 ### cache
 
-* `cacheCreateCache` - Creates the cache
-* `cacheDel` - Deletes an entry from cache
-* `cacheDeleteCache` - Deletes the cache
-* `cacheGet` - Reads an entry from cache
-* `cacheGetSet` - Sets an entry in the cache and returns the previous value if exists
-* `cacheKeys` - Lists all the key for this cache
-* `cacheListCaches` - Lists all the caches for the given project
-* `cacheSet` - Sets an entry in the cache
+* `create` - Creates the cache
+* `delete` - Deletes the cache
+* `deleteKeys` - Deletes an entry from cache
+* `getKey` - Reads an entry from cache
+* `getSetKey` - Sets an entry in the cache and returns the previous value if exists
+* `list` - Lists all the caches for the given project
+* `listKeys` - Lists all the key for this cache
+* `setKey` - Sets an entry in the cache
 
-### collections
+### channel
 
-* `tigrisCreateOrUpdateCollection` - Create or update a collection
-* `tigrisDelete` - Delete Documents
-* `tigrisDescribeCollection` - Describe Collection
-* `tigrisDropCollection` - Drop Collection
-* `tigrisImport` - Import Documents
-* `tigrisInsert` - Insert Documents
-* `tigrisRead` - Read Documents
-* `tigrisReplace` - Insert or Replace Documents
-* `tigrisSearch` - Search Documents.
-* `tigrisUpdate` - Update Documents.
+* `get` - Get the details about a channel
+* `getMessages` - Get all messages for a channel
+* `list` - Get all channels for your application project
+* `listSubscriptions` - Get the subscriptions details about a channel
+* `pushMessages` - push messages to a single channel
+* `realtimePresence` - Presence about the channel
+
+### collection
+
+* `create` - Create or update a collection
+* `deleteDocuments` - Delete Documents
+* `describe` - Describe Collection
+* `drop` - Drop Collection
+* `importDocuments` - Import Documents
+* `insertDocuments` - Insert Documents
+* `readDocuments` - Read Documents
+* `replaceDocuments` - Insert or Replace Documents
+* `searchDocuments` - Search Documents.
+* `updateDocuments` - Update Documents.
 
 ### database
 
-* `tigrisBeginTransaction` - Begin a transaction
-* `tigrisCommitTransaction` - Commit a Transaction
-* `tigrisCreateBranch` - Create a database branch
-* `tigrisDeleteBranch` - Delete a database branch
-* `tigrisDescribeDatabase` - Describe database
+* `beginTransaction` - Begin a transaction
+* `commitTransaction` - Commit a Transaction
+* `createBranch` - Create a database branch
+* `deleteBranch` - Delete a database branch
+* `describe` - Describe database
+* `listCollections` - List Collections
+* `rollbackTransaction` - Rollback a transaction
 * `tigrisListBranches` - List database branches
-* `tigrisListCollections` - List Collections
-* `tigrisRollbackTransaction` - Rollback a transaction
 
-### management
+### namespace
 
-* `managementCreateNamespace` - Creates a Namespace
-* `managementDescribeNamespaces` - Describe the details of all namespaces
-* `managementGetNamespaceMetadata` - Reads the Namespace Metadata
-* `managementGetUserMetadata` - Reads the User Metadata
-* `managementInsertNamespaceMetadata` - Inserts Namespace Metadata
-* `managementInsertUserMetadata` - Inserts User Metadata
-* `managementListNamespaces` - Lists all Namespaces
-* `managementUpdateNamespaceMetadata` - Updates Namespace Metadata
-* `managementUpdateUserMetadata` - Updates User Metadata
+* `create` - Creates a Namespace
+* `get` - Describe the details of all namespaces
+* `getMetadata` - Reads the Namespace Metadata
+* `insertMetadata` - Inserts Namespace Metadata
+* `list` - Lists all Namespaces
+* `updateMetadata` - Updates Namespace Metadata
 
-### observability
+### project
 
-* `healthAPIHealth` - Health Check
-* `observabilityGetInfo` - Information about the server
-* `observabilityQueryTimeSeriesMetrics` - Queries time series metrics
-* `observabilityQuotaLimits` - Queries current namespace quota limits
-* `observabilityQuotaUsage` - Queries current namespace quota usage
-
-### projects
-
-* `tigrisCreateProject` - Create Project
-* `tigrisDeleteProject` - Delete Project and all resources under project
-* `tigrisListProjects` - List Projects
-
-### realtime
-
-* `realtimeGetRTChannel` - Get the details about a channel
-* `realtimeGetRTChannels` - Get all channels for your application project
-* `realtimeListSubscriptions` - Get the subscriptions details about a channel
-* `realtimeMessages` - push messages to a single channel
-* `realtimePresence` - Presence about the channel
-* `realtimeReadMessages` - Get all messages for a channel
+* `create` - Create Project
+* `deleteProject` - Delete Project and all resources under project
+* `list` - List Projects
 
 ### search
 
-* `searchCreate` - Create multiple documents
-* `searchCreateById` - Create a single document
-* `searchCreateOrReplace` - Create or replace documents in an index
-* `searchCreateOrUpdateIndex` - Creates or updates search index
-* `searchDelete` - Delete documents by ids
-* `searchDeleteByQuery` - Delete documents by query
-* `searchDeleteIndex` - Deletes search index
-* `searchGet` - Get a single or multiple documents
-* `searchGetIndex` - Get information about a search index
-* `searchListIndexes` - List search indexes
-* `searchSearch` - Search Documents.
-* `searchUpdate` - Update documents in an index
+* `createDocument` - Create a single document
+* `createDocuments` - Create multiple documents
+* `deleteDocuments` - Delete documents by ids
+* `deleteIndex` - Deletes search index
+* `findDocuments` - Search Documents.
+* `getDocuments` - Get a single or multiple documents
+* `getIndex` - Get information about a search index
+* `listIndexes` - List search indexes
+* `queryDeleteDocuments` - Delete documents by query
+* `replaceDocuments` - Create or replace documents in an index
+* `updateDocuments` - Update documents in an index
+* `updateIndex` - Creates or updates search index
+
+### system
+
+* `getHealth` - Health Check
+* `getServerInfo` - Information about the server
+* `observabilityQuotaUsage` - Queries current namespace quota usage
+* `queryQuotaLimits` - Queries current namespace quota limits
+* `queryTimeSeriesMetrics` - Queries time series metrics
+
+### user
+
+* `getMetadata` - Reads the User Metadata
+* `insertMetadata` - Inserts User Metadata
+* `updateMetadata` - Updates User Metadata
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -4,10 +4,10 @@ package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
 import com.tigrisdata.tigris_core.models.shared.Security;
-import com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyPathParams;
-import com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyRequest;
-import com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse;
-import com.tigrisdata.tigris_core.models.shared.CreateAppKeyRequest;
+import com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyPathParams;
+import com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyRequest;
+import com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse;
+import com.tigrisdata.tigris_core.models.shared.DeleteAppKeyRequest;
 
 public class Application {
     public static void main(String[] args) {
@@ -24,19 +24,18 @@ public class Application {
 
             SDK sdk = builder.build();
 
-            TigrisCreateAppKeyRequest req = new TigrisCreateAppKeyRequest() {{
-                pathParams = new TigrisCreateAppKeyPathParams() {{
+            TigrisDeleteAppKeyRequest req = new TigrisDeleteAppKeyRequest() {{
+                pathParams = new TigrisDeleteAppKeyPathParams() {{
                     project = "unde";
                 }};
-                request = new CreateAppKeyRequest() {{
-                    description = "deserunt";
-                    name = "porro";
+                request = new DeleteAppKeyRequest() {{
+                    id = "deserunt";
                 }};
             }};
 
-            TigrisCreateAppKeyResponse res = sdk.applicationKeys.tigrisCreateAppKey(req);
+            TigrisDeleteAppKeyResponse res = sdk.appKey.delete(req);
 
-            if (res.createAppKeyResponse.isPresent()) {
+            if (res.deleteAppKeyResponse.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

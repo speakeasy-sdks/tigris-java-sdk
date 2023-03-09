@@ -8,7 +8,7 @@ import com.tigrisdata.tigris_core.utils.SerializedBody;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 
-public class Collections {
+public class Collection {
 	
 	
 	
@@ -26,7 +26,7 @@ public class Collections {
 	private String _sdkVersion;
 	private String _genVersion;
 
-	public Collections(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
+	public Collection(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
 		this._defaultClient = defaultClient;
 		this._securityClient = securityClient;
 		this._serverUrl = serverUrl;
@@ -37,7 +37,7 @@ public class Collections {
 	
     
     /**
-     * tigrisCreateOrUpdateCollection - Create or update a collection
+     * create - Create or update a collection
      *
      * Creates a new collection or atomically upgrades the collection to the new schema provided in the request.
      *  Schema changes are applied atomically and immediately without any downtime.
@@ -45,7 +45,7 @@ public class Collections {
      *     <li> `DOCUMENTS`: Offers rich CRUD APIs.
      *     <li> `MESSAGES`: Offers event streaming APIs.
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionResponse tigrisCreateOrUpdateCollection(com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionResponse create(com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/createOrUpdate", request.pathParams);
         
@@ -93,11 +93,11 @@ public class Collections {
 	
     
     /**
-     * tigrisDelete - Delete Documents
+     * deleteDocuments - Delete Documents
      *
      * Delete a range of documents in the collection using the condition provided in the filter.
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisDeleteResponse tigrisDelete(com.tigrisdata.tigris_core.models.operations.TigrisDeleteRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisDeleteResponse deleteDocuments(com.tigrisdata.tigris_core.models.operations.TigrisDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/delete", request.pathParams);
         
@@ -145,11 +145,11 @@ public class Collections {
 	
     
     /**
-     * tigrisDescribeCollection - Describe Collection
+     * describe - Describe Collection
      *
      * Returns the information related to the collection. This can be used to retrieve the schema or size of the collection.
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionResponse tigrisDescribeCollection(com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionResponse describe(com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/describe", request.pathParams);
         
@@ -197,12 +197,12 @@ public class Collections {
 	
     
     /**
-     * tigrisDropCollection - Drop Collection
+     * drop - Drop Collection
      *
      * Drops the collection inside this project. This API deletes all of the
      *  documents inside this collection and any metadata associated with it.
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionResponse tigrisDropCollection(com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionResponse drop(com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/drop", request.pathParams);
         
@@ -250,7 +250,7 @@ public class Collections {
 	
     
     /**
-     * tigrisImport - Import Documents
+     * importDocuments - Import Documents
      *
      * Imports documents into the collection.
      * 
@@ -259,7 +259,7 @@ public class Collections {
      *   * Evolves the schema as soon as it's backward compatible
      *   * Creates collection with inferred schema (if requested)
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisImportResponse tigrisImport(com.tigrisdata.tigris_core.models.operations.TigrisImportRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisImportResponse importDocuments(com.tigrisdata.tigris_core.models.operations.TigrisImportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/import", request.pathParams);
         
@@ -307,13 +307,13 @@ public class Collections {
 	
     
     /**
-     * tigrisInsert - Insert Documents
+     * insertDocuments - Insert Documents
      *
      * Inserts new documents in the collection and returns an AlreadyExists error if any of the documents
      *  in the request already exists. Insert provides idempotency by returning an error if the document
      *  already exists. To replace documents, use REPLACE API instead of INSERT.
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisInsertResponse tigrisInsert(com.tigrisdata.tigris_core.models.operations.TigrisInsertRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisInsertResponse insertDocuments(com.tigrisdata.tigris_core.models.operations.TigrisInsertRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/insert", request.pathParams);
         
@@ -361,7 +361,7 @@ public class Collections {
 	
     
     /**
-     * tigrisRead - Read Documents
+     * readDocuments - Read Documents
      *
      * Reads a range of documents from the collection, or messages from a collection in case of event streaming. Tigris does not require you to
      *  index any fields and automatically index all the fields which means you can filter by any field in the document.
@@ -370,7 +370,7 @@ public class Collections {
      *  the `limit` parameter is used to specify the number of documents to read. You can find more detailed documentation
      *  of the Read API <a href="https://docs.tigrisdata.com/overview/query" title="here">here</a>.
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisReadResponse tigrisRead(com.tigrisdata.tigris_core.models.operations.TigrisReadRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisReadResponse readDocuments(com.tigrisdata.tigris_core.models.operations.TigrisReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/read", request.pathParams);
         
@@ -418,11 +418,11 @@ public class Collections {
 	
     
     /**
-     * tigrisReplace - Insert or Replace Documents
+     * replaceDocuments - Insert or Replace Documents
      *
      * Inserts the documents or replaces the existing documents in the collections.
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisReplaceResponse tigrisReplace(com.tigrisdata.tigris_core.models.operations.TigrisReplaceRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisReplaceResponse replaceDocuments(com.tigrisdata.tigris_core.models.operations.TigrisReplaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/replace", request.pathParams);
         
@@ -470,14 +470,14 @@ public class Collections {
 	
     
     /**
-     * tigrisSearch - Search Documents.
+     * searchDocuments - Search Documents.
      *
      * Searches a collection for the documents matching the query, or messages in case of event streaming. A search can be
      *  a term search or a phrase search. Search API allows filtering the result set using filters as documented <a href="https://docs.tigrisdata.com/overview/query#specification-1" title="here">here</a>.
      *  You can also perform a faceted search by passing the fields in the facet parameter.
      *  You can find more detailed documentation of the Search API with multiple examples <a href="https://docs.tigrisdata.com/overview/search" title="here">here</a>.
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisSearchResponse tigrisSearch(com.tigrisdata.tigris_core.models.operations.TigrisSearchRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisSearchResponse searchDocuments(com.tigrisdata.tigris_core.models.operations.TigrisSearchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/search", request.pathParams);
         
@@ -525,11 +525,11 @@ public class Collections {
 	
     
     /**
-     * tigrisUpdate - Update Documents.
+     * updateDocuments - Update Documents.
      *
      * Update a range of documents in the collection using the condition provided in the filter.
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisUpdateResponse tigrisUpdate(com.tigrisdata.tigris_core.models.operations.TigrisUpdateRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisUpdateResponse updateDocuments(com.tigrisdata.tigris_core.models.operations.TigrisUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/update", request.pathParams);
         

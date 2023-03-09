@@ -8,7 +8,7 @@ import com.tigrisdata.tigris_core.utils.SerializedBody;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 
-public class Observability {
+public class AppKey {
 	
 	
 	
@@ -21,7 +21,7 @@ public class Observability {
 	private String _sdkVersion;
 	private String _genVersion;
 
-	public Observability(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
+	public AppKey(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
 		this._defaultClient = defaultClient;
 		this._securityClient = securityClient;
 		this._serverUrl = serverUrl;
@@ -32,13 +32,65 @@ public class Observability {
 	
     
     /**
-     * healthAPIHealth - Health Check
+     * delete - Deletes the app key
      *
-     * This endpoint can be used to check the liveness of the server.
+     * Delete an app key.
     **/
-    public com.tigrisdata.tigris_core.models.operations.HealthAPIHealthResponse healthAPIHealth() throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse delete(com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/health");
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/apps/keys/delete", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse() {{
+            deleteAppKeyResponse = null;
+            status = null;
+        }};
+        res.statusCode = httpRes.statusCode();
+        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.tigrisdata.tigris_core.models.shared.DeleteAppKeyResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.DeleteAppKeyResponse.class);
+                res.deleteAppKeyResponse = out;
+            }
+        }
+        else {
+            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.tigrisdata.tigris_core.models.shared.Status out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.Status.class);
+                res.status = out;
+            }
+        }
+
+        return res;
+    }
+	
+    
+    /**
+     * list - List all the app keys
+     *
+     * Lists all app keys visible to requesting actor.
+    **/
+    public com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse list(com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/apps/keys", request.pathParams);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -51,8 +103,8 @@ public class Observability {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.HealthAPIHealthResponse res = new com.tigrisdata.tigris_core.models.operations.HealthAPIHealthResponse() {{
-            healthCheckResponse = null;
+        com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse() {{
+            listAppKeysResponse = null;
             status = null;
         }};
         res.statusCode = httpRes.statusCode();
@@ -62,8 +114,8 @@ public class Observability {
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.HealthCheckResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.HealthCheckResponse.class);
-                res.healthCheckResponse = out;
+                com.tigrisdata.tigris_core.models.shared.ListAppKeysResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.ListAppKeysResponse.class);
+                res.listAppKeysResponse = out;
             }
         }
         else {
@@ -79,60 +131,13 @@ public class Observability {
 	
     
     /**
-     * observabilityGetInfo - Information about the server
+     * rotate - Rotates the app key secret
      *
-     * Provides the information about the server. This information includes returning the server version, etc.
+     * Endpoint is used to rotate the secret for the app key.
     **/
-    public com.tigrisdata.tigris_core.models.operations.ObservabilityGetInfoResponse observabilityGetInfo() throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse rotate(com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/observability/info");
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.ObservabilityGetInfoResponse res = new com.tigrisdata.tigris_core.models.operations.ObservabilityGetInfoResponse() {{
-            getInfoResponse = null;
-            status = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.GetInfoResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.GetInfoResponse.class);
-                res.getInfoResponse = out;
-            }
-        }
-        else {
-            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.Status out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.Status.class);
-                res.status = out;
-            }
-        }
-
-        return res;
-    }
-	
-    
-    /**
-     * observabilityQueryTimeSeriesMetrics - Queries time series metrics
-     *
-     * Queries time series metrics
-    **/
-    public com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsResponse observabilityQueryTimeSeriesMetrics(com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/observability/metrics/timeseries/query");
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/apps/keys/rotate", request.pathParams);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -150,8 +155,8 @@ public class Observability {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsResponse res = new com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsResponse() {{
-            queryTimeSeriesMetricsResponse = null;
+        com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse() {{
+            rotateAppKeyResponse = null;
             status = null;
         }};
         res.statusCode = httpRes.statusCode();
@@ -161,8 +166,8 @@ public class Observability {
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsResponse.class);
-                res.queryTimeSeriesMetricsResponse = out;
+                com.tigrisdata.tigris_core.models.shared.RotateAppKeyResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.RotateAppKeyResponse.class);
+                res.rotateAppKeyResponse = out;
             }
         }
         else {
@@ -178,13 +183,13 @@ public class Observability {
 	
     
     /**
-     * observabilityQuotaLimits - Queries current namespace quota limits
+     * tigrisCreateAppKey - Creates the app key
      *
-     * Returns current namespace quota limits
+     * Create an app key.
     **/
-    public com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsResponse observabilityQuotaLimits(com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse tigrisCreateAppKey(com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/observability/quota/limits");
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/apps/keys/create", request.pathParams);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -202,8 +207,8 @@ public class Observability {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsResponse res = new com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsResponse() {{
-            quotaLimitsResponse = null;
+        com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse() {{
+            createAppKeyResponse = null;
             status = null;
         }};
         res.statusCode = httpRes.statusCode();
@@ -213,8 +218,8 @@ public class Observability {
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.QuotaLimitsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.QuotaLimitsResponse.class);
-                res.quotaLimitsResponse = out;
+                com.tigrisdata.tigris_core.models.shared.CreateAppKeyResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.CreateAppKeyResponse.class);
+                res.createAppKeyResponse = out;
             }
         }
         else {
@@ -230,13 +235,13 @@ public class Observability {
 	
     
     /**
-     * observabilityQuotaUsage - Queries current namespace quota usage
+     * update - Updates the description of the app key
      *
-     * Returns current namespace quota limits
+     * Update the description of an app key.
     **/
-    public com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageResponse observabilityQuotaUsage(com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse update(com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/observability/quota/usage");
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/apps/keys/update", request.pathParams);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -254,8 +259,8 @@ public class Observability {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageResponse res = new com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageResponse() {{
-            quotaUsageResponse = null;
+        com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse() {{
+            updateAppKeyResponse = null;
             status = null;
         }};
         res.statusCode = httpRes.statusCode();
@@ -265,8 +270,8 @@ public class Observability {
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.QuotaUsageResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.QuotaUsageResponse.class);
-                res.quotaUsageResponse = out;
+                com.tigrisdata.tigris_core.models.shared.UpdateAppKeyResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.UpdateAppKeyResponse.class);
+                res.updateAppKeyResponse = out;
             }
         }
         else {

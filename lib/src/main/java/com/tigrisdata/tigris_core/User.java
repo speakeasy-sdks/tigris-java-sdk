@@ -8,7 +8,7 @@ import com.tigrisdata.tigris_core.utils.SerializedBody;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 
-public class Projects {
+public class User {
 	
 	
 	
@@ -19,7 +19,7 @@ public class Projects {
 	private String _sdkVersion;
 	private String _genVersion;
 
-	public Projects(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
+	public User(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
 		this._defaultClient = defaultClient;
 		this._securityClient = securityClient;
 		this._serverUrl = serverUrl;
@@ -30,13 +30,13 @@ public class Projects {
 	
     
     /**
-     * tigrisCreateProject - Create Project
+     * getMetadata - Reads the User Metadata
      *
-     * Creates a new project. Returns an AlreadyExists error with a status code 409 if the project already exists.
+     * GetUserMetadata inserts the user metadata object
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectResponse tigrisCreateProject(com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataResponse getMetadata(com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/create", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/users/metadata/{metadataKey}/get", request.pathParams);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -54,8 +54,8 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectResponse() {{
-            createProjectResponse = null;
+        com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataResponse() {{
+            getUserMetadataResponse = null;
             status = null;
         }};
         res.statusCode = httpRes.statusCode();
@@ -65,8 +65,8 @@ public class Projects {
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.CreateProjectResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.CreateProjectResponse.class);
-                res.createProjectResponse = out;
+                com.tigrisdata.tigris_core.models.shared.GetUserMetadataResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.GetUserMetadataResponse.class);
+                res.getUserMetadataResponse = out;
             }
         }
         else {
@@ -82,16 +82,16 @@ public class Projects {
 	
     
     /**
-     * tigrisDeleteProject - Delete Project and all resources under project
+     * insertMetadata - Inserts User Metadata
      *
-     * Delete Project deletes all the collections in this project along with all of the documents, and associated metadata for these collections.
+     * insertUserMetadata inserts the user metadata object
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectResponse tigrisDeleteProject(com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataResponse insertMetadata(com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/delete", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/users/metadata/{metadataKey}/insert", request.pathParams);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
+        req.setMethod("POST");
         req.setURL(url);
         SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
         if (serializedRequestBody == null) {
@@ -106,8 +106,8 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectResponse() {{
-            deleteProjectResponse = null;
+        com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataResponse() {{
+            insertUserMetadataResponse = null;
             status = null;
         }};
         res.statusCode = httpRes.statusCode();
@@ -117,8 +117,8 @@ public class Projects {
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.DeleteProjectResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.DeleteProjectResponse.class);
-                res.deleteProjectResponse = out;
+                com.tigrisdata.tigris_core.models.shared.InsertUserMetadataResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.InsertUserMetadataResponse.class);
+                res.insertUserMetadataResponse = out;
             }
         }
         else {
@@ -134,17 +134,22 @@ public class Projects {
 	
     
     /**
-     * tigrisListProjects - List Projects
+     * updateMetadata - Updates User Metadata
      *
-     * List returns all the projects.
+     * updateUserMetadata updates the user metadata object
     **/
-    public com.tigrisdata.tigris_core.models.operations.TigrisListProjectsResponse tigrisListProjects() throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataResponse updateMetadata(com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects");
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/users/metadata/{metadataKey}/update", request.pathParams);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
+        req.setMethod("POST");
         req.setURL(url);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
         
         
         HTTPClient client = this._securityClient;
@@ -153,8 +158,8 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisListProjectsResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisListProjectsResponse() {{
-            listProjectsResponse = null;
+        com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataResponse() {{
+            updateUserMetadataResponse = null;
             status = null;
         }};
         res.statusCode = httpRes.statusCode();
@@ -164,8 +169,8 @@ public class Projects {
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.ListProjectsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.ListProjectsResponse.class);
-                res.listProjectsResponse = out;
+                com.tigrisdata.tigris_core.models.shared.UpdateUserMetadataResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.UpdateUserMetadataResponse.class);
+                res.updateUserMetadataResponse = out;
             }
         }
         else {

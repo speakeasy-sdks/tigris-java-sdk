@@ -7,9 +7,8 @@ import com.tigrisdata.tigris_core.utils.JSON;
 import com.tigrisdata.tigris_core.utils.SerializedBody;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
-import org.apache.http.NameValuePair;
 
-public class Realtime {
+public class Namespace {
 	
 	
 	
@@ -23,7 +22,7 @@ public class Realtime {
 	private String _sdkVersion;
 	private String _genVersion;
 
-	public Realtime(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
+	public Namespace(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
 		this._defaultClient = defaultClient;
 		this._securityClient = securityClient;
 		this._serverUrl = serverUrl;
@@ -34,152 +33,13 @@ public class Realtime {
 	
     
     /**
-     * realtimeGetRTChannel - Get the details about a channel
+     * create - Creates a Namespace
+     *
+     * Creates a new namespace, if it does not exist
     **/
-    public com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelResponse realtimeGetRTChannel(com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.CreateNamespaceResponse create(com.tigrisdata.tigris_core.models.operations.CreateNamespaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/realtime/channels/{channel}", request.pathParams);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelResponse() {{
-            getRTChannelResponse = null;
-            status = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.GetRTChannelResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.GetRTChannelResponse.class);
-                res.getRTChannelResponse = out;
-            }
-        }
-        else {
-            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.Status out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.Status.class);
-                res.status = out;
-            }
-        }
-
-        return res;
-    }
-	
-    
-    /**
-     * realtimeGetRTChannels - Get all channels for your application project
-    **/
-    public com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsResponse realtimeGetRTChannels(com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/realtime/channels", request.pathParams);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsResponse() {{
-            getRTChannelsResponse = null;
-            status = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.GetRTChannelsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.GetRTChannelsResponse.class);
-                res.getRTChannelsResponse = out;
-            }
-        }
-        else {
-            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.Status out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.Status.class);
-                res.status = out;
-            }
-        }
-
-        return res;
-    }
-	
-    
-    /**
-     * realtimeListSubscriptions - Get the subscriptions details about a channel
-    **/
-    public com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsResponse realtimeListSubscriptions(com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/subscriptions", request.pathParams);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(request.queryParams);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsResponse() {{
-            listSubscriptionResponse = null;
-            status = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.ListSubscriptionResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.ListSubscriptionResponse.class);
-                res.listSubscriptionResponse = out;
-            }
-        }
-        else {
-            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.Status out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.Status.class);
-                res.status = out;
-            }
-        }
-
-        return res;
-    }
-	
-    
-    /**
-     * realtimeMessages - push messages to a single channel
-    **/
-    public com.tigrisdata.tigris_core.models.operations.RealtimeMessagesResponse realtimeMessages(com.tigrisdata.tigris_core.models.operations.RealtimeMessagesRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/messages", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/namespaces/create");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -197,8 +57,8 @@ public class Realtime {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.RealtimeMessagesResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimeMessagesResponse() {{
-            messagesResponse = null;
+        com.tigrisdata.tigris_core.models.operations.CreateNamespaceResponse res = new com.tigrisdata.tigris_core.models.operations.CreateNamespaceResponse() {{
+            createNamespaceResponse = null;
             status = null;
         }};
         res.statusCode = httpRes.statusCode();
@@ -208,8 +68,8 @@ public class Realtime {
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.MessagesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.MessagesResponse.class);
-                res.messagesResponse = out;
+                com.tigrisdata.tigris_core.models.shared.CreateNamespaceResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.CreateNamespaceResponse.class);
+                res.createNamespaceResponse = out;
             }
         }
         else {
@@ -225,14 +85,16 @@ public class Realtime {
 	
     
     /**
-     * realtimePresence - Presence about the channel
+     * get - Describe the details of all namespaces
+     *
+     * Get details for all namespaces
     **/
-    public com.tigrisdata.tigris_core.models.operations.RealtimePresenceResponse realtimePresence(com.tigrisdata.tigris_core.models.operations.RealtimePresenceRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.ManagementDescribeNamespacesResponse get() throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/presence", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/namespaces/describe");
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
+        req.setMethod("POST");
         req.setURL(url);
         
         
@@ -242,8 +104,8 @@ public class Realtime {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.RealtimePresenceResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimePresenceResponse() {{
-            presenceResponse = null;
+        com.tigrisdata.tigris_core.models.operations.ManagementDescribeNamespacesResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementDescribeNamespacesResponse() {{
+            describeNamespacesResponse = null;
             status = null;
         }};
         res.statusCode = httpRes.statusCode();
@@ -253,8 +115,8 @@ public class Realtime {
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.PresenceResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.PresenceResponse.class);
-                res.presenceResponse = out;
+                com.tigrisdata.tigris_core.models.shared.DescribeNamespacesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.DescribeNamespacesResponse.class);
+                res.describeNamespacesResponse = out;
             }
         }
         else {
@@ -270,22 +132,23 @@ public class Realtime {
 	
     
     /**
-     * realtimeReadMessages - Get all messages for a channel
+     * getMetadata - Reads the Namespace Metadata
+     *
+     * GetNamespaceMetadata inserts the user metadata object
     **/
-    public com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesResponse realtimeReadMessages(com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataResponse getMetadata(com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/messages", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/namespace/metadata/{metadataKey}/get", request.pathParams);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
+        req.setMethod("POST");
         req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(request.queryParams);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
         }
+        req.setBody(serializedRequestBody);
+        
         
         HTTPClient client = this._securityClient;
         
@@ -293,8 +156,8 @@ public class Realtime {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesResponse() {{
-            readMessagesResponse = null;
+        com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataResponse() {{
+            getNamespaceMetadataResponse = null;
             status = null;
         }};
         res.statusCode = httpRes.statusCode();
@@ -304,8 +167,159 @@ public class Realtime {
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.tigrisdata.tigris_core.models.shared.ReadMessagesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.ReadMessagesResponse.class);
-                res.readMessagesResponse = out;
+                com.tigrisdata.tigris_core.models.shared.GetNamespaceMetadataResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.GetNamespaceMetadataResponse.class);
+                res.getNamespaceMetadataResponse = out;
+            }
+        }
+        else {
+            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.tigrisdata.tigris_core.models.shared.Status out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.Status.class);
+                res.status = out;
+            }
+        }
+
+        return res;
+    }
+	
+    
+    /**
+     * insertMetadata - Inserts Namespace Metadata
+     *
+     * InsertNamespaceMetadata inserts the namespace metadata object
+    **/
+    public com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataResponse insertMetadata(com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/namespace/metadata/{metadataKey}/insert", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataResponse() {{
+            insertNamespaceMetadataResponse = null;
+            status = null;
+        }};
+        res.statusCode = httpRes.statusCode();
+        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.tigrisdata.tigris_core.models.shared.InsertNamespaceMetadataResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.InsertNamespaceMetadataResponse.class);
+                res.insertNamespaceMetadataResponse = out;
+            }
+        }
+        else {
+            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.tigrisdata.tigris_core.models.shared.Status out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.Status.class);
+                res.status = out;
+            }
+        }
+
+        return res;
+    }
+	
+    
+    /**
+     * list - Lists all Namespaces
+     *
+     * List all namespace
+    **/
+    public com.tigrisdata.tigris_core.models.operations.ManagementListNamespacesResponse list() throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/namespaces/list");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.tigrisdata.tigris_core.models.operations.ManagementListNamespacesResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementListNamespacesResponse() {{
+            listNamespacesResponse = null;
+            status = null;
+        }};
+        res.statusCode = httpRes.statusCode();
+        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.tigrisdata.tigris_core.models.shared.ListNamespacesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.ListNamespacesResponse.class);
+                res.listNamespacesResponse = out;
+            }
+        }
+        else {
+            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.tigrisdata.tigris_core.models.shared.Status out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.Status.class);
+                res.status = out;
+            }
+        }
+
+        return res;
+    }
+	
+    
+    /**
+     * updateMetadata - Updates Namespace Metadata
+     *
+     * UpdateNamespaceMetadata updates the user metadata object
+    **/
+    public com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataResponse updateMetadata(com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/namespace/metadata/{metadataKey}/update", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataResponse() {{
+            updateNamespaceMetadataResponse = null;
+            status = null;
+        }};
+        res.statusCode = httpRes.statusCode();
+        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.tigrisdata.tigris_core.models.shared.UpdateNamespaceMetadataResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.tigrisdata.tigris_core.models.shared.UpdateNamespaceMetadataResponse.class);
+                res.updateNamespaceMetadataResponse = out;
             }
         }
         else {
