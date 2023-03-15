@@ -12,17 +12,13 @@ import com.tigrisdata.tigris_core.models.shared.DeleteAppKeyRequest;
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     bearerAuth = new SchemeBearerAuth() {{
                         authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             TigrisDeleteAppKeyRequest req = new TigrisDeleteAppKeyRequest() {{
                 pathParams = new TigrisDeleteAppKeyPathParams() {{
@@ -31,7 +27,7 @@ public class Application {
                 request = new DeleteAppKeyRequest() {{
                     id = "deserunt";
                 }};
-            }};
+            }};            
 
             TigrisDeleteAppKeyResponse res = sdk.appKey.delete(req);
 

@@ -10,8 +10,6 @@ import java.nio.charset.StandardCharsets;
 
 public class User {
 	
-	
-	
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
 	private String _serverUrl;
@@ -36,12 +34,12 @@ public class User {
     **/
     public com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataResponse getMetadata(com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/users/metadata/{metadataKey}/get", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataPathParams.class, baseUrl, "/v1/management/users/metadata/{metadataKey}/get", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -88,12 +86,12 @@ public class User {
     **/
     public com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataResponse insertMetadata(com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/users/metadata/{metadataKey}/insert", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataPathParams.class, baseUrl, "/v1/management/users/metadata/{metadataKey}/insert", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -140,12 +138,12 @@ public class User {
     **/
     public com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataResponse updateMetadata(com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/users/metadata/{metadataKey}/update", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataPathParams.class, baseUrl, "/v1/management/users/metadata/{metadataKey}/update", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

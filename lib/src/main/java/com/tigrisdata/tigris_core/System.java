@@ -10,10 +10,6 @@ import java.nio.charset.StandardCharsets;
 
 public class System {
 	
-	
-	
-	
-	
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
 	private String _serverUrl;
@@ -137,7 +133,7 @@ public class System {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -189,7 +185,7 @@ public class System {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -241,7 +237,7 @@ public class System {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

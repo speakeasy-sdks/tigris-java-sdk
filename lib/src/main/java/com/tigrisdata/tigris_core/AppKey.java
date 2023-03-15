@@ -10,10 +10,6 @@ import java.nio.charset.StandardCharsets;
 
 public class AppKey {
 	
-	
-	
-	
-	
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
 	private String _serverUrl;
@@ -38,12 +34,12 @@ public class AppKey {
     **/
     public com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse delete(com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/apps/keys/delete", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyPathParams.class, baseUrl, "/v1/projects/{project}/apps/keys/delete", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -90,7 +86,7 @@ public class AppKey {
     **/
     public com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse list(com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/apps/keys", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysPathParams.class, baseUrl, "/v1/projects/{project}/apps/keys", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -137,12 +133,12 @@ public class AppKey {
     **/
     public com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse rotate(com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/apps/keys/rotate", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretPathParams.class, baseUrl, "/v1/projects/{project}/apps/keys/rotate", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -189,12 +185,12 @@ public class AppKey {
     **/
     public com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse tigrisCreateAppKey(com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/apps/keys/create", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyPathParams.class, baseUrl, "/v1/projects/{project}/apps/keys/create", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -241,12 +237,12 @@ public class AppKey {
     **/
     public com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse update(com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/apps/keys/update", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyPathParams.class, baseUrl, "/v1/projects/{project}/apps/keys/update", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -10,15 +10,6 @@ import java.nio.charset.StandardCharsets;
 
 public class Collection {
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
 	private String _serverUrl;
@@ -47,12 +38,12 @@ public class Collection {
     **/
     public com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionResponse create(com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/createOrUpdate", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionPathParams.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/createOrUpdate", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -99,12 +90,12 @@ public class Collection {
     **/
     public com.tigrisdata.tigris_core.models.operations.TigrisDeleteResponse deleteDocuments(com.tigrisdata.tigris_core.models.operations.TigrisDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/delete", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisDeletePathParams.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/delete", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -151,12 +142,12 @@ public class Collection {
     **/
     public com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionResponse describe(com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/describe", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionPathParams.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/describe", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -204,12 +195,12 @@ public class Collection {
     **/
     public com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionResponse drop(com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/drop", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionPathParams.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/drop", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -261,12 +252,12 @@ public class Collection {
     **/
     public com.tigrisdata.tigris_core.models.operations.TigrisImportResponse importDocuments(com.tigrisdata.tigris_core.models.operations.TigrisImportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/import", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisImportPathParams.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/import", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -315,12 +306,12 @@ public class Collection {
     **/
     public com.tigrisdata.tigris_core.models.operations.TigrisInsertResponse insertDocuments(com.tigrisdata.tigris_core.models.operations.TigrisInsertRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/insert", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisInsertPathParams.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/insert", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -372,12 +363,12 @@ public class Collection {
     **/
     public com.tigrisdata.tigris_core.models.operations.TigrisReadResponse readDocuments(com.tigrisdata.tigris_core.models.operations.TigrisReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/read", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisReadPathParams.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/read", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -424,12 +415,12 @@ public class Collection {
     **/
     public com.tigrisdata.tigris_core.models.operations.TigrisReplaceResponse replaceDocuments(com.tigrisdata.tigris_core.models.operations.TigrisReplaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/replace", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisReplacePathParams.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/replace", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -479,12 +470,12 @@ public class Collection {
     **/
     public com.tigrisdata.tigris_core.models.operations.TigrisSearchResponse searchDocuments(com.tigrisdata.tigris_core.models.operations.TigrisSearchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/search", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisSearchPathParams.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/search", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -531,12 +522,12 @@ public class Collection {
     **/
     public com.tigrisdata.tigris_core.models.operations.TigrisUpdateResponse updateDocuments(com.tigrisdata.tigris_core.models.operations.TigrisUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/update", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisUpdatePathParams.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/update", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

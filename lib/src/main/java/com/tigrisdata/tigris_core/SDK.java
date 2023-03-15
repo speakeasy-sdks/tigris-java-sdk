@@ -84,9 +84,8 @@ public class SDK {
 	private com.tigrisdata.tigris_core.models.shared.Security _security;
 	private String _serverUrl;
 	private String _language = "java";
-	private String _sdkVersion = "0.0.2";
-	private String _genVersion = "1.9.2";
-
+	private String _sdkVersion = "0.1.0";
+	private String _genVersion = "1.11.0";
 	public static class Builder {
 		private HTTPClient client;
 		private com.tigrisdata.tigris_core.models.shared.Security security;
@@ -149,6 +148,7 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+		
 		
 		this.appKey = new AppKey(
 			this._defaultClient,

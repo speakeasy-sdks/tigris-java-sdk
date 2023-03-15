@@ -11,11 +11,6 @@ import org.apache.http.NameValuePair;
 
 public class Channel {
 	
-	
-	
-	
-	
-	
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
 	private String _serverUrl;
@@ -38,7 +33,7 @@ public class Channel {
     **/
     public com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelResponse get(com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/realtime/channels/{channel}", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelPathParams.class, baseUrl, "/v1/projects/{project}/realtime/channels/{channel}", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -83,13 +78,13 @@ public class Channel {
     **/
     public com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesResponse getMessages(com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/messages", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesPathParams.class, baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/messages", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(request.queryParams);
+        java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesQueryParams.class, request.queryParams, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -134,7 +129,7 @@ public class Channel {
     **/
     public com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsResponse list(com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/realtime/channels", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsPathParams.class, baseUrl, "/v1/projects/{project}/realtime/channels", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -179,13 +174,13 @@ public class Channel {
     **/
     public com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsResponse listSubscriptions(com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/subscriptions", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsPathParams.class, baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/subscriptions", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(request.queryParams);
+        java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsQueryParams.class, request.queryParams, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -230,12 +225,12 @@ public class Channel {
     **/
     public com.tigrisdata.tigris_core.models.operations.RealtimeMessagesResponse pushMessages(com.tigrisdata.tigris_core.models.operations.RealtimeMessagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/messages", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimeMessagesPathParams.class, baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/messages", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -280,7 +275,7 @@ public class Channel {
     **/
     public com.tigrisdata.tigris_core.models.operations.RealtimePresenceResponse realtimePresence(com.tigrisdata.tigris_core.models.operations.RealtimePresenceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/presence", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimePresencePathParams.class, baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/presence", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

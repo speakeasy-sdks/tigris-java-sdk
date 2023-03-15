@@ -10,11 +10,6 @@ import java.nio.charset.StandardCharsets;
 
 public class Namespace {
 	
-	
-	
-	
-	
-	
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
 	private String _serverUrl;
@@ -44,7 +39,7 @@ public class Namespace {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -138,12 +133,12 @@ public class Namespace {
     **/
     public com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataResponse getMetadata(com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/namespace/metadata/{metadataKey}/get", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataPathParams.class, baseUrl, "/v1/management/namespace/metadata/{metadataKey}/get", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -190,12 +185,12 @@ public class Namespace {
     **/
     public com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataResponse insertMetadata(com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/namespace/metadata/{metadataKey}/insert", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataPathParams.class, baseUrl, "/v1/management/namespace/metadata/{metadataKey}/insert", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -289,12 +284,12 @@ public class Namespace {
     **/
     public com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataResponse updateMetadata(com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/namespace/metadata/{metadataKey}/update", request.pathParams);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataPathParams.class, baseUrl, "/v1/management/namespace/metadata/{metadataKey}/update", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
