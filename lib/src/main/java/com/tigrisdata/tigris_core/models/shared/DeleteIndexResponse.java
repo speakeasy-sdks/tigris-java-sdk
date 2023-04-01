@@ -16,7 +16,8 @@ public class DeleteIndexResponse {
      * A detailed response message.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("message")public String message;
+    @JsonProperty("message")
+    public String message;
     public DeleteIndexResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -26,7 +27,8 @@ public class DeleteIndexResponse {
      * An enum with value set as "deleted".
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("status")public String status;
+    @JsonProperty("status")
+    public String status;
     public DeleteIndexResponse withStatus(String status) {
         this.status = status;
         return this;

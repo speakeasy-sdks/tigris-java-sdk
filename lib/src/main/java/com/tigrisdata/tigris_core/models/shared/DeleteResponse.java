@@ -16,7 +16,8 @@ public class DeleteResponse {
      * Has metadata related to the documents stored.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("metadata")public ResponseMetadata metadata;
+    @JsonProperty("metadata")
+    public ResponseMetadata metadata;
     public DeleteResponse withMetadata(ResponseMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -26,7 +27,8 @@ public class DeleteResponse {
      * an enum with value set as "deleted"
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("status")public String status;
+    @JsonProperty("status")
+    public String status;
     public DeleteResponse withStatus(String status) {
         this.status = status;
         return this;

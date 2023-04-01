@@ -7,15 +7,30 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisReplaceRequest {
-    public TigrisReplacePathParams pathParams;
-    public TigrisReplaceRequest withPathParams(TigrisReplacePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.ReplaceRequest replaceRequest;
+    public TigrisReplaceRequest withReplaceRequest(com.tigrisdata.tigris_core.models.shared.ReplaceRequest replaceRequest) {
+        this.replaceRequest = replaceRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.ReplaceRequest request;
-    public TigrisReplaceRequest withRequest(com.tigrisdata.tigris_core.models.shared.ReplaceRequest request) {
-        this.request = request;
+    /**
+     * Collection name where to replace documents.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
+    public String collection;
+    public TigrisReplaceRequest withCollection(String collection) {
+        this.collection = collection;
+        return this;
+    }
+    
+    /**
+     * Project name whose db is under target to replace documents.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisReplaceRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

@@ -13,14 +13,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class InsertNamespaceMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("metadataKey")public String metadataKey;
+    @JsonProperty("metadataKey")
+    public String metadataKey;
     public InsertNamespaceMetadataRequest withMetadataKey(String metadataKey) {
         this.metadataKey = metadataKey;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("value")public java.util.Map<String, Object> value;
+    @JsonProperty("value")
+    public java.util.Map<String, Object> value;
     public InsertNamespaceMetadataRequest withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;

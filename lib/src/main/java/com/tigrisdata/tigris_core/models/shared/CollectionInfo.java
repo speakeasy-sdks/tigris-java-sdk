@@ -13,14 +13,16 @@ public class CollectionInfo {
      * Collection name.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("collection")public String collection;
+    @JsonProperty("collection")
+    public String collection;
     public CollectionInfo withCollection(String collection) {
         this.collection = collection;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("metadata")public java.util.Map<String, Object> metadata;
+    @JsonProperty("metadata")
+    public java.util.Map<String, Object> metadata;
     public CollectionInfo withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;

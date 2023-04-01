@@ -16,7 +16,8 @@ public class ReadRequestOptions {
      * A collation allows you to specify string comparison rules. Default is case-sensitive, to override it you can set this option to 'ci' that will apply to all the text fields in the filters.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("collation")public Collation collation;
+    @JsonProperty("collation")
+    public Collation collation;
     public ReadRequestOptions withCollation(Collation collation) {
         this.collation = collation;
         return this;
@@ -26,7 +27,8 @@ public class ReadRequestOptions {
      * Limit the number of documents returned by the read operation.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("limit")public Long limit;
+    @JsonProperty("limit")
+    public Long limit;
     public ReadRequestOptions withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -36,7 +38,8 @@ public class ReadRequestOptions {
      * A cursor for use in pagination. The next streams will return documents after this offset.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("offset")public String offset;
+    @JsonProperty("offset")
+    public String offset;
     public ReadRequestOptions withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -46,7 +49,8 @@ public class ReadRequestOptions {
      * Number of documents to skip before starting to return resulting documents.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("skip")public Long skip;
+    @JsonProperty("skip")
+    public Long skip;
     public ReadRequestOptions withSkip(Long skip) {
         this.skip = skip;
         return this;

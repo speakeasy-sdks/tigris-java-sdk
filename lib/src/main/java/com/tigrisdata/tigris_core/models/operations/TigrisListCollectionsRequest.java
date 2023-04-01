@@ -4,18 +4,26 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
-
+import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisListCollectionsRequest {
-    public TigrisListCollectionsPathParams pathParams;
-    public TigrisListCollectionsRequest withPathParams(TigrisListCollectionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Optionally specify a database branch name to perform operation on
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=branch")
+    public String branch;
+    public TigrisListCollectionsRequest withBranch(String branch) {
+        this.branch = branch;
         return this;
     }
     
-    public TigrisListCollectionsQueryParams queryParams;
-    public TigrisListCollectionsRequest withQueryParams(TigrisListCollectionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Project name whose db is under target to list collections.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisListCollectionsRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

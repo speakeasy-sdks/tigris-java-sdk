@@ -35,7 +35,7 @@ public class Auth {
     /**
      * Access Token
      * Endpoint for receiving access token from Tigris Server. The endpoint requires Grant Type(`grant_type`) which has
-     *  two possible values <i>"REFRESH_TOKEN"</i> or <i>"CLIENT_CREDENTIALS"</i> based on which either Refresh token(`refresh_token`)
+     *  two possible values &lt;i&gt;"REFRESH_TOKEN"&lt;/i&gt; or &lt;i&gt;"CLIENT_CREDENTIALS"&lt;/i&gt; based on which either Refresh token(`refresh_token`)
      *  needs to be set or client credentials(`client_id`, `client_secret`).
      * @return the response from the API call
      * @throws Exception if the API call fails

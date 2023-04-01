@@ -7,15 +7,17 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class ManagementUpdateNamespaceMetadataRequest {
-    public ManagementUpdateNamespaceMetadataPathParams pathParams;
-    public ManagementUpdateNamespaceMetadataRequest withPathParams(ManagementUpdateNamespaceMetadataPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.UpdateNamespaceMetadataRequest updateNamespaceMetadataRequest;
+    public ManagementUpdateNamespaceMetadataRequest withUpdateNamespaceMetadataRequest(com.tigrisdata.tigris_core.models.shared.UpdateNamespaceMetadataRequest updateNamespaceMetadataRequest) {
+        this.updateNamespaceMetadataRequest = updateNamespaceMetadataRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.UpdateNamespaceMetadataRequest request;
-    public ManagementUpdateNamespaceMetadataRequest withRequest(com.tigrisdata.tigris_core.models.shared.UpdateNamespaceMetadataRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=metadataKey")
+    public String metadataKey;
+    public ManagementUpdateNamespaceMetadataRequest withMetadataKey(String metadataKey) {
+        this.metadataKey = metadataKey;
         return this;
     }
     

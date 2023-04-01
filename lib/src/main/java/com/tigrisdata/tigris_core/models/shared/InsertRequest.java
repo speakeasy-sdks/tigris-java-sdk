@@ -13,7 +13,8 @@ public class InsertRequest {
      * Optionally specify a database branch name to perform operation on
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("branch")public String branch;
+    @JsonProperty("branch")
+    public String branch;
     public InsertRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -23,7 +24,8 @@ public class InsertRequest {
      * Array of documents to insert. Each document is a JSON object.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("documents")public java.util.Map<String, Object>[] documents;
+    @JsonProperty("documents")
+    public java.util.Map<String, Object>[] documents;
     public InsertRequest withDocuments(java.util.Map<String, Object>[] documents) {
         this.documents = documents;
         return this;
@@ -33,7 +35,8 @@ public class InsertRequest {
      * additional options for insert requests.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("options")public InsertRequestOptions options;
+    @JsonProperty("options")
+    public InsertRequestOptions options;
     public InsertRequest withOptions(InsertRequestOptions options) {
         this.options = options;
         return this;

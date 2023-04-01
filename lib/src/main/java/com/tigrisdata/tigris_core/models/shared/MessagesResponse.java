@@ -16,7 +16,8 @@ public class MessagesResponse {
      * ids of the published messages
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("ids")public String[] ids;
+    @JsonProperty("ids")
+    public String[] ids;
     public MessagesResponse withIds(String[] ids) {
         this.ids = ids;
         return this;

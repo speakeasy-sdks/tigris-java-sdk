@@ -16,7 +16,8 @@ public class Page {
      * Number representing the current page of results
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("current")public Integer current;
+    @JsonProperty("current")
+    public Integer current;
     public Page withCurrent(Integer current) {
         this.current = current;
         return this;
@@ -26,7 +27,8 @@ public class Page {
      * Maximum number of results per page
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("size")public Integer size;
+    @JsonProperty("size")
+    public Integer size;
     public Page withSize(Integer size) {
         this.size = size;
         return this;

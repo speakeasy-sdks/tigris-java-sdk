@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SearchFacet {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("counts")public FacetCount[] counts;
+    @JsonProperty("counts")
+    public FacetCount[] counts;
     public SearchFacet withCounts(FacetCount[] counts) {
         this.counts = counts;
         return this;
@@ -20,7 +21,8 @@ public class SearchFacet {
      * Additional stats for faceted field
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("stats")public FacetStats stats;
+    @JsonProperty("stats")
+    public FacetStats stats;
     public SearchFacet withStats(FacetStats stats) {
         this.stats = stats;
         return this;

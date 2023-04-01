@@ -16,7 +16,8 @@ public class InsertRequestOptions {
      * Additional options to modify write requests.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("write_options")public java.util.Map<String, Object> writeOptions;
+    @JsonProperty("write_options")
+    public java.util.Map<String, Object> writeOptions;
     public InsertRequestOptions withWriteOptions(java.util.Map<String, Object> writeOptions) {
         this.writeOptions = writeOptions;
         return this;

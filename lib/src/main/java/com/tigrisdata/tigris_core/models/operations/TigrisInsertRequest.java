@@ -7,15 +7,30 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisInsertRequest {
-    public TigrisInsertPathParams pathParams;
-    public TigrisInsertRequest withPathParams(TigrisInsertPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.InsertRequest insertRequest;
+    public TigrisInsertRequest withInsertRequest(com.tigrisdata.tigris_core.models.shared.InsertRequest insertRequest) {
+        this.insertRequest = insertRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.InsertRequest request;
-    public TigrisInsertRequest withRequest(com.tigrisdata.tigris_core.models.shared.InsertRequest request) {
-        this.request = request;
+    /**
+     * Collection name where to insert documents.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
+    public String collection;
+    public TigrisInsertRequest withCollection(String collection) {
+        this.collection = collection;
+        return this;
+    }
+    
+    /**
+     * Project name whose db is under target to insert documents.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisInsertRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

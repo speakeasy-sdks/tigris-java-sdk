@@ -7,15 +7,30 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class SearchDeleteIndexRequest {
-    public SearchDeleteIndexPathParams pathParams;
-    public SearchDeleteIndexRequest withPathParams(SearchDeleteIndexPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.DeleteIndexRequest deleteIndexRequest;
+    public SearchDeleteIndexRequest withDeleteIndexRequest(com.tigrisdata.tigris_core.models.shared.DeleteIndexRequest deleteIndexRequest) {
+        this.deleteIndexRequest = deleteIndexRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.DeleteIndexRequest request;
-    public SearchDeleteIndexRequest withRequest(com.tigrisdata.tigris_core.models.shared.DeleteIndexRequest request) {
-        this.request = request;
+    /**
+     * index name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public SearchDeleteIndexRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Tigris project name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public SearchDeleteIndexRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

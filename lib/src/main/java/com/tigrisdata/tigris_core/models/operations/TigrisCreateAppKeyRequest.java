@@ -7,15 +7,20 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisCreateAppKeyRequest {
-    public TigrisCreateAppKeyPathParams pathParams;
-    public TigrisCreateAppKeyRequest withPathParams(TigrisCreateAppKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.CreateAppKeyRequest createAppKeyRequest;
+    public TigrisCreateAppKeyRequest withCreateAppKeyRequest(com.tigrisdata.tigris_core.models.shared.CreateAppKeyRequest createAppKeyRequest) {
+        this.createAppKeyRequest = createAppKeyRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.CreateAppKeyRequest request;
-    public TigrisCreateAppKeyRequest withRequest(com.tigrisdata.tigris_core.models.shared.CreateAppKeyRequest request) {
-        this.request = request;
+    /**
+     * Project name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisCreateAppKeyRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

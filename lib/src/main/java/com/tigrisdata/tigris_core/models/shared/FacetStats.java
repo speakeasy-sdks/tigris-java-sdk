@@ -16,7 +16,8 @@ public class FacetStats {
      * Average of all values in a field. Only available for numeric fields
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("avg")public Double avg;
+    @JsonProperty("avg")
+    public Double avg;
     public FacetStats withAvg(Double avg) {
         this.avg = avg;
         return this;
@@ -26,7 +27,8 @@ public class FacetStats {
      * Total number of values in a field
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("count")public Long count;
+    @JsonProperty("count")
+    public Long count;
     public FacetStats withCount(Long count) {
         this.count = count;
         return this;
@@ -36,7 +38,8 @@ public class FacetStats {
      * Maximum of all values in a field. Only available for numeric fields
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("max")public Double max;
+    @JsonProperty("max")
+    public Double max;
     public FacetStats withMax(Double max) {
         this.max = max;
         return this;
@@ -46,7 +49,8 @@ public class FacetStats {
      * Minimum of all values in a field. Only available for numeric fields
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("min")public Double min;
+    @JsonProperty("min")
+    public Double min;
     public FacetStats withMin(Double min) {
         this.min = min;
         return this;
@@ -56,7 +60,8 @@ public class FacetStats {
      * Sum of all values in a field. Only available for numeric fields
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("sum")public Double sum;
+    @JsonProperty("sum")
+    public Double sum;
     public FacetStats withSum(Double sum) {
         this.sum = sum;
         return this;

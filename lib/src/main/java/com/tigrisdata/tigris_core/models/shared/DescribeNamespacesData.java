@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeNamespacesData {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("details")public String details;
+    @JsonProperty("details")
+    public String details;
     public DescribeNamespacesData withDetails(String details) {
         this.details = details;
         return this;

@@ -13,7 +13,8 @@ public class DeleteByQueryRequest {
      * A filter is required to delete matching documents. To delete document by id, you can pass the filter as follows ```{"id": "test"}```
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("filter")public String filter;
+    @JsonProperty("filter")
+    public String filter;
     public DeleteByQueryRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -23,7 +24,8 @@ public class DeleteByQueryRequest {
      * The index name of the documents that needs deletion.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("index")public String index;
+    @JsonProperty("index")
+    public String index;
     public DeleteByQueryRequest withIndex(String index) {
         this.index = index;
         return this;
@@ -33,7 +35,8 @@ public class DeleteByQueryRequest {
      * The project name.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("project")public String project;
+    @JsonProperty("project")
+    public String project;
     public DeleteByQueryRequest withProject(String project) {
         this.project = project;
         return this;

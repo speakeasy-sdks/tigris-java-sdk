@@ -7,15 +7,20 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisRotateAppKeySecretRequest {
-    public TigrisRotateAppKeySecretPathParams pathParams;
-    public TigrisRotateAppKeySecretRequest withPathParams(TigrisRotateAppKeySecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.RotateAppKeyRequest rotateAppKeyRequest;
+    public TigrisRotateAppKeySecretRequest withRotateAppKeyRequest(com.tigrisdata.tigris_core.models.shared.RotateAppKeyRequest rotateAppKeyRequest) {
+        this.rotateAppKeyRequest = rotateAppKeyRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.RotateAppKeyRequest request;
-    public TigrisRotateAppKeySecretRequest withRequest(com.tigrisdata.tigris_core.models.shared.RotateAppKeyRequest request) {
-        this.request = request;
+    /**
+     * project name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisRotateAppKeySecretRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

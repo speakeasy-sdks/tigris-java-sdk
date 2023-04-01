@@ -16,14 +16,16 @@ public class DescribeCollectionResponse {
      * Name of the collection.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("collection")public String collection;
+    @JsonProperty("collection")
+    public String collection;
     public DescribeCollectionResponse withCollection(String collection) {
         this.collection = collection;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("metadata")public java.util.Map<String, Object> metadata;
+    @JsonProperty("metadata")
+    public java.util.Map<String, Object> metadata;
     public DescribeCollectionResponse withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -33,7 +35,8 @@ public class DescribeCollectionResponse {
      * Schema of this collection.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("schema")public java.util.Map<String, Object> schema;
+    @JsonProperty("schema")
+    public java.util.Map<String, Object> schema;
     public DescribeCollectionResponse withSchema(java.util.Map<String, Object> schema) {
         this.schema = schema;
         return this;
@@ -43,7 +46,8 @@ public class DescribeCollectionResponse {
      * The size of this collection in bytes.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("size")public Long size;
+    @JsonProperty("size")
+    public Long size;
     public DescribeCollectionResponse withSize(Long size) {
         this.size = size;
         return this;

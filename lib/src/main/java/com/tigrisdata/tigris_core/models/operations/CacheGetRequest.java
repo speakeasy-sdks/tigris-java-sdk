@@ -4,12 +4,36 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
-
+import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class CacheGetRequest {
-    public CacheGetPathParams pathParams;
-    public CacheGetRequest withPathParams(CacheGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * cache key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public CacheGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * cache name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public CacheGetRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Tigris project name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public CacheGetRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

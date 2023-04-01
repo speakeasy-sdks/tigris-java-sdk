@@ -7,15 +7,30 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisImportRequest {
-    public TigrisImportPathParams pathParams;
-    public TigrisImportRequest withPathParams(TigrisImportPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.ImportRequest importRequest;
+    public TigrisImportRequest withImportRequest(com.tigrisdata.tigris_core.models.shared.ImportRequest importRequest) {
+        this.importRequest = importRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.ImportRequest request;
-    public TigrisImportRequest withRequest(com.tigrisdata.tigris_core.models.shared.ImportRequest request) {
-        this.request = request;
+    /**
+     * Collection name where to import documents.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
+    public String collection;
+    public TigrisImportRequest withCollection(String collection) {
+        this.collection = collection;
+        return this;
+    }
+    
+    /**
+     * Project name whose db is under target to import documents.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisImportRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

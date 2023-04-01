@@ -7,15 +7,30 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class CacheCreateCacheRequest {
-    public CacheCreateCachePathParams pathParams;
-    public CacheCreateCacheRequest withPathParams(CacheCreateCachePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.CreateCacheRequest createCacheRequest;
+    public CacheCreateCacheRequest withCreateCacheRequest(com.tigrisdata.tigris_core.models.shared.CreateCacheRequest createCacheRequest) {
+        this.createCacheRequest = createCacheRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.CreateCacheRequest request;
-    public CacheCreateCacheRequest withRequest(com.tigrisdata.tigris_core.models.shared.CreateCacheRequest request) {
-        this.request = request;
+    /**
+     * cache name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public CacheCreateCacheRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Tigris project name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public CacheCreateCacheRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

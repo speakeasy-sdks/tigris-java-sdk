@@ -16,7 +16,8 @@ public class UpdateResponse {
      * Has metadata related to the documents stored.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("metadata")public ResponseMetadata metadata;
+    @JsonProperty("metadata")
+    public ResponseMetadata metadata;
     public UpdateResponse withMetadata(ResponseMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -26,7 +27,8 @@ public class UpdateResponse {
      * Returns the number of documents modified.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("modified_count")public Integer modifiedCount;
+    @JsonProperty("modified_count")
+    public Integer modifiedCount;
     public UpdateResponse withModifiedCount(Integer modifiedCount) {
         this.modifiedCount = modifiedCount;
         return this;
@@ -36,7 +38,8 @@ public class UpdateResponse {
      * an enum with value set as "updated".
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("status")public String status;
+    @JsonProperty("status")
+    public String status;
     public UpdateResponse withStatus(String status) {
         this.status = status;
         return this;

@@ -16,7 +16,8 @@ public class Status {
      * The Error type defines a logical error model
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("error")public Error error;
+    @JsonProperty("error")
+    public Error error;
     public Status withError(Error error) {
         this.error = error;
         return this;

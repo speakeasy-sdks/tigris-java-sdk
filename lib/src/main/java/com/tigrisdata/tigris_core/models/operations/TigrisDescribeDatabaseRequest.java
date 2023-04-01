@@ -7,15 +7,20 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisDescribeDatabaseRequest {
-    public TigrisDescribeDatabasePathParams pathParams;
-    public TigrisDescribeDatabaseRequest withPathParams(TigrisDescribeDatabasePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.DescribeDatabaseRequest describeDatabaseRequest;
+    public TigrisDescribeDatabaseRequest withDescribeDatabaseRequest(com.tigrisdata.tigris_core.models.shared.DescribeDatabaseRequest describeDatabaseRequest) {
+        this.describeDatabaseRequest = describeDatabaseRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.DescribeDatabaseRequest request;
-    public TigrisDescribeDatabaseRequest withRequest(com.tigrisdata.tigris_core.models.shared.DescribeDatabaseRequest request) {
-        this.request = request;
+    /**
+     * Project name whose db is under target to get description.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisDescribeDatabaseRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

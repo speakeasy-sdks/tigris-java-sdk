@@ -7,15 +7,20 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisDeleteAppKeyRequest {
-    public TigrisDeleteAppKeyPathParams pathParams;
-    public TigrisDeleteAppKeyRequest withPathParams(TigrisDeleteAppKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.DeleteAppKeyRequest deleteAppKeyRequest;
+    public TigrisDeleteAppKeyRequest withDeleteAppKeyRequest(com.tigrisdata.tigris_core.models.shared.DeleteAppKeyRequest deleteAppKeyRequest) {
+        this.deleteAppKeyRequest = deleteAppKeyRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.DeleteAppKeyRequest request;
-    public TigrisDeleteAppKeyRequest withRequest(com.tigrisdata.tigris_core.models.shared.DeleteAppKeyRequest request) {
-        this.request = request;
+    /**
+     * project name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisDeleteAppKeyRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

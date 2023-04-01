@@ -13,14 +13,16 @@ public class BranchInfo {
      * Branch name
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("branch")public String branch;
+    @JsonProperty("branch")
+    public String branch;
     public BranchInfo withBranch(String branch) {
         this.branch = branch;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("metadata")public java.util.Map<String, Object> metadata;
+    @JsonProperty("metadata")
+    public java.util.Map<String, Object> metadata;
     public BranchInfo withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;

@@ -7,6 +7,7 @@ package com.tigrisdata.tigris_core.models.operations;
 import java.net.http.HttpResponse;
 
 public class RealtimeReadMessagesResponse {
+    
     public String contentType;
     public RealtimeReadMessagesResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,6 +17,7 @@ public class RealtimeReadMessagesResponse {
     /**
      * OK
      */
+    
     public com.tigrisdata.tigris_core.models.shared.ReadMessagesResponse readMessagesResponse;
     public RealtimeReadMessagesResponse withReadMessagesResponse(com.tigrisdata.tigris_core.models.shared.ReadMessagesResponse readMessagesResponse) {
         this.readMessagesResponse = readMessagesResponse;
@@ -25,17 +27,20 @@ public class RealtimeReadMessagesResponse {
     /**
      * Default error response
      */
+    
     public com.tigrisdata.tigris_core.models.shared.Status status;
     public RealtimeReadMessagesResponse withStatus(com.tigrisdata.tigris_core.models.shared.Status status) {
         this.status = status;
         return this;
     }
     
+    
     public Integer statusCode;
     public RealtimeReadMessagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public RealtimeReadMessagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

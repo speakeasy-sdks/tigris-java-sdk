@@ -46,12 +46,12 @@ public class Search {
      */
     public com.tigrisdata.tigris_core.models.operations.SearchCreateByIdResponse createDocument(com.tigrisdata.tigris_core.models.operations.SearchCreateByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchCreateByIdPathParams.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents/{id}", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchCreateByIdRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "createByIdRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -103,12 +103,12 @@ public class Search {
      */
     public com.tigrisdata.tigris_core.models.operations.SearchCreateResponse createDocuments(com.tigrisdata.tigris_core.models.operations.SearchCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchCreatePathParams.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchCreateRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "createDocumentRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -158,12 +158,12 @@ public class Search {
      */
     public com.tigrisdata.tigris_core.models.operations.SearchDeleteResponse deleteDocuments(com.tigrisdata.tigris_core.models.operations.SearchDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchDeletePathParams.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchDeleteRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "deleteDocumentRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -210,12 +210,12 @@ public class Search {
      */
     public com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexResponse deleteIndex(com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexPathParams.class, baseUrl, "/v1/projects/{project}/search/indexes/{name}", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "deleteIndexRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -258,21 +258,21 @@ public class Search {
      * Search Documents.
      * Searches an index for the documents matching the query. A search can be a term search or a phrase search.
      *  Search API allows filtering the result set using filters as documented
-     *  <a href="https://docs.tigrisdata.com/overview/query#specification-1" title="here">here</a>. You can also perform
+     *  &lt;a href="https://docs.tigrisdata.com/overview/query#specification-1" title="here"&gt;here&lt;/a&gt;. You can also perform
      *  a faceted search by passing the fields in the facet parameter. You can find more detailed documentation of the
-     *  Search API with multiple examples <a href="https://docs.tigrisdata.com/overview/search" title="here">here</a>.
+     *  Search API with multiple examples &lt;a href="https://docs.tigrisdata.com/overview/search" title="here"&gt;here&lt;/a&gt;.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.SearchSearchResponse findDocuments(com.tigrisdata.tigris_core.models.operations.SearchSearchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchSearchPathParams.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents/search", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchSearchRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents/search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "searchIndexRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -321,13 +321,13 @@ public class Search {
      */
     public com.tigrisdata.tigris_core.models.operations.SearchGetResponse getDocuments(com.tigrisdata.tigris_core.models.operations.SearchGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchGetPathParams.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchGetRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(com.tigrisdata.tigris_core.models.operations.SearchGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(com.tigrisdata.tigris_core.models.operations.SearchGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -374,7 +374,7 @@ public class Search {
      */
     public com.tigrisdata.tigris_core.models.operations.SearchGetIndexResponse getIndex(com.tigrisdata.tigris_core.models.operations.SearchGetIndexRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchGetIndexPathParams.class, baseUrl, "/v1/projects/{project}/search/indexes/{name}", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchGetIndexRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -421,13 +421,13 @@ public class Search {
      */
     public com.tigrisdata.tigris_core.models.operations.SearchListIndexesResponse listIndexes(com.tigrisdata.tigris_core.models.operations.SearchListIndexesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchListIndexesPathParams.class, baseUrl, "/v1/projects/{project}/search/indexes", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchListIndexesRequest.class, baseUrl, "/v1/projects/{project}/search/indexes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(com.tigrisdata.tigris_core.models.operations.SearchListIndexesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(com.tigrisdata.tigris_core.models.operations.SearchListIndexesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -476,12 +476,12 @@ public class Search {
      */
     public com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryResponse queryDeleteDocuments(com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryPathParams.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents/deleteByQuery", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents/deleteByQuery", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "deleteByQueryRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -532,12 +532,12 @@ public class Search {
      */
     public com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceResponse replaceDocuments(com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplacePathParams.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "createOrReplaceDocumentRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -588,12 +588,12 @@ public class Search {
      */
     public com.tigrisdata.tigris_core.models.operations.SearchUpdateResponse updateDocuments(com.tigrisdata.tigris_core.models.operations.SearchUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchUpdatePathParams.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchUpdateRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "updateDocumentRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -640,12 +640,12 @@ public class Search {
      */
     public com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexResponse updateIndex(com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexPathParams.class, baseUrl, "/v1/projects/{project}/search/indexes/{name}", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "createOrUpdateIndexRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

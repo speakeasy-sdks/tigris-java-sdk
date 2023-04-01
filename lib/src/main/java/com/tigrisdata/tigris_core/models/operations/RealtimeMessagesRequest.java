@@ -7,15 +7,24 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class RealtimeMessagesRequest {
-    public RealtimeMessagesPathParams pathParams;
-    public RealtimeMessagesRequest withPathParams(RealtimeMessagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.MessagesRequest messagesRequest;
+    public RealtimeMessagesRequest withMessagesRequest(com.tigrisdata.tigris_core.models.shared.MessagesRequest messagesRequest) {
+        this.messagesRequest = messagesRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.MessagesRequest request;
-    public RealtimeMessagesRequest withRequest(com.tigrisdata.tigris_core.models.shared.MessagesRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel")
+    public String channel;
+    public RealtimeMessagesRequest withChannel(String channel) {
+        this.channel = channel;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RealtimeMessagesRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

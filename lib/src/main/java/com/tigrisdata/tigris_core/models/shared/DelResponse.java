@@ -16,7 +16,8 @@ public class DelResponse {
      * A detailed response message.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("message")public String message;
+    @JsonProperty("message")
+    public String message;
     public DelResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -26,7 +27,8 @@ public class DelResponse {
      * An enum with value set as "deleted" or "not_found"
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("status")public String status;
+    @JsonProperty("status")
+    public String status;
     public DelResponse withStatus(String status) {
         this.status = status;
         return this;

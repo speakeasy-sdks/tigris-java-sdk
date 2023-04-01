@@ -16,7 +16,8 @@ public class RotateAppKeyResponse {
      * An user AppKey
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("app_key")public AppKey appKey;
+    @JsonProperty("app_key")
+    public AppKey appKey;
     public RotateAppKeyResponse withAppKey(AppKey appKey) {
         this.appKey = appKey;
         return this;

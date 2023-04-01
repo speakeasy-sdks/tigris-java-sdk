@@ -16,7 +16,8 @@ public class InsertResponse {
      * an array returns the value of the primary keys.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("keys")public String[] keys;
+    @JsonProperty("keys")
+    public String[] keys;
     public InsertResponse withKeys(String[] keys) {
         this.keys = keys;
         return this;
@@ -26,7 +27,8 @@ public class InsertResponse {
      * Has metadata related to the documents stored.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("metadata")public ResponseMetadata metadata;
+    @JsonProperty("metadata")
+    public ResponseMetadata metadata;
     public InsertResponse withMetadata(ResponseMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -36,7 +38,8 @@ public class InsertResponse {
      * An enum with value set as "inserted"
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("status")public String status;
+    @JsonProperty("status")
+    public String status;
     public InsertResponse withStatus(String status) {
         this.status = status;
         return this;

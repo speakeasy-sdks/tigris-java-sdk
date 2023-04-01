@@ -16,7 +16,8 @@ public class UpdateAppKeyRequest {
      * A new human readable app description
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("description")public String description;
+    @JsonProperty("description")
+    public String description;
     public UpdateAppKeyRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -26,7 +27,8 @@ public class UpdateAppKeyRequest {
      * app key id - this is not allowed to update
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public UpdateAppKeyRequest withId(String id) {
         this.id = id;
         return this;
@@ -36,7 +38,8 @@ public class UpdateAppKeyRequest {
      * A new human readable app name
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public UpdateAppKeyRequest withName(String name) {
         this.name = name;
         return this;

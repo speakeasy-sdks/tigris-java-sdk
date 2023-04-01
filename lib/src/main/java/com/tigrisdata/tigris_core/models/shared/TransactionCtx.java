@@ -16,7 +16,8 @@ public class TransactionCtx {
      * Unique for a single transactional request.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public TransactionCtx withId(String id) {
         this.id = id;
         return this;
@@ -26,7 +27,8 @@ public class TransactionCtx {
      * Serves as an internal identifier.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("origin")public String origin;
+    @JsonProperty("origin")
+    public String origin;
     public TransactionCtx withOrigin(String origin) {
         this.origin = origin;
         return this;

@@ -4,18 +4,36 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
-
+import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class SearchGetRequest {
-    public SearchGetPathParams pathParams;
-    public SearchGetRequest withPathParams(SearchGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * document id.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
+    public String[] ids;
+    public SearchGetRequest withIds(String[] ids) {
+        this.ids = ids;
         return this;
     }
     
-    public SearchGetQueryParams queryParams;
-    public SearchGetRequest withQueryParams(SearchGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * index name where to create documents.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public String index;
+    public SearchGetRequest withIndex(String index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * Tigris project name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public SearchGetRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

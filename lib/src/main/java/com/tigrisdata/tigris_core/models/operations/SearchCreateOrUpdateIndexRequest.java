@@ -7,15 +7,30 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class SearchCreateOrUpdateIndexRequest {
-    public SearchCreateOrUpdateIndexPathParams pathParams;
-    public SearchCreateOrUpdateIndexRequest withPathParams(SearchCreateOrUpdateIndexPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.CreateOrUpdateIndexRequest createOrUpdateIndexRequest;
+    public SearchCreateOrUpdateIndexRequest withCreateOrUpdateIndexRequest(com.tigrisdata.tigris_core.models.shared.CreateOrUpdateIndexRequest createOrUpdateIndexRequest) {
+        this.createOrUpdateIndexRequest = createOrUpdateIndexRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.CreateOrUpdateIndexRequest request;
-    public SearchCreateOrUpdateIndexRequest withRequest(com.tigrisdata.tigris_core.models.shared.CreateOrUpdateIndexRequest request) {
-        this.request = request;
+    /**
+     * search index name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public SearchCreateOrUpdateIndexRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Tigris project name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public SearchCreateOrUpdateIndexRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

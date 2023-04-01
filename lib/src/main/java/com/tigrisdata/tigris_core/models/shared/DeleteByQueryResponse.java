@@ -16,7 +16,8 @@ public class DeleteByQueryResponse {
      * The number of documents deleted.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("count")public Integer count;
+    @JsonProperty("count")
+    public Integer count;
     public DeleteByQueryResponse withCount(Integer count) {
         this.count = count;
         return this;

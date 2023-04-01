@@ -42,12 +42,12 @@ public class Cache {
      */
     public com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse create(com.tigrisdata.tigris_core.models.operations.CacheCreateCacheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheCreateCachePathParams.class, baseUrl, "/v1/projects/{project}/caches/{name}/create", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheCreateCacheRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/create", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "createCacheRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -94,12 +94,12 @@ public class Cache {
      */
     public com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheResponse delete(com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheDeleteCachePathParams.class, baseUrl, "/v1/projects/{project}/caches/{name}/delete", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/delete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -146,12 +146,12 @@ public class Cache {
      */
     public com.tigrisdata.tigris_core.models.operations.CacheDelResponse deleteKeys(com.tigrisdata.tigris_core.models.operations.CacheDelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheDelPathParams.class, baseUrl, "/v1/projects/{project}/caches/{name}/{key}/delete", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheDelRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/{key}/delete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -198,7 +198,7 @@ public class Cache {
      */
     public com.tigrisdata.tigris_core.models.operations.CacheGetResponse getKey(com.tigrisdata.tigris_core.models.operations.CacheGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheGetPathParams.class, baseUrl, "/v1/projects/{project}/caches/{name}/{key}/get", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheGetRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/{key}/get", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -245,12 +245,12 @@ public class Cache {
      */
     public com.tigrisdata.tigris_core.models.operations.CacheGetSetResponse getSetKey(com.tigrisdata.tigris_core.models.operations.CacheGetSetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheGetSetPathParams.class, baseUrl, "/v1/projects/{project}/caches/{name}/{key}/getset", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheGetSetRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/{key}/getset", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "getSetRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -297,7 +297,7 @@ public class Cache {
      */
     public com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse list(com.tigrisdata.tigris_core.models.operations.CacheListCachesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheListCachesPathParams.class, baseUrl, "/v1/projects/{project}/caches/list", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheListCachesRequest.class, baseUrl, "/v1/projects/{project}/caches/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -344,13 +344,13 @@ public class Cache {
      */
     public com.tigrisdata.tigris_core.models.operations.CacheKeysResponse listKeys(com.tigrisdata.tigris_core.models.operations.CacheKeysRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheKeysPathParams.class, baseUrl, "/v1/projects/{project}/caches/{name}/keys", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheKeysRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(com.tigrisdata.tigris_core.models.operations.CacheKeysQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(com.tigrisdata.tigris_core.models.operations.CacheKeysRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -397,12 +397,12 @@ public class Cache {
      */
     public com.tigrisdata.tigris_core.models.operations.CacheSetResponse setKey(com.tigrisdata.tigris_core.models.operations.CacheSetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheSetPathParams.class, baseUrl, "/v1/projects/{project}/caches/{name}/{key}/set", request.pathParams, null);
+        String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheSetRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/{key}/set", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "setRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

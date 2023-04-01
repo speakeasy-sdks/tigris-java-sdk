@@ -16,7 +16,8 @@ public class KeysResponse {
      * cursor - 0 is the keys scan is finished, non-zero cursor can be passed in next keys request to continue the scan this is useful if streaming breaks and user wants to resume stream
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("cursor")public Long cursor;
+    @JsonProperty("cursor")
+    public Long cursor;
     public KeysResponse withCursor(Long cursor) {
         this.cursor = cursor;
         return this;
@@ -26,7 +27,8 @@ public class KeysResponse {
      * keys
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("keys")public String[] keys;
+    @JsonProperty("keys")
+    public String[] keys;
     public KeysResponse withKeys(String[] keys) {
         this.keys = keys;
         return this;

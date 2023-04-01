@@ -7,15 +7,30 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisCreateOrUpdateCollectionRequest {
-    public TigrisCreateOrUpdateCollectionPathParams pathParams;
-    public TigrisCreateOrUpdateCollectionRequest withPathParams(TigrisCreateOrUpdateCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.CreateOrUpdateCollectionRequest createOrUpdateCollectionRequest;
+    public TigrisCreateOrUpdateCollectionRequest withCreateOrUpdateCollectionRequest(com.tigrisdata.tigris_core.models.shared.CreateOrUpdateCollectionRequest createOrUpdateCollectionRequest) {
+        this.createOrUpdateCollectionRequest = createOrUpdateCollectionRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.CreateOrUpdateCollectionRequest request;
-    public TigrisCreateOrUpdateCollectionRequest withRequest(com.tigrisdata.tigris_core.models.shared.CreateOrUpdateCollectionRequest request) {
-        this.request = request;
+    /**
+     * Collection name to create.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
+    public String collection;
+    public TigrisCreateOrUpdateCollectionRequest withCollection(String collection) {
+        this.collection = collection;
+        return this;
+    }
+    
+    /**
+     * Project name whose db is under target to create or update collection.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisCreateOrUpdateCollectionRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

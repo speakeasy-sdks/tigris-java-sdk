@@ -7,15 +7,30 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class SearchUpdateRequest {
-    public SearchUpdatePathParams pathParams;
-    public SearchUpdateRequest withPathParams(SearchUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.UpdateDocumentRequest updateDocumentRequest;
+    public SearchUpdateRequest withUpdateDocumentRequest(com.tigrisdata.tigris_core.models.shared.UpdateDocumentRequest updateDocumentRequest) {
+        this.updateDocumentRequest = updateDocumentRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.UpdateDocumentRequest request;
-    public SearchUpdateRequest withRequest(com.tigrisdata.tigris_core.models.shared.UpdateDocumentRequest request) {
-        this.request = request;
+    /**
+     * Index name where to create documents.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public String index;
+    public SearchUpdateRequest withIndex(String index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * Project name whose db is under target to insert documents.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public SearchUpdateRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

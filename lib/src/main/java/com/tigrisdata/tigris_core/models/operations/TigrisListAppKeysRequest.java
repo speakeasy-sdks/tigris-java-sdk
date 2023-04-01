@@ -4,12 +4,16 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
-
+import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisListAppKeysRequest {
-    public TigrisListAppKeysPathParams pathParams;
-    public TigrisListAppKeysRequest withPathParams(TigrisListAppKeysPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Project name filter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisListAppKeysRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

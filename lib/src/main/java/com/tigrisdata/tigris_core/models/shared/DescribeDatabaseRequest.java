@@ -13,7 +13,8 @@ public class DescribeDatabaseRequest {
      * Optionally specify a database branch name to perform operation on
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("branch")public String branch;
+    @JsonProperty("branch")
+    public String branch;
     public DescribeDatabaseRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -23,7 +24,8 @@ public class DescribeDatabaseRequest {
      * Project name whose db is under target to get description.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("project")public String project;
+    @JsonProperty("project")
+    public String project;
     public DescribeDatabaseRequest withProject(String project) {
         this.project = project;
         return this;
@@ -33,7 +35,8 @@ public class DescribeDatabaseRequest {
      * Return schema in the requested format. Format can be JSON, Go, TypeScript, Java. Default is JSON.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("schema_format")public String schemaFormat;
+    @JsonProperty("schema_format")
+    public String schemaFormat;
     public DescribeDatabaseRequest withSchemaFormat(String schemaFormat) {
         this.schemaFormat = schemaFormat;
         return this;

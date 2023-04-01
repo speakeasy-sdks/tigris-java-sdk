@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Message {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("data")public String data;
+    @JsonProperty("data")
+    public String data;
     public Message withData(String data) {
         this.data = data;
         return this;
@@ -20,21 +21,24 @@ public class Message {
      * an optional id if idempotency is needed to ensure only a single time message is published during retries. If not specified then server will automatically add an id to message.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public Message withId(String id) {
         this.id = id;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public Message withName(String name) {
         this.name = name;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("sequence")public String sequence;
+    @JsonProperty("sequence")
+    public String sequence;
     public Message withSequence(String sequence) {
         this.sequence = sequence;
         return this;

@@ -16,7 +16,8 @@ public class CreateByIdResponse {
      * Returns the id of the created document.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public CreateByIdResponse withId(String id) {
         this.id = id;
         return this;

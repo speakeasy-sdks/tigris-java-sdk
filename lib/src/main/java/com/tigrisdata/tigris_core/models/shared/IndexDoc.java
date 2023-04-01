@@ -13,7 +13,8 @@ public class IndexDoc {
      * Actual search document
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("doc")public String doc;
+    @JsonProperty("doc")
+    public String doc;
     public IndexDoc withDoc(String doc) {
         this.doc = doc;
         return this;
@@ -23,7 +24,8 @@ public class IndexDoc {
      * Contains metadata related to the search hit, has information about document created_at/updated_at as well.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("metadata")public DocMeta metadata;
+    @JsonProperty("metadata")
+    public DocMeta metadata;
     public IndexDoc withMetadata(DocMeta metadata) {
         this.metadata = metadata;
         return this;

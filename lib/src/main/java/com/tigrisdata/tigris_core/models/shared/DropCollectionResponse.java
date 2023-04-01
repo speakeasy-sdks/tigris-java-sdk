@@ -16,7 +16,8 @@ public class DropCollectionResponse {
      * A detailed response message.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("message")public String message;
+    @JsonProperty("message")
+    public String message;
     public DropCollectionResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -26,7 +27,8 @@ public class DropCollectionResponse {
      * An enum with value set as "dropped".
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("status")public String status;
+    @JsonProperty("status")
+    public String status;
     public DropCollectionResponse withStatus(String status) {
         this.status = status;
         return this;

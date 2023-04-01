@@ -7,15 +7,30 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisDeleteBranchRequest {
-    public TigrisDeleteBranchPathParams pathParams;
-    public TigrisDeleteBranchRequest withPathParams(TigrisDeleteBranchPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> requestBody;
+    public TigrisDeleteBranchRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public java.util.Map<String, Object> request;
-    public TigrisDeleteBranchRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    /**
+     * Name of the database branch to delete. &lt;p&gt;&lt;/p&gt;**Note**: `main` branch cannot be deleted, use DeleteProject instead
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
+    public String branch;
+    public TigrisDeleteBranchRequest withBranch(String branch) {
+        this.branch = branch;
+        return this;
+    }
+    
+    /**
+     * Delete a database branch in this project
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisDeleteBranchRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

@@ -16,7 +16,8 @@ public class ListCachesResponse {
      * List of caches metadata
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("caches")public CacheMetadata[] caches;
+    @JsonProperty("caches")
+    public CacheMetadata[] caches;
     public ListCachesResponse withCaches(CacheMetadata[] caches) {
         this.caches = caches;
         return this;

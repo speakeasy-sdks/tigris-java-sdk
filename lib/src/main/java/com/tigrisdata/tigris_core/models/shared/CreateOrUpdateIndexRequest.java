@@ -13,7 +13,8 @@ public class CreateOrUpdateIndexRequest {
      * search index name.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public CreateOrUpdateIndexRequest withName(String name) {
         this.name = name;
         return this;
@@ -23,7 +24,8 @@ public class CreateOrUpdateIndexRequest {
      * If set to `true` then a conflict with HTTP Status code 409 is returned if an index already exists. The default is false.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("only_create")public Boolean onlyCreate;
+    @JsonProperty("only_create")
+    public Boolean onlyCreate;
     public CreateOrUpdateIndexRequest withOnlyCreate(Boolean onlyCreate) {
         this.onlyCreate = onlyCreate;
         return this;
@@ -33,17 +35,19 @@ public class CreateOrUpdateIndexRequest {
      * Tigris project name.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("project")public String project;
+    @JsonProperty("project")
+    public String project;
     public CreateOrUpdateIndexRequest withProject(String project) {
         this.project = project;
         return this;
     }
     
     /**
-     * schema of the index. The schema specifications are same as JSON schema specification defined <a href="https://json-schema.org/specification.html" title="here">here</a>.<p></p> Schema example: `{  "title": "ecommerce_index",  "description": "an ecommerce store search index",  "properties": {    "name": {      "description": "Name of the product",      "type": "string",      "maxLength": 128    },    "brand": {      "description": "Brand of the product",      "type": "string"    },    "price": {      "description": "Price of the product",      "type": "number"    }  } }`
+     * schema of the index. The schema specifications are same as JSON schema specification defined &lt;a href="https://json-schema.org/specification.html" title="here"&gt;here&lt;/a&gt;.&lt;p&gt;&lt;/p&gt; Schema example: `{  "title": "ecommerce_index",  "description": "an ecommerce store search index",  "properties": {    "name": {      "description": "Name of the product",      "type": "string",      "maxLength": 128    },    "brand": {      "description": "Brand of the product",      "type": "string"    },    "price": {      "description": "Price of the product",      "type": "number"    }  } }`
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("schema")public String schema;
+    @JsonProperty("schema")
+    public String schema;
     public CreateOrUpdateIndexRequest withSchema(String schema) {
         this.schema = schema;
         return this;

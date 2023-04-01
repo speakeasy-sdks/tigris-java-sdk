@@ -16,7 +16,8 @@ public class RotateAppKeyRequest {
      * app key id
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public RotateAppKeyRequest withId(String id) {
         this.id = id;
         return this;
@@ -26,7 +27,8 @@ public class RotateAppKeyRequest {
      * project name
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("project")public String project;
+    @JsonProperty("project")
+    public String project;
     public RotateAppKeyRequest withProject(String project) {
         this.project = project;
         return this;

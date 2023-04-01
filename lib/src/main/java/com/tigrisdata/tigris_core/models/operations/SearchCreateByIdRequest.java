@@ -7,15 +7,40 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class SearchCreateByIdRequest {
-    public SearchCreateByIdPathParams pathParams;
-    public SearchCreateByIdRequest withPathParams(SearchCreateByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.CreateByIdRequest createByIdRequest;
+    public SearchCreateByIdRequest withCreateByIdRequest(com.tigrisdata.tigris_core.models.shared.CreateByIdRequest createByIdRequest) {
+        this.createByIdRequest = createByIdRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.CreateByIdRequest request;
-    public SearchCreateByIdRequest withRequest(com.tigrisdata.tigris_core.models.shared.CreateByIdRequest request) {
-        this.request = request;
+    /**
+     * document id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public SearchCreateByIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * index name where to create document.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public String index;
+    public SearchCreateByIdRequest withIndex(String index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * Tigris project name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public SearchCreateByIdRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

@@ -7,15 +7,40 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class CacheDelRequest {
-    public CacheDelPathParams pathParams;
-    public CacheDelRequest withPathParams(CacheDelPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> requestBody;
+    public CacheDelRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public java.util.Map<String, Object> request;
-    public CacheDelRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    /**
+     * cache key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public CacheDelRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * cache name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public CacheDelRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Tigris project name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public CacheDelRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

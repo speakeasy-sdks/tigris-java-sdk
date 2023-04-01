@@ -7,15 +7,30 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisDescribeCollectionRequest {
-    public TigrisDescribeCollectionPathParams pathParams;
-    public TigrisDescribeCollectionRequest withPathParams(TigrisDescribeCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.DescribeCollectionRequest describeCollectionRequest;
+    public TigrisDescribeCollectionRequest withDescribeCollectionRequest(com.tigrisdata.tigris_core.models.shared.DescribeCollectionRequest describeCollectionRequest) {
+        this.describeCollectionRequest = describeCollectionRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.DescribeCollectionRequest request;
-    public TigrisDescribeCollectionRequest withRequest(com.tigrisdata.tigris_core.models.shared.DescribeCollectionRequest request) {
-        this.request = request;
+    /**
+     * Name of the collection.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
+    public String collection;
+    public TigrisDescribeCollectionRequest withCollection(String collection) {
+        this.collection = collection;
+        return this;
+    }
+    
+    /**
+     * Project name whose db is under target to get description of its collection.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisDescribeCollectionRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

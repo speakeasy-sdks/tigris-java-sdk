@@ -16,7 +16,8 @@ public class GetSetResponse {
      * A detailed response message.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("message")public String message;
+    @JsonProperty("message")
+    public String message;
     public GetSetResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -26,7 +27,8 @@ public class GetSetResponse {
      * An old value if exists
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("old_value")public String oldValue;
+    @JsonProperty("old_value")
+    public String oldValue;
     public GetSetResponse withOldValue(String oldValue) {
         this.oldValue = oldValue;
         return this;
@@ -36,7 +38,8 @@ public class GetSetResponse {
      * An enum with value set as "set"
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("status")public String status;
+    @JsonProperty("status")
+    public String status;
     public GetSetResponse withStatus(String status) {
         this.status = status;
         return this;

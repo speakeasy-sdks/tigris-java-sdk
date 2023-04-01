@@ -13,7 +13,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GetRTChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("channel")public String channel;
+    @JsonProperty("channel")
+    public String channel;
     public GetRTChannelResponse withChannel(String channel) {
         this.channel = channel;
         return this;

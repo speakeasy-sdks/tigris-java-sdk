@@ -13,7 +13,8 @@ public class ReadResponse {
      * Object containing the collection document.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("data")public java.util.Map<String, Object> data;
+    @JsonProperty("data")
+    public java.util.Map<String, Object> data;
     public ReadResponse withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -23,7 +24,8 @@ public class ReadResponse {
      * Has metadata related to the documents stored.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("metadata")public ResponseMetadata metadata;
+    @JsonProperty("metadata")
+    public ResponseMetadata metadata;
     public ReadResponse withMetadata(ResponseMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -33,7 +35,8 @@ public class ReadResponse {
      * An internal key, used for pagination.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("resume_token")public String resumeToken;
+    @JsonProperty("resume_token")
+    public String resumeToken;
     public ReadResponse withResumeToken(String resumeToken) {
         this.resumeToken = resumeToken;
         return this;

@@ -7,15 +7,20 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisUpdateAppKeyRequest {
-    public TigrisUpdateAppKeyPathParams pathParams;
-    public TigrisUpdateAppKeyRequest withPathParams(TigrisUpdateAppKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.UpdateAppKeyRequest updateAppKeyRequest;
+    public TigrisUpdateAppKeyRequest withUpdateAppKeyRequest(com.tigrisdata.tigris_core.models.shared.UpdateAppKeyRequest updateAppKeyRequest) {
+        this.updateAppKeyRequest = updateAppKeyRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.UpdateAppKeyRequest request;
-    public TigrisUpdateAppKeyRequest withRequest(com.tigrisdata.tigris_core.models.shared.UpdateAppKeyRequest request) {
-        this.request = request;
+    /**
+     * project name -  this is not allowed to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisUpdateAppKeyRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

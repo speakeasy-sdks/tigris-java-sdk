@@ -16,7 +16,8 @@ public class GetAccessTokenResponse {
      * An Access Token.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("access_token")public String accessToken;
+    @JsonProperty("access_token")
+    public String accessToken;
     public GetAccessTokenResponse withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -26,7 +27,8 @@ public class GetAccessTokenResponse {
      * Access token expiration timeout in seconds.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("expires_in")public Integer expiresIn;
+    @JsonProperty("expires_in")
+    public Integer expiresIn;
     public GetAccessTokenResponse withExpiresIn(Integer expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -36,7 +38,8 @@ public class GetAccessTokenResponse {
      * The Refresh Token.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("refresh_token")public String refreshToken;
+    @JsonProperty("refresh_token")
+    public String refreshToken;
     public GetAccessTokenResponse withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;

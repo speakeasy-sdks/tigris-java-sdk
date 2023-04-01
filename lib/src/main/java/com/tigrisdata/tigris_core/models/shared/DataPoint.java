@@ -13,14 +13,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class DataPoint {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("timestamp")public Long timestamp;
+    @JsonProperty("timestamp")
+    public Long timestamp;
     public DataPoint withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("value")public Double value;
+    @JsonProperty("value")
+    public Double value;
     public DataPoint withValue(Double value) {
         this.value = value;
         return this;

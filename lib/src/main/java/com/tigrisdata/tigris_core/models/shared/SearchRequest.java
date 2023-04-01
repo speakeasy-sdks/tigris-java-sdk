@@ -13,7 +13,8 @@ public class SearchRequest {
      * Optionally specify a database branch name to perform operation on
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("branch")public String branch;
+    @JsonProperty("branch")
+    public String branch;
     public SearchRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -23,7 +24,8 @@ public class SearchRequest {
      * A collation allows you to specify string comparison rules. Default is case-sensitive, to override it you can set this option to 'ci' that will apply to all the text fields in the filters.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("collation")public Collation collation;
+    @JsonProperty("collation")
+    public Collation collation;
     public SearchRequest withCollation(Collation collation) {
         this.collation = collation;
         return this;
@@ -33,7 +35,8 @@ public class SearchRequest {
      * Array of document field names to exclude from results. `include_fields`, if specified, takes precedence over `exclude_fields`.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("exclude_fields")public String[] excludeFields;
+    @JsonProperty("exclude_fields")
+    public String[] excludeFields;
     public SearchRequest withExcludeFields(String[] excludeFields) {
         this.excludeFields = excludeFields;
         return this;
@@ -43,14 +46,16 @@ public class SearchRequest {
      * Facet query to aggregate results on given fields. The field name for the facet search can be passed like this `{"brand": { "size": 10 }}` where the size controls the total facets for this field.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("facet")public java.util.Map<String, Object> facet;
+    @JsonProperty("facet")
+    public java.util.Map<String, Object> facet;
     public SearchRequest withFacet(java.util.Map<String, Object> facet) {
         this.facet = facet;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("fields")public java.util.Map<String, Object> fields;
+    @JsonProperty("fields")
+    public java.util.Map<String, Object> fields;
     public SearchRequest withFields(java.util.Map<String, Object> fields) {
         this.fields = fields;
         return this;
@@ -60,7 +65,8 @@ public class SearchRequest {
      * Filter stacks on top of query results to further narrow down the results. Similar to `ReadRequest.filter`
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("filter")public java.util.Map<String, Object> filter;
+    @JsonProperty("filter")
+    public java.util.Map<String, Object> filter;
     public SearchRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
         return this;
@@ -70,7 +76,8 @@ public class SearchRequest {
      * Array of document field names to include in results. By default, all fields are included.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("include_fields")public String[] includeFields;
+    @JsonProperty("include_fields")
+    public String[] includeFields;
     public SearchRequest withIncludeFields(String[] includeFields) {
         this.includeFields = includeFields;
         return this;
@@ -80,7 +87,8 @@ public class SearchRequest {
      * Optionally can specify the page to retrieve. If page is set then only hits for this page is returned
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("page")public Integer page;
+    @JsonProperty("page")
+    public Integer page;
     public SearchRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -90,7 +98,8 @@ public class SearchRequest {
      * Optionally can set the number of hits to be returned per page, default is 20.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("page_size")public Integer pageSize;
+    @JsonProperty("page_size")
+    public Integer pageSize;
     public SearchRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -100,7 +109,8 @@ public class SearchRequest {
      * Query string for searching across text fields
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("q")public String q;
+    @JsonProperty("q")
+    public String q;
     public SearchRequest withQ(String q) {
         this.q = q;
         return this;
@@ -110,7 +120,8 @@ public class SearchRequest {
      * Array of fields to project search query against
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("search_fields")public String[] searchFields;
+    @JsonProperty("search_fields")
+    public String[] searchFields;
     public SearchRequest withSearchFields(String[] searchFields) {
         this.searchFields = searchFields;
         return this;
@@ -120,7 +131,8 @@ public class SearchRequest {
      * Array of fields and corresponding sort orders to order the results `[{ "salary": "$desc" }]`
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("sort")public java.util.Map<String, Object> sort;
+    @JsonProperty("sort")
+    public java.util.Map<String, Object> sort;
     public SearchRequest withSort(java.util.Map<String, Object> sort) {
         this.sort = sort;
         return this;

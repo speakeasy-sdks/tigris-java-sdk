@@ -16,7 +16,8 @@ public class BeginTransactionRequest {
      * Optionally specify a project branch name to perform operation on
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("branch")public String branch;
+    @JsonProperty("branch")
+    public String branch;
     public BeginTransactionRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -26,7 +27,8 @@ public class BeginTransactionRequest {
      * Options that can be used to modify the transaction semantics.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("options")public java.util.Map<String, Object> options;
+    @JsonProperty("options")
+    public java.util.Map<String, Object> options;
     public BeginTransactionRequest withOptions(java.util.Map<String, Object> options) {
         this.options = options;
         return this;

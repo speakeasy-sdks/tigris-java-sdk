@@ -13,7 +13,8 @@ public class DescribeCollectionRequest {
      * Optionally specify a database branch name to perform operation on
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("branch")public String branch;
+    @JsonProperty("branch")
+    public String branch;
     public DescribeCollectionRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -23,7 +24,8 @@ public class DescribeCollectionRequest {
      * Name of the collection.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("collection")public String collection;
+    @JsonProperty("collection")
+    public String collection;
     public DescribeCollectionRequest withCollection(String collection) {
         this.collection = collection;
         return this;
@@ -33,7 +35,8 @@ public class DescribeCollectionRequest {
      * Collection requests modifying options.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("options")public java.util.Map<String, Object> options;
+    @JsonProperty("options")
+    public java.util.Map<String, Object> options;
     public DescribeCollectionRequest withOptions(java.util.Map<String, Object> options) {
         this.options = options;
         return this;
@@ -43,7 +46,8 @@ public class DescribeCollectionRequest {
      * Project name whose db is under target to get description of its collection.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("project")public String project;
+    @JsonProperty("project")
+    public String project;
     public DescribeCollectionRequest withProject(String project) {
         this.project = project;
         return this;
@@ -53,7 +57,8 @@ public class DescribeCollectionRequest {
      * Return schema in the requested format. Format can be JSON, Go, TypeScript, Java. Default is JSON.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("schema_format")public String schemaFormat;
+    @JsonProperty("schema_format")
+    public String schemaFormat;
     public DescribeCollectionRequest withSchemaFormat(String schemaFormat) {
         this.schemaFormat = schemaFormat;
         return this;

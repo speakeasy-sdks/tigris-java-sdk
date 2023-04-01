@@ -7,15 +7,30 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class SearchCreateOrReplaceRequest {
-    public SearchCreateOrReplacePathParams pathParams;
-    public SearchCreateOrReplaceRequest withPathParams(SearchCreateOrReplacePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.CreateOrReplaceDocumentRequest createOrReplaceDocumentRequest;
+    public SearchCreateOrReplaceRequest withCreateOrReplaceDocumentRequest(com.tigrisdata.tigris_core.models.shared.CreateOrReplaceDocumentRequest createOrReplaceDocumentRequest) {
+        this.createOrReplaceDocumentRequest = createOrReplaceDocumentRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.CreateOrReplaceDocumentRequest request;
-    public SearchCreateOrReplaceRequest withRequest(com.tigrisdata.tigris_core.models.shared.CreateOrReplaceDocumentRequest request) {
-        this.request = request;
+    /**
+     * index name where to create documents.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public String index;
+    public SearchCreateOrReplaceRequest withIndex(String index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * Project name whose db is under target to insert documents.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public SearchCreateOrReplaceRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

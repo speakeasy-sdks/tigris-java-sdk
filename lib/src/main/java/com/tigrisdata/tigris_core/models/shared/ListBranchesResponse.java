@@ -16,7 +16,8 @@ public class ListBranchesResponse {
      * List of all the branches in this database
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("branches")public BranchInfo[] branches;
+    @JsonProperty("branches")
+    public BranchInfo[] branches;
     public ListBranchesResponse withBranches(BranchInfo[] branches) {
         this.branches = branches;
         return this;

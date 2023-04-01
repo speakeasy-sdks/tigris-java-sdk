@@ -4,18 +4,46 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
-
+import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class SearchListIndexesRequest {
-    public SearchListIndexesPathParams pathParams;
-    public SearchListIndexesRequest withPathParams(SearchListIndexesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Applicable only in case index is backed by Tigris collection. This is the database branch for the above collection. For primary database it can be omitted or "main" can be passed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter.branch")
+    public String filterBranch;
+    public SearchListIndexesRequest withFilterBranch(String filterBranch) {
+        this.filterBranch = filterBranch;
         return this;
     }
     
-    public SearchListIndexesQueryParams queryParams;
-    public SearchListIndexesRequest withQueryParams(SearchListIndexesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Applicable only in case index is backed by Tigris collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter.collection")
+    public String filterCollection;
+    public SearchListIndexesRequest withFilterCollection(String filterCollection) {
+        this.filterCollection = filterCollection;
+        return this;
+    }
+    
+    /**
+     * An index can be either managed by user explicitly then the type is set as "user" or the index is backed by Tigris collection. In case it is backed by Tigris collection the type is "tigris".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter.type")
+    public String filterType;
+    public SearchListIndexesRequest withFilterType(String filterType) {
+        this.filterType = filterType;
+        return this;
+    }
+    
+    /**
+     * Tigris project name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public SearchListIndexesRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

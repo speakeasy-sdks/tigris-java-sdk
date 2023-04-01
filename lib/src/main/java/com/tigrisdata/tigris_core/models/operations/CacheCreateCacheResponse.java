@@ -7,6 +7,7 @@ package com.tigrisdata.tigris_core.models.operations;
 import java.net.http.HttpResponse;
 
 public class CacheCreateCacheResponse {
+    
     public String contentType;
     public CacheCreateCacheResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,6 +17,7 @@ public class CacheCreateCacheResponse {
     /**
      * OK
      */
+    
     public com.tigrisdata.tigris_core.models.shared.CreateCacheResponse createCacheResponse;
     public CacheCreateCacheResponse withCreateCacheResponse(com.tigrisdata.tigris_core.models.shared.CreateCacheResponse createCacheResponse) {
         this.createCacheResponse = createCacheResponse;
@@ -25,17 +27,20 @@ public class CacheCreateCacheResponse {
     /**
      * Default error response
      */
+    
     public com.tigrisdata.tigris_core.models.shared.Status status;
     public CacheCreateCacheResponse withStatus(com.tigrisdata.tigris_core.models.shared.Status status) {
         this.status = status;
         return this;
     }
     
+    
     public Integer statusCode;
     public CacheCreateCacheResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public CacheCreateCacheResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

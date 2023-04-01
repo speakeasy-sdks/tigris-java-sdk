@@ -16,7 +16,8 @@ public class CommitTransactionResponse {
      * Status of commit transaction operation.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("status")public String status;
+    @JsonProperty("status")
+    public String status;
     public CommitTransactionResponse withStatus(String status) {
         this.status = status;
         return this;

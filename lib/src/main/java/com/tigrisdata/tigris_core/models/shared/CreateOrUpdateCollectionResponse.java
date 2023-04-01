@@ -16,7 +16,8 @@ public class CreateOrUpdateCollectionResponse {
      * A detailed response message.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("message")public String message;
+    @JsonProperty("message")
+    public String message;
     public CreateOrUpdateCollectionResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -26,7 +27,8 @@ public class CreateOrUpdateCollectionResponse {
      * An enum with value set as "created" or "updated"
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("status")public String status;
+    @JsonProperty("status")
+    public String status;
     public CreateOrUpdateCollectionResponse withStatus(String status) {
         this.status = status;
         return this;

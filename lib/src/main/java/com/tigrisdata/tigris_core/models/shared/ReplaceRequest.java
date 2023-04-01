@@ -13,7 +13,8 @@ public class ReplaceRequest {
      * Optionally specify a database branch name to perform operation on
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("branch")public String branch;
+    @JsonProperty("branch")
+    public String branch;
     public ReplaceRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -23,7 +24,8 @@ public class ReplaceRequest {
      * Array of documents to be replaced. Each document is a JSON object.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("documents")public java.util.Map<String, Object>[] documents;
+    @JsonProperty("documents")
+    public java.util.Map<String, Object>[] documents;
     public ReplaceRequest withDocuments(java.util.Map<String, Object>[] documents) {
         this.documents = documents;
         return this;
@@ -33,7 +35,8 @@ public class ReplaceRequest {
      * Additional options for replace requests.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("options")public ReplaceRequestOptions options;
+    @JsonProperty("options")
+    public ReplaceRequestOptions options;
     public ReplaceRequest withOptions(ReplaceRequestOptions options) {
         this.options = options;
         return this;

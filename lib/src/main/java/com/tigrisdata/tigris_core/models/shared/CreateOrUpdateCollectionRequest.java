@@ -13,7 +13,8 @@ public class CreateOrUpdateCollectionRequest {
      * Optionally specify a database branch name to perform operation on
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("branch")public String branch;
+    @JsonProperty("branch")
+    public String branch;
     public CreateOrUpdateCollectionRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -23,7 +24,8 @@ public class CreateOrUpdateCollectionRequest {
      * If set to `true` then the update schema request to the collection will fail by returning a conflict with HTTP Status code 409. The default is false.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("only_create")public Boolean onlyCreate;
+    @JsonProperty("only_create")
+    public Boolean onlyCreate;
     public CreateOrUpdateCollectionRequest withOnlyCreate(Boolean onlyCreate) {
         this.onlyCreate = onlyCreate;
         return this;
@@ -33,17 +35,19 @@ public class CreateOrUpdateCollectionRequest {
      * Collection requests modifying options.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("options")public java.util.Map<String, Object> options;
+    @JsonProperty("options")
+    public java.util.Map<String, Object> options;
     public CreateOrUpdateCollectionRequest withOptions(java.util.Map<String, Object> options) {
         this.options = options;
         return this;
     }
     
     /**
-     * The schema specifications are same as JSON schema specification defined <a href="https://json-schema.org/specification.html" title="here">here</a>.<p></p> Schema example: `{  "title": "user",  "description": "Collection of documents with details of users",  "properties": {    "id": {      "description": "A unique identifier for the user",      "type": "integer"    },    "name": {      "description": "Name of the user",      "type": "string",      "maxLength": 128    },    "balance": {      "description": "User account balance",      "type": "number"    }  },  "primary_key": ["id"] }`
+     * The schema specifications are same as JSON schema specification defined &lt;a href="https://json-schema.org/specification.html" title="here"&gt;here&lt;/a&gt;.&lt;p&gt;&lt;/p&gt; Schema example: `{  "title": "user",  "description": "Collection of documents with details of users",  "properties": {    "id": {      "description": "A unique identifier for the user",      "type": "integer"    },    "name": {      "description": "Name of the user",      "type": "string",      "maxLength": 128    },    "balance": {      "description": "User account balance",      "type": "number"    }  },  "primary_key": ["id"] }`
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("schema")public java.util.Map<String, Object> schema;
+    @JsonProperty("schema")
+    public java.util.Map<String, Object> schema;
     public CreateOrUpdateCollectionRequest withSchema(java.util.Map<String, Object> schema) {
         this.schema = schema;
         return this;

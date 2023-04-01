@@ -16,7 +16,8 @@ public class ListProjectsResponse {
      * List of the projects.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("projects")public ProjectInfo[] projects;
+    @JsonProperty("projects")
+    public ProjectInfo[] projects;
     public ListProjectsResponse withProjects(ProjectInfo[] projects) {
         this.projects = projects;
         return this;

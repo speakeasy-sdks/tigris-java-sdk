@@ -13,7 +13,8 @@ public class GetSetRequest {
      * free form byte[] value
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("value")public String value;
+    @JsonProperty("value")
+    public String value;
     public GetSetRequest withValue(String value) {
         this.value = value;
         return this;

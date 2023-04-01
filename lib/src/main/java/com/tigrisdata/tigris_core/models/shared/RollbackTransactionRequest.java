@@ -16,7 +16,8 @@ public class RollbackTransactionRequest {
      * Optionally specify a database branch name to perform operation on
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("branch")public String branch;
+    @JsonProperty("branch")
+    public String branch;
     public RollbackTransactionRequest withBranch(String branch) {
         this.branch = branch;
         return this;

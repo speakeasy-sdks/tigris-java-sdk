@@ -16,7 +16,8 @@ public class StreamingSearchResponse {
      * The Error type defines a logical error model
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("error")public Error error;
+    @JsonProperty("error")
+    public Error error;
     public StreamingSearchResponse withError(Error error) {
         this.error = error;
         return this;
@@ -26,7 +27,8 @@ public class StreamingSearchResponse {
      * Response struct for search
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("result")public SearchResponse result;
+    @JsonProperty("result")
+    public SearchResponse result;
     public StreamingSearchResponse withResult(SearchResponse result) {
         this.result = result;
         return this;

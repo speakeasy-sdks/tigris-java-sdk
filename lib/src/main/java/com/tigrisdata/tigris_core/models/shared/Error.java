@@ -16,7 +16,8 @@ public class Error {
      * The status code is a short, machine parsable string, which uniquely identifies the error type. Tigris to HTTP code mapping [here](/reference/http-code)
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("code")public ErrorCodeEnum code;
+    @JsonProperty("code")
+    public ErrorCodeEnum code;
     public Error withCode(ErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -26,7 +27,8 @@ public class Error {
      * A developer-facing descriptive error message
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("message")public String message;
+    @JsonProperty("message")
+    public String message;
     public Error withMessage(String message) {
         this.message = message;
         return this;

@@ -13,17 +13,19 @@ public class DeleteRequest {
      * Optionally specify a database branch name to perform operation on
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("branch")public String branch;
+    @JsonProperty("branch")
+    public String branch;
     public DeleteRequest withBranch(String branch) {
         this.branch = branch;
         return this;
     }
     
     /**
-     * Delete documents which matching specified filter. A filter can simply be key, value where key is the field name and value would be the value for this field. Or a filter can be logical where two or more fields can be logically joined using $or and $and. A few examples of filter: <li> To delete a user document where the id has a value 1: ```{"id": 1 }``` <li> To delete all the user documents where the key "id" has a value 1 or 2 or 3: `{"$or": [{"id": 1}, {"id": 2}, {"id": 3}]}`
+     * Delete documents which matching specified filter. A filter can simply be key, value where key is the field name and value would be the value for this field. Or a filter can be logical where two or more fields can be logically joined using $or and $and. A few examples of filter: &lt;li&gt; To delete a user document where the id has a value 1: ```{"id": 1 }``` &lt;li&gt; To delete all the user documents where the key "id" has a value 1 or 2 or 3: `{"$or": [{"id": 1}, {"id": 2}, {"id": 3}]}`
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("filter")public java.util.Map<String, Object> filter;
+    @JsonProperty("filter")
+    public java.util.Map<String, Object> filter;
     public DeleteRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
         return this;
@@ -33,7 +35,8 @@ public class DeleteRequest {
      * Additional options for deleted requests.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("options")public DeleteRequestOptions options;
+    @JsonProperty("options")
+    public DeleteRequestOptions options;
     public DeleteRequest withOptions(DeleteRequestOptions options) {
         this.options = options;
         return this;

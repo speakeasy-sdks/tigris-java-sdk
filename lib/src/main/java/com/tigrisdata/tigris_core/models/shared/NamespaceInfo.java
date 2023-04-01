@@ -13,7 +13,8 @@ public class NamespaceInfo {
      * The unique namespace code.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("code")public Integer code;
+    @JsonProperty("code")
+    public Integer code;
     public NamespaceInfo withCode(Integer code) {
         this.code = code;
         return this;
@@ -23,7 +24,8 @@ public class NamespaceInfo {
      * The namespace unique id.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public NamespaceInfo withId(String id) {
         this.id = id;
         return this;
@@ -33,7 +35,8 @@ public class NamespaceInfo {
      * The namespace display name.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public NamespaceInfo withName(String name) {
         this.name = name;
         return this;

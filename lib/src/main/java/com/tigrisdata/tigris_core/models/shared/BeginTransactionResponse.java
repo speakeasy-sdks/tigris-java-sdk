@@ -16,7 +16,8 @@ public class BeginTransactionResponse {
      * Contains ID which uniquely identifies transaction This context is returned by BeginTransaction request and should be passed in the metadata (headers) of subsequent requests in order to run them in the context of the same transaction.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("tx_ctx")public TransactionCtx txCtx;
+    @JsonProperty("tx_ctx")
+    public TransactionCtx txCtx;
     public BeginTransactionResponse withTxCtx(TransactionCtx txCtx) {
         this.txCtx = txCtx;
         return this;

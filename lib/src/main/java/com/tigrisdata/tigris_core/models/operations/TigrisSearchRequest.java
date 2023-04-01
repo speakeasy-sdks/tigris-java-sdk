@@ -7,15 +7,30 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisSearchRequest {
-    public TigrisSearchPathParams pathParams;
-    public TigrisSearchRequest withPathParams(TigrisSearchPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.SearchRequest searchRequest;
+    public TigrisSearchRequest withSearchRequest(com.tigrisdata.tigris_core.models.shared.SearchRequest searchRequest) {
+        this.searchRequest = searchRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.SearchRequest request;
-    public TigrisSearchRequest withRequest(com.tigrisdata.tigris_core.models.shared.SearchRequest request) {
-        this.request = request;
+    /**
+     * Collection name to search documents from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
+    public String collection;
+    public TigrisSearchRequest withCollection(String collection) {
+        this.collection = collection;
+        return this;
+    }
+    
+    /**
+     * Project name whose db is under target to search documents from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisSearchRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

@@ -4,18 +4,62 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
-
+import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class RealtimeReadMessagesRequest {
-    public RealtimeReadMessagesPathParams pathParams;
-    public RealtimeReadMessagesRequest withPathParams(RealtimeReadMessagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel")
+    public String channel;
+    public RealtimeReadMessagesRequest withChannel(String channel) {
+        this.channel = channel;
         return this;
     }
     
-    public RealtimeReadMessagesQueryParams queryParams;
-    public RealtimeReadMessagesRequest withQueryParams(RealtimeReadMessagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public String end;
+    public RealtimeReadMessagesRequest withEnd(String end) {
+        this.end = end;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event")
+    public String event;
+    public RealtimeReadMessagesRequest withEvent(String event) {
+        this.event = event;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public RealtimeReadMessagesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RealtimeReadMessagesRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=session_id")
+    public String sessionId;
+    public RealtimeReadMessagesRequest withSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=socket_id")
+    public String socketId;
+    public RealtimeReadMessagesRequest withSocketId(String socketId) {
+        this.socketId = socketId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public String start;
+    public RealtimeReadMessagesRequest withStart(String start) {
+        this.start = start;
         return this;
     }
     

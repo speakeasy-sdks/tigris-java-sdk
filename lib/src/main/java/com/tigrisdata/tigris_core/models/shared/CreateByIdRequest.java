@@ -13,7 +13,8 @@ public class CreateByIdRequest {
      * A JSON document that needs to be indexed.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("document")public String document;
+    @JsonProperty("document")
+    public String document;
     public CreateByIdRequest withDocument(String document) {
         this.document = document;
         return this;
@@ -23,7 +24,8 @@ public class CreateByIdRequest {
      * document id.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public CreateByIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -33,7 +35,8 @@ public class CreateByIdRequest {
      * index name where to create document.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("index")public String index;
+    @JsonProperty("index")
+    public String index;
     public CreateByIdRequest withIndex(String index) {
         this.index = index;
         return this;
@@ -43,7 +46,8 @@ public class CreateByIdRequest {
      * Tigris project name.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("project")public String project;
+    @JsonProperty("project")
+    public String project;
     public CreateByIdRequest withProject(String project) {
         this.project = project;
         return this;

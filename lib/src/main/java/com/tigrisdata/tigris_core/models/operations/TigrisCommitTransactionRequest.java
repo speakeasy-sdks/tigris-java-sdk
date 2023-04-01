@@ -7,15 +7,20 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisCommitTransactionRequest {
-    public TigrisCommitTransactionPathParams pathParams;
-    public TigrisCommitTransactionRequest withPathParams(TigrisCommitTransactionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.CommitTransactionRequest commitTransactionRequest;
+    public TigrisCommitTransactionRequest withCommitTransactionRequest(com.tigrisdata.tigris_core.models.shared.CommitTransactionRequest commitTransactionRequest) {
+        this.commitTransactionRequest = commitTransactionRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.CommitTransactionRequest request;
-    public TigrisCommitTransactionRequest withRequest(com.tigrisdata.tigris_core.models.shared.CommitTransactionRequest request) {
-        this.request = request;
+    /**
+     * Project name whose DB this transaction belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisCommitTransactionRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

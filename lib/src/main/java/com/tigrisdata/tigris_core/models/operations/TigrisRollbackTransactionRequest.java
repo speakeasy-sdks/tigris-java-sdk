@@ -7,15 +7,20 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisRollbackTransactionRequest {
-    public TigrisRollbackTransactionPathParams pathParams;
-    public TigrisRollbackTransactionRequest withPathParams(TigrisRollbackTransactionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.RollbackTransactionRequest rollbackTransactionRequest;
+    public TigrisRollbackTransactionRequest withRollbackTransactionRequest(com.tigrisdata.tigris_core.models.shared.RollbackTransactionRequest rollbackTransactionRequest) {
+        this.rollbackTransactionRequest = rollbackTransactionRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.RollbackTransactionRequest request;
-    public TigrisRollbackTransactionRequest withRequest(com.tigrisdata.tigris_core.models.shared.RollbackTransactionRequest request) {
-        this.request = request;
+    /**
+     * Project name whose DB this transaction belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisRollbackTransactionRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

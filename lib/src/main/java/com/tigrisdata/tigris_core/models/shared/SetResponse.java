@@ -16,7 +16,8 @@ public class SetResponse {
      * A detailed response message.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("message")public String message;
+    @JsonProperty("message")
+    public String message;
     public SetResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -26,7 +27,8 @@ public class SetResponse {
      * An enum with value set as "set"
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("status")public String status;
+    @JsonProperty("status")
+    public String status;
     public SetResponse withStatus(String status) {
         this.status = status;
         return this;

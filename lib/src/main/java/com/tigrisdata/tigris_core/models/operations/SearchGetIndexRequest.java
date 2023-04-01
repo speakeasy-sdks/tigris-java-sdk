@@ -4,12 +4,26 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
-
+import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class SearchGetIndexRequest {
-    public SearchGetIndexPathParams pathParams;
-    public SearchGetIndexRequest withPathParams(SearchGetIndexPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * index name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public SearchGetIndexRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Tigris project name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public SearchGetIndexRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

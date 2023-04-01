@@ -13,7 +13,8 @@ public class UpdateDocumentRequest {
      * An array of documents. Each document should have "id" present which will be used by Tigris for updating the document.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("documents")public String[] documents;
+    @JsonProperty("documents")
+    public String[] documents;
     public UpdateDocumentRequest withDocuments(String[] documents) {
         this.documents = documents;
         return this;
@@ -23,7 +24,8 @@ public class UpdateDocumentRequest {
      * Index name where to create documents.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("index")public String index;
+    @JsonProperty("index")
+    public String index;
     public UpdateDocumentRequest withIndex(String index) {
         this.index = index;
         return this;
@@ -33,7 +35,8 @@ public class UpdateDocumentRequest {
      * Project name whose db is under target to insert documents.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("project")public String project;
+    @JsonProperty("project")
+    public String project;
     public UpdateDocumentRequest withProject(String project) {
         this.project = project;
         return this;

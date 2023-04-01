@@ -7,15 +7,30 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class SearchDeleteByQueryRequest {
-    public SearchDeleteByQueryPathParams pathParams;
-    public SearchDeleteByQueryRequest withPathParams(SearchDeleteByQueryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.DeleteByQueryRequest deleteByQueryRequest;
+    public SearchDeleteByQueryRequest withDeleteByQueryRequest(com.tigrisdata.tigris_core.models.shared.DeleteByQueryRequest deleteByQueryRequest) {
+        this.deleteByQueryRequest = deleteByQueryRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.DeleteByQueryRequest request;
-    public SearchDeleteByQueryRequest withRequest(com.tigrisdata.tigris_core.models.shared.DeleteByQueryRequest request) {
-        this.request = request;
+    /**
+     * The index name of the documents that needs deletion.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public String index;
+    public SearchDeleteByQueryRequest withIndex(String index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * The project name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public SearchDeleteByQueryRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

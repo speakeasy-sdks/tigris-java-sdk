@@ -16,7 +16,8 @@ public class DeleteAppKeyResponse {
      * status flag for delete operation
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("deleted")public Boolean deleted;
+    @JsonProperty("deleted")
+    public Boolean deleted;
     public DeleteAppKeyResponse withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;

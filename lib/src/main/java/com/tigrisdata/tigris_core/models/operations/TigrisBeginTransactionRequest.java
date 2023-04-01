@@ -7,15 +7,20 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisBeginTransactionRequest {
-    public TigrisBeginTransactionPathParams pathParams;
-    public TigrisBeginTransactionRequest withPathParams(TigrisBeginTransactionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.BeginTransactionRequest beginTransactionRequest;
+    public TigrisBeginTransactionRequest withBeginTransactionRequest(com.tigrisdata.tigris_core.models.shared.BeginTransactionRequest beginTransactionRequest) {
+        this.beginTransactionRequest = beginTransactionRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.BeginTransactionRequest request;
-    public TigrisBeginTransactionRequest withRequest(com.tigrisdata.tigris_core.models.shared.BeginTransactionRequest request) {
-        this.request = request;
+    /**
+     * Project name whose DB this transaction belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisBeginTransactionRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

@@ -7,15 +7,30 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisReadRequest {
-    public TigrisReadPathParams pathParams;
-    public TigrisReadRequest withPathParams(TigrisReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.tigrisdata.tigris_core.models.shared.ReadRequest readRequest;
+    public TigrisReadRequest withReadRequest(com.tigrisdata.tigris_core.models.shared.ReadRequest readRequest) {
+        this.readRequest = readRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.tigrisdata.tigris_core.models.shared.ReadRequest request;
-    public TigrisReadRequest withRequest(com.tigrisdata.tigris_core.models.shared.ReadRequest request) {
-        this.request = request;
+    /**
+     * Collection name to read documents from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
+    public String collection;
+    public TigrisReadRequest withCollection(String collection) {
+        this.collection = collection;
+        return this;
+    }
+    
+    /**
+     * Project name whose db is under target to read documents from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public TigrisReadRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

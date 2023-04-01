@@ -134,7 +134,7 @@ public class System {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageResponse observabilityQuotaUsage(com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageResponse observabilityQuotaUsage(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/observability/quota/usage");
         
@@ -187,7 +187,7 @@ public class System {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsResponse queryQuotaLimits(com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsResponse queryQuotaLimits(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/observability/quota/limits");
         
@@ -240,7 +240,7 @@ public class System {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsResponse queryTimeSeriesMetrics(com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsRequest request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsResponse queryTimeSeriesMetrics(com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/observability/metrics/timeseries/query");
         

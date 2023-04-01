@@ -16,7 +16,8 @@ public class RollbackTransactionResponse {
      * Status of rollback transaction operation.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("status")public String status;
+    @JsonProperty("status")
+    public String status;
     public RollbackTransactionResponse withStatus(String status) {
         this.status = status;
         return this;

@@ -16,7 +16,8 @@ public class DeleteRequestOptions {
      * A collation allows you to specify string comparison rules. Default is case-sensitive, to override it you can set this option to 'ci' that will apply to all the text fields in the filters.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("collation")public Collation collation;
+    @JsonProperty("collation")
+    public Collation collation;
     public DeleteRequestOptions withCollation(Collation collation) {
         this.collation = collation;
         return this;
@@ -26,7 +27,8 @@ public class DeleteRequestOptions {
      * Limit the number of documents to be deleted
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("limit")public Long limit;
+    @JsonProperty("limit")
+    public Long limit;
     public DeleteRequestOptions withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -36,7 +38,8 @@ public class DeleteRequestOptions {
      * Additional options to modify write requests.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("write_options")public java.util.Map<String, Object> writeOptions;
+    @JsonProperty("write_options")
+    public java.util.Map<String, Object> writeOptions;
     public DeleteRequestOptions withWriteOptions(java.util.Map<String, Object> writeOptions) {
         this.writeOptions = writeOptions;
         return this;

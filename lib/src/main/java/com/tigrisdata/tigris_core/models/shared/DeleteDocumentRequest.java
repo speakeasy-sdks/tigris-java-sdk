@@ -13,7 +13,8 @@ public class DeleteDocumentRequest {
      * A list of ids
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("ids")public String[] ids;
+    @JsonProperty("ids")
+    public String[] ids;
     public DeleteDocumentRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -23,7 +24,8 @@ public class DeleteDocumentRequest {
      * The index name of the documents that needs deletion.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("index")public String index;
+    @JsonProperty("index")
+    public String index;
     public DeleteDocumentRequest withIndex(String index) {
         this.index = index;
         return this;
@@ -33,7 +35,8 @@ public class DeleteDocumentRequest {
      * The project name.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("project")public String project;
+    @JsonProperty("project")
+    public String project;
     public DeleteDocumentRequest withProject(String project) {
         this.project = project;
         return this;

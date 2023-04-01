@@ -16,7 +16,8 @@ public class AdditionalFunction {
      * Rollup function aggregates the slices of metrics returned by original query and lets you operate on the slices using aggregator and constructs the bigger slice of your choice of interval (specified in seconds).
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("rollup")public RollupFunction rollup;
+    @JsonProperty("rollup")
+    public RollupFunction rollup;
     public AdditionalFunction withRollup(RollupFunction rollup) {
         this.rollup = rollup;
         return this;

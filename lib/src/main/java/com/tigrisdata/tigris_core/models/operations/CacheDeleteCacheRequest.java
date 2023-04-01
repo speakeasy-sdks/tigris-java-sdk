@@ -7,15 +7,30 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class CacheDeleteCacheRequest {
-    public CacheDeleteCachePathParams pathParams;
-    public CacheDeleteCacheRequest withPathParams(CacheDeleteCachePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> requestBody;
+    public CacheDeleteCacheRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public java.util.Map<String, Object> request;
-    public CacheDeleteCacheRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    /**
+     * cache name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public CacheDeleteCacheRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Tigris project name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public CacheDeleteCacheRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

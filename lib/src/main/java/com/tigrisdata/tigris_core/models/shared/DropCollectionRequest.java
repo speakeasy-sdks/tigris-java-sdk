@@ -13,7 +13,8 @@ public class DropCollectionRequest {
      * Optionally specify a project branch name to perform operation on
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("branch")public String branch;
+    @JsonProperty("branch")
+    public String branch;
     public DropCollectionRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -23,7 +24,8 @@ public class DropCollectionRequest {
      * Collection requests modifying options.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("options")public java.util.Map<String, Object> options;
+    @JsonProperty("options")
+    public java.util.Map<String, Object> options;
     public DropCollectionRequest withOptions(java.util.Map<String, Object> options) {
         this.options = options;
         return this;

@@ -13,7 +13,8 @@ public class SetRequest {
      * optional - ttl specific to this key in second
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("ex")public Long ex;
+    @JsonProperty("ex")
+    public Long ex;
     public SetRequest withEx(Long ex) {
         this.ex = ex;
         return this;
@@ -23,7 +24,8 @@ public class SetRequest {
      * set only if the key doesn't exist
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("nx")public Boolean nx;
+    @JsonProperty("nx")
+    public Boolean nx;
     public SetRequest withNx(Boolean nx) {
         this.nx = nx;
         return this;
@@ -33,7 +35,8 @@ public class SetRequest {
      * optional - ttl specific to this key in millisecond
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("px")public Long px;
+    @JsonProperty("px")
+    public Long px;
     public SetRequest withPx(Long px) {
         this.px = px;
         return this;
@@ -43,7 +46,8 @@ public class SetRequest {
      * free form byte[] value
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("value")public String value;
+    @JsonProperty("value")
+    public String value;
     public SetRequest withValue(String value) {
         this.value = value;
         return this;
@@ -53,7 +57,8 @@ public class SetRequest {
      * set only if the key exist
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("xx")public Boolean xx;
+    @JsonProperty("xx")
+    public Boolean xx;
     public SetRequest withXx(Boolean xx) {
         this.xx = xx;
         return this;

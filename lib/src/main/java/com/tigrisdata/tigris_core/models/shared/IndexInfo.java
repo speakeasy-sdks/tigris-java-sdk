@@ -13,7 +13,8 @@ public class IndexInfo {
      * Name of the index.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public IndexInfo withName(String name) {
         this.name = name;
         return this;
@@ -23,7 +24,8 @@ public class IndexInfo {
      * Schema of the index.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("schema")public String schema;
+    @JsonProperty("schema")
+    public String schema;
     public IndexInfo withSchema(String schema) {
         this.schema = schema;
         return this;

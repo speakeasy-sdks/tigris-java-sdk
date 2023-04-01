@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.tigrisdata.tigris_core:tigris-data:0.4.0'
+implementation 'com.tigrisdata.tigris_core:tigris-data:0.4.1'
 ```
 <!-- End SDK Installation -->
 
@@ -17,7 +17,6 @@ package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
 import com.tigrisdata.tigris_core.models.shared.Security;
-import com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyPathParams;
 import com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyRequest;
 import com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse;
 import com.tigrisdata.tigris_core.models.shared.DeleteAppKeyRequest;
@@ -27,20 +26,16 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    bearerAuth = new SchemeBearerAuth() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
-                    }};
+                    bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisDeleteAppKeyRequest req = new TigrisDeleteAppKeyRequest() {{
-                pathParams = new TigrisDeleteAppKeyPathParams() {{
-                    project = "unde";
+                deleteAppKeyRequest = new DeleteAppKeyRequest() {{
+                    id = "corrupti";
                 }};
-                request = new DeleteAppKeyRequest() {{
-                    id = "deserunt";
-                }};
-            }};            
+                project = "provident";
+            }}            
 
             TigrisDeleteAppKeyResponse res = sdk.appKey.delete(req);
 
@@ -54,7 +49,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### appKey

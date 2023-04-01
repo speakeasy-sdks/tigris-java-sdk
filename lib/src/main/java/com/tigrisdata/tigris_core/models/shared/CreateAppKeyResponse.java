@@ -16,7 +16,8 @@ public class CreateAppKeyResponse {
      * An user AppKey
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("created_app_key")public AppKey createdAppKey;
+    @JsonProperty("created_app_key")
+    public AppKey createdAppKey;
     public CreateAppKeyResponse withCreatedAppKey(AppKey createdAppKey) {
         this.createdAppKey = createdAppKey;
         return this;

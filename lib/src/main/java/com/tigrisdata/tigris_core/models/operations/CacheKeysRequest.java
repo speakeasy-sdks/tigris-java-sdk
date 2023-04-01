@@ -4,18 +4,56 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
-
+import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class CacheKeysRequest {
-    public CacheKeysPathParams pathParams;
-    public CacheKeysRequest withPathParams(CacheKeysPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * optional - count of keys to return a stream response line.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Long count;
+    public CacheKeysRequest withCount(Long count) {
+        this.count = count;
         return this;
     }
     
-    public CacheKeysQueryParams queryParams;
-    public CacheKeysRequest withQueryParams(CacheKeysQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * optional - cursor - skip this argument if no cursor is associated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public Long cursor;
+    public CacheKeysRequest withCursor(Long cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    /**
+     * cache name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public CacheKeysRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * optional key pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pattern")
+    public String pattern;
+    public CacheKeysRequest withPattern(String pattern) {
+        this.pattern = pattern;
+        return this;
+    }
+    
+    /**
+     * Tigris project name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public CacheKeysRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

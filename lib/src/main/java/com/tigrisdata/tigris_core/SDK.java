@@ -37,11 +37,11 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyHTTPClient;
  * 
  *   HTTP Code  | Tigris Code | Reason
  *   ----------------|-------------|---------
- *   400 - Bad Request | INVALID_ARGUMENT | The request was unacceptable, often due to missing a required parameter. <br>Examples: <li>Missing documents for write request</li><li>Collection or Database name is not following the allowed characters</li>
+ *   400 - Bad Request | INVALID_ARGUMENT | The request was unacceptable, often due to missing a required parameter. &lt;br&gt;Examples: &lt;li&gt;Missing documents for write request&lt;/li&gt;&lt;li&gt;Collection or Database name is not following the allowed characters&lt;/li&gt;
  *   401 - Unauthorized | UNAUTHENTICATED | No valid API key provided. Check that your `api_key` and `api_secret` are correct.
  *   403 - Forbidden | PERMISSION_DENIED | The API key doesn't have permissions to perform the request.
- *   404 - Not Found | NOT_FOUND | The requested resource doesn't exist. <br>Examples: <li>Database or Collection doesn't exists</li><li>Access Token missing in the request header</li>
- *   409 - Conflict | ALREADY_EXISTS | TThe request conflicts with another request (perhaps due to using the same idempotent key). <br>Examples: <li>Trying to insert document again for the primary key that already exists</li><li>Creating a database that already exists</li>
+ *   404 - Not Found | NOT_FOUND | The requested resource doesn't exist. &lt;br&gt;Examples: &lt;li&gt;Database or Collection doesn't exists&lt;/li&gt;&lt;li&gt;Access Token missing in the request header&lt;/li&gt;
+ *   409 - Conflict | ALREADY_EXISTS | TThe request conflicts with another request (perhaps due to using the same idempotent key). &lt;br&gt;Examples: &lt;li&gt;Trying to insert document again for the primary key that already exists&lt;/li&gt;&lt;li&gt;Creating a database that already exists&lt;/li&gt;
  *   429 - Too Many Requests | RESOURCE_EXHAUSTED | Too many requests hit the API too quickly. We recommend an exponential backoff of your requests.
  *   
  *   
@@ -64,7 +64,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyHTTPClient;
  * 
  * 
  * # Limitations
- * <li>Do not rely on case to distinguish between databases or collections names.</li> <li>Database Name and Collection Name cannot be empty and can only have the characters matches the regex: <code>^[a-zA-Z]+[a-zA-Z0-9_]+$</code>.</li> <li>Duplicate field names are not allowed. </li> <li>The maximum allowed document size is 100KB.</li> <li>The maximum allowed transaction size is 10MB.</li>
+ * &lt;li&gt;Do not rely on case to distinguish between databases or collections names.&lt;/li&gt; &lt;li&gt;Database Name and Collection Name cannot be empty and can only have the characters matches the regex: &lt;code&gt;^[a-zA-Z]+[a-zA-Z0-9_]+$&lt;/code&gt;.&lt;/li&gt; &lt;li&gt;Duplicate field names are not allowed. &lt;/li&gt; &lt;li&gt;The maximum allowed document size is 100KB.&lt;/li&gt; &lt;li&gt;The maximum allowed transaction size is 10MB.&lt;/li&gt;
  * 
  */
 public class SDK {
@@ -132,8 +132,8 @@ public class SDK {
 	private com.tigrisdata.tigris_core.models.shared.Security _security;
 	private String _serverUrl;
 	private String _language = "java";
-	private String _sdkVersion = "0.4.0";
-	private String _genVersion = "2.16.1";
+	private String _sdkVersion = "0.4.1";
+	private String _genVersion = "2.16.7";
 	/**
 	 * The Builder class allows the configuration of a new instance of the SDK.
 	 */

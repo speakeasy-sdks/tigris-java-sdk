@@ -16,7 +16,8 @@ public class CreateBranchResponse {
      * A detailed response message.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("message")public String message;
+    @JsonProperty("message")
+    public String message;
     public CreateBranchResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -26,7 +27,8 @@ public class CreateBranchResponse {
      * An enum with value set as "created".
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("status")public String status;
+    @JsonProperty("status")
+    public String status;
     public CreateBranchResponse withStatus(String status) {
         this.status = status;
         return this;

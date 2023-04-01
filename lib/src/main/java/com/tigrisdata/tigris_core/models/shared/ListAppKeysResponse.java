@@ -13,7 +13,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ListAppKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("app_keys")public AppKey[] appKeys;
+    @JsonProperty("app_keys")
+    public AppKey[] appKeys;
     public ListAppKeysResponse withAppKeys(AppKey[] appKeys) {
         this.appKeys = appKeys;
         return this;

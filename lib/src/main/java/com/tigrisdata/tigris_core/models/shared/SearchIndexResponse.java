@@ -13,21 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class SearchIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("facets")public java.util.Map<String, SearchFacet> facets;
+    @JsonProperty("facets")
+    public java.util.Map<String, SearchFacet> facets;
     public SearchIndexResponse withFacets(java.util.Map<String, SearchFacet> facets) {
         this.facets = facets;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("hits")public IndexDoc[] hits;
+    @JsonProperty("hits")
+    public IndexDoc[] hits;
     public SearchIndexResponse withHits(IndexDoc[] hits) {
         this.hits = hits;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("meta")public SearchMetadata meta;
+    @JsonProperty("meta")
+    public SearchMetadata meta;
     public SearchIndexResponse withMeta(SearchMetadata meta) {
         this.meta = meta;
         return this;

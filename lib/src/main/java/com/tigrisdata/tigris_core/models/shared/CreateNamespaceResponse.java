@@ -16,14 +16,16 @@ public class CreateNamespaceResponse {
      * A detailed response message.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("message")public String message;
+    @JsonProperty("message")
+    public String message;
     public CreateNamespaceResponse withMessage(String message) {
         this.message = message;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("namespace")public NamespaceInfo namespace;
+    @JsonProperty("namespace")
+    public NamespaceInfo namespace;
     public CreateNamespaceResponse withNamespace(NamespaceInfo namespace) {
         this.namespace = namespace;
         return this;
@@ -33,7 +35,8 @@ public class CreateNamespaceResponse {
      * An enum with value set as "created".
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("status")public String status;
+    @JsonProperty("status")
+    public String status;
     public CreateNamespaceResponse withStatus(String status) {
         this.status = status;
         return this;

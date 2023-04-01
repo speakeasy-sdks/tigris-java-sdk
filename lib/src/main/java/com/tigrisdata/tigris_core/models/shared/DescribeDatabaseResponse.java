@@ -16,7 +16,8 @@ public class DescribeDatabaseResponse {
      * List of all the branches in this database
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("branches")public String[] branches;
+    @JsonProperty("branches")
+    public String[] branches;
     public DescribeDatabaseResponse withBranches(String[] branches) {
         this.branches = branches;
         return this;
@@ -26,14 +27,16 @@ public class DescribeDatabaseResponse {
      * A detailed description about all the collections. The description returns collection metadata and the schema.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("collections")public CollectionDescription[] collections;
+    @JsonProperty("collections")
+    public CollectionDescription[] collections;
     public DescribeDatabaseResponse withCollections(CollectionDescription[] collections) {
         this.collections = collections;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("metadata")public java.util.Map<String, Object> metadata;
+    @JsonProperty("metadata")
+    public java.util.Map<String, Object> metadata;
     public DescribeDatabaseResponse withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -43,7 +46,8 @@ public class DescribeDatabaseResponse {
      * Sum of all the collections sizes present in this database
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("size")public Long size;
+    @JsonProperty("size")
+    public Long size;
     public DescribeDatabaseResponse withSize(Long size) {
         this.size = size;
         return this;
