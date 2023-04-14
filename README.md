@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.tigrisdata.tigris_core:tigris-data:0.4.1'
+implementation 'com.tigrisdata.tigris_core:tigris-data:0.5.0'
 ```
 <!-- End SDK Installation -->
 
@@ -32,9 +32,9 @@ public class Application {
 
             TigrisDeleteAppKeyRequest req = new TigrisDeleteAppKeyRequest() {{
                 deleteAppKeyRequest = new DeleteAppKeyRequest() {{
-                    id = "corrupti";
+                    id = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
                 }};
-                project = "provident";
+                project = "deserunt";
             }}            
 
             TigrisDeleteAppKeyResponse res = sdk.appKey.delete(req);
