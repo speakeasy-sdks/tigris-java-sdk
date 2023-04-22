@@ -34,4 +34,6 @@ public class DelResponse {
         return this;
     }
     
+
+    public DelResponse(){}
 }

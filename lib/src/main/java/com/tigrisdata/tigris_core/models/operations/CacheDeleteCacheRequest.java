@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class CacheDeleteCacheRequest {
@@ -34,4 +35,10 @@ public class CacheDeleteCacheRequest {
         return this;
     }
     
+
+    public CacheDeleteCacheRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("name") String name, @JsonProperty("project") String project) {
+    this.requestBody = requestBody;
+this.name = name;
+this.project = project;
+  }
 }

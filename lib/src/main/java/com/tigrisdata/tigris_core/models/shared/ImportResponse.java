@@ -45,4 +45,6 @@ public class ImportResponse {
         return this;
     }
     
+
+    public ImportResponse(){}
 }

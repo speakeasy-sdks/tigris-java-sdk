@@ -111,4 +111,6 @@ public class AppKey {
         return this;
     }
     
+
+    public AppKey(){}
 }

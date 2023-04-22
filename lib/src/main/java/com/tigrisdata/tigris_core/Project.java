@@ -60,12 +60,10 @@ public class Project {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectResponse(contentType, httpRes.statusCode()) {{
             createProjectResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,12 +111,10 @@ public class Project {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectResponse(contentType, httpRes.statusCode()) {{
             deleteProjectResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,12 +156,10 @@ public class Project {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisListProjectsResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisListProjectsResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisListProjectsResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisListProjectsResponse(contentType, httpRes.statusCode()) {{
             listProjectsResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

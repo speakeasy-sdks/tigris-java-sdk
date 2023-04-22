@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class RealtimeMessagesRequest {
@@ -28,4 +29,10 @@ public class RealtimeMessagesRequest {
         return this;
     }
     
+
+    public RealtimeMessagesRequest(@JsonProperty("MessagesRequest") com.tigrisdata.tigris_core.models.shared.MessagesRequest messagesRequest, @JsonProperty("channel") String channel, @JsonProperty("project") String project) {
+    this.messagesRequest = messagesRequest;
+this.channel = channel;
+this.project = project;
+  }
 }

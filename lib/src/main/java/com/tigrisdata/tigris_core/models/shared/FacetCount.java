@@ -25,4 +25,6 @@ public class FacetCount {
         return this;
     }
     
+
+    public FacetCount(){}
 }

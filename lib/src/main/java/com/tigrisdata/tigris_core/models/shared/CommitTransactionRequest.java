@@ -23,4 +23,6 @@ public class CommitTransactionRequest {
         return this;
     }
     
+
+    public CommitTransactionRequest(){}
 }

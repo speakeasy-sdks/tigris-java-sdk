@@ -64,12 +64,10 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.SearchCreateByIdResponse res = new com.tigrisdata.tigris_core.models.operations.SearchCreateByIdResponse() {{
+        com.tigrisdata.tigris_core.models.operations.SearchCreateByIdResponse res = new com.tigrisdata.tigris_core.models.operations.SearchCreateByIdResponse(contentType, httpRes.statusCode()) {{
             createByIdResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -121,12 +119,10 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.SearchCreateResponse res = new com.tigrisdata.tigris_core.models.operations.SearchCreateResponse() {{
+        com.tigrisdata.tigris_core.models.operations.SearchCreateResponse res = new com.tigrisdata.tigris_core.models.operations.SearchCreateResponse(contentType, httpRes.statusCode()) {{
             createDocumentResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,12 +172,10 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.SearchDeleteResponse res = new com.tigrisdata.tigris_core.models.operations.SearchDeleteResponse() {{
+        com.tigrisdata.tigris_core.models.operations.SearchDeleteResponse res = new com.tigrisdata.tigris_core.models.operations.SearchDeleteResponse(contentType, httpRes.statusCode()) {{
             deleteDocumentResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -228,12 +222,10 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexResponse res = new com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexResponse() {{
+        com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexResponse res = new com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexResponse(contentType, httpRes.statusCode()) {{
             deleteIndexResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -285,12 +277,10 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.SearchSearchResponse res = new com.tigrisdata.tigris_core.models.operations.SearchSearchResponse() {{
+        com.tigrisdata.tigris_core.models.operations.SearchSearchResponse res = new com.tigrisdata.tigris_core.models.operations.SearchSearchResponse(contentType, httpRes.statusCode()) {{
             searchIndexResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -340,12 +330,10 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.SearchGetResponse res = new com.tigrisdata.tigris_core.models.operations.SearchGetResponse() {{
+        com.tigrisdata.tigris_core.models.operations.SearchGetResponse res = new com.tigrisdata.tigris_core.models.operations.SearchGetResponse(contentType, httpRes.statusCode()) {{
             getDocumentResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,12 +375,10 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.SearchGetIndexResponse res = new com.tigrisdata.tigris_core.models.operations.SearchGetIndexResponse() {{
+        com.tigrisdata.tigris_core.models.operations.SearchGetIndexResponse res = new com.tigrisdata.tigris_core.models.operations.SearchGetIndexResponse(contentType, httpRes.statusCode()) {{
             getIndexResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,12 +426,10 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.SearchListIndexesResponse res = new com.tigrisdata.tigris_core.models.operations.SearchListIndexesResponse() {{
+        com.tigrisdata.tigris_core.models.operations.SearchListIndexesResponse res = new com.tigrisdata.tigris_core.models.operations.SearchListIndexesResponse(contentType, httpRes.statusCode()) {{
             listIndexesResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -494,12 +478,10 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryResponse res = new com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryResponse() {{
+        com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryResponse res = new com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryResponse(contentType, httpRes.statusCode()) {{
             deleteByQueryResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -550,12 +532,10 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceResponse res = new com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceResponse() {{
+        com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceResponse res = new com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceResponse(contentType, httpRes.statusCode()) {{
             createOrReplaceDocumentResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -606,12 +586,10 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.SearchUpdateResponse res = new com.tigrisdata.tigris_core.models.operations.SearchUpdateResponse() {{
+        com.tigrisdata.tigris_core.models.operations.SearchUpdateResponse res = new com.tigrisdata.tigris_core.models.operations.SearchUpdateResponse(contentType, httpRes.statusCode()) {{
             updateDocumentResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -658,12 +636,10 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexResponse res = new com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexResponse() {{
+        com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexResponse res = new com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexResponse(contentType, httpRes.statusCode()) {{
             createOrUpdateIndexResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

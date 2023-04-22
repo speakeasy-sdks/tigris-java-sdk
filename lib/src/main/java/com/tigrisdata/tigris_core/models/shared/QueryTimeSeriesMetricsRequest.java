@@ -108,4 +108,6 @@ public class QueryTimeSeriesMetricsRequest {
         return this;
     }
     
+
+    public QueryTimeSeriesMetricsRequest(){}
 }

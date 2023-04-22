@@ -31,4 +31,6 @@ public class DropCollectionRequest {
         return this;
     }
     
+
+    public DropCollectionRequest(){}
 }

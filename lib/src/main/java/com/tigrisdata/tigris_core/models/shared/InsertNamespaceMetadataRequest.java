@@ -28,4 +28,6 @@ public class InsertNamespaceMetadataRequest {
         return this;
     }
     
+
+    public InsertNamespaceMetadataRequest(){}
 }

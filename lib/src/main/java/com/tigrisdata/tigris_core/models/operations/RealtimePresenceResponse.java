@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RealtimePresenceResponse {
@@ -48,4 +49,9 @@ public class RealtimePresenceResponse {
         return this;
     }
     
+
+    public RealtimePresenceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+    this.contentType = contentType;
+this.statusCode = statusCode;
+  }
 }

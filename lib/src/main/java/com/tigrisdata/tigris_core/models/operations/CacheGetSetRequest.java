@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class CacheGetSetRequest {
@@ -44,4 +45,11 @@ public class CacheGetSetRequest {
         return this;
     }
     
+
+    public CacheGetSetRequest(@JsonProperty("GetSetRequest") com.tigrisdata.tigris_core.models.shared.GetSetRequest getSetRequest, @JsonProperty("key") String key, @JsonProperty("name") String name, @JsonProperty("project") String project) {
+    this.getSetRequest = getSetRequest;
+this.key = key;
+this.name = name;
+this.project = project;
+  }
 }

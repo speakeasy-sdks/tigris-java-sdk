@@ -12,17 +12,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
-            TigrisDeleteAppKeyRequest req = new TigrisDeleteAppKeyRequest() {{
-                deleteAppKeyRequest = new DeleteAppKeyRequest() {{
-                    id = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-                }};
-                project = "deserunt";
-            }}            
+            TigrisDeleteAppKeyRequest req = new TigrisDeleteAppKeyRequest(                new DeleteAppKeyRequest() {{
+                                id = "9bd9d8d6-9a67-44e0-b467-cc8796ed151a";
+                            }};, "perferendis");            
 
             TigrisDeleteAppKeyResponse res = sdk.appKey.delete(req);
 

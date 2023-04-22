@@ -28,4 +28,6 @@ public class UpdateUserMetadataRequest {
         return this;
     }
     
+
+    public UpdateUserMetadataRequest(){}
 }

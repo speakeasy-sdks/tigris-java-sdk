@@ -34,4 +34,6 @@ public class DeleteProjectResponse {
         return this;
     }
     
+
+    public DeleteProjectResponse(){}
 }

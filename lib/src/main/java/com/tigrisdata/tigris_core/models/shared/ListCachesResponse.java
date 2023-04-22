@@ -23,4 +23,6 @@ public class ListCachesResponse {
         return this;
     }
     
+
+    public ListCachesResponse(){}
 }

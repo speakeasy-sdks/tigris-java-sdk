@@ -53,4 +53,6 @@ public class CreateOrUpdateIndexRequest {
         return this;
     }
     
+
+    public CreateOrUpdateIndexRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisCommitTransactionRequest {
@@ -24,4 +25,9 @@ public class TigrisCommitTransactionRequest {
         return this;
     }
     
+
+    public TigrisCommitTransactionRequest(@JsonProperty("CommitTransactionRequest") com.tigrisdata.tigris_core.models.shared.CommitTransactionRequest commitTransactionRequest, @JsonProperty("project") String project) {
+    this.commitTransactionRequest = commitTransactionRequest;
+this.project = project;
+  }
 }

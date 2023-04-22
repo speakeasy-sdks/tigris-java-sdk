@@ -20,4 +20,6 @@ public class GetSetRequest {
         return this;
     }
     
+
+    public GetSetRequest(){}
 }

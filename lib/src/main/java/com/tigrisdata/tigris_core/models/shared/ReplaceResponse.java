@@ -45,4 +45,6 @@ public class ReplaceResponse {
         return this;
     }
     
+
+    public ReplaceResponse(){}
 }

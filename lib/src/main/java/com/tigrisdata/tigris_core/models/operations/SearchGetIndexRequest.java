@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class SearchGetIndexRequest {
@@ -27,4 +28,9 @@ public class SearchGetIndexRequest {
         return this;
     }
     
+
+    public SearchGetIndexRequest(@JsonProperty("name") String name, @JsonProperty("project") String project) {
+    this.name = name;
+this.project = project;
+  }
 }

@@ -20,4 +20,6 @@ public class ListNamespacesResponse {
         return this;
     }
     
+
+    public ListNamespacesResponse(){}
 }

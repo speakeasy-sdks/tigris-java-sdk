@@ -31,4 +31,6 @@ public class StreamingReadResponse {
         return this;
     }
     
+
+    public StreamingReadResponse(){}
 }

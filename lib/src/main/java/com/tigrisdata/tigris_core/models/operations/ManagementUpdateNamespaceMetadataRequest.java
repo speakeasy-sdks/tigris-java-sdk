@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class ManagementUpdateNamespaceMetadataRequest {
@@ -21,4 +22,9 @@ public class ManagementUpdateNamespaceMetadataRequest {
         return this;
     }
     
+
+    public ManagementUpdateNamespaceMetadataRequest(@JsonProperty("UpdateNamespaceMetadataRequest") com.tigrisdata.tigris_core.models.shared.UpdateNamespaceMetadataRequest updateNamespaceMetadataRequest, @JsonProperty("metadataKey") String metadataKey) {
+    this.updateNamespaceMetadataRequest = updateNamespaceMetadataRequest;
+this.metadataKey = metadataKey;
+  }
 }

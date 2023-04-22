@@ -60,12 +60,10 @@ public class AppKey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse(contentType, httpRes.statusCode()) {{
             deleteAppKeyResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,12 +106,10 @@ public class AppKey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse(contentType, httpRes.statusCode()) {{
             listAppKeysResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -161,12 +157,10 @@ public class AppKey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse(contentType, httpRes.statusCode()) {{
             rotateAppKeyResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -214,12 +208,10 @@ public class AppKey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse(contentType, httpRes.statusCode()) {{
             createAppKeyResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -267,12 +259,10 @@ public class AppKey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse(contentType, httpRes.statusCode()) {{
             updateAppKeyResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

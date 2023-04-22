@@ -23,4 +23,6 @@ public class CreateByIdResponse {
         return this;
     }
     
+
+    public CreateByIdResponse(){}
 }

@@ -55,12 +55,10 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse res = new com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse() {{
+        com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse res = new com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse(contentType, httpRes.statusCode()) {{
             getAccessTokenResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

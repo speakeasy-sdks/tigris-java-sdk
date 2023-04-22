@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisRotateAppKeySecretRequest {
@@ -24,4 +25,9 @@ public class TigrisRotateAppKeySecretRequest {
         return this;
     }
     
+
+    public TigrisRotateAppKeySecretRequest(@JsonProperty("RotateAppKeyRequest") com.tigrisdata.tigris_core.models.shared.RotateAppKeyRequest rotateAppKeyRequest, @JsonProperty("project") String project) {
+    this.rotateAppKeyRequest = rotateAppKeyRequest;
+this.project = project;
+  }
 }

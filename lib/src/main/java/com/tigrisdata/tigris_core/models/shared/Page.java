@@ -34,4 +34,6 @@ public class Page {
         return this;
     }
     
+
+    public Page(){}
 }

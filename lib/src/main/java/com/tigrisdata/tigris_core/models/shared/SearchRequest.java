@@ -138,4 +138,6 @@ public class SearchRequest {
         return this;
     }
     
+
+    public SearchRequest(){}
 }

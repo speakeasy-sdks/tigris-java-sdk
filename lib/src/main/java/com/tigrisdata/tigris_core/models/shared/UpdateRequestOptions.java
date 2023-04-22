@@ -45,4 +45,6 @@ public class UpdateRequestOptions {
         return this;
     }
     
+
+    public UpdateRequestOptions(){}
 }

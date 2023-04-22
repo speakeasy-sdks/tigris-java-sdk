@@ -23,4 +23,6 @@ public class MessagesResponse {
         return this;
     }
     
+
+    public MessagesResponse(){}
 }

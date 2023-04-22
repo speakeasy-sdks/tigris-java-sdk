@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class ManagementGetUserMetadataRequest {
@@ -21,4 +22,9 @@ public class ManagementGetUserMetadataRequest {
         return this;
     }
     
+
+    public ManagementGetUserMetadataRequest(@JsonProperty("GetUserMetadataRequest") com.tigrisdata.tigris_core.models.shared.GetUserMetadataRequest getUserMetadataRequest, @JsonProperty("metadataKey") String metadataKey) {
+    this.getUserMetadataRequest = getUserMetadataRequest;
+this.metadataKey = metadataKey;
+  }
 }

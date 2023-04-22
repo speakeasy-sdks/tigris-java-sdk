@@ -44,4 +44,6 @@ public class QueryTimeSeriesMetricsResponse {
         return this;
     }
     
+
+    public QueryTimeSeriesMetricsResponse(){}
 }

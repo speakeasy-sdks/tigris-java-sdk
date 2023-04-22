@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisDeleteProjectRequest {
@@ -24,4 +25,9 @@ public class TigrisDeleteProjectRequest {
         return this;
     }
     
+
+    public TigrisDeleteProjectRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("project") String project) {
+    this.requestBody = requestBody;
+this.project = project;
+  }
 }

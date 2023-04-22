@@ -23,4 +23,6 @@ public class DeleteAppKeyRequest {
         return this;
     }
     
+
+    public DeleteAppKeyRequest(){}
 }

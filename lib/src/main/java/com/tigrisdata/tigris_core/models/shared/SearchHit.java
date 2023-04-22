@@ -31,4 +31,6 @@ public class SearchHit {
         return this;
     }
     
+
+    public SearchHit(){}
 }

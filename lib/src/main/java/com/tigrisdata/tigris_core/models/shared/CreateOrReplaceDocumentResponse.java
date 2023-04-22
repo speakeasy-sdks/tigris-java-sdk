@@ -23,4 +23,6 @@ public class CreateOrReplaceDocumentResponse {
         return this;
     }
     
+
+    public CreateOrReplaceDocumentResponse(){}
 }

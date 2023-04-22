@@ -54,12 +54,10 @@ public class System {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.HealthAPIHealthResponse res = new com.tigrisdata.tigris_core.models.operations.HealthAPIHealthResponse() {{
+        com.tigrisdata.tigris_core.models.operations.HealthAPIHealthResponse res = new com.tigrisdata.tigris_core.models.operations.HealthAPIHealthResponse(contentType, httpRes.statusCode()) {{
             healthCheckResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,12 +99,10 @@ public class System {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.ObservabilityGetInfoResponse res = new com.tigrisdata.tigris_core.models.operations.ObservabilityGetInfoResponse() {{
+        com.tigrisdata.tigris_core.models.operations.ObservabilityGetInfoResponse res = new com.tigrisdata.tigris_core.models.operations.ObservabilityGetInfoResponse(contentType, httpRes.statusCode()) {{
             getInfoResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,12 +150,10 @@ public class System {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageResponse res = new com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageResponse() {{
+        com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageResponse res = new com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageResponse(contentType, httpRes.statusCode()) {{
             quotaUsageResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -207,12 +201,10 @@ public class System {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsResponse res = new com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsResponse() {{
+        com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsResponse res = new com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsResponse(contentType, httpRes.statusCode()) {{
             quotaLimitsResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -260,12 +252,10 @@ public class System {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsResponse res = new com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsResponse() {{
+        com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsResponse res = new com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsResponse(contentType, httpRes.statusCode()) {{
             queryTimeSeriesMetricsResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

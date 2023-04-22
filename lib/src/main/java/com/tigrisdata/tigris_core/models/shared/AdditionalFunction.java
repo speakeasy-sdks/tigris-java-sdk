@@ -23,4 +23,6 @@ public class AdditionalFunction {
         return this;
     }
     
+
+    public AdditionalFunction(){}
 }

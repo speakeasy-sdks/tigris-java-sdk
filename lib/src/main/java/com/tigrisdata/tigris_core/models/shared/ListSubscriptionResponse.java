@@ -20,4 +20,6 @@ public class ListSubscriptionResponse {
         return this;
     }
     
+
+    public ListSubscriptionResponse(){}
 }

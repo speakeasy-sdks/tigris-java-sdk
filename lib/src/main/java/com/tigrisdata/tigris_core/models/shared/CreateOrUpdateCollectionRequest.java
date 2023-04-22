@@ -53,4 +53,6 @@ public class CreateOrUpdateCollectionRequest {
         return this;
     }
     
+
+    public CreateOrUpdateCollectionRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisDeleteAppKeyRequest {
@@ -24,4 +25,9 @@ public class TigrisDeleteAppKeyRequest {
         return this;
     }
     
+
+    public TigrisDeleteAppKeyRequest(@JsonProperty("DeleteAppKeyRequest") com.tigrisdata.tigris_core.models.shared.DeleteAppKeyRequest deleteAppKeyRequest, @JsonProperty("project") String project) {
+    this.deleteAppKeyRequest = deleteAppKeyRequest;
+this.project = project;
+  }
 }

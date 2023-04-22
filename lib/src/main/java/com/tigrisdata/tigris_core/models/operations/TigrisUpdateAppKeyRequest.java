@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisUpdateAppKeyRequest {
@@ -24,4 +25,9 @@ public class TigrisUpdateAppKeyRequest {
         return this;
     }
     
+
+    public TigrisUpdateAppKeyRequest(@JsonProperty("UpdateAppKeyRequest") com.tigrisdata.tigris_core.models.shared.UpdateAppKeyRequest updateAppKeyRequest, @JsonProperty("project") String project) {
+    this.updateAppKeyRequest = updateAppKeyRequest;
+this.project = project;
+  }
 }

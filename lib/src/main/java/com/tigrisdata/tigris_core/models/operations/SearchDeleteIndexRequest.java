@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class SearchDeleteIndexRequest {
@@ -34,4 +35,10 @@ public class SearchDeleteIndexRequest {
         return this;
     }
     
+
+    public SearchDeleteIndexRequest(@JsonProperty("DeleteIndexRequest") com.tigrisdata.tigris_core.models.shared.DeleteIndexRequest deleteIndexRequest, @JsonProperty("name") String name, @JsonProperty("project") String project) {
+    this.deleteIndexRequest = deleteIndexRequest;
+this.name = name;
+this.project = project;
+  }
 }

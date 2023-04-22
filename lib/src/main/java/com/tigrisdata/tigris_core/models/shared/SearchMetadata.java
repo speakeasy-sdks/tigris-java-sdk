@@ -42,4 +42,6 @@ public class SearchMetadata {
         return this;
     }
     
+
+    public SearchMetadata(){}
 }

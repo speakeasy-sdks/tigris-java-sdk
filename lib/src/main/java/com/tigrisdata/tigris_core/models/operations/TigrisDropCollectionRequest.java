@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisDropCollectionRequest {
@@ -34,4 +35,10 @@ public class TigrisDropCollectionRequest {
         return this;
     }
     
+
+    public TigrisDropCollectionRequest(@JsonProperty("DropCollectionRequest") com.tigrisdata.tigris_core.models.shared.DropCollectionRequest dropCollectionRequest, @JsonProperty("collection") String collection, @JsonProperty("project") String project) {
+    this.dropCollectionRequest = dropCollectionRequest;
+this.collection = collection;
+this.project = project;
+  }
 }

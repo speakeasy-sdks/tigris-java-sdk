@@ -63,12 +63,10 @@ public class Database {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionResponse(contentType, httpRes.statusCode()) {{
             beginTransactionResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,12 +115,10 @@ public class Database {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionResponse(contentType, httpRes.statusCode()) {{
             commitTransactionResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -170,12 +166,10 @@ public class Database {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchResponse(contentType, httpRes.statusCode()) {{
             createBranchResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -224,12 +218,10 @@ public class Database {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchResponse(contentType, httpRes.statusCode()) {{
             deleteBranchResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -278,12 +270,10 @@ public class Database {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseResponse(contentType, httpRes.statusCode()) {{
             describeDatabaseResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -332,12 +322,10 @@ public class Database {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsResponse(contentType, httpRes.statusCode()) {{
             listCollectionsResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -386,12 +374,10 @@ public class Database {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionResponse(contentType, httpRes.statusCode()) {{
             rollbackTransactionResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -434,12 +420,10 @@ public class Database {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisListBranchesResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisListBranchesResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisListBranchesResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisListBranchesResponse(contentType, httpRes.statusCode()) {{
             listBranchesResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -45,4 +45,6 @@ public class UpdateResponse {
         return this;
     }
     
+
+    public UpdateResponse(){}
 }

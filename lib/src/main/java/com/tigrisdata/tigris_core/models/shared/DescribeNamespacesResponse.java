@@ -20,4 +20,6 @@ public class DescribeNamespacesResponse {
         return this;
     }
     
+
+    public DescribeNamespacesResponse(){}
 }

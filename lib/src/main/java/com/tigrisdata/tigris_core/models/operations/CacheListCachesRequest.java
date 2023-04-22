@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class CacheListCachesRequest {
@@ -17,4 +18,8 @@ public class CacheListCachesRequest {
         return this;
     }
     
+
+    public CacheListCachesRequest(@JsonProperty("project") String project) {
+    this.project = project;
+  }
 }

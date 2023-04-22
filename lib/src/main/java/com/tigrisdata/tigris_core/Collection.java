@@ -64,12 +64,10 @@ public class Collection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionResponse(contentType, httpRes.statusCode()) {{
             createOrUpdateCollectionResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,12 +115,10 @@ public class Collection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisDeleteResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDeleteResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisDeleteResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDeleteResponse(contentType, httpRes.statusCode()) {{
             deleteResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -170,12 +166,10 @@ public class Collection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionResponse(contentType, httpRes.statusCode()) {{
             describeCollectionResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -224,12 +218,10 @@ public class Collection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionResponse(contentType, httpRes.statusCode()) {{
             dropCollectionResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -282,12 +274,10 @@ public class Collection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisImportResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisImportResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisImportResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisImportResponse(contentType, httpRes.statusCode()) {{
             importResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -337,12 +327,10 @@ public class Collection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisInsertResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisInsertResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisInsertResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisInsertResponse(contentType, httpRes.statusCode()) {{
             insertResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -395,12 +383,10 @@ public class Collection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisReadResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisReadResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisReadResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisReadResponse(contentType, httpRes.statusCode()) {{
             streamingReadResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -448,12 +434,10 @@ public class Collection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisReplaceResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisReplaceResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisReplaceResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisReplaceResponse(contentType, httpRes.statusCode()) {{
             replaceResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -504,12 +488,10 @@ public class Collection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisSearchResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisSearchResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisSearchResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisSearchResponse(contentType, httpRes.statusCode()) {{
             streamingSearchResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -557,12 +539,10 @@ public class Collection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.TigrisUpdateResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisUpdateResponse() {{
+        com.tigrisdata.tigris_core.models.operations.TigrisUpdateResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisUpdateResponse(contentType, httpRes.statusCode()) {{
             updateResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

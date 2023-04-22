@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisBeginTransactionRequest {
@@ -24,4 +25,9 @@ public class TigrisBeginTransactionRequest {
         return this;
     }
     
+
+    public TigrisBeginTransactionRequest(@JsonProperty("BeginTransactionRequest") com.tigrisdata.tigris_core.models.shared.BeginTransactionRequest beginTransactionRequest, @JsonProperty("project") String project) {
+    this.beginTransactionRequest = beginTransactionRequest;
+this.project = project;
+  }
 }

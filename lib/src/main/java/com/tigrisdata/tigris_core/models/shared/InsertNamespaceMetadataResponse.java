@@ -36,4 +36,6 @@ public class InsertNamespaceMetadataResponse {
         return this;
     }
     
+
+    public InsertNamespaceMetadataResponse(){}
 }

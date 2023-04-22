@@ -23,4 +23,6 @@ public class ReplaceRequestOptions {
         return this;
     }
     
+
+    public ReplaceRequestOptions(){}
 }

@@ -23,4 +23,6 @@ public class ListBranchesResponse {
         return this;
     }
     
+
+    public ListBranchesResponse(){}
 }

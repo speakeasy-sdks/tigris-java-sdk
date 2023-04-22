@@ -34,4 +34,6 @@ public class CreateCacheResponse {
         return this;
     }
     
+
+    public CreateCacheResponse(){}
 }

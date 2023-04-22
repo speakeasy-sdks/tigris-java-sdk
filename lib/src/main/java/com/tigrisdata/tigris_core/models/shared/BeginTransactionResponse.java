@@ -23,4 +23,6 @@ public class BeginTransactionResponse {
         return this;
     }
     
+
+    public BeginTransactionResponse(){}
 }

@@ -52,4 +52,6 @@ public class MetricSeries {
         return this;
     }
     
+
+    public MetricSeries(){}
 }

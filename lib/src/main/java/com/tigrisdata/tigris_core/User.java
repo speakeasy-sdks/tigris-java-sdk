@@ -60,12 +60,10 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataResponse() {{
+        com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataResponse(contentType, httpRes.statusCode()) {{
             getUserMetadataResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,12 +111,10 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataResponse() {{
+        com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataResponse(contentType, httpRes.statusCode()) {{
             insertUserMetadataResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -166,12 +162,10 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataResponse() {{
+        com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataResponse(contentType, httpRes.statusCode()) {{
             updateUserMetadataResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

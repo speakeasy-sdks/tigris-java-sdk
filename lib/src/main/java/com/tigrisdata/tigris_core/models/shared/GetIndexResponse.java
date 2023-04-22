@@ -20,4 +20,6 @@ public class GetIndexResponse {
         return this;
     }
     
+
+    public GetIndexResponse(){}
 }

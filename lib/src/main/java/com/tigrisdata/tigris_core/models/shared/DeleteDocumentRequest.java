@@ -42,4 +42,6 @@ public class DeleteDocumentRequest {
         return this;
     }
     
+
+    public DeleteDocumentRequest(){}
 }

@@ -60,12 +60,10 @@ public class Cache {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse res = new com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse() {{
+        com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse res = new com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse(contentType, httpRes.statusCode()) {{
             createCacheResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -112,12 +110,10 @@ public class Cache {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheResponse res = new com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheResponse() {{
+        com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheResponse res = new com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheResponse(contentType, httpRes.statusCode()) {{
             deleteCacheResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -164,12 +160,10 @@ public class Cache {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.CacheDelResponse res = new com.tigrisdata.tigris_core.models.operations.CacheDelResponse() {{
+        com.tigrisdata.tigris_core.models.operations.CacheDelResponse res = new com.tigrisdata.tigris_core.models.operations.CacheDelResponse(contentType, httpRes.statusCode()) {{
             delResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -211,12 +205,10 @@ public class Cache {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.CacheGetResponse res = new com.tigrisdata.tigris_core.models.operations.CacheGetResponse() {{
+        com.tigrisdata.tigris_core.models.operations.CacheGetResponse res = new com.tigrisdata.tigris_core.models.operations.CacheGetResponse(contentType, httpRes.statusCode()) {{
             getResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,12 +255,10 @@ public class Cache {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.CacheGetSetResponse res = new com.tigrisdata.tigris_core.models.operations.CacheGetSetResponse() {{
+        com.tigrisdata.tigris_core.models.operations.CacheGetSetResponse res = new com.tigrisdata.tigris_core.models.operations.CacheGetSetResponse(contentType, httpRes.statusCode()) {{
             getSetResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -310,12 +300,10 @@ public class Cache {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse res = new com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse() {{
+        com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse res = new com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse(contentType, httpRes.statusCode()) {{
             listCachesResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -363,12 +351,10 @@ public class Cache {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.CacheKeysResponse res = new com.tigrisdata.tigris_core.models.operations.CacheKeysResponse() {{
+        com.tigrisdata.tigris_core.models.operations.CacheKeysResponse res = new com.tigrisdata.tigris_core.models.operations.CacheKeysResponse(contentType, httpRes.statusCode()) {{
             keysResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -415,12 +401,10 @@ public class Cache {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.CacheSetResponse res = new com.tigrisdata.tigris_core.models.operations.CacheSetResponse() {{
+        com.tigrisdata.tigris_core.models.operations.CacheSetResponse res = new com.tigrisdata.tigris_core.models.operations.CacheSetResponse(contentType, httpRes.statusCode()) {{
             setResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -45,4 +45,6 @@ public class GetSetResponse {
         return this;
     }
     
+
+    public GetSetResponse(){}
 }

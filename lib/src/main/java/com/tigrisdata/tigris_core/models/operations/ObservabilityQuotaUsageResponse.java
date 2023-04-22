@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ObservabilityQuotaUsageResponse {
@@ -48,4 +49,9 @@ public class ObservabilityQuotaUsageResponse {
         return this;
     }
     
+
+    public ObservabilityQuotaUsageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+    this.contentType = contentType;
+this.statusCode = statusCode;
+  }
 }

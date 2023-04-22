@@ -28,4 +28,6 @@ public class RollupFunction {
         return this;
     }
     
+
+    public RollupFunction(){}
 }

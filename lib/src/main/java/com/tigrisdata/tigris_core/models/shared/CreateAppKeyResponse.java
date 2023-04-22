@@ -23,4 +23,6 @@ public class CreateAppKeyResponse {
         return this;
     }
     
+
+    public CreateAppKeyResponse(){}
 }

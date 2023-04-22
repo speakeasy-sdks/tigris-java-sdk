@@ -34,4 +34,6 @@ public class KeysResponse {
         return this;
     }
     
+
+    public KeysResponse(){}
 }

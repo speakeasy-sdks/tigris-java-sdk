@@ -28,4 +28,6 @@ public class GetUserMetadataRequest {
         return this;
     }
     
+
+    public GetUserMetadataRequest(){}
 }

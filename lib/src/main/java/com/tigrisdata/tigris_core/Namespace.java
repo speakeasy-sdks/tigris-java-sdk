@@ -60,12 +60,10 @@ public class Namespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.CreateNamespaceResponse res = new com.tigrisdata.tigris_core.models.operations.CreateNamespaceResponse() {{
+        com.tigrisdata.tigris_core.models.operations.CreateNamespaceResponse res = new com.tigrisdata.tigris_core.models.operations.CreateNamespaceResponse(contentType, httpRes.statusCode()) {{
             createNamespaceResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,12 +105,10 @@ public class Namespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.ManagementDescribeNamespacesResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementDescribeNamespacesResponse() {{
+        com.tigrisdata.tigris_core.models.operations.ManagementDescribeNamespacesResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementDescribeNamespacesResponse(contentType, httpRes.statusCode()) {{
             describeNamespacesResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,12 +156,10 @@ public class Namespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataResponse() {{
+        com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataResponse(contentType, httpRes.statusCode()) {{
             getNamespaceMetadataResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -213,12 +207,10 @@ public class Namespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataResponse() {{
+        com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataResponse(contentType, httpRes.statusCode()) {{
             insertNamespaceMetadataResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -260,12 +252,10 @@ public class Namespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.ManagementListNamespacesResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementListNamespacesResponse() {{
+        com.tigrisdata.tigris_core.models.operations.ManagementListNamespacesResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementListNamespacesResponse(contentType, httpRes.statusCode()) {{
             listNamespacesResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -313,12 +303,10 @@ public class Namespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataResponse() {{
+        com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataResponse(contentType, httpRes.statusCode()) {{
             updateNamespaceMetadataResponse = null;
             status = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

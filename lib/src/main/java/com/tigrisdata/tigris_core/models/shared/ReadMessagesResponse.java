@@ -20,4 +20,6 @@ public class ReadMessagesResponse {
         return this;
     }
     
+
+    public ReadMessagesResponse(){}
 }

@@ -28,4 +28,6 @@ public class ProjectInfo {
         return this;
     }
     
+
+    public ProjectInfo(){}
 }

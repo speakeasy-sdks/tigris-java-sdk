@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisDeleteRequest {
@@ -34,4 +35,10 @@ public class TigrisDeleteRequest {
         return this;
     }
     
+
+    public TigrisDeleteRequest(@JsonProperty("DeleteRequest") com.tigrisdata.tigris_core.models.shared.DeleteRequest deleteRequest, @JsonProperty("collection") String collection, @JsonProperty("project") String project) {
+    this.deleteRequest = deleteRequest;
+this.collection = collection;
+this.project = project;
+  }
 }

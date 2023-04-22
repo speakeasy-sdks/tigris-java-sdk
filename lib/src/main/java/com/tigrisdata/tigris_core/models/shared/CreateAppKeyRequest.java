@@ -34,4 +34,6 @@ public class CreateAppKeyRequest {
         return this;
     }
     
+
+    public CreateAppKeyRequest(){}
 }

@@ -42,4 +42,6 @@ public class ReplaceRequest {
         return this;
     }
     
+
+    public ReplaceRequest(){}
 }

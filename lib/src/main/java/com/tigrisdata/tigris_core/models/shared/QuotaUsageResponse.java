@@ -78,4 +78,6 @@ public class QuotaUsageResponse {
         return this;
     }
     
+
+    public QuotaUsageResponse(){}
 }

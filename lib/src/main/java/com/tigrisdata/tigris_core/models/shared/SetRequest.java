@@ -64,4 +64,6 @@ public class SetRequest {
         return this;
     }
     
+
+    public SetRequest(){}
 }

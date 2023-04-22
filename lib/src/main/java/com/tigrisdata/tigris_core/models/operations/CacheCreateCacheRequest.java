@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class CacheCreateCacheRequest {
@@ -34,4 +35,10 @@ public class CacheCreateCacheRequest {
         return this;
     }
     
+
+    public CacheCreateCacheRequest(@JsonProperty("CreateCacheRequest") com.tigrisdata.tigris_core.models.shared.CreateCacheRequest createCacheRequest, @JsonProperty("name") String name, @JsonProperty("project") String project) {
+    this.createCacheRequest = createCacheRequest;
+this.name = name;
+this.project = project;
+  }
 }

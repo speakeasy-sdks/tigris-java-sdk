@@ -34,4 +34,6 @@ public class StreamingSearchResponse {
         return this;
     }
     
+
+    public StreamingSearchResponse(){}
 }

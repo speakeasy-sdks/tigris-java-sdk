@@ -23,4 +23,6 @@ public class RotateAppKeyResponse {
         return this;
     }
     
+
+    public RotateAppKeyResponse(){}
 }

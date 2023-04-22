@@ -42,4 +42,6 @@ public class DescribeDatabaseRequest {
         return this;
     }
     
+
+    public DescribeDatabaseRequest(){}
 }

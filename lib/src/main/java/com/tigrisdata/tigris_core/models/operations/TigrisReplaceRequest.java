@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisReplaceRequest {
@@ -34,4 +35,10 @@ public class TigrisReplaceRequest {
         return this;
     }
     
+
+    public TigrisReplaceRequest(@JsonProperty("ReplaceRequest") com.tigrisdata.tigris_core.models.shared.ReplaceRequest replaceRequest, @JsonProperty("collection") String collection, @JsonProperty("project") String project) {
+    this.replaceRequest = replaceRequest;
+this.collection = collection;
+this.project = project;
+  }
 }

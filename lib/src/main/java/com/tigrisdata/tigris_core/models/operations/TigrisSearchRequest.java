@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisSearchRequest {
@@ -34,4 +35,10 @@ public class TigrisSearchRequest {
         return this;
     }
     
+
+    public TigrisSearchRequest(@JsonProperty("SearchRequest") com.tigrisdata.tigris_core.models.shared.SearchRequest searchRequest, @JsonProperty("collection") String collection, @JsonProperty("project") String project) {
+    this.searchRequest = searchRequest;
+this.collection = collection;
+this.project = project;
+  }
 }

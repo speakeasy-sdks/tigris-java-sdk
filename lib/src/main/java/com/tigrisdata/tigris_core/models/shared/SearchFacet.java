@@ -28,4 +28,6 @@ public class SearchFacet {
         return this;
     }
     
+
+    public SearchFacet(){}
 }

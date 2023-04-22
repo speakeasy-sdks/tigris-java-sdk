@@ -34,4 +34,6 @@ public class CreateOrUpdateCollectionResponse {
         return this;
     }
     
+
+    public CreateOrUpdateCollectionResponse(){}
 }

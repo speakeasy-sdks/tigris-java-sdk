@@ -50,4 +50,6 @@ public class CollectionDescription {
         return this;
     }
     
+
+    public CollectionDescription(){}
 }

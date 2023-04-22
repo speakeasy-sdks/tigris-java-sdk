@@ -36,4 +36,6 @@ public class UpdateNamespaceMetadataResponse {
         return this;
     }
     
+
+    public UpdateNamespaceMetadataResponse(){}
 }

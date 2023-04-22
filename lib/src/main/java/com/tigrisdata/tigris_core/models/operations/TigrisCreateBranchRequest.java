@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisCreateBranchRequest {
@@ -34,4 +35,10 @@ public class TigrisCreateBranchRequest {
         return this;
     }
     
+
+    public TigrisCreateBranchRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("branch") String branch, @JsonProperty("project") String project) {
+    this.requestBody = requestBody;
+this.branch = branch;
+this.project = project;
+  }
 }

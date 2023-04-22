@@ -44,4 +44,6 @@ public class InsertUserMetadataResponse {
         return this;
     }
     
+
+    public InsertUserMetadataResponse(){}
 }

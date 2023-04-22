@@ -23,4 +23,6 @@ public class DeleteAppKeyResponse {
         return this;
     }
     
+
+    public DeleteAppKeyResponse(){}
 }

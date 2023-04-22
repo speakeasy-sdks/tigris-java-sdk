@@ -28,4 +28,6 @@ public class DataPoint {
         return this;
     }
     
+
+    public DataPoint(){}
 }

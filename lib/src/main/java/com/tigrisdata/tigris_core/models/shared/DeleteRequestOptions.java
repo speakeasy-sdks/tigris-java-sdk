@@ -45,4 +45,6 @@ public class DeleteRequestOptions {
         return this;
     }
     
+
+    public DeleteRequestOptions(){}
 }

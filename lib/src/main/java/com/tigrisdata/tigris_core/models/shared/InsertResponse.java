@@ -45,4 +45,6 @@ public class InsertResponse {
         return this;
     }
     
+
+    public InsertResponse(){}
 }

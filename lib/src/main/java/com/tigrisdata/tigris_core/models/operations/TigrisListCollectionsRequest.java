@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisListCollectionsRequest {
@@ -27,4 +28,8 @@ public class TigrisListCollectionsRequest {
         return this;
     }
     
+
+    public TigrisListCollectionsRequest(@JsonProperty("project") String project) {
+    this.project = project;
+  }
 }

@@ -56,4 +56,6 @@ public class ResponseMetadata {
         return this;
     }
     
+
+    public ResponseMetadata(){}
 }

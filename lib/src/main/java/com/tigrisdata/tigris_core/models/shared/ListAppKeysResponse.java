@@ -20,4 +20,6 @@ public class ListAppKeysResponse {
         return this;
     }
     
+
+    public ListAppKeysResponse(){}
 }

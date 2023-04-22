@@ -4,6 +4,7 @@
 
 package com.tigrisdata.tigris_core.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class Security {
@@ -14,4 +15,8 @@ public class Security {
         return this;
     }
     
+
+    public Security(@JsonProperty("BearerAuth") String bearerAuth) {
+    this.bearerAuth = bearerAuth;
+  }
 }

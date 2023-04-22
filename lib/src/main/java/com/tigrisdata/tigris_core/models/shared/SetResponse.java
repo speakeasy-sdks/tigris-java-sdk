@@ -34,4 +34,6 @@ public class SetResponse {
         return this;
     }
     
+
+    public SetResponse(){}
 }
