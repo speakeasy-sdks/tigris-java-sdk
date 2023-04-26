@@ -23,6 +23,5 @@ public class ListCollectionsResponse {
         return this;
     }
     
-
     public ListCollectionsResponse(){}
 }

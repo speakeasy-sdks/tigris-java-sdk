@@ -25,9 +25,8 @@ public class TigrisDescribeDatabaseRequest {
         return this;
     }
     
-
     public TigrisDescribeDatabaseRequest(@JsonProperty("DescribeDatabaseRequest") com.tigrisdata.tigris_core.models.shared.DescribeDatabaseRequest describeDatabaseRequest, @JsonProperty("project") String project) {
-    this.describeDatabaseRequest = describeDatabaseRequest;
-this.project = project;
+        this.describeDatabaseRequest = describeDatabaseRequest;
+        this.project = project;
   }
 }

@@ -23,6 +23,5 @@ public class DeleteByQueryResponse {
         return this;
     }
     
-
     public DeleteByQueryResponse(){}
 }

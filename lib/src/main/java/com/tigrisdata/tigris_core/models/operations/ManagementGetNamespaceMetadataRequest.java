@@ -22,9 +22,8 @@ public class ManagementGetNamespaceMetadataRequest {
         return this;
     }
     
-
     public ManagementGetNamespaceMetadataRequest(@JsonProperty("GetNamespaceMetadataRequest") com.tigrisdata.tigris_core.models.shared.GetNamespaceMetadataRequest getNamespaceMetadataRequest, @JsonProperty("metadataKey") String metadataKey) {
-    this.getNamespaceMetadataRequest = getNamespaceMetadataRequest;
-this.metadataKey = metadataKey;
+        this.getNamespaceMetadataRequest = getNamespaceMetadataRequest;
+        this.metadataKey = metadataKey;
   }
 }

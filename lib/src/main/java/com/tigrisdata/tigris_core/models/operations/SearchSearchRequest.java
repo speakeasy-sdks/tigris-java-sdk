@@ -35,10 +35,9 @@ public class SearchSearchRequest {
         return this;
     }
     
-
     public SearchSearchRequest(@JsonProperty("SearchIndexRequest") com.tigrisdata.tigris_core.models.shared.SearchIndexRequest searchIndexRequest, @JsonProperty("index") String index, @JsonProperty("project") String project) {
-    this.searchIndexRequest = searchIndexRequest;
-this.index = index;
-this.project = project;
+        this.searchIndexRequest = searchIndexRequest;
+        this.index = index;
+        this.project = project;
   }
 }

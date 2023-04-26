@@ -34,6 +34,5 @@ public class BeginTransactionRequest {
         return this;
     }
     
-
     public BeginTransactionRequest(){}
 }

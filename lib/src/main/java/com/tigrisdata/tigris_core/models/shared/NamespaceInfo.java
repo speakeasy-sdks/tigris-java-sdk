@@ -42,6 +42,5 @@ public class NamespaceInfo {
         return this;
     }
     
-
     public NamespaceInfo(){}
 }

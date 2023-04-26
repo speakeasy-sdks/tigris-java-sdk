@@ -28,6 +28,5 @@ public class BranchInfo {
         return this;
     }
     
-
     public BranchInfo(){}
 }

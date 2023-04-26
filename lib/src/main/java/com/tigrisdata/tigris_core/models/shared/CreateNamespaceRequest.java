@@ -42,6 +42,5 @@ public class CreateNamespaceRequest {
         return this;
     }
     
-
     public CreateNamespaceRequest(){}
 }

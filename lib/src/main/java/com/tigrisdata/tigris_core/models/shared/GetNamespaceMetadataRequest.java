@@ -28,6 +28,5 @@ public class GetNamespaceMetadataRequest {
         return this;
     }
     
-
     public GetNamespaceMetadataRequest(){}
 }

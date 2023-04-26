@@ -20,6 +20,5 @@ public class CacheMetadata {
         return this;
     }
     
-
     public CacheMetadata(){}
 }

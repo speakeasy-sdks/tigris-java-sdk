@@ -23,6 +23,5 @@ public class UpdateAppKeyResponse {
         return this;
     }
     
-
     public UpdateAppKeyResponse(){}
 }

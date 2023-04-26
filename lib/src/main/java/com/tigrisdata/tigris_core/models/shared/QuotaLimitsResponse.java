@@ -45,6 +45,5 @@ public class QuotaLimitsResponse {
         return this;
     }
     
-
     public QuotaLimitsResponse(){}
 }

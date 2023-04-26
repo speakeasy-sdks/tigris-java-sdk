@@ -23,6 +23,5 @@ public class RollbackTransactionResponse {
         return this;
     }
     
-
     public RollbackTransactionResponse(){}
 }

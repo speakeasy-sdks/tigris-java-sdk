@@ -23,6 +23,5 @@ public class UpdateDocumentResponse {
         return this;
     }
     
-
     public UpdateDocumentResponse(){}
 }

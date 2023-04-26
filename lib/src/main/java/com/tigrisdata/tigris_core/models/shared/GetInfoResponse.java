@@ -20,6 +20,5 @@ public class GetInfoResponse {
         return this;
     }
     
-
     public GetInfoResponse(){}
 }

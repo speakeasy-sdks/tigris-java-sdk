@@ -29,10 +29,9 @@ public class RealtimeMessagesRequest {
         return this;
     }
     
-
     public RealtimeMessagesRequest(@JsonProperty("MessagesRequest") com.tigrisdata.tigris_core.models.shared.MessagesRequest messagesRequest, @JsonProperty("channel") String channel, @JsonProperty("project") String project) {
-    this.messagesRequest = messagesRequest;
-this.channel = channel;
-this.project = project;
+        this.messagesRequest = messagesRequest;
+        this.channel = channel;
+        this.project = project;
   }
 }

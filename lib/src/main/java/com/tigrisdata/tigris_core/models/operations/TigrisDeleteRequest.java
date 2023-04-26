@@ -35,10 +35,9 @@ public class TigrisDeleteRequest {
         return this;
     }
     
-
     public TigrisDeleteRequest(@JsonProperty("DeleteRequest") com.tigrisdata.tigris_core.models.shared.DeleteRequest deleteRequest, @JsonProperty("collection") String collection, @JsonProperty("project") String project) {
-    this.deleteRequest = deleteRequest;
-this.collection = collection;
-this.project = project;
+        this.deleteRequest = deleteRequest;
+        this.collection = collection;
+        this.project = project;
   }
 }

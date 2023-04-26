@@ -28,9 +28,8 @@ public class SearchGetIndexRequest {
         return this;
     }
     
-
     public SearchGetIndexRequest(@JsonProperty("name") String name, @JsonProperty("project") String project) {
-    this.name = name;
-this.project = project;
+        this.name = name;
+        this.project = project;
   }
 }

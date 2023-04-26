@@ -18,8 +18,7 @@ public class CacheListCachesRequest {
         return this;
     }
     
-
     public CacheListCachesRequest(@JsonProperty("project") String project) {
-    this.project = project;
+        this.project = project;
   }
 }

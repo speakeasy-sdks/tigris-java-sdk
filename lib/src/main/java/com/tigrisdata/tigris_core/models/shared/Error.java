@@ -34,6 +34,5 @@ public class Error {
         return this;
     }
     
-
     public Error(){}
 }

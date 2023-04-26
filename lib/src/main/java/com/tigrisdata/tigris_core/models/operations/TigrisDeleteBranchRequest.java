@@ -35,10 +35,9 @@ public class TigrisDeleteBranchRequest {
         return this;
     }
     
-
     public TigrisDeleteBranchRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("branch") String branch, @JsonProperty("project") String project) {
-    this.requestBody = requestBody;
-this.branch = branch;
-this.project = project;
+        this.requestBody = requestBody;
+        this.branch = branch;
+        this.project = project;
   }
 }

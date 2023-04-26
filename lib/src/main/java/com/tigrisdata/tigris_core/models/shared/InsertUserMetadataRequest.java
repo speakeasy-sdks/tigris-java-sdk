@@ -28,6 +28,5 @@ public class InsertUserMetadataRequest {
         return this;
     }
     
-
     public InsertUserMetadataRequest(){}
 }

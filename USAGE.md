@@ -3,10 +3,10 @@
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
-import com.tigrisdata.tigris_core.models.shared.Security;
 import com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyRequest;
 import com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse;
 import com.tigrisdata.tigris_core.models.shared.DeleteAppKeyRequest;
+import com.tigrisdata.tigris_core.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -23,11 +23,13 @@ public class Application {
 
             TigrisDeleteAppKeyResponse res = sdk.appKey.delete(req);
 
-            if (res.deleteAppKeyResponse.isPresent()) {
+            if (res.deleteAppKeyResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -35,10 +35,9 @@ public class SearchUpdateRequest {
         return this;
     }
     
-
     public SearchUpdateRequest(@JsonProperty("UpdateDocumentRequest") com.tigrisdata.tigris_core.models.shared.UpdateDocumentRequest updateDocumentRequest, @JsonProperty("index") String index, @JsonProperty("project") String project) {
-    this.updateDocumentRequest = updateDocumentRequest;
-this.index = index;
-this.project = project;
+        this.updateDocumentRequest = updateDocumentRequest;
+        this.index = index;
+        this.project = project;
   }
 }

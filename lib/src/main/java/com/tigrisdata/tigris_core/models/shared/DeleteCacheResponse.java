@@ -34,6 +34,5 @@ public class DeleteCacheResponse {
         return this;
     }
     
-
     public DeleteCacheResponse(){}
 }

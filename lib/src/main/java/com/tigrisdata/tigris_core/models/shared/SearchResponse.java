@@ -36,6 +36,5 @@ public class SearchResponse {
         return this;
     }
     
-
     public SearchResponse(){}
 }

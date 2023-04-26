@@ -35,10 +35,9 @@ public class TigrisUpdateRequest {
         return this;
     }
     
-
     public TigrisUpdateRequest(@JsonProperty("UpdateRequest") com.tigrisdata.tigris_core.models.shared.UpdateRequest updateRequest, @JsonProperty("collection") String collection, @JsonProperty("project") String project) {
-    this.updateRequest = updateRequest;
-this.collection = collection;
-this.project = project;
+        this.updateRequest = updateRequest;
+        this.collection = collection;
+        this.project = project;
   }
 }

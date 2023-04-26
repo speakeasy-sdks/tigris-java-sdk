@@ -23,6 +23,5 @@ public class Status {
         return this;
     }
     
-
     public Status(){}
 }

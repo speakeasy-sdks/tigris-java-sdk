@@ -20,6 +20,5 @@ public class PresenceResponse {
         return this;
     }
     
-
     public PresenceResponse(){}
 }

@@ -25,9 +25,8 @@ public class TigrisBeginTransactionRequest {
         return this;
     }
     
-
     public TigrisBeginTransactionRequest(@JsonProperty("BeginTransactionRequest") com.tigrisdata.tigris_core.models.shared.BeginTransactionRequest beginTransactionRequest, @JsonProperty("project") String project) {
-    this.beginTransactionRequest = beginTransactionRequest;
-this.project = project;
+        this.beginTransactionRequest = beginTransactionRequest;
+        this.project = project;
   }
 }

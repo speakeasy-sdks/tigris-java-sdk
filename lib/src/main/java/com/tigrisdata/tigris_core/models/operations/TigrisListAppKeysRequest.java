@@ -18,8 +18,7 @@ public class TigrisListAppKeysRequest {
         return this;
     }
     
-
     public TigrisListAppKeysRequest(@JsonProperty("project") String project) {
-    this.project = project;
+        this.project = project;
   }
 }

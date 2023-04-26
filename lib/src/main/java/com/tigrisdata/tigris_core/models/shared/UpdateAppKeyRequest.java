@@ -45,6 +45,5 @@ public class UpdateAppKeyRequest {
         return this;
     }
     
-
     public UpdateAppKeyRequest(){}
 }

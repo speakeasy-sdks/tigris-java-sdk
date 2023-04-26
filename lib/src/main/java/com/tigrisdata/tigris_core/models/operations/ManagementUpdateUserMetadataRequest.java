@@ -22,9 +22,8 @@ public class ManagementUpdateUserMetadataRequest {
         return this;
     }
     
-
     public ManagementUpdateUserMetadataRequest(@JsonProperty("UpdateUserMetadataRequest") com.tigrisdata.tigris_core.models.shared.UpdateUserMetadataRequest updateUserMetadataRequest, @JsonProperty("metadataKey") String metadataKey) {
-    this.updateUserMetadataRequest = updateUserMetadataRequest;
-this.metadataKey = metadataKey;
+        this.updateUserMetadataRequest = updateUserMetadataRequest;
+        this.metadataKey = metadataKey;
   }
 }

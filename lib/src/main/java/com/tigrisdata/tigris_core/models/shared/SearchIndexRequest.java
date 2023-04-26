@@ -141,6 +141,5 @@ public class SearchIndexRequest {
         return this;
     }
     
-
     public SearchIndexRequest(){}
 }

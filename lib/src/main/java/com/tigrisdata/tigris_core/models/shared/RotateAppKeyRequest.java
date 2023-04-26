@@ -34,6 +34,5 @@ public class RotateAppKeyRequest {
         return this;
     }
     
-
     public RotateAppKeyRequest(){}
 }

@@ -25,9 +25,8 @@ public class TigrisCreateAppKeyRequest {
         return this;
     }
     
-
     public TigrisCreateAppKeyRequest(@JsonProperty("CreateAppKeyRequest") com.tigrisdata.tigris_core.models.shared.CreateAppKeyRequest createAppKeyRequest, @JsonProperty("project") String project) {
-    this.createAppKeyRequest = createAppKeyRequest;
-this.project = project;
+        this.createAppKeyRequest = createAppKeyRequest;
+        this.project = project;
   }
 }

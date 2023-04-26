@@ -42,6 +42,5 @@ public class CreateOrReplaceDocumentRequest {
         return this;
     }
     
-
     public CreateOrReplaceDocumentRequest(){}
 }

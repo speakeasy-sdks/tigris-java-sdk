@@ -28,6 +28,5 @@ public class CollectionInfo {
         return this;
     }
     
-
     public CollectionInfo(){}
 }

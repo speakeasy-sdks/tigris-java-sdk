@@ -28,8 +28,7 @@ public class TigrisListCollectionsRequest {
         return this;
     }
     
-
     public TigrisListCollectionsRequest(@JsonProperty("project") String project) {
-    this.project = project;
+        this.project = project;
   }
 }

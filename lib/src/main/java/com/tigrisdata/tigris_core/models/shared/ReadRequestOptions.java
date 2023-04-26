@@ -56,6 +56,5 @@ public class ReadRequestOptions {
         return this;
     }
     
-
     public ReadRequestOptions(){}
 }

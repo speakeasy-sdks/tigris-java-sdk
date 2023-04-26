@@ -34,6 +34,5 @@ public class CreateOrUpdateIndexResponse {
         return this;
     }
     
-
     public CreateOrUpdateIndexResponse(){}
 }

@@ -35,10 +35,9 @@ public class CacheDeleteCacheRequest {
         return this;
     }
     
-
     public CacheDeleteCacheRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("name") String name, @JsonProperty("project") String project) {
-    this.requestBody = requestBody;
-this.name = name;
-this.project = project;
+        this.requestBody = requestBody;
+        this.name = name;
+        this.project = project;
   }
 }

@@ -35,10 +35,9 @@ public class TigrisCreateOrUpdateCollectionRequest {
         return this;
     }
     
-
     public TigrisCreateOrUpdateCollectionRequest(@JsonProperty("CreateOrUpdateCollectionRequest") com.tigrisdata.tigris_core.models.shared.CreateOrUpdateCollectionRequest createOrUpdateCollectionRequest, @JsonProperty("collection") String collection, @JsonProperty("project") String project) {
-    this.createOrUpdateCollectionRequest = createOrUpdateCollectionRequest;
-this.collection = collection;
-this.project = project;
+        this.createOrUpdateCollectionRequest = createOrUpdateCollectionRequest;
+        this.collection = collection;
+        this.project = project;
   }
 }

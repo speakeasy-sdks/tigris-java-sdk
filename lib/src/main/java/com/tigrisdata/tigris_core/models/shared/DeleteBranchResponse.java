@@ -34,6 +34,5 @@ public class DeleteBranchResponse {
         return this;
     }
     
-
     public DeleteBranchResponse(){}
 }

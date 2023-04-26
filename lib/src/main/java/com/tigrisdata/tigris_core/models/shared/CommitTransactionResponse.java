@@ -23,6 +23,5 @@ public class CommitTransactionResponse {
         return this;
     }
     
-
     public CommitTransactionResponse(){}
 }

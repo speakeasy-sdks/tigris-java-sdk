@@ -34,6 +34,5 @@ public class DeleteIndexResponse {
         return this;
     }
     
-
     public DeleteIndexResponse(){}
 }

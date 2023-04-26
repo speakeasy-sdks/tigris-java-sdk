@@ -15,8 +15,7 @@ public class RealtimeGetRTChannelsRequest {
         return this;
     }
     
-
     public RealtimeGetRTChannelsRequest(@JsonProperty("project") String project) {
-    this.project = project;
+        this.project = project;
   }
 }

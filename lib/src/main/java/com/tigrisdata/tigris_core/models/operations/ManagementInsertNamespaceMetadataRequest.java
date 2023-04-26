@@ -22,9 +22,8 @@ public class ManagementInsertNamespaceMetadataRequest {
         return this;
     }
     
-
     public ManagementInsertNamespaceMetadataRequest(@JsonProperty("InsertNamespaceMetadataRequest") com.tigrisdata.tigris_core.models.shared.InsertNamespaceMetadataRequest insertNamespaceMetadataRequest, @JsonProperty("metadataKey") String metadataKey) {
-    this.insertNamespaceMetadataRequest = insertNamespaceMetadataRequest;
-this.metadataKey = metadataKey;
+        this.insertNamespaceMetadataRequest = insertNamespaceMetadataRequest;
+        this.metadataKey = metadataKey;
   }
 }

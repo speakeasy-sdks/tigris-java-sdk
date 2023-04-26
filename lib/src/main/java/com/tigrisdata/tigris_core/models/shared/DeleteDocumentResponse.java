@@ -23,6 +23,5 @@ public class DeleteDocumentResponse {
         return this;
     }
     
-
     public DeleteDocumentResponse(){}
 }

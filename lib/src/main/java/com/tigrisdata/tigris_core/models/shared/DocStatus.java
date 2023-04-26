@@ -31,6 +31,5 @@ public class DocStatus {
         return this;
     }
     
-
     public DocStatus(){}
 }

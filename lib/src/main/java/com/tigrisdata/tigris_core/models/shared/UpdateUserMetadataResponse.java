@@ -44,6 +44,5 @@ public class UpdateUserMetadataResponse {
         return this;
     }
     
-
     public UpdateUserMetadataResponse(){}
 }

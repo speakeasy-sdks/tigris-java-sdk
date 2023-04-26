@@ -34,6 +34,5 @@ public class CreateBranchResponse {
         return this;
     }
     
-
     public CreateBranchResponse(){}
 }

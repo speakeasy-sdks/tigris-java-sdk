@@ -36,6 +36,5 @@ public class SearchIndexResponse {
         return this;
     }
     
-
     public SearchIndexResponse(){}
 }

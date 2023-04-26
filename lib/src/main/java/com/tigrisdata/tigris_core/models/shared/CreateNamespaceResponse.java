@@ -42,6 +42,5 @@ public class CreateNamespaceResponse {
         return this;
     }
     
-
     public CreateNamespaceResponse(){}
 }

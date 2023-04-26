@@ -23,6 +23,5 @@ public class InsertRequestOptions {
         return this;
     }
     
-
     public InsertRequestOptions(){}
 }

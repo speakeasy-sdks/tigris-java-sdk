@@ -64,6 +64,5 @@ public class DescribeCollectionRequest {
         return this;
     }
     
-
     public DescribeCollectionRequest(){}
 }

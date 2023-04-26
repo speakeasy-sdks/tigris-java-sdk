@@ -22,9 +22,8 @@ public class ManagementGetUserMetadataRequest {
         return this;
     }
     
-
     public ManagementGetUserMetadataRequest(@JsonProperty("GetUserMetadataRequest") com.tigrisdata.tigris_core.models.shared.GetUserMetadataRequest getUserMetadataRequest, @JsonProperty("metadataKey") String metadataKey) {
-    this.getUserMetadataRequest = getUserMetadataRequest;
-this.metadataKey = metadataKey;
+        this.getUserMetadataRequest = getUserMetadataRequest;
+        this.metadataKey = metadataKey;
   }
 }

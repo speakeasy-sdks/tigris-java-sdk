@@ -23,6 +23,5 @@ public class CreateDocumentResponse {
         return this;
     }
     
-
     public CreateDocumentResponse(){}
 }

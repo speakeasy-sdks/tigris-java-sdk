@@ -31,6 +31,5 @@ public class IndexDoc {
         return this;
     }
     
-
     public IndexDoc(){}
 }

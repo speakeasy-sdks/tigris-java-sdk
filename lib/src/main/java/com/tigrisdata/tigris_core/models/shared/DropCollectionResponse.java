@@ -34,6 +34,5 @@ public class DropCollectionResponse {
         return this;
     }
     
-
     public DropCollectionResponse(){}
 }

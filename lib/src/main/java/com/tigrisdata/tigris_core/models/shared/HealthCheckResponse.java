@@ -20,6 +20,5 @@ public class HealthCheckResponse {
         return this;
     }
     
-
     public HealthCheckResponse(){}
 }

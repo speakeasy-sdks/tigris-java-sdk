@@ -25,9 +25,8 @@ public class TigrisDeleteProjectRequest {
         return this;
     }
     
-
     public TigrisDeleteProjectRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("project") String project) {
-    this.requestBody = requestBody;
-this.project = project;
+        this.requestBody = requestBody;
+        this.project = project;
   }
 }

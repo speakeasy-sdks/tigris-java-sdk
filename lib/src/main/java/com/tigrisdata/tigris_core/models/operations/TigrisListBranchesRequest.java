@@ -18,8 +18,7 @@ public class TigrisListBranchesRequest {
         return this;
     }
     
-
     public TigrisListBranchesRequest(@JsonProperty("project") String project) {
-    this.project = project;
+        this.project = project;
   }
 }

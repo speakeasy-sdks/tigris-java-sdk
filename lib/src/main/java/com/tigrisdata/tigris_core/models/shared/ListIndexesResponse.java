@@ -23,6 +23,5 @@ public class ListIndexesResponse {
         return this;
     }
     
-
     public ListIndexesResponse(){}
 }

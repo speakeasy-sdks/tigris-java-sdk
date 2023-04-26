@@ -25,9 +25,8 @@ public class TigrisRollbackTransactionRequest {
         return this;
     }
     
-
     public TigrisRollbackTransactionRequest(@JsonProperty("RollbackTransactionRequest") com.tigrisdata.tigris_core.models.shared.RollbackTransactionRequest rollbackTransactionRequest, @JsonProperty("project") String project) {
-    this.rollbackTransactionRequest = rollbackTransactionRequest;
-this.project = project;
+        this.rollbackTransactionRequest = rollbackTransactionRequest;
+        this.project = project;
   }
 }

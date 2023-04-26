@@ -49,9 +49,8 @@ public class ManagementGetNamespaceMetadataResponse {
         return this;
     }
     
-
     public ManagementGetNamespaceMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
-    this.contentType = contentType;
-this.statusCode = statusCode;
+        this.contentType = contentType;
+        this.statusCode = statusCode;
   }
 }

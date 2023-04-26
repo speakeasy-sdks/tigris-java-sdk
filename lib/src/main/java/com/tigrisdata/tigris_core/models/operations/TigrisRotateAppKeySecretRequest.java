@@ -25,9 +25,8 @@ public class TigrisRotateAppKeySecretRequest {
         return this;
     }
     
-
     public TigrisRotateAppKeySecretRequest(@JsonProperty("RotateAppKeyRequest") com.tigrisdata.tigris_core.models.shared.RotateAppKeyRequest rotateAppKeyRequest, @JsonProperty("project") String project) {
-    this.rotateAppKeyRequest = rotateAppKeyRequest;
-this.project = project;
+        this.rotateAppKeyRequest = rotateAppKeyRequest;
+        this.project = project;
   }
 }

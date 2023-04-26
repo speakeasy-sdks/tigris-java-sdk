@@ -20,6 +20,5 @@ public class GetRTChannelResponse {
         return this;
     }
     
-
     public GetRTChannelResponse(){}
 }

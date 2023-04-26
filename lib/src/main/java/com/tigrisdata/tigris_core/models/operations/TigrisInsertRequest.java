@@ -35,10 +35,9 @@ public class TigrisInsertRequest {
         return this;
     }
     
-
     public TigrisInsertRequest(@JsonProperty("InsertRequest") com.tigrisdata.tigris_core.models.shared.InsertRequest insertRequest, @JsonProperty("collection") String collection, @JsonProperty("project") String project) {
-    this.insertRequest = insertRequest;
-this.collection = collection;
-this.project = project;
+        this.insertRequest = insertRequest;
+        this.collection = collection;
+        this.project = project;
   }
 }

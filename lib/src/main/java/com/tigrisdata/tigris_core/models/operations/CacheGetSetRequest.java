@@ -45,11 +45,10 @@ public class CacheGetSetRequest {
         return this;
     }
     
-
     public CacheGetSetRequest(@JsonProperty("GetSetRequest") com.tigrisdata.tigris_core.models.shared.GetSetRequest getSetRequest, @JsonProperty("key") String key, @JsonProperty("name") String name, @JsonProperty("project") String project) {
-    this.getSetRequest = getSetRequest;
-this.key = key;
-this.name = name;
-this.project = project;
+        this.getSetRequest = getSetRequest;
+        this.key = key;
+        this.name = name;
+        this.project = project;
   }
 }

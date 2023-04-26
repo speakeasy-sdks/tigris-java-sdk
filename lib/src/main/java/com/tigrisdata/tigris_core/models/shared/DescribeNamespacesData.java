@@ -17,6 +17,5 @@ public class DescribeNamespacesData {
         return this;
     }
     
-
     public DescribeNamespacesData(){}
 }

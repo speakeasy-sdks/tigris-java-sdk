@@ -31,6 +31,5 @@ public class IndexInfo {
         return this;
     }
     
-
     public IndexInfo(){}
 }

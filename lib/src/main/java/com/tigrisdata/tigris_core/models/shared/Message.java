@@ -44,6 +44,5 @@ public class Message {
         return this;
     }
     
-
     public Message(){}
 }

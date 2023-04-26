@@ -35,10 +35,9 @@ public class SearchCreateOrReplaceRequest {
         return this;
     }
     
-
     public SearchCreateOrReplaceRequest(@JsonProperty("CreateOrReplaceDocumentRequest") com.tigrisdata.tigris_core.models.shared.CreateOrReplaceDocumentRequest createOrReplaceDocumentRequest, @JsonProperty("index") String index, @JsonProperty("project") String project) {
-    this.createOrReplaceDocumentRequest = createOrReplaceDocumentRequest;
-this.index = index;
-this.project = project;
+        this.createOrReplaceDocumentRequest = createOrReplaceDocumentRequest;
+        this.index = index;
+        this.project = project;
   }
 }

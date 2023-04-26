@@ -42,6 +42,5 @@ public class InsertRequest {
         return this;
     }
     
-
     public InsertRequest(){}
 }

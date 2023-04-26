@@ -20,6 +20,5 @@ public class Collation {
         return this;
     }
     
-
     public Collation(){}
 }

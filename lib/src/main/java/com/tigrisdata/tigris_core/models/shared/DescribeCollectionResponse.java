@@ -53,6 +53,5 @@ public class DescribeCollectionResponse {
         return this;
     }
     
-
     public DescribeCollectionResponse(){}
 }

@@ -35,10 +35,9 @@ public class SearchDeleteIndexRequest {
         return this;
     }
     
-
     public SearchDeleteIndexRequest(@JsonProperty("DeleteIndexRequest") com.tigrisdata.tigris_core.models.shared.DeleteIndexRequest deleteIndexRequest, @JsonProperty("name") String name, @JsonProperty("project") String project) {
-    this.deleteIndexRequest = deleteIndexRequest;
-this.name = name;
-this.project = project;
+        this.deleteIndexRequest = deleteIndexRequest;
+        this.name = name;
+        this.project = project;
   }
 }

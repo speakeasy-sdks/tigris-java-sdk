@@ -45,6 +45,5 @@ public class GetAccessTokenResponse {
         return this;
     }
     
-
     public GetAccessTokenResponse(){}
 }

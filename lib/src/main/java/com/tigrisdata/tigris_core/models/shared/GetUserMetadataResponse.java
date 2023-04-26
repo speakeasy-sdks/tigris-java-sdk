@@ -44,6 +44,5 @@ public class GetUserMetadataResponse {
         return this;
     }
     
-
     public GetUserMetadataResponse(){}
 }

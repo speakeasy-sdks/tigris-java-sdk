@@ -17,6 +17,5 @@ public class ChannelMetadata {
         return this;
     }
     
-
     public ChannelMetadata(){}
 }

@@ -42,6 +42,5 @@ public class ReadResponse {
         return this;
     }
     
-
     public ReadResponse(){}
 }

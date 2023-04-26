@@ -42,6 +42,5 @@ public class DeleteByQueryRequest {
         return this;
     }
     
-
     public DeleteByQueryRequest(){}
 }

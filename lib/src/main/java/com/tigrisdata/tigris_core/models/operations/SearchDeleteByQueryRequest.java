@@ -35,10 +35,9 @@ public class SearchDeleteByQueryRequest {
         return this;
     }
     
-
     public SearchDeleteByQueryRequest(@JsonProperty("DeleteByQueryRequest") com.tigrisdata.tigris_core.models.shared.DeleteByQueryRequest deleteByQueryRequest, @JsonProperty("index") String index, @JsonProperty("project") String project) {
-    this.deleteByQueryRequest = deleteByQueryRequest;
-this.index = index;
-this.project = project;
+        this.deleteByQueryRequest = deleteByQueryRequest;
+        this.index = index;
+        this.project = project;
   }
 }

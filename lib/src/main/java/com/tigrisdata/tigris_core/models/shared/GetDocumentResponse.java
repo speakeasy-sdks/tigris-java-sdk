@@ -23,6 +23,5 @@ public class GetDocumentResponse {
         return this;
     }
     
-
     public GetDocumentResponse(){}
 }

@@ -48,8 +48,7 @@ public class SearchListIndexesRequest {
         return this;
     }
     
-
     public SearchListIndexesRequest(@JsonProperty("project") String project) {
-    this.project = project;
+        this.project = project;
   }
 }

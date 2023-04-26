@@ -23,6 +23,5 @@ public class ListProjectsResponse {
         return this;
     }
     
-
     public ListProjectsResponse(){}
 }

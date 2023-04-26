@@ -58,9 +58,8 @@ public class CacheKeysRequest {
         return this;
     }
     
-
     public CacheKeysRequest(@JsonProperty("name") String name, @JsonProperty("project") String project) {
-    this.name = name;
-this.project = project;
+        this.name = name;
+        this.project = project;
   }
 }

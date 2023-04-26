@@ -43,6 +43,5 @@ public class SearchHitMeta {
         return this;
     }
     
-
     public SearchHitMeta(){}
 }

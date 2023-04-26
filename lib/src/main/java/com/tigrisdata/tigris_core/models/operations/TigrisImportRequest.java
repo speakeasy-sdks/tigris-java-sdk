@@ -35,10 +35,9 @@ public class TigrisImportRequest {
         return this;
     }
     
-
     public TigrisImportRequest(@JsonProperty("ImportRequest") com.tigrisdata.tigris_core.models.shared.ImportRequest importRequest, @JsonProperty("collection") String collection, @JsonProperty("project") String project) {
-    this.importRequest = importRequest;
-this.collection = collection;
-this.project = project;
+        this.importRequest = importRequest;
+        this.collection = collection;
+        this.project = project;
   }
 }

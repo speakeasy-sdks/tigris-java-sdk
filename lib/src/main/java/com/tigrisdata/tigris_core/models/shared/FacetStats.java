@@ -67,6 +67,5 @@ public class FacetStats {
         return this;
     }
     
-
     public FacetStats(){}
 }

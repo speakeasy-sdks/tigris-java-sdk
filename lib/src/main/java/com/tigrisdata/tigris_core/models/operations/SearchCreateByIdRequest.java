@@ -45,11 +45,10 @@ public class SearchCreateByIdRequest {
         return this;
     }
     
-
     public SearchCreateByIdRequest(@JsonProperty("CreateByIdRequest") com.tigrisdata.tigris_core.models.shared.CreateByIdRequest createByIdRequest, @JsonProperty("id") String id, @JsonProperty("index") String index, @JsonProperty("project") String project) {
-    this.createByIdRequest = createByIdRequest;
-this.id = id;
-this.index = index;
-this.project = project;
+        this.createByIdRequest = createByIdRequest;
+        this.id = id;
+        this.index = index;
+        this.project = project;
   }
 }

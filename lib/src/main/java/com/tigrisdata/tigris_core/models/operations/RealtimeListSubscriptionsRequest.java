@@ -36,9 +36,8 @@ public class RealtimeListSubscriptionsRequest {
         return this;
     }
     
-
     public RealtimeListSubscriptionsRequest(@JsonProperty("channel") String channel, @JsonProperty("project") String project) {
-    this.channel = channel;
-this.project = project;
+        this.channel = channel;
+        this.project = project;
   }
 }

@@ -36,6 +36,5 @@ public class GetNamespaceMetadataResponse {
         return this;
     }
     
-
     public GetNamespaceMetadataResponse(){}
 }

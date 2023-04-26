@@ -49,9 +49,8 @@ public class TigrisBeginTransactionResponse {
         return this;
     }
     
-
     public TigrisBeginTransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
-    this.contentType = contentType;
-this.statusCode = statusCode;
+        this.contentType = contentType;
+        this.statusCode = statusCode;
   }
 }

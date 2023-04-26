@@ -25,9 +25,8 @@ public class TigrisDeleteAppKeyRequest {
         return this;
     }
     
-
     public TigrisDeleteAppKeyRequest(@JsonProperty("DeleteAppKeyRequest") com.tigrisdata.tigris_core.models.shared.DeleteAppKeyRequest deleteAppKeyRequest, @JsonProperty("project") String project) {
-    this.deleteAppKeyRequest = deleteAppKeyRequest;
-this.project = project;
+        this.deleteAppKeyRequest = deleteAppKeyRequest;
+        this.project = project;
   }
 }

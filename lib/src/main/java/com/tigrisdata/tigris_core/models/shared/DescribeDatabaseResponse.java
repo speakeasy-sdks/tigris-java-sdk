@@ -53,6 +53,5 @@ public class DescribeDatabaseResponse {
         return this;
     }
     
-
     public DescribeDatabaseResponse(){}
 }

@@ -35,10 +35,9 @@ public class CacheCreateCacheRequest {
         return this;
     }
     
-
     public CacheCreateCacheRequest(@JsonProperty("CreateCacheRequest") com.tigrisdata.tigris_core.models.shared.CreateCacheRequest createCacheRequest, @JsonProperty("name") String name, @JsonProperty("project") String project) {
-    this.createCacheRequest = createCacheRequest;
-this.name = name;
-this.project = project;
+        this.createCacheRequest = createCacheRequest;
+        this.name = name;
+        this.project = project;
   }
 }

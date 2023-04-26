@@ -28,6 +28,5 @@ public class UpdateNamespaceMetadataRequest {
         return this;
     }
     
-
     public UpdateNamespaceMetadataRequest(){}
 }

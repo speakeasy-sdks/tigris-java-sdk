@@ -34,6 +34,5 @@ public class GetResponse {
         return this;
     }
     
-
     public GetResponse(){}
 }

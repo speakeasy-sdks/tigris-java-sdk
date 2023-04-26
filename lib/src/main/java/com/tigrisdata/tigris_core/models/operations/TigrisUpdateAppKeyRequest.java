@@ -25,9 +25,8 @@ public class TigrisUpdateAppKeyRequest {
         return this;
     }
     
-
     public TigrisUpdateAppKeyRequest(@JsonProperty("UpdateAppKeyRequest") com.tigrisdata.tigris_core.models.shared.UpdateAppKeyRequest updateAppKeyRequest, @JsonProperty("project") String project) {
-    this.updateAppKeyRequest = updateAppKeyRequest;
-this.project = project;
+        this.updateAppKeyRequest = updateAppKeyRequest;
+        this.project = project;
   }
 }
