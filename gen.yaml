@@ -2,14 +2,14 @@ configVersion: 1.0.0
 management:
   docChecksum: 7de1b55b74752506b18edc0b4da96efe
   docVersion: 0.0.1
-  speakeasyVersion: 1.23.1
-  generationVersion: 2.21.1
+  speakeasyVersion: 1.26.5
+  generationVersion: 2.23.6
 generation:
   telemetryEnabled: false
   sdkClassName: SDK
   singleTagPerOp: false
 java:
-  version: 0.7.0
+  version: 0.8.0
   artifactID: tigris-core
   groupID: com.tigrisdata
   projectName: tigris-data
