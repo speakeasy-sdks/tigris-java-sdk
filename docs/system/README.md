@@ -29,7 +29,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("voluptate") {{
+                .setSecurity(new Security("minima") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
@@ -63,7 +63,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("ipsa") {{
+                .setSecurity(new Security("distinctio") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
@@ -97,13 +97,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("minima") {{
+                .setSecurity(new Security("eligendi") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             com.tigrisdata.tigris_core.models.. req = new java.util.HashMap<String, Object>() {{
-                put("consectetur", "adipisci");
+                put("culpa", "tempore");
             }}            
 
             ObservabilityQuotaUsageResponse res = sdk.system.observabilityQuotaUsage(req);
@@ -135,16 +135,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("iste") {{
+                .setSecurity(new Security("adipisci") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             com.tigrisdata.tigris_core.models.. req = new java.util.HashMap<String, Object>() {{
-                put("accusantium", "rem");
-                put("aut", "laudantium");
-                put("eum", "mollitia");
-                put("ab", "corrupti");
+                put("consequuntur", "consequatur");
+                put("minus", "quaerat");
+                put("sapiente", "consectetur");
+                put("esse", "blanditiis");
             }}            
 
             ObservabilityQuotaLimitsResponse res = sdk.system.queryQuotaLimits(req);
@@ -183,7 +183,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("non") {{
+                .setSecurity(new Security("provident") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
@@ -192,27 +192,42 @@ public class Application {
                 additionalFunctions = new com.tigrisdata.tigris_core.models.shared.AdditionalFunction[]{{
                     add(new AdditionalFunction() {{
                         rollup = new RollupFunction() {{
-                            aggregator = RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_COUNT;
-                            interval = 580152L;
+                            aggregator = RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_AVG;
+                            interval = 557811L;
+                        }};
+                    }}),
+                    add(new AdditionalFunction() {{
+                        rollup = new RollupFunction() {{
+                            aggregator = RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_MIN;
+                            interval = 97468L;
+                        }};
+                    }}),
+                    add(new AdditionalFunction() {{
+                        rollup = new RollupFunction() {{
+                            aggregator = RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_AVG;
+                            interval = 621679L;
+                        }};
+                    }}),
+                    add(new AdditionalFunction() {{
+                        rollup = new RollupFunction() {{
+                            aggregator = RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_MIN;
+                            interval = 863023L;
                         }};
                     }}),
                 }};
-                branch = "numquam";
-                collection = "impedit";
-                db = "explicabo";
-                from = 376226L;
-                function = QueryTimeSeriesMetricsRequestFunctionEnum.RATE;
-                metricName = "dignissimos";
-                quantile = 1154.84;
+                branch = "possimus";
+                collection = "quia";
+                db = "eveniet";
+                from = 992430L;
+                function = QueryTimeSeriesMetricsRequestFunctionEnum.NONE;
+                metricName = "veritatis";
+                quantile = 1594.14;
                 spaceAggregatedBy = new String[]{{
-                    add("natus"),
-                    add("velit"),
-                    add("voluptatibus"),
-                    add("voluptas"),
+                    add("similique"),
                 }};
-                spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregationEnum.SUM;
-                tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperationEnum.ALL;
-                to = 409054L;
+                spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregationEnum.MAX;
+                tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperationEnum.READ;
+                to = 949298L;
             }};            
 
             ObservabilityQueryTimeSeriesMetricsResponse res = sdk.system.queryTimeSeriesMetrics(req);

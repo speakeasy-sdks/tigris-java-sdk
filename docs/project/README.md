@@ -28,17 +28,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("quidem") {{
+                .setSecurity(new Security("ex") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisCreateProjectRequest req = new TigrisCreateProjectRequest(                new java.util.HashMap<String, Object>() {{
-                                put("ut", "eum");
-                                put("suscipit", "assumenda");
-                                put("eos", "praesentium");
-                                put("quisquam", "veritatis");
-                            }}, "ipsa");            
+                                put("excepturi", "voluptatibus");
+                                put("nostrum", "sapiente");
+                                put("quisquam", "saepe");
+                                put("ea", "impedit");
+                            }}, "corporis");            
 
             TigrisCreateProjectResponse res = sdk.project.create(req);
 
@@ -70,16 +70,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("id") {{
+                .setSecurity(new Security("veniam") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisDeleteProjectRequest req = new TigrisDeleteProjectRequest(                new java.util.HashMap<String, Object>() {{
-                                put("neque", "quo");
-                                put("illum", "quo");
-                                put("fuga", "eius");
-                            }}, "eos");            
+                                put("inventore", "magnam");
+                                put("ea", "quo");
+                            }}, "consectetur");            
 
             TigrisDeleteProjectResponse res = sdk.project.deleteProject(req);
 
@@ -110,7 +109,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("voluptas") {{
+                .setSecurity(new Security("recusandae") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();

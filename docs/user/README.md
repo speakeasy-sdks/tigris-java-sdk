@@ -29,20 +29,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("quaerat") {{
+                .setSecurity(new Security("quae") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             ManagementGetUserMetadataRequest req = new ManagementGetUserMetadataRequest(                new GetUserMetadataRequest() {{
-                                metadataKey = "consequuntur";
+                                metadataKey = "earum";
                                 value = new java.util.HashMap<String, Object>() {{
-                                    put("officia", "maxime");
-                                    put("dignissimos", "officia");
-                                    put("asperiores", "nemo");
-                                    put("quae", "quaerat");
+                                    put("in", "eius");
+                                    put("libero", "illum");
                                 }};
-                            }};, "porro");            
+                            }};, "soluta");            
 
             ManagementGetUserMetadataResponse res = sdk.user.getMetadata(req);
 
@@ -75,17 +73,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("quod") {{
+                .setSecurity(new Security("accusantium") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             ManagementInsertUserMetadataRequest req = new ManagementInsertUserMetadataRequest(                new InsertUserMetadataRequest() {{
-                                metadataKey = "labore";
+                                metadataKey = "aliquam";
                                 value = new java.util.HashMap<String, Object>() {{
-                                    put("adipisci", "fuga");
+                                    put("dicta", "ullam");
+                                    put("reprehenderit", "ullam");
+                                    put("nisi", "aut");
+                                    put("voluptatum", "qui");
                                 }};
-                            }};, "id");            
+                            }};, "quibusdam");            
 
             ManagementInsertUserMetadataResponse res = sdk.user.insertMetadata(req);
 
@@ -118,19 +119,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("suscipit") {{
+                .setSecurity(new Security("ex") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             ManagementUpdateUserMetadataRequest req = new ManagementUpdateUserMetadataRequest(                new UpdateUserMetadataRequest() {{
-                                metadataKey = "velit";
+                                metadataKey = "deleniti";
                                 value = new java.util.HashMap<String, Object>() {{
-                                    put("est", "recusandae");
-                                    put("totam", "fugiat");
-                                    put("vel", "ducimus");
+                                    put("dolorum", "architecto");
+                                    put("omnis", "tenetur");
+                                    put("quasi", "at");
+                                    put("et", "voluptate");
                                 }};
-                            }};, "quos");            
+                            }};, "ipsa");            
 
             ManagementUpdateUserMetadataResponse res = sdk.user.updateMetadata(req);
 

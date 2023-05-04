@@ -36,17 +36,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("omnis") {{
+                .setSecurity(new Security("dolores") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisBeginTransactionRequest req = new TigrisBeginTransactionRequest(                new BeginTransactionRequest() {{
-                                branch = "quis";
+                                branch = "distinctio";
                                 options = new java.util.HashMap<String, Object>() {{
-                                    put("delectus", "voluptate");
+                                    put("aliquid", "quam");
+                                    put("molestias", "temporibus");
+                                    put("qui", "neque");
                                 }};
-                            }};, "consectetur");            
+                            }};, "fugit");            
 
             TigrisBeginTransactionResponse res = sdk.database.beginTransaction(req);
 
@@ -80,14 +82,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("vero") {{
+                .setSecurity(new Security("magni") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisCommitTransactionRequest req = new TigrisCommitTransactionRequest(                new CommitTransactionRequest() {{
-                                branch = "tenetur";
-                            }};, "dignissimos");            
+                                branch = "odio";
+                            }};, "sunt");            
 
             TigrisCommitTransactionResponse res = sdk.database.commitTransaction(req);
 
@@ -119,16 +121,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("hic") {{
+                .setSecurity(new Security("ullam") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisCreateBranchRequest req = new TigrisCreateBranchRequest(                new java.util.HashMap<String, Object>() {{
-                                put("quod", "odio");
-                                put("similique", "facilis");
-                                put("vero", "ducimus");
-                            }}, "dolore", "quibusdam");            
+                                put("hic", "voluptatem");
+                                put("cumque", "soluta");
+                                put("nobis", "et");
+                            }}, "saepe", "ipsum");            
 
             TigrisCreateBranchResponse res = sdk.database.createBranch(req);
 
@@ -161,14 +163,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("illum") {{
+                .setSecurity(new Security("veritatis") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisDeleteBranchRequest req = new TigrisDeleteBranchRequest(                new java.util.HashMap<String, Object>() {{
-                                put("natus", "impedit");
-                            }}, "aut", "voluptatibus");            
+                                put("quos", "tempore");
+                                put("cupiditate", "aperiam");
+                                put("delectus", "dolorem");
+                            }}, "dolore", "labore");            
 
             TigrisDeleteBranchResponse res = sdk.database.deleteBranch(req);
 
@@ -202,16 +206,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("exercitationem") {{
+                .setSecurity(new Security("adipisci") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisDescribeDatabaseRequest req = new TigrisDescribeDatabaseRequest(                new DescribeDatabaseRequest() {{
-                                branch = "nulla";
-                                project = "fugit";
-                                schemaFormat = "porro";
-                            }};, "maiores");            
+                                branch = "dolorum";
+                                project = "architecto";
+                                schemaFormat = "quae";
+                            }};, "aut");            
 
             TigrisDescribeDatabaseResponse res = sdk.database.describe(req);
 
@@ -243,13 +247,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("doloribus") {{
+                .setSecurity(new Security("quas") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
-            TigrisListCollectionsRequest req = new TigrisListCollectionsRequest("iusto") {{
-                branch = "eligendi";
+            TigrisListCollectionsRequest req = new TigrisListCollectionsRequest("itaque") {{
+                branch = "consequatur";
             }};            
 
             TigrisListCollectionsResponse res = sdk.database.listCollections(req);
@@ -284,14 +288,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("ducimus") {{
+                .setSecurity(new Security("est") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisRollbackTransactionRequest req = new TigrisRollbackTransactionRequest(                new RollbackTransactionRequest() {{
-                                branch = "alias";
-                            }};, "officia");            
+                                branch = "repellendus";
+                            }};, "porro");            
 
             TigrisRollbackTransactionResponse res = sdk.database.rollbackTransaction(req);
 
@@ -323,12 +327,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("tempora") {{
+                .setSecurity(new Security("doloribus") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
-            TigrisListBranchesRequest req = new TigrisListBranchesRequest("ipsam");            
+            TigrisListBranchesRequest req = new TigrisListBranchesRequest("ut");            
 
             TigrisListBranchesResponse res = sdk.database.tigrisListBranches(req);
 

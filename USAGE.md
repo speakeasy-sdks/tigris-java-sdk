@@ -3,9 +3,10 @@
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
-import com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyRequest;
-import com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse;
-import com.tigrisdata.tigris_core.models.shared.DeleteAppKeyRequest;
+import com.tigrisdata.tigris_core.models.operations.CacheCreateCacheRequest;
+import com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse;
+import com.tigrisdata.tigris_core.models.shared.CreateCacheOptions;
+import com.tigrisdata.tigris_core.models.shared.CreateCacheRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
 
 public class Application {
@@ -17,13 +18,15 @@ public class Application {
                 }})
                 .build();
 
-            TigrisDeleteAppKeyRequest req = new TigrisDeleteAppKeyRequest(                new DeleteAppKeyRequest() {{
-                                id = "9bd9d8d6-9a67-44e0-b467-cc8796ed151a";
-                            }};, "perferendis");            
+            CacheCreateCacheRequest req = new CacheCreateCacheRequest(                new CreateCacheRequest() {{
+                                options = new CreateCacheOptions() {{
+                                    ttlMs = 592845L;
+                                }};;
+                            }};, "distinctio", "quibusdam");            
 
-            TigrisDeleteAppKeyResponse res = sdk.appKey.delete(req);
+            CacheCreateCacheResponse res = sdk.cache.create(req);
 
-            if (res.deleteAppKeyResponse != null) {
+            if (res.createCacheResponse != null) {
                 // handle response
             }
         } catch (Exception e) {

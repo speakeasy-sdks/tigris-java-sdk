@@ -40,26 +40,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("accusantium") {{
+                .setSecurity(new Security("mollitia") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisCreateOrUpdateCollectionRequest req = new TigrisCreateOrUpdateCollectionRequest(                new CreateOrUpdateCollectionRequest() {{
-                                branch = "consequuntur";
+                                branch = "reiciendis";
                                 onlyCreate = false;
                                 options = new java.util.HashMap<String, Object>() {{
-                                    put("natus", "magni");
-                                    put("sunt", "quo");
-                                    put("illum", "pariatur");
+                                    put("ad", "eum");
+                                    put("dolor", "necessitatibus");
+                                    put("odit", "nemo");
                                 }};
                                 schema = new java.util.HashMap<String, Object>() {{
-                                    put("ea", "excepturi");
-                                    put("odit", "ea");
-                                    put("accusantium", "ab");
-                                    put("maiores", "quidem");
+                                    put("iure", "doloribus");
                                 }};
-                            }};, "ipsam", "voluptate");            
+                            }};, "debitis", "eius");            
 
             TigrisCreateOrUpdateCollectionResponse res = sdk.collection.create(req);
 
@@ -94,29 +91,31 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("autem") {{
+                .setSecurity(new Security("maxime") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisDeleteRequest req = new TigrisDeleteRequest(                new DeleteRequest() {{
-                                branch = "nam";
+                                branch = "deleniti";
                                 filter = new java.util.HashMap<String, Object>() {{
-                                    put("pariatur", "nemo");
+                                    put("in", "architecto");
+                                    put("architecto", "repudiandae");
+                                    put("ullam", "expedita");
                                 }};
                                 options = new DeleteRequestOptions() {{
                                     collation = new Collation() {{
-                                        case_ = "voluptatibus";
+                                        case_ = "nihil";
                                     }};;
-                                    limit = 16627L;
+                                    limit = 998848L;
                                     writeOptions = new java.util.HashMap<String, Object>() {{
-                                        put("amet", "aut");
-                                        put("cumque", "corporis");
-                                        put("hic", "libero");
-                                        put("nobis", "dolores");
+                                        put("sed", "saepe");
+                                        put("pariatur", "accusantium");
+                                        put("consequuntur", "praesentium");
+                                        put("natus", "magni");
                                     }};
                                 }};;
-                            }};, "quis", "totam");            
+                            }};, "sunt", "quo");            
 
             TigrisDeleteResponse res = sdk.collection.deleteDocuments(req);
 
@@ -149,20 +148,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("dignissimos") {{
+                .setSecurity(new Security("illum") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisDescribeCollectionRequest req = new TigrisDescribeCollectionRequest(                new DescribeCollectionRequest() {{
-                                branch = "eaque";
-                                collection = "quis";
+                                branch = "pariatur";
+                                collection = "maxime";
                                 options = new java.util.HashMap<String, Object>() {{
-                                    put("eos", "perferendis");
+                                    put("excepturi", "odit");
+                                    put("ea", "accusantium");
                                 }};
-                                project = "dolores";
-                                schemaFormat = "minus";
-                            }};, "quam", "dolor");            
+                                project = "ab";
+                                schemaFormat = "maiores";
+                            }};, "quidem", "ipsam");            
 
             TigrisDescribeCollectionResponse res = sdk.collection.describe(req);
 
@@ -196,20 +196,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("vero") {{
+                .setSecurity(new Security("voluptate") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisDropCollectionRequest req = new TigrisDropCollectionRequest(                new DropCollectionRequest() {{
-                                branch = "nostrum";
+                                branch = "autem";
                                 options = new java.util.HashMap<String, Object>() {{
-                                    put("recusandae", "omnis");
-                                    put("facilis", "perspiciatis");
-                                    put("voluptatem", "porro");
-                                    put("consequuntur", "blanditiis");
+                                    put("eaque", "pariatur");
+                                    put("nemo", "voluptatibus");
+                                    put("perferendis", "fugiat");
                                 }};
-                            }};, "error", "eaque");            
+                            }};, "amet", "aut");            
 
             TigrisDropCollectionResponse res = sdk.collection.drop(req);
 
@@ -248,45 +247,33 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("occaecati") {{
+                .setSecurity(new Security("cumque") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisImportRequest req = new TigrisImportRequest(                new ImportRequest() {{
                                 autogenerated = new String[]{{
-                                    add("adipisci"),
-                                    add("asperiores"),
-                                    add("earum"),
+                                    add("hic"),
+                                    add("libero"),
                                 }};
-                                branch = "modi";
+                                branch = "nobis";
                                 createCollection = false;
                                 documents = new java.util.HashMap<String, Object>[]{{
                                     add(new java.util.HashMap<String, Object>() {{
-                                        put("deleniti", "pariatur");
-                                        put("provident", "nobis");
-                                        put("libero", "delectus");
-                                    }}),
-                                    add(new java.util.HashMap<String, Object>() {{
-                                        put("quos", "aliquid");
-                                        put("dolorem", "dolorem");
-                                    }}),
-                                    add(new java.util.HashMap<String, Object>() {{
-                                        put("qui", "ipsum");
+                                        put("totam", "dignissimos");
+                                        put("eaque", "quis");
                                     }}),
                                 }};
                                 options = new ImportRequestOptions() {{
                                     writeOptions = new java.util.HashMap<String, Object>() {{
-                                        put("excepturi", "cum");
-                                        put("voluptate", "dignissimos");
-                                        put("reiciendis", "amet");
-                                        put("dolorum", "numquam");
+                                        put("eos", "perferendis");
                                     }};
                                 }};;
                                 primaryKey = new String[]{{
-                                    add("ipsa"),
+                                    add("minus"),
                                 }};
-                            }};, "ipsa", "iure");            
+                            }};, "quam", "dolor");            
 
             TigrisImportResponse res = sdk.collection.importDocuments(req);
 
@@ -322,44 +309,39 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("odio") {{
+                .setSecurity(new Security("vero") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisInsertRequest req = new TigrisInsertRequest(                new InsertRequest() {{
-                                branch = "quaerat";
+                                branch = "nostrum";
                                 documents = new java.util.HashMap<String, Object>[]{{
                                     add(new java.util.HashMap<String, Object>() {{
-                                        put("voluptatibus", "voluptas");
-                                        put("natus", "eos");
-                                        put("atque", "sit");
+                                        put("omnis", "facilis");
+                                        put("perspiciatis", "voluptatem");
+                                        put("porro", "consequuntur");
+                                        put("blanditiis", "error");
                                     }}),
                                     add(new java.util.HashMap<String, Object>() {{
-                                        put("ab", "soluta");
-                                        put("dolorum", "iusto");
-                                        put("voluptate", "dolorum");
-                                        put("deleniti", "omnis");
+                                        put("occaecati", "rerum");
                                     }}),
                                     add(new java.util.HashMap<String, Object>() {{
-                                        put("distinctio", "asperiores");
-                                        put("nihil", "ipsum");
-                                        put("voluptate", "id");
-                                        put("saepe", "eius");
+                                        put("asperiores", "earum");
                                     }}),
                                     add(new java.util.HashMap<String, Object>() {{
-                                        put("perferendis", "amet");
+                                        put("iste", "dolorum");
+                                        put("deleniti", "pariatur");
                                     }}),
                                 }};
                                 options = new InsertRequestOptions() {{
                                     writeOptions = new java.util.HashMap<String, Object>() {{
-                                        put("accusamus", "ad");
-                                        put("saepe", "suscipit");
-                                        put("deserunt", "provident");
-                                        put("minima", "repellendus");
+                                        put("nobis", "libero");
+                                        put("delectus", "quaerat");
+                                        put("quos", "aliquid");
                                     }};
                                 }};;
-                            }};, "totam", "similique");            
+                            }};, "dolorem", "dolorem");            
 
             TigrisInsertResponse res = sdk.collection.insertDocuments(req);
 
@@ -399,30 +381,31 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("alias") {{
+                .setSecurity(new Security("dolor") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisReadRequest req = new TigrisReadRequest(                new ReadRequest() {{
-                                branch = "at";
+                                branch = "qui";
                                 fields = new java.util.HashMap<String, Object>() {{
-                                    put("tempora", "vel");
-                                    put("quod", "officiis");
+                                    put("hic", "excepturi");
                                 }};
                                 filter = new java.util.HashMap<String, Object>() {{
-                                    put("dolorum", "a");
+                                    put("voluptate", "dignissimos");
+                                    put("reiciendis", "amet");
+                                    put("dolorum", "numquam");
                                 }};
                                 options = new ReadRequestOptions() {{
                                     collation = new Collation() {{
-                                        case_ = "esse";
+                                        case_ = "veritatis";
                                     }};;
-                                    limit = 687488L;
-                                    offset = "iusto";
-                                    skip = 215507L;
+                                    limit = 58029L;
+                                    offset = "ipsa";
+                                    skip = 434417L;
                                 }};;
-                                sort = "quisquam";
-                            }};, "tenetur", "amet");            
+                                sort = "odio";
+                            }};, "quaerat", "accusamus");            
 
             TigrisReadResponse res = sdk.collection.readDocuments(req);
 
@@ -456,28 +439,33 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("tempore") {{
+                .setSecurity(new Security("quidem") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisReplaceRequest req = new TigrisReplaceRequest(                new ReplaceRequest() {{
-                                branch = "accusamus";
+                                branch = "voluptatibus";
                                 documents = new java.util.HashMap<String, Object>[]{{
                                     add(new java.util.HashMap<String, Object>() {{
-                                        put("dolorem", "sapiente");
-                                        put("totam", "nihil");
+                                        put("eos", "atque");
+                                        put("sit", "fugiat");
+                                        put("ab", "soluta");
                                     }}),
                                     add(new java.util.HashMap<String, Object>() {{
-                                        put("expedita", "neque");
+                                        put("iusto", "voluptate");
+                                        put("dolorum", "deleniti");
+                                        put("omnis", "necessitatibus");
                                     }}),
                                 }};
                                 options = new ReplaceRequestOptions() {{
                                     writeOptions = new java.util.HashMap<String, Object>() {{
-                                        put("vel", "libero");
+                                        put("asperiores", "nihil");
+                                        put("ipsum", "voluptate");
+                                        put("id", "saepe");
                                     }};
                                 }};;
-                            }};, "voluptas", "deserunt");            
+                            }};, "eius", "aspernatur");            
 
             TigrisReplaceResponse res = sdk.collection.replaceDocuments(req);
 
@@ -514,50 +502,51 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("quam") {{
+                .setSecurity(new Security("perferendis") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisSearchRequest req = new TigrisSearchRequest(                new SearchRequest() {{
-                                branch = "ipsum";
+                                branch = "amet";
                                 collation = new Collation() {{
-                                    case_ = "incidunt";
+                                    case_ = "optio";
                                 }};;
                                 excludeFields = new String[]{{
-                                    add("cupiditate"),
+                                    add("ad"),
+                                    add("saepe"),
+                                    add("suscipit"),
+                                    add("deserunt"),
                                 }};
                                 facet = new java.util.HashMap<String, Object>() {{
-                                    put("pariatur", "soluta");
-                                    put("dicta", "laborum");
-                                    put("totam", "incidunt");
-                                    put("aspernatur", "dolores");
+                                    put("minima", "repellendus");
+                                    put("totam", "similique");
+                                    put("alias", "at");
                                 }};
                                 fields = new java.util.HashMap<String, Object>() {{
-                                    put("facilis", "aliquid");
-                                    put("quam", "molestias");
-                                    put("temporibus", "qui");
+                                    put("tempora", "vel");
+                                    put("quod", "officiis");
                                 }};
                                 filter = new java.util.HashMap<String, Object>() {{
-                                    put("fugit", "magni");
+                                    put("dolorum", "a");
                                 }};
                                 includeFields = new String[]{{
-                                    add("sunt"),
-                                    add("ullam"),
+                                    add("harum"),
+                                    add("iusto"),
                                 }};
-                                page = 722081;
-                                pageSize = 940432;
-                                q = "voluptatem";
+                                page = 215507;
+                                pageSize = 788740;
+                                q = "tenetur";
                                 searchFields = new String[]{{
-                                    add("soluta"),
-                                    add("nobis"),
-                                    add("et"),
-                                    add("saepe"),
+                                    add("tempore"),
                                 }};
                                 sort = new java.util.HashMap<String, Object>() {{
-                                    put("veritatis", "nobis");
+                                    put("numquam", "enim");
+                                    put("dolorem", "sapiente");
+                                    put("totam", "nihil");
+                                    put("sit", "expedita");
                                 }};
-                            }};, "quos", "tempore");            
+                            }};, "neque", "sed");            
 
             TigrisSearchResponse res = sdk.collection.searchDocuments(req);
 
@@ -592,36 +581,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("cupiditate") {{
+                .setSecurity(new Security("vel") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             TigrisUpdateRequest req = new TigrisUpdateRequest(                new UpdateRequest() {{
-                                branch = "aperiam";
+                                branch = "libero";
                                 fields = new java.util.HashMap<String, Object>() {{
-                                    put("dolorem", "dolore");
-                                    put("labore", "adipisci");
-                                    put("dolorum", "architecto");
-                                    put("quae", "aut");
+                                    put("deserunt", "quam");
+                                    put("ipsum", "incidunt");
                                 }};
                                 filter = new java.util.HashMap<String, Object>() {{
-                                    put("itaque", "consequatur");
-                                    put("est", "repellendus");
-                                    put("porro", "doloribus");
+                                    put("cupiditate", "maxime");
                                 }};
                                 options = new UpdateRequestOptions() {{
                                     collation = new Collation() {{
-                                        case_ = "ut";
+                                        case_ = "pariatur";
                                     }};;
-                                    limit = 703495L;
+                                    limit = 747080L;
                                     writeOptions = new java.util.HashMap<String, Object>() {{
-                                        put("qui", "quae");
-                                        put("laudantium", "odio");
-                                        put("occaecati", "voluptatibus");
+                                        put("laborum", "totam");
                                     }};
                                 }};;
-                            }};, "quisquam", "vero");            
+                            }};, "incidunt", "aspernatur");            
 
             TigrisUpdateResponse res = sdk.collection.updateDocuments(req);
 

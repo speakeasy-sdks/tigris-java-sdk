@@ -31,15 +31,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("ea") {{
+                .setSecurity(new Security("facilis") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             com.tigrisdata.tigris_core.models.shared.CreateNamespaceRequest req = new CreateNamespaceRequest() {{
-                code = 136900L;
-                id = "6d436813-f16d-49f5-bce6-c556146c3e25";
-                name = "Mr. Elsa Reinger";
+                code = 586410L;
+                id = "21879fce-953f-473e-b7fb-c7abd74dd39c";
+                name = "Camille Heidenreich";
             }};            
 
             CreateNamespaceResponse res = sdk.namespace.create(req);
@@ -71,7 +71,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("impedit") {{
+                .setSecurity(new Security("porro") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
@@ -107,20 +107,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("aliquam") {{
+                .setSecurity(new Security("maiores") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             ManagementGetNamespaceMetadataRequest req = new ManagementGetNamespaceMetadataRequest(                new GetNamespaceMetadataRequest() {{
-                                metadataKey = "fugit";
+                                metadataKey = "doloribus";
                                 value = new java.util.HashMap<String, Object>() {{
-                                    put("inventore", "non");
-                                    put("et", "dolorum");
-                                    put("laborum", "placeat");
-                                    put("velit", "eum");
+                                    put("eligendi", "ducimus");
+                                    put("alias", "officia");
                                 }};
-                            }};, "autem");            
+                            }};, "tempora");            
 
             ManagementGetNamespaceMetadataResponse res = sdk.namespace.getMetadata(req);
 
@@ -153,20 +151,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("nobis") {{
+                .setSecurity(new Security("ipsam") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             ManagementInsertNamespaceMetadataRequest req = new ManagementInsertNamespaceMetadataRequest(                new InsertNamespaceMetadataRequest() {{
-                                metadataKey = "quas";
+                                metadataKey = "ea";
                                 value = new java.util.HashMap<String, Object>() {{
-                                    put("nulla", "voluptas");
-                                    put("libero", "quasi");
-                                    put("tempora", "numquam");
-                                    put("explicabo", "provident");
+                                    put("vel", "possimus");
                                 }};
-                            }};, "ipsa");            
+                            }};, "magnam");            
 
             ManagementInsertNamespaceMetadataResponse res = sdk.namespace.insertMetadata(req);
 
@@ -197,7 +192,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("molestiae") {{
+                .setSecurity(new Security("ratione") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
@@ -233,18 +228,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("magnam") {{
+                .setSecurity(new Security("ex") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             ManagementUpdateNamespaceMetadataRequest req = new ManagementUpdateNamespaceMetadataRequest(                new UpdateNamespaceMetadataRequest() {{
-                                metadataKey = "odio";
+                                metadataKey = "laudantium";
                                 value = new java.util.HashMap<String, Object>() {{
-                                    put("esse", "esse");
-                                    put("rem", "fuga");
+                                    put("dolor", "maiores");
                                 }};
-                            }};, "reprehenderit");            
+                            }};, "quasi");            
 
             ManagementUpdateNamespaceMetadataResponse res = sdk.namespace.updateMetadata(req);
 
