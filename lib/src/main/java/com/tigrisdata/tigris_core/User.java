@@ -33,13 +33,6 @@ public class User {
 		this._genVersion = genVersion;
 	}
 
-    /**
-     * Reads the User Metadata
-     * GetUserMetadata inserts the user metadata object
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataResponse getMetadata(com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataRequest.class, baseUrl, "/v1/management/users/metadata/{metadataKey}/get", request, null);
@@ -84,13 +77,6 @@ public class User {
         return res;
     }
 
-    /**
-     * Inserts User Metadata
-     * insertUserMetadata inserts the user metadata object
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataResponse insertMetadata(com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataRequest.class, baseUrl, "/v1/management/users/metadata/{metadataKey}/insert", request, null);
@@ -135,13 +121,6 @@ public class User {
         return res;
     }
 
-    /**
-     * Updates User Metadata
-     * updateUserMetadata updates the user metadata object
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataResponse updateMetadata(com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataRequest.class, baseUrl, "/v1/management/users/metadata/{metadataKey}/update", request, null);

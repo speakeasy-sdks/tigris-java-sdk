@@ -34,12 +34,6 @@ public class Cache {
 		this._genVersion = genVersion;
 	}
 
-    /**
-     * Creates the cache
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse create(com.tigrisdata.tigris_core.models.operations.CacheCreateCacheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheCreateCacheRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/create", request, null);
@@ -84,12 +78,6 @@ public class Cache {
         return res;
     }
 
-    /**
-     * Deletes the cache
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheResponse delete(com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/delete", request, null);
@@ -134,12 +122,6 @@ public class Cache {
         return res;
     }
 
-    /**
-     * Deletes an entry from cache
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.CacheDelResponse deleteKeys(com.tigrisdata.tigris_core.models.operations.CacheDelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheDelRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/{key}/delete", request, null);
@@ -184,12 +166,6 @@ public class Cache {
         return res;
     }
 
-    /**
-     * Reads an entry from cache
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.CacheGetResponse getKey(com.tigrisdata.tigris_core.models.operations.CacheGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheGetRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/{key}/get", request, null);
@@ -229,12 +205,6 @@ public class Cache {
         return res;
     }
 
-    /**
-     * Sets an entry in the cache and returns the previous value if exists
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.CacheGetSetResponse getSetKey(com.tigrisdata.tigris_core.models.operations.CacheGetSetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheGetSetRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/{key}/getset", request, null);
@@ -279,12 +249,6 @@ public class Cache {
         return res;
     }
 
-    /**
-     * Lists all the caches for the given project
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse list(com.tigrisdata.tigris_core.models.operations.CacheListCachesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheListCachesRequest.class, baseUrl, "/v1/projects/{project}/caches/list", request, null);
@@ -324,12 +288,6 @@ public class Cache {
         return res;
     }
 
-    /**
-     * Lists all the key for this cache
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.CacheKeysResponse listKeys(com.tigrisdata.tigris_core.models.operations.CacheKeysRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheKeysRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/keys", request, null);
@@ -375,12 +333,6 @@ public class Cache {
         return res;
     }
 
-    /**
-     * Sets an entry in the cache
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.CacheSetResponse setKey(com.tigrisdata.tigris_core.models.operations.CacheSetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheSetRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/{key}/set", request, null);

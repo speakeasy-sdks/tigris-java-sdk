@@ -2,19 +2,20 @@ configVersion: 1.0.0
 management:
   docChecksum: db7bd8f69518c551928aef7eb16008e2
   docVersion: 0.0.1
-  speakeasyVersion: 1.27.0
-  generationVersion: 2.24.0
+  speakeasyVersion: 1.29.0
+  generationVersion: 2.26.0
 generation:
   telemetryEnabled: false
   sdkClassName: SDK
   singleTagPerOp: false
 java:
-  version: 0.9.1
+  version: 0.10.0
   artifactID: tigris-core
   companyEmail: info@mycompany.com
   companyName: My Company
   companyURL: www.mycompany.com
   githubURL: github.com/owner/repo
   groupID: com.tigrisdata
+  maxMethodParams: 0
   ossrhURL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
   projectName: tigris-data

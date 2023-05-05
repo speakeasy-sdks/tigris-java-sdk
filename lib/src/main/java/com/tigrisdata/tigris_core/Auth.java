@@ -32,14 +32,6 @@ public class Auth {
 		this._genVersion = genVersion;
 	}
 
-    /**
-     * Access Token
-     * Endpoint for receiving access token from Tigris Server. The endpoint requires Grant Type(`grant_type`) which has
-     *  two possible values &lt;i&gt;"REFRESH_TOKEN"&lt;/i&gt; or &lt;i&gt;"CLIENT_CREDENTIALS"&lt;/i&gt; based on which either Refresh token(`refresh_token`)
-     *  needs to be set or client credentials(`client_id`, `client_secret`).
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse get() throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/auth/token");

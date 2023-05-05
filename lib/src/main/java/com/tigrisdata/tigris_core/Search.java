@@ -34,16 +34,6 @@ public class Search {
 		this._genVersion = genVersion;
 	}
 
-    /**
-     * Create a single document
-     * CreateById is used for indexing a single document. The API expects a single document. An "id" is optional
-     *  and the server can automatically generate it for you in case it is missing. In cases an id is provided in
-     *  the document and the document already exists then that document will not be indexed and an error is returned
-     *  with HTTP status code 409.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.SearchCreateByIdResponse createDocument(com.tigrisdata.tigris_core.models.operations.SearchCreateByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchCreateByIdRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents/{id}", request, null);
@@ -88,17 +78,6 @@ public class Search {
         return res;
     }
 
-    /**
-     * Create multiple documents
-     * Create is used for indexing a single or multiple documents. The API expects an array of documents.
-     *  Each document is a JSON object. An "id" is optional and the server can automatically generate it for you in
-     *  case it is missing. In cases when an id is provided in the document and the document already exists then that
-     *  document will not be indexed and in the response there will be an error corresponding to that document id other
-     *  documents will succeed. Returns an array of status indicating the status of each document.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.SearchCreateResponse createDocuments(com.tigrisdata.tigris_core.models.operations.SearchCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchCreateRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request, null);
@@ -143,15 +122,6 @@ public class Search {
         return res;
     }
 
-    /**
-     * Delete documents by ids
-     * Delete one or more documents by id. Returns an array of status indicating the status of each document. Each status
-     *  has an error field that is set to null in case document is deleted successfully otherwise it will non null with
-     *  an error code and message.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.SearchDeleteResponse deleteDocuments(com.tigrisdata.tigris_core.models.operations.SearchDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchDeleteRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request, null);
@@ -196,12 +166,6 @@ public class Search {
         return res;
     }
 
-    /**
-     * Deletes search index
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexResponse deleteIndex(com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{name}", request, null);
@@ -246,17 +210,6 @@ public class Search {
         return res;
     }
 
-    /**
-     * Search Documents.
-     * Searches an index for the documents matching the query. A search can be a term search or a phrase search.
-     *  Search API allows filtering the result set using filters as documented
-     *  &lt;a href="https://docs.tigrisdata.com/overview/query#specification-1" title="here"&gt;here&lt;/a&gt;. You can also perform
-     *  a faceted search by passing the fields in the facet parameter. You can find more detailed documentation of the
-     *  Search API with multiple examples &lt;a href="https://docs.tigrisdata.com/overview/search" title="here"&gt;here&lt;/a&gt;.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.SearchSearchResponse findDocuments(com.tigrisdata.tigris_core.models.operations.SearchSearchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchSearchRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents/search", request, null);
@@ -301,14 +254,6 @@ public class Search {
         return res;
     }
 
-    /**
-     * Get a single or multiple documents
-     * Retrieves one or more documents by id. The response is an array of documents in the same order it is requests.
-     *  A null is returned for the documents that are not found.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.SearchGetResponse getDocuments(com.tigrisdata.tigris_core.models.operations.SearchGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchGetRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request, null);
@@ -354,12 +299,6 @@ public class Search {
         return res;
     }
 
-    /**
-     * Get information about a search index
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.SearchGetIndexResponse getIndex(com.tigrisdata.tigris_core.models.operations.SearchGetIndexRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchGetIndexRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{name}", request, null);
@@ -399,12 +338,6 @@ public class Search {
         return res;
     }
 
-    /**
-     * List search indexes
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.SearchListIndexesResponse listIndexes(com.tigrisdata.tigris_core.models.operations.SearchListIndexesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchListIndexesRequest.class, baseUrl, "/v1/projects/{project}/search/indexes", request, null);
@@ -450,14 +383,6 @@ public class Search {
         return res;
     }
 
-    /**
-     * Delete documents by query
-     * DeleteByQuery is used to delete documents that match the filter. A filter is required. To delete document by id,
-     *  you can pass the filter as follows ```{"id": "test"}```. Returns a count of number of documents deleted.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryResponse queryDeleteDocuments(com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents/deleteByQuery", request, null);
@@ -502,16 +427,6 @@ public class Search {
         return res;
     }
 
-    /**
-     * Create or replace documents in an index
-     * Creates or replaces one or more documents. Each document is a JSON object. A document is replaced
-     *  if it already exists. An "id" is generated automatically in case it is missing in the document. The
-     *  document is created if "id" doesn't exists otherwise it is replaced. Returns an array of status indicating
-     *  the status of each document.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceResponse replaceDocuments(com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request, null);
@@ -556,16 +471,6 @@ public class Search {
         return res;
     }
 
-    /**
-     * Update documents in an index
-     * Updates one or more documents by "id". Each document is required to have the
-     *  "id" field in it. Returns an array of status indicating the status of each document. Each status
-     *  has an error field that is set to null in case document is updated successfully otherwise the error
-     *  field is set with a code and message.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.SearchUpdateResponse updateDocuments(com.tigrisdata.tigris_core.models.operations.SearchUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchUpdateRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request, null);
@@ -610,12 +515,6 @@ public class Search {
         return res;
     }
 
-    /**
-     * Creates or updates search index
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexResponse updateIndex(com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{name}", request, null);

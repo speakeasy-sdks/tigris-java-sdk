@@ -34,15 +34,6 @@ public class Database {
 		this._genVersion = genVersion;
 	}
 
-    /**
-     * Begin a transaction
-     * Starts a new transaction and returns a transactional object. All reads/writes performed
-     *  within a transaction will run with serializable isolation. Tigris offers global transactions,
-     *  with ACID properties and strict serializability.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionResponse beginTransaction(com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionRequest.class, baseUrl, "/v1/projects/{project}/database/transactions/begin", request, null);
@@ -87,14 +78,6 @@ public class Database {
         return res;
     }
 
-    /**
-     * Commit a Transaction
-     * Atomically commit all the changes performed in the context of the transaction. Commit provides all
-     *  or nothing semantics by ensuring no partial updates are in the project due to a transaction failure.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionResponse commitTransaction(com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionRequest.class, baseUrl, "/v1/projects/{project}/database/transactions/commit", request, null);
@@ -139,13 +122,6 @@ public class Database {
         return res;
     }
 
-    /**
-     * Create a database branch
-     * Creates a new database branch, if not already existing.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchResponse createBranch(com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchRequest.class, baseUrl, "/v1/projects/{project}/database/branches/{branch}/create", request, null);
@@ -190,14 +166,6 @@ public class Database {
         return res;
     }
 
-    /**
-     * Delete a database branch
-     * Deletes a database branch, if exists.
-     *  Throws 400 Bad Request if "main" branch is being deleted
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchResponse deleteBranch(com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchRequest.class, baseUrl, "/v1/projects/{project}/database/branches/{branch}/delete", request, null);
@@ -242,14 +210,6 @@ public class Database {
         return res;
     }
 
-    /**
-     * Describe database
-     * This API returns information related to the project along with all the collections inside the project.
-     *  This can be used to retrieve the size of the project or to retrieve schemas, branches and the size of all the collections present in this project.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseResponse describe(com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseRequest.class, baseUrl, "/v1/projects/{project}/database/describe", request, null);
@@ -294,13 +254,6 @@ public class Database {
         return res;
     }
 
-    /**
-     * List Collections
-     * List all the collections present in the project passed in the request.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsResponse listCollections(com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsRequest.class, baseUrl, "/v1/projects/{project}/database/collections", request, null);
@@ -346,14 +299,6 @@ public class Database {
         return res;
     }
 
-    /**
-     * Rollback a transaction
-     * Rollback transaction discards all the changes
-     *  performed in the transaction
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionResponse rollbackTransaction(com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionRequest.class, baseUrl, "/v1/projects/{project}/database/transactions/rollback", request, null);
@@ -398,13 +343,6 @@ public class Database {
         return res;
     }
 
-    /**
-     * List database branches
-     * List database branches
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.tigrisdata.tigris_core.models.operations.TigrisListBranchesResponse tigrisListBranches(com.tigrisdata.tigris_core.models.operations.TigrisListBranchesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisListBranchesRequest.class, baseUrl, "/v1/projects/{project}/database/branches", request, null);
