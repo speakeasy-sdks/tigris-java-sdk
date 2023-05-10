@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class ManagementGetUserMetadataRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.tigrisdata.tigris_core.models.shared.GetUserMetadataRequest getUserMetadataRequest;
+
     public ManagementGetUserMetadataRequest withGetUserMetadataRequest(com.tigrisdata.tigris_core.models.shared.GetUserMetadataRequest getUserMetadataRequest) {
         this.getUserMetadataRequest = getUserMetadataRequest;
         return this;
@@ -17,6 +18,7 @@ public class ManagementGetUserMetadataRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=metadataKey")
     public String metadataKey;
+
     public ManagementGetUserMetadataRequest withMetadataKey(String metadataKey) {
         this.metadataKey = metadataKey;
         return this;

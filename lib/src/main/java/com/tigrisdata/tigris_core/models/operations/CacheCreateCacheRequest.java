@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class CacheCreateCacheRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.tigrisdata.tigris_core.models.shared.CreateCacheRequest createCacheRequest;
+
     public CacheCreateCacheRequest withCreateCacheRequest(com.tigrisdata.tigris_core.models.shared.CreateCacheRequest createCacheRequest) {
         this.createCacheRequest = createCacheRequest;
         return this;
@@ -20,6 +21,7 @@ public class CacheCreateCacheRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public CacheCreateCacheRequest withName(String name) {
         this.name = name;
         return this;
@@ -30,6 +32,7 @@ public class CacheCreateCacheRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public CacheCreateCacheRequest withProject(String project) {
         this.project = project;
         return this;

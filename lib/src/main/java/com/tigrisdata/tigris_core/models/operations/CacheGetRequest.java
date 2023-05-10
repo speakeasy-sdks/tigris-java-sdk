@@ -13,6 +13,7 @@ public class CacheGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
     public String key;
+
     public CacheGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -23,6 +24,7 @@ public class CacheGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public CacheGetRequest withName(String name) {
         this.name = name;
         return this;
@@ -33,6 +35,7 @@ public class CacheGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public CacheGetRequest withProject(String project) {
         this.project = project;
         return this;

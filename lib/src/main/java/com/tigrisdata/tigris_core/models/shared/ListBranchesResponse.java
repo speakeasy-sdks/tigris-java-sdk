@@ -18,6 +18,7 @@ public class ListBranchesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branches")
     public BranchInfo[] branches;
+
     public ListBranchesResponse withBranches(BranchInfo[] branches) {
         this.branches = branches;
         return this;

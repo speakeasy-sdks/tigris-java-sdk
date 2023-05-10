@@ -18,6 +18,7 @@ public class DeleteAppKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeleteAppKeyRequest withId(String id) {
         this.id = id;
         return this;

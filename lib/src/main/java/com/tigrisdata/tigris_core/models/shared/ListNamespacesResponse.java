@@ -15,6 +15,7 @@ public class ListNamespacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaces")
     public NamespaceInfo[] namespaces;
+
     public ListNamespacesResponse withNamespaces(NamespaceInfo[] namespaces) {
         this.namespaces = namespaces;
         return this;

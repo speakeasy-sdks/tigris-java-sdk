@@ -18,6 +18,7 @@ public class DeleteRequestOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collation")
     public Collation collation;
+
     public DeleteRequestOptions withCollation(Collation collation) {
         this.collation = collation;
         return this;
@@ -29,6 +30,7 @@ public class DeleteRequestOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public DeleteRequestOptions withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -40,6 +42,7 @@ public class DeleteRequestOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("write_options")
     public java.util.Map<String, Object> writeOptions;
+
     public DeleteRequestOptions withWriteOptions(java.util.Map<String, Object> writeOptions) {
         this.writeOptions = writeOptions;
         return this;

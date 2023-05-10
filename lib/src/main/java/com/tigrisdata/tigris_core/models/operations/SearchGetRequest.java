@@ -13,6 +13,7 @@ public class SearchGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public String[] ids;
+
     public SearchGetRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -23,6 +24,7 @@ public class SearchGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
     public String index;
+
     public SearchGetRequest withIndex(String index) {
         this.index = index;
         return this;
@@ -33,6 +35,7 @@ public class SearchGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public SearchGetRequest withProject(String project) {
         this.project = project;
         return this;

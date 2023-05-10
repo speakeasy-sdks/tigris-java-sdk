@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class SearchDeleteIndexRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.tigrisdata.tigris_core.models.shared.DeleteIndexRequest deleteIndexRequest;
+
     public SearchDeleteIndexRequest withDeleteIndexRequest(com.tigrisdata.tigris_core.models.shared.DeleteIndexRequest deleteIndexRequest) {
         this.deleteIndexRequest = deleteIndexRequest;
         return this;
@@ -20,6 +21,7 @@ public class SearchDeleteIndexRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public SearchDeleteIndexRequest withName(String name) {
         this.name = name;
         return this;
@@ -30,6 +32,7 @@ public class SearchDeleteIndexRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public SearchDeleteIndexRequest withProject(String project) {
         this.project = project;
         return this;

@@ -18,6 +18,7 @@ public class ListIndexesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexes")
     public IndexInfo[] indexes;
+
     public ListIndexesResponse withIndexes(IndexInfo[] indexes) {
         this.indexes = indexes;
         return this;

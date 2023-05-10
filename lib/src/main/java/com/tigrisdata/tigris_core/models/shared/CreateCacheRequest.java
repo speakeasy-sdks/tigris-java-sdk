@@ -12,6 +12,7 @@ public class CreateCacheRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public CreateCacheOptions options;
+
     public CreateCacheRequest withOptions(CreateCacheOptions options) {
         this.options = options;
         return this;

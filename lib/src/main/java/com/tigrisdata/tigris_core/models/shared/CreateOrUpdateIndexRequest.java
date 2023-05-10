@@ -15,6 +15,7 @@ public class CreateOrUpdateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateOrUpdateIndexRequest withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +27,7 @@ public class CreateOrUpdateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("only_create")
     public Boolean onlyCreate;
+
     public CreateOrUpdateIndexRequest withOnlyCreate(Boolean onlyCreate) {
         this.onlyCreate = onlyCreate;
         return this;
@@ -37,6 +39,7 @@ public class CreateOrUpdateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public CreateOrUpdateIndexRequest withProject(String project) {
         this.project = project;
         return this;
@@ -48,6 +51,7 @@ public class CreateOrUpdateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public CreateOrUpdateIndexRequest withSchema(String schema) {
         this.schema = schema;
         return this;

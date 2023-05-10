@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class RealtimeReadMessagesRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel")
     public String channel;
+
     public RealtimeReadMessagesRequest withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -17,6 +18,7 @@ public class RealtimeReadMessagesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public String end;
+
     public RealtimeReadMessagesRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -24,6 +26,7 @@ public class RealtimeReadMessagesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event")
     public String event;
+
     public RealtimeReadMessagesRequest withEvent(String event) {
         this.event = event;
         return this;
@@ -31,6 +34,7 @@ public class RealtimeReadMessagesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public RealtimeReadMessagesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -38,6 +42,7 @@ public class RealtimeReadMessagesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RealtimeReadMessagesRequest withProject(String project) {
         this.project = project;
         return this;
@@ -45,6 +50,7 @@ public class RealtimeReadMessagesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=session_id")
     public String sessionId;
+
     public RealtimeReadMessagesRequest withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -52,6 +58,7 @@ public class RealtimeReadMessagesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=socket_id")
     public String socketId;
+
     public RealtimeReadMessagesRequest withSocketId(String socketId) {
         this.socketId = socketId;
         return this;
@@ -59,6 +66,7 @@ public class RealtimeReadMessagesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public String start;
+
     public RealtimeReadMessagesRequest withStart(String start) {
         this.start = start;
         return this;

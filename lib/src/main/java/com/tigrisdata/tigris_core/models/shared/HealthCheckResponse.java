@@ -15,6 +15,7 @@ public class HealthCheckResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public String response;
+
     public HealthCheckResponse withResponse(String response) {
         this.response = response;
         return this;

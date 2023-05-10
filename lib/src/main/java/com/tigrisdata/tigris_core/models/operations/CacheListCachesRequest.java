@@ -13,6 +13,7 @@ public class CacheListCachesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public CacheListCachesRequest withProject(String project) {
         this.project = project;
         return this;

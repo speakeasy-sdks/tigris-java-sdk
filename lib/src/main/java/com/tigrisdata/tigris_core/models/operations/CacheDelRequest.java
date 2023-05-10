@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class CacheDelRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public CacheDelRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -20,6 +21,7 @@ public class CacheDelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
     public String key;
+
     public CacheDelRequest withKey(String key) {
         this.key = key;
         return this;
@@ -30,6 +32,7 @@ public class CacheDelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public CacheDelRequest withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +43,7 @@ public class CacheDelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public CacheDelRequest withProject(String project) {
         this.project = project;
         return this;

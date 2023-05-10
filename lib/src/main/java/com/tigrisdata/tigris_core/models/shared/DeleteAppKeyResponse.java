@@ -18,6 +18,7 @@ public class DeleteAppKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public DeleteAppKeyResponse withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;

@@ -18,6 +18,7 @@ public class BeginTransactionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch")
     public String branch;
+
     public BeginTransactionRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -29,6 +30,7 @@ public class BeginTransactionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public java.util.Map<String, Object> options;
+
     public BeginTransactionRequest withOptions(java.util.Map<String, Object> options) {
         this.options = options;
         return this;

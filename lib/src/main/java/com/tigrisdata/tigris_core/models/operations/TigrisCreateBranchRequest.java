@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class TigrisCreateBranchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public TigrisCreateBranchRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -20,6 +21,7 @@ public class TigrisCreateBranchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
     public String branch;
+
     public TigrisCreateBranchRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -30,6 +32,7 @@ public class TigrisCreateBranchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public TigrisCreateBranchRequest withProject(String project) {
         this.project = project;
         return this;

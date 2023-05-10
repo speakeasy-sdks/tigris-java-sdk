@@ -15,6 +15,7 @@ public class GetIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public IndexInfo index;
+
     public GetIndexResponse withIndex(IndexInfo index) {
         this.index = index;
         return this;

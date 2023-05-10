@@ -15,6 +15,7 @@ public class DeleteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch")
     public String branch;
+
     public DeleteRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -26,6 +27,7 @@ public class DeleteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public java.util.Map<String, Object> filter;
+
     public DeleteRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
         return this;
@@ -37,6 +39,7 @@ public class DeleteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public DeleteRequestOptions options;
+
     public DeleteRequest withOptions(DeleteRequestOptions options) {
         this.options = options;
         return this;

@@ -15,6 +15,7 @@ public class DescribeDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch")
     public String branch;
+
     public DescribeDatabaseRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -26,6 +27,7 @@ public class DescribeDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public DescribeDatabaseRequest withProject(String project) {
         this.project = project;
         return this;
@@ -37,6 +39,7 @@ public class DescribeDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema_format")
     public String schemaFormat;
+
     public DescribeDatabaseRequest withSchemaFormat(String schemaFormat) {
         this.schemaFormat = schemaFormat;
         return this;

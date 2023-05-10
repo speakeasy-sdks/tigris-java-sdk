@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class TigrisDeleteRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.tigrisdata.tigris_core.models.shared.DeleteRequest deleteRequest;
+
     public TigrisDeleteRequest withDeleteRequest(com.tigrisdata.tigris_core.models.shared.DeleteRequest deleteRequest) {
         this.deleteRequest = deleteRequest;
         return this;
@@ -20,6 +21,7 @@ public class TigrisDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
     public String collection;
+
     public TigrisDeleteRequest withCollection(String collection) {
         this.collection = collection;
         return this;
@@ -30,6 +32,7 @@ public class TigrisDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public TigrisDeleteRequest withProject(String project) {
         this.project = project;
         return this;

@@ -18,6 +18,7 @@ public class GetDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public IndexDoc[] documents;
+
     public GetDocumentResponse withDocuments(IndexDoc[] documents) {
         this.documents = documents;
         return this;

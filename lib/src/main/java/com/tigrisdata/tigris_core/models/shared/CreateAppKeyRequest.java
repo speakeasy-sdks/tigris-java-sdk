@@ -18,6 +18,7 @@ public class CreateAppKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateAppKeyRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class CreateAppKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateAppKeyRequest withName(String name) {
         this.name = name;
         return this;

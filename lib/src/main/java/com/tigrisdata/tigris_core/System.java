@@ -33,6 +33,12 @@ public class System {
 		this._genVersion = genVersion;
 	}
 
+    /**
+     * Health Check
+     * This endpoint can be used to check the liveness of the server.
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.HealthAPIHealthResponse getHealth() throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/health");
@@ -72,6 +78,12 @@ public class System {
         return res;
     }
 
+    /**
+     * Information about the server
+     * Provides the information about the server. This information includes returning the server version, etc.
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.ObservabilityGetInfoResponse getServerInfo() throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/observability/info");
@@ -111,6 +123,13 @@ public class System {
         return res;
     }
 
+    /**
+     * Queries current namespace quota usage
+     * Returns current namespace quota limits
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageResponse observabilityQuotaUsage(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/observability/quota/usage");
@@ -155,6 +174,13 @@ public class System {
         return res;
     }
 
+    /**
+     * Queries current namespace quota limits
+     * Returns current namespace quota limits
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsResponse queryQuotaLimits(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/observability/quota/limits");
@@ -199,6 +225,13 @@ public class System {
         return res;
     }
 
+    /**
+     * Queries time series metrics
+     * Queries time series metrics
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsResponse queryTimeSeriesMetrics(com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/observability/metrics/timeseries/query");

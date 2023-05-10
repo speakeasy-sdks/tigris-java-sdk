@@ -18,6 +18,7 @@ public class ListCollectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections")
     public CollectionInfo[] collections;
+
     public ListCollectionsResponse withCollections(CollectionInfo[] collections) {
         this.collections = collections;
         return this;

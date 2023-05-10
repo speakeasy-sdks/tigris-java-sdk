@@ -18,6 +18,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public Status withError(Error error) {
         this.error = error;
         return this;

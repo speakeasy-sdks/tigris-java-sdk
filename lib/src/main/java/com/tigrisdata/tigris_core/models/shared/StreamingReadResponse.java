@@ -18,6 +18,7 @@ public class StreamingReadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public StreamingReadResponse withError(Error error) {
         this.error = error;
         return this;
@@ -26,6 +27,7 @@ public class StreamingReadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public ReadResponse result;
+
     public StreamingReadResponse withResult(ReadResponse result) {
         this.result = result;
         return this;

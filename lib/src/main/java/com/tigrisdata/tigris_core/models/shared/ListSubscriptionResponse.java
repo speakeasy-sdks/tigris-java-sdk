@@ -15,6 +15,7 @@ public class ListSubscriptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public String[] devices;
+
     public ListSubscriptionResponse withDevices(String[] devices) {
         this.devices = devices;
         return this;

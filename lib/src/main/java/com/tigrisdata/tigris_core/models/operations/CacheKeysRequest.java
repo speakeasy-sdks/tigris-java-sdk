@@ -13,6 +13,7 @@ public class CacheKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Long count;
+
     public CacheKeysRequest withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class CacheKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public Long cursor;
+
     public CacheKeysRequest withCursor(Long cursor) {
         this.cursor = cursor;
         return this;
@@ -33,6 +35,7 @@ public class CacheKeysRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public CacheKeysRequest withName(String name) {
         this.name = name;
         return this;
@@ -43,6 +46,7 @@ public class CacheKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pattern")
     public String pattern;
+
     public CacheKeysRequest withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -53,6 +57,7 @@ public class CacheKeysRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public CacheKeysRequest withProject(String project) {
         this.project = project;
         return this;

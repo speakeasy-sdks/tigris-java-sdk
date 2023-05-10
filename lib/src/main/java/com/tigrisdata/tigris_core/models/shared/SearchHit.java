@@ -15,6 +15,7 @@ public class SearchHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public SearchHit withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -26,6 +27,7 @@ public class SearchHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public SearchHitMeta metadata;
+
     public SearchHit withMetadata(SearchHitMeta metadata) {
         this.metadata = metadata;
         return this;

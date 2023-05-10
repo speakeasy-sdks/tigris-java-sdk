@@ -13,6 +13,7 @@ public class TigrisListBranchesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public TigrisListBranchesRequest withProject(String project) {
         this.project = project;
         return this;

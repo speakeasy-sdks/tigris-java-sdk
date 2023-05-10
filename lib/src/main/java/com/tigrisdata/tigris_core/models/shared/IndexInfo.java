@@ -15,6 +15,7 @@ public class IndexInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IndexInfo withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +27,7 @@ public class IndexInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public IndexInfo withSchema(String schema) {
         this.schema = schema;
         return this;

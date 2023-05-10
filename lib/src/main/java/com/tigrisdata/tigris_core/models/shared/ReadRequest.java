@@ -15,6 +15,7 @@ public class ReadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch")
     public String branch;
+
     public ReadRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -26,6 +27,7 @@ public class ReadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, Object> fields;
+
     public ReadRequest withFields(java.util.Map<String, Object> fields) {
         this.fields = fields;
         return this;
@@ -37,6 +39,7 @@ public class ReadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public java.util.Map<String, Object> filter;
+
     public ReadRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
         return this;
@@ -48,6 +51,7 @@ public class ReadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public ReadRequestOptions options;
+
     public ReadRequest withOptions(ReadRequestOptions options) {
         this.options = options;
         return this;
@@ -59,6 +63,7 @@ public class ReadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public String sort;
+
     public ReadRequest withSort(String sort) {
         this.sort = sort;
         return this;

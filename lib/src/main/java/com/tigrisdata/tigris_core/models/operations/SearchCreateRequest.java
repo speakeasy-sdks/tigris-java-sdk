@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class SearchCreateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.tigrisdata.tigris_core.models.shared.CreateDocumentRequest createDocumentRequest;
+
     public SearchCreateRequest withCreateDocumentRequest(com.tigrisdata.tigris_core.models.shared.CreateDocumentRequest createDocumentRequest) {
         this.createDocumentRequest = createDocumentRequest;
         return this;
@@ -20,6 +21,7 @@ public class SearchCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
     public String index;
+
     public SearchCreateRequest withIndex(String index) {
         this.index = index;
         return this;
@@ -30,6 +32,7 @@ public class SearchCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public SearchCreateRequest withProject(String project) {
         this.project = project;
         return this;

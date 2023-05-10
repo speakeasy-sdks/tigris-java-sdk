@@ -18,6 +18,7 @@ public class AdditionalFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollup")
     public RollupFunction rollup;
+
     public AdditionalFunction withRollup(RollupFunction rollup) {
         this.rollup = rollup;
         return this;

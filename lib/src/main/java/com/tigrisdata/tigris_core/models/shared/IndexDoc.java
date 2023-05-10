@@ -15,6 +15,7 @@ public class IndexDoc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doc")
     public String doc;
+
     public IndexDoc withDoc(String doc) {
         this.doc = doc;
         return this;
@@ -26,6 +27,7 @@ public class IndexDoc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public DocMeta metadata;
+
     public IndexDoc withMetadata(DocMeta metadata) {
         this.metadata = metadata;
         return this;

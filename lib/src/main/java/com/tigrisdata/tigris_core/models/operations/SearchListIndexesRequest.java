@@ -13,6 +13,7 @@ public class SearchListIndexesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter.branch")
     public String filterBranch;
+
     public SearchListIndexesRequest withFilterBranch(String filterBranch) {
         this.filterBranch = filterBranch;
         return this;
@@ -23,6 +24,7 @@ public class SearchListIndexesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter.collection")
     public String filterCollection;
+
     public SearchListIndexesRequest withFilterCollection(String filterCollection) {
         this.filterCollection = filterCollection;
         return this;
@@ -33,6 +35,7 @@ public class SearchListIndexesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter.type")
     public String filterType;
+
     public SearchListIndexesRequest withFilterType(String filterType) {
         this.filterType = filterType;
         return this;
@@ -43,6 +46,7 @@ public class SearchListIndexesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public SearchListIndexesRequest withProject(String project) {
         this.project = project;
         return this;

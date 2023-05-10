@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class TigrisDescribeCollectionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.tigrisdata.tigris_core.models.shared.DescribeCollectionRequest describeCollectionRequest;
+
     public TigrisDescribeCollectionRequest withDescribeCollectionRequest(com.tigrisdata.tigris_core.models.shared.DescribeCollectionRequest describeCollectionRequest) {
         this.describeCollectionRequest = describeCollectionRequest;
         return this;
@@ -20,6 +21,7 @@ public class TigrisDescribeCollectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
     public String collection;
+
     public TigrisDescribeCollectionRequest withCollection(String collection) {
         this.collection = collection;
         return this;
@@ -30,6 +32,7 @@ public class TigrisDescribeCollectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public TigrisDescribeCollectionRequest withProject(String project) {
         this.project = project;
         return this;

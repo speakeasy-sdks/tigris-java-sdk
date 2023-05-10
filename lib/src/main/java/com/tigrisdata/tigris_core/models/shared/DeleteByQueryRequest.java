@@ -15,6 +15,7 @@ public class DeleteByQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public DeleteByQueryRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -26,6 +27,7 @@ public class DeleteByQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public String index;
+
     public DeleteByQueryRequest withIndex(String index) {
         this.index = index;
         return this;
@@ -37,6 +39,7 @@ public class DeleteByQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public DeleteByQueryRequest withProject(String project) {
         this.project = project;
         return this;

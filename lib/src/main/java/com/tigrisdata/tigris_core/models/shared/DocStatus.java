@@ -15,6 +15,7 @@ public class DocStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public DocStatus withError(Error error) {
         this.error = error;
         return this;
@@ -26,6 +27,7 @@ public class DocStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DocStatus withId(String id) {
         this.id = id;
         return this;

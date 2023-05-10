@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class CacheGetSetRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.tigrisdata.tigris_core.models.shared.GetSetRequest getSetRequest;
+
     public CacheGetSetRequest withGetSetRequest(com.tigrisdata.tigris_core.models.shared.GetSetRequest getSetRequest) {
         this.getSetRequest = getSetRequest;
         return this;
@@ -20,6 +21,7 @@ public class CacheGetSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
     public String key;
+
     public CacheGetSetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -30,6 +32,7 @@ public class CacheGetSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public CacheGetSetRequest withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +43,7 @@ public class CacheGetSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public CacheGetSetRequest withProject(String project) {
         this.project = project;
         return this;

@@ -18,6 +18,7 @@ public class DeleteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ResponseMetadata metadata;
+
     public DeleteResponse withMetadata(ResponseMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -29,6 +30,7 @@ public class DeleteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public DeleteResponse withStatus(String status) {
         this.status = status;
         return this;

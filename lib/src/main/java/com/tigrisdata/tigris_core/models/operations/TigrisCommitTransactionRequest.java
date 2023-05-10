@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class TigrisCommitTransactionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.tigrisdata.tigris_core.models.shared.CommitTransactionRequest commitTransactionRequest;
+
     public TigrisCommitTransactionRequest withCommitTransactionRequest(com.tigrisdata.tigris_core.models.shared.CommitTransactionRequest commitTransactionRequest) {
         this.commitTransactionRequest = commitTransactionRequest;
         return this;
@@ -20,6 +21,7 @@ public class TigrisCommitTransactionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public TigrisCommitTransactionRequest withProject(String project) {
         this.project = project;
         return this;

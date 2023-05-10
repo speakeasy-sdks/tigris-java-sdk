@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class TigrisInsertRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.tigrisdata.tigris_core.models.shared.InsertRequest insertRequest;
+
     public TigrisInsertRequest withInsertRequest(com.tigrisdata.tigris_core.models.shared.InsertRequest insertRequest) {
         this.insertRequest = insertRequest;
         return this;
@@ -20,6 +21,7 @@ public class TigrisInsertRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
     public String collection;
+
     public TigrisInsertRequest withCollection(String collection) {
         this.collection = collection;
         return this;
@@ -30,6 +32,7 @@ public class TigrisInsertRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public TigrisInsertRequest withProject(String project) {
         this.project = project;
         return this;

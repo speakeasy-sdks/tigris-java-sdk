@@ -12,6 +12,7 @@ public class FacetCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public FacetCount withCount(Long count) {
         this.count = count;
         return this;
@@ -20,6 +21,7 @@ public class FacetCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public FacetCount withValue(String value) {
         this.value = value;
         return this;

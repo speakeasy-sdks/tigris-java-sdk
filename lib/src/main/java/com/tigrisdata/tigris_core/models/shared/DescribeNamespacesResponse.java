@@ -15,6 +15,7 @@ public class DescribeNamespacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public DescribeNamespacesData data;
+
     public DescribeNamespacesResponse withData(DescribeNamespacesData data) {
         this.data = data;
         return this;

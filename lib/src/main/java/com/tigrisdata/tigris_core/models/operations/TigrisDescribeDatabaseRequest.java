@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class TigrisDescribeDatabaseRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.tigrisdata.tigris_core.models.shared.DescribeDatabaseRequest describeDatabaseRequest;
+
     public TigrisDescribeDatabaseRequest withDescribeDatabaseRequest(com.tigrisdata.tigris_core.models.shared.DescribeDatabaseRequest describeDatabaseRequest) {
         this.describeDatabaseRequest = describeDatabaseRequest;
         return this;
@@ -20,6 +21,7 @@ public class TigrisDescribeDatabaseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public TigrisDescribeDatabaseRequest withProject(String project) {
         this.project = project;
         return this;

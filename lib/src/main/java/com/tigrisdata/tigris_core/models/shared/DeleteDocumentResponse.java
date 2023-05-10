@@ -18,6 +18,7 @@ public class DeleteDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DocStatus[] status;
+
     public DeleteDocumentResponse withStatus(DocStatus[] status) {
         this.status = status;
         return this;

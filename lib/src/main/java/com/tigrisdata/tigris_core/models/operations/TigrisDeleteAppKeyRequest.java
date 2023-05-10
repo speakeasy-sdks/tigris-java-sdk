@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class TigrisDeleteAppKeyRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.tigrisdata.tigris_core.models.shared.DeleteAppKeyRequest deleteAppKeyRequest;
+
     public TigrisDeleteAppKeyRequest withDeleteAppKeyRequest(com.tigrisdata.tigris_core.models.shared.DeleteAppKeyRequest deleteAppKeyRequest) {
         this.deleteAppKeyRequest = deleteAppKeyRequest;
         return this;
@@ -20,6 +21,7 @@ public class TigrisDeleteAppKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public TigrisDeleteAppKeyRequest withProject(String project) {
         this.project = project;
         return this;

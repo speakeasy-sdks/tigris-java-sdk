@@ -18,6 +18,7 @@ public class CommitTransactionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch")
     public String branch;
+
     public CommitTransactionRequest withBranch(String branch) {
         this.branch = branch;
         return this;

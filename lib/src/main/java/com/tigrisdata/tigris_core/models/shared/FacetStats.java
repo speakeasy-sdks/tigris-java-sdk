@@ -18,6 +18,7 @@ public class FacetStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avg")
     public Double avg;
+
     public FacetStats withAvg(Double avg) {
         this.avg = avg;
         return this;
@@ -29,6 +30,7 @@ public class FacetStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public FacetStats withCount(Long count) {
         this.count = count;
         return this;
@@ -40,6 +42,7 @@ public class FacetStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
     public Double max;
+
     public FacetStats withMax(Double max) {
         this.max = max;
         return this;
@@ -51,6 +54,7 @@ public class FacetStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min")
     public Double min;
+
     public FacetStats withMin(Double min) {
         this.min = min;
         return this;
@@ -62,6 +66,7 @@ public class FacetStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sum")
     public Double sum;
+
     public FacetStats withSum(Double sum) {
         this.sum = sum;
         return this;

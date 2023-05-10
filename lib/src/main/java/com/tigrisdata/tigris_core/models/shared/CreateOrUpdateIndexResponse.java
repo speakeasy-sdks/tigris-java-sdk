@@ -18,6 +18,7 @@ public class CreateOrUpdateIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CreateOrUpdateIndexResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -29,6 +30,7 @@ public class CreateOrUpdateIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public CreateOrUpdateIndexResponse withStatus(String status) {
         this.status = status;
         return this;

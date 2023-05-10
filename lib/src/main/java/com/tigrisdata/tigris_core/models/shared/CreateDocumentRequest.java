@@ -15,6 +15,7 @@ public class CreateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public String[] documents;
+
     public CreateDocumentRequest withDocuments(String[] documents) {
         this.documents = documents;
         return this;
@@ -26,6 +27,7 @@ public class CreateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public String index;
+
     public CreateDocumentRequest withIndex(String index) {
         this.index = index;
         return this;
@@ -37,6 +39,7 @@ public class CreateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public CreateDocumentRequest withProject(String project) {
         this.project = project;
         return this;

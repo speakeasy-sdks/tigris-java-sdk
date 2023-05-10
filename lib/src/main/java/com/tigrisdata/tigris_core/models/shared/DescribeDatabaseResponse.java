@@ -18,6 +18,7 @@ public class DescribeDatabaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branches")
     public String[] branches;
+
     public DescribeDatabaseResponse withBranches(String[] branches) {
         this.branches = branches;
         return this;
@@ -29,6 +30,7 @@ public class DescribeDatabaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections")
     public CollectionDescription[] collections;
+
     public DescribeDatabaseResponse withCollections(CollectionDescription[] collections) {
         this.collections = collections;
         return this;
@@ -37,6 +39,7 @@ public class DescribeDatabaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public DescribeDatabaseResponse withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -48,6 +51,7 @@ public class DescribeDatabaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public DescribeDatabaseResponse withSize(Long size) {
         this.size = size;
         return this;

@@ -33,6 +33,13 @@ public class Namespace {
 		this._genVersion = genVersion;
 	}
 
+    /**
+     * Creates a Namespace
+     * Creates a new namespace, if it does not exist
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.CreateNamespaceResponse create(com.tigrisdata.tigris_core.models.shared.CreateNamespaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/namespaces/create");
@@ -77,6 +84,12 @@ public class Namespace {
         return res;
     }
 
+    /**
+     * Describe the details of all namespaces
+     * Get details for all namespaces
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.ManagementDescribeNamespacesResponse get() throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/namespaces/describe");
@@ -116,6 +129,13 @@ public class Namespace {
         return res;
     }
 
+    /**
+     * Reads the Namespace Metadata
+     * GetNamespaceMetadata inserts the user metadata object
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataResponse getMetadata(com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataRequest.class, baseUrl, "/v1/management/namespace/metadata/{metadataKey}/get", request, null);
@@ -160,6 +180,13 @@ public class Namespace {
         return res;
     }
 
+    /**
+     * Inserts Namespace Metadata
+     * InsertNamespaceMetadata inserts the namespace metadata object
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataResponse insertMetadata(com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataRequest.class, baseUrl, "/v1/management/namespace/metadata/{metadataKey}/insert", request, null);
@@ -204,6 +231,12 @@ public class Namespace {
         return res;
     }
 
+    /**
+     * Lists all Namespaces
+     * List all namespace
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.ManagementListNamespacesResponse list() throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/namespaces/list");
@@ -243,6 +276,13 @@ public class Namespace {
         return res;
     }
 
+    /**
+     * Updates Namespace Metadata
+     * UpdateNamespaceMetadata updates the user metadata object
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataResponse updateMetadata(com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataRequest.class, baseUrl, "/v1/management/namespace/metadata/{metadataKey}/update", request, null);

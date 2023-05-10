@@ -10,6 +10,7 @@ import java.net.http.HttpResponse;
 public class ManagementGetNamespaceMetadataResponse {
     
     public String contentType;
+
     public ManagementGetNamespaceMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -20,6 +21,7 @@ public class ManagementGetNamespaceMetadataResponse {
      */
     
     public com.tigrisdata.tigris_core.models.shared.GetNamespaceMetadataResponse getNamespaceMetadataResponse;
+
     public ManagementGetNamespaceMetadataResponse withGetNamespaceMetadataResponse(com.tigrisdata.tigris_core.models.shared.GetNamespaceMetadataResponse getNamespaceMetadataResponse) {
         this.getNamespaceMetadataResponse = getNamespaceMetadataResponse;
         return this;
@@ -30,6 +32,7 @@ public class ManagementGetNamespaceMetadataResponse {
      */
     
     public com.tigrisdata.tigris_core.models.shared.Status status;
+
     public ManagementGetNamespaceMetadataResponse withStatus(com.tigrisdata.tigris_core.models.shared.Status status) {
         this.status = status;
         return this;
@@ -37,6 +40,7 @@ public class ManagementGetNamespaceMetadataResponse {
     
     
     public Integer statusCode;
+
     public ManagementGetNamespaceMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -44,6 +48,7 @@ public class ManagementGetNamespaceMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ManagementGetNamespaceMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;

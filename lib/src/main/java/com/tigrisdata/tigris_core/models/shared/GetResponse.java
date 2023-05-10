@@ -18,6 +18,7 @@ public class GetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_in_ms")
     public Long expiresInMs;
+
     public GetResponse withExpiresInMs(Long expiresInMs) {
         this.expiresInMs = expiresInMs;
         return this;
@@ -29,6 +30,7 @@ public class GetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GetResponse withValue(String value) {
         this.value = value;
         return this;

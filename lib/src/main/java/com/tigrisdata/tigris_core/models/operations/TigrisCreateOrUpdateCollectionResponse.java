@@ -10,6 +10,7 @@ import java.net.http.HttpResponse;
 public class TigrisCreateOrUpdateCollectionResponse {
     
     public String contentType;
+
     public TigrisCreateOrUpdateCollectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -20,6 +21,7 @@ public class TigrisCreateOrUpdateCollectionResponse {
      */
     
     public com.tigrisdata.tigris_core.models.shared.CreateOrUpdateCollectionResponse createOrUpdateCollectionResponse;
+
     public TigrisCreateOrUpdateCollectionResponse withCreateOrUpdateCollectionResponse(com.tigrisdata.tigris_core.models.shared.CreateOrUpdateCollectionResponse createOrUpdateCollectionResponse) {
         this.createOrUpdateCollectionResponse = createOrUpdateCollectionResponse;
         return this;
@@ -30,6 +32,7 @@ public class TigrisCreateOrUpdateCollectionResponse {
      */
     
     public com.tigrisdata.tigris_core.models.shared.Status status;
+
     public TigrisCreateOrUpdateCollectionResponse withStatus(com.tigrisdata.tigris_core.models.shared.Status status) {
         this.status = status;
         return this;
@@ -37,6 +40,7 @@ public class TigrisCreateOrUpdateCollectionResponse {
     
     
     public Integer statusCode;
+
     public TigrisCreateOrUpdateCollectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -44,6 +48,7 @@ public class TigrisCreateOrUpdateCollectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TigrisCreateOrUpdateCollectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;

@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class TigrisRollbackTransactionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.tigrisdata.tigris_core.models.shared.RollbackTransactionRequest rollbackTransactionRequest;
+
     public TigrisRollbackTransactionRequest withRollbackTransactionRequest(com.tigrisdata.tigris_core.models.shared.RollbackTransactionRequest rollbackTransactionRequest) {
         this.rollbackTransactionRequest = rollbackTransactionRequest;
         return this;
@@ -20,6 +21,7 @@ public class TigrisRollbackTransactionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public TigrisRollbackTransactionRequest withProject(String project) {
         this.project = project;
         return this;

@@ -18,6 +18,7 @@ public class CreateDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DocStatus[] status;
+
     public CreateDocumentResponse withStatus(DocStatus[] status) {
         this.status = status;
         return this;

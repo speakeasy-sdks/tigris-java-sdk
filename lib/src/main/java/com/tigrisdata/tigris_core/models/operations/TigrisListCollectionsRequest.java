@@ -13,6 +13,7 @@ public class TigrisListCollectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=branch")
     public String branch;
+
     public TigrisListCollectionsRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -23,6 +24,7 @@ public class TigrisListCollectionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public TigrisListCollectionsRequest withProject(String project) {
         this.project = project;
         return this;

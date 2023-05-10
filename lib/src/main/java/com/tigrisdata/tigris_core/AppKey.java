@@ -33,6 +33,13 @@ public class AppKey {
 		this._genVersion = genVersion;
 	}
 
+    /**
+     * Deletes the app key
+     * Delete an app key.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse delete(com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyRequest.class, baseUrl, "/v1/projects/{project}/apps/keys/delete", request, null);
@@ -77,6 +84,13 @@ public class AppKey {
         return res;
     }
 
+    /**
+     * List all the app keys
+     * Lists all app keys visible to requesting actor.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse list(com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysRequest.class, baseUrl, "/v1/projects/{project}/apps/keys", request, null);
@@ -116,6 +130,13 @@ public class AppKey {
         return res;
     }
 
+    /**
+     * Rotates the app key secret
+     * Endpoint is used to rotate the secret for the app key.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse rotate(com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretRequest.class, baseUrl, "/v1/projects/{project}/apps/keys/rotate", request, null);
@@ -160,6 +181,13 @@ public class AppKey {
         return res;
     }
 
+    /**
+     * Creates the app key
+     * Create an app key.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse tigrisCreateAppKey(com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyRequest.class, baseUrl, "/v1/projects/{project}/apps/keys/create", request, null);
@@ -204,6 +232,13 @@ public class AppKey {
         return res;
     }
 
+    /**
+     * Updates the description of the app key
+     * Update the description of an app key.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse update(com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyRequest.class, baseUrl, "/v1/projects/{project}/apps/keys/update", request, null);

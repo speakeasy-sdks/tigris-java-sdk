@@ -15,6 +15,7 @@ public class InsertUserMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataKey")
     public String metadataKey;
+
     public InsertUserMetadataRequest withMetadataKey(String metadataKey) {
         this.metadataKey = metadataKey;
         return this;
@@ -23,6 +24,7 @@ public class InsertUserMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public java.util.Map<String, Object> value;
+
     public InsertUserMetadataRequest withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;

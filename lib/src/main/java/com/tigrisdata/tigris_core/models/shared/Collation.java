@@ -15,6 +15,7 @@ public class Collation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("case")
     public String case_;
+
     public Collation withCase(String case_) {
         this.case_ = case_;
         return this;

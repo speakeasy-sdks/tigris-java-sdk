@@ -18,6 +18,7 @@ public class KeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public Long cursor;
+
     public KeysResponse withCursor(Long cursor) {
         this.cursor = cursor;
         return this;
@@ -29,6 +30,7 @@ public class KeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public String[] keys;
+
     public KeysResponse withKeys(String[] keys) {
         this.keys = keys;
         return this;

@@ -34,6 +34,12 @@ public class Channel {
 		this._genVersion = genVersion;
 	}
 
+    /**
+     * Get the details about a channel
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelResponse get(com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelRequest.class, baseUrl, "/v1/projects/{project}/realtime/channels/{channel}", request, null);
@@ -73,6 +79,12 @@ public class Channel {
         return res;
     }
 
+    /**
+     * Get all messages for a channel
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesResponse getMessages(com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesRequest.class, baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/messages", request, null);
@@ -118,6 +130,12 @@ public class Channel {
         return res;
     }
 
+    /**
+     * Get all channels for your application project
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsResponse list(com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsRequest.class, baseUrl, "/v1/projects/{project}/realtime/channels", request, null);
@@ -157,6 +175,12 @@ public class Channel {
         return res;
     }
 
+    /**
+     * Get the subscriptions details about a channel
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsResponse listSubscriptions(com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsRequest.class, baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/subscriptions", request, null);
@@ -202,6 +226,12 @@ public class Channel {
         return res;
     }
 
+    /**
+     * push messages to a single channel
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.RealtimeMessagesResponse pushMessages(com.tigrisdata.tigris_core.models.operations.RealtimeMessagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimeMessagesRequest.class, baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/messages", request, null);
@@ -246,6 +276,12 @@ public class Channel {
         return res;
     }
 
+    /**
+     * Presence about the channel
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.RealtimePresenceResponse realtimePresence(com.tigrisdata.tigris_core.models.operations.RealtimePresenceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimePresenceRequest.class, baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/presence", request, null);

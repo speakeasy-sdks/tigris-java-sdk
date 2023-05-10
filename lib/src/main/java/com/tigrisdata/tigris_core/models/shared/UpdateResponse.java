@@ -18,6 +18,7 @@ public class UpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ResponseMetadata metadata;
+
     public UpdateResponse withMetadata(ResponseMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -29,6 +30,7 @@ public class UpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modified_count")
     public Integer modifiedCount;
+
     public UpdateResponse withModifiedCount(Integer modifiedCount) {
         this.modifiedCount = modifiedCount;
         return this;
@@ -40,6 +42,7 @@ public class UpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public UpdateResponse withStatus(String status) {
         this.status = status;
         return this;

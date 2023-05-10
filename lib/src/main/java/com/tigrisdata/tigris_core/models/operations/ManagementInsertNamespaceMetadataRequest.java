@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class ManagementInsertNamespaceMetadataRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.tigrisdata.tigris_core.models.shared.InsertNamespaceMetadataRequest insertNamespaceMetadataRequest;
+
     public ManagementInsertNamespaceMetadataRequest withInsertNamespaceMetadataRequest(com.tigrisdata.tigris_core.models.shared.InsertNamespaceMetadataRequest insertNamespaceMetadataRequest) {
         this.insertNamespaceMetadataRequest = insertNamespaceMetadataRequest;
         return this;
@@ -17,6 +18,7 @@ public class ManagementInsertNamespaceMetadataRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=metadataKey")
     public String metadataKey;
+
     public ManagementInsertNamespaceMetadataRequest withMetadataKey(String metadataKey) {
         this.metadataKey = metadataKey;
         return this;

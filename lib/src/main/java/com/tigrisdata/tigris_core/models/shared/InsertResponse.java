@@ -18,6 +18,7 @@ public class InsertResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public String[] keys;
+
     public InsertResponse withKeys(String[] keys) {
         this.keys = keys;
         return this;
@@ -29,6 +30,7 @@ public class InsertResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ResponseMetadata metadata;
+
     public InsertResponse withMetadata(ResponseMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -40,6 +42,7 @@ public class InsertResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public InsertResponse withStatus(String status) {
         this.status = status;
         return this;

@@ -18,6 +18,7 @@ public class ReplaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public String[] keys;
+
     public ReplaceResponse withKeys(String[] keys) {
         this.keys = keys;
         return this;
@@ -29,6 +30,7 @@ public class ReplaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ResponseMetadata metadata;
+
     public ReplaceResponse withMetadata(ResponseMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -40,6 +42,7 @@ public class ReplaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ReplaceResponse withStatus(String status) {
         this.status = status;
         return this;

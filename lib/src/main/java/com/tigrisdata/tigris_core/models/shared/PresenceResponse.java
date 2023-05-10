@@ -15,6 +15,7 @@ public class PresenceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public String response;
+
     public PresenceResponse withResponse(String response) {
         this.response = response;
         return this;

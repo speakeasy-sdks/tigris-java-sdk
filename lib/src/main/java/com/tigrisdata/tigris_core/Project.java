@@ -33,6 +33,13 @@ public class Project {
 		this._genVersion = genVersion;
 	}
 
+    /**
+     * Create Project
+     * Creates a new project. Returns an AlreadyExists error with a status code 409 if the project already exists.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectResponse create(com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectRequest.class, baseUrl, "/v1/projects/{project}/create", request, null);
@@ -77,6 +84,13 @@ public class Project {
         return res;
     }
 
+    /**
+     * Delete Project and all resources under project
+     * Delete Project deletes all the collections in this project along with all of the documents, and associated metadata for these collections.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectResponse deleteProject(com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectRequest.class, baseUrl, "/v1/projects/{project}/delete", request, null);
@@ -121,6 +135,12 @@ public class Project {
         return res;
     }
 
+    /**
+     * List Projects
+     * List returns all the projects.
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.tigrisdata.tigris_core.models.operations.TigrisListProjectsResponse list() throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/projects");

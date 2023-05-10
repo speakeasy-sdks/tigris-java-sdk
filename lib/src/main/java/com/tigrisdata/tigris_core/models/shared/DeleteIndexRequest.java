@@ -15,6 +15,7 @@ public class DeleteIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DeleteIndexRequest withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +27,7 @@ public class DeleteIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public DeleteIndexRequest withProject(String project) {
         this.project = project;
         return this;

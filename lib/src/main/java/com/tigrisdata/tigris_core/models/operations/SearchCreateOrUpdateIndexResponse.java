@@ -10,6 +10,7 @@ import java.net.http.HttpResponse;
 public class SearchCreateOrUpdateIndexResponse {
     
     public String contentType;
+
     public SearchCreateOrUpdateIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -20,6 +21,7 @@ public class SearchCreateOrUpdateIndexResponse {
      */
     
     public com.tigrisdata.tigris_core.models.shared.CreateOrUpdateIndexResponse createOrUpdateIndexResponse;
+
     public SearchCreateOrUpdateIndexResponse withCreateOrUpdateIndexResponse(com.tigrisdata.tigris_core.models.shared.CreateOrUpdateIndexResponse createOrUpdateIndexResponse) {
         this.createOrUpdateIndexResponse = createOrUpdateIndexResponse;
         return this;
@@ -30,6 +32,7 @@ public class SearchCreateOrUpdateIndexResponse {
      */
     
     public com.tigrisdata.tigris_core.models.shared.Status status;
+
     public SearchCreateOrUpdateIndexResponse withStatus(com.tigrisdata.tigris_core.models.shared.Status status) {
         this.status = status;
         return this;
@@ -37,6 +40,7 @@ public class SearchCreateOrUpdateIndexResponse {
     
     
     public Integer statusCode;
+
     public SearchCreateOrUpdateIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -44,6 +48,7 @@ public class SearchCreateOrUpdateIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchCreateOrUpdateIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;

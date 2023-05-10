@@ -15,6 +15,7 @@ public class RollupFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregator")
     public RollupFunctionAggregatorEnum aggregator;
+
     public RollupFunction withAggregator(RollupFunctionAggregatorEnum aggregator) {
         this.aggregator = aggregator;
         return this;
@@ -23,6 +24,7 @@ public class RollupFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public Long interval;
+
     public RollupFunction withInterval(Long interval) {
         this.interval = interval;
         return this;

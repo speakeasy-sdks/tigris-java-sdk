@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class TigrisCreateAppKeyRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.tigrisdata.tigris_core.models.shared.CreateAppKeyRequest createAppKeyRequest;
+
     public TigrisCreateAppKeyRequest withCreateAppKeyRequest(com.tigrisdata.tigris_core.models.shared.CreateAppKeyRequest createAppKeyRequest) {
         this.createAppKeyRequest = createAppKeyRequest;
         return this;
@@ -20,6 +21,7 @@ public class TigrisCreateAppKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public TigrisCreateAppKeyRequest withProject(String project) {
         this.project = project;
         return this;

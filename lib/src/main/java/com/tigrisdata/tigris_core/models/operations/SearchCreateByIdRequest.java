@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class SearchCreateByIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.tigrisdata.tigris_core.models.shared.CreateByIdRequest createByIdRequest;
+
     public SearchCreateByIdRequest withCreateByIdRequest(com.tigrisdata.tigris_core.models.shared.CreateByIdRequest createByIdRequest) {
         this.createByIdRequest = createByIdRequest;
         return this;
@@ -20,6 +21,7 @@ public class SearchCreateByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public SearchCreateByIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -30,6 +32,7 @@ public class SearchCreateByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
     public String index;
+
     public SearchCreateByIdRequest withIndex(String index) {
         this.index = index;
         return this;
@@ -40,6 +43,7 @@ public class SearchCreateByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public SearchCreateByIdRequest withProject(String project) {
         this.project = project;
         return this;

@@ -15,6 +15,7 @@ public class GetRTChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public String channel;
+
     public GetRTChannelResponse withChannel(String channel) {
         this.channel = channel;
         return this;

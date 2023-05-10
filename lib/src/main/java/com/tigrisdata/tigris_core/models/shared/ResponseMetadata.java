@@ -25,6 +25,7 @@ public class ResponseMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public ResponseMetadata withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +39,7 @@ public class ResponseMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deleted_at")
     public OffsetDateTime deletedAt;
+
     public ResponseMetadata withDeletedAt(OffsetDateTime deletedAt) {
         this.deletedAt = deletedAt;
         return this;
@@ -51,6 +53,7 @@ public class ResponseMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public ResponseMetadata withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;

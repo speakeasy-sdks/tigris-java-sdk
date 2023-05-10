@@ -15,6 +15,7 @@ public class DropCollectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch")
     public String branch;
+
     public DropCollectionRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -26,6 +27,7 @@ public class DropCollectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public java.util.Map<String, Object> options;
+
     public DropCollectionRequest withOptions(java.util.Map<String, Object> options) {
         this.options = options;
         return this;

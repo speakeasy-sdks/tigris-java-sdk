@@ -18,6 +18,7 @@ public class CommitTransactionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public CommitTransactionResponse withStatus(String status) {
         this.status = status;
         return this;

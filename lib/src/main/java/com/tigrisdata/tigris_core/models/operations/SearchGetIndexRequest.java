@@ -13,6 +13,7 @@ public class SearchGetIndexRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public SearchGetIndexRequest withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class SearchGetIndexRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public SearchGetIndexRequest withProject(String project) {
         this.project = project;
         return this;

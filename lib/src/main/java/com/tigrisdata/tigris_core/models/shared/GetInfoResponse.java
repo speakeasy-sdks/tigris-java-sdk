@@ -15,6 +15,7 @@ public class GetInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server_version")
     public String serverVersion;
+
     public GetInfoResponse withServerVersion(String serverVersion) {
         this.serverVersion = serverVersion;
         return this;

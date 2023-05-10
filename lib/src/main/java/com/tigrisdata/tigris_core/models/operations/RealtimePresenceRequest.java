@@ -10,6 +10,7 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 public class RealtimePresenceRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel")
     public String channel;
+
     public RealtimePresenceRequest withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -17,6 +18,7 @@ public class RealtimePresenceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RealtimePresenceRequest withProject(String project) {
         this.project = project;
         return this;
