@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class CreateDocumentResponse {
     /**
-     * An array of statuses of all the documents received in the request. Order is same as it is received in the request. Each item of this array has an \u201cid\u201d and \u201cerror\u201d key. Id is set as document id and error will be null in case of success, otherwise error is set with an error code and message.
+     * An array of statuses of all the documents received in the request. Order is same as it is received in the request. Each item of this array has an “id” and “error” key. Id is set as document id and error will be null in case of success, otherwise error is set with an error code and message.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
