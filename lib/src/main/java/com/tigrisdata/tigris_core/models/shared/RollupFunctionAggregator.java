@@ -6,7 +6,7 @@ package com.tigrisdata.tigris_core.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
-public enum RollupFunctionAggregatorEnum {
+public enum RollupFunctionAggregator {
     ROLLUP_AGGREGATOR_SUM("ROLLUP_AGGREGATOR_SUM"),
     ROLLUP_AGGREGATOR_COUNT("ROLLUP_AGGREGATOR_COUNT"),
     ROLLUP_AGGREGATOR_MIN("ROLLUP_AGGREGATOR_MIN"),
@@ -16,7 +16,7 @@ public enum RollupFunctionAggregatorEnum {
     @JsonValue
     public final String value;
 
-    private RollupFunctionAggregatorEnum(String value) {
+    private RollupFunctionAggregator(String value) {
         this.value = value;
     }
 }

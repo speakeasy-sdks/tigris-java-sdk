@@ -47,7 +47,8 @@ public class Channel {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
-        
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
         
         HTTPClient client = this._securityClient;
@@ -93,7 +94,8 @@ public class Channel {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
-        
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
         java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesRequest.class, request, null);
         if (queryParams != null) {
@@ -145,7 +147,8 @@ public class Channel {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
-        
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
         
         HTTPClient client = this._securityClient;
@@ -191,7 +194,8 @@ public class Channel {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
-        
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
         java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsRequest.class, request, null);
         if (queryParams != null) {
@@ -248,7 +252,8 @@ public class Channel {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
-        
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
         
         HTTPClient client = this._securityClient;
@@ -294,7 +299,8 @@ public class Channel {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
-        
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
         
         HTTPClient client = this._securityClient;

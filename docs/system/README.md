@@ -172,11 +172,11 @@ import com.tigrisdata.tigris_core.SDK;
 import com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsResponse;
 import com.tigrisdata.tigris_core.models.shared.AdditionalFunction;
 import com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequest;
-import com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequestFunctionEnum;
-import com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequestSpaceAggregationEnum;
-import com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequestTigrisOperationEnum;
+import com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequestFunction;
+import com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequestSpaceAggregation;
+import com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequestTigrisOperation;
 import com.tigrisdata.tigris_core.models.shared.RollupFunction;
-import com.tigrisdata.tigris_core.models.shared.RollupFunctionAggregatorEnum;
+import com.tigrisdata.tigris_core.models.shared.RollupFunctionAggregator;
 import com.tigrisdata.tigris_core.models.shared.Security;
 
 public class Application {
@@ -192,25 +192,25 @@ public class Application {
                 additionalFunctions = new com.tigrisdata.tigris_core.models.shared.AdditionalFunction[]{{
                     add(new AdditionalFunction() {{
                         rollup = new RollupFunction() {{
-                            aggregator = RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_AVG;
+                            aggregator = RollupFunctionAggregator.ROLLUP_AGGREGATOR_AVG;
                             interval = 557811L;
                         }};
                     }}),
                     add(new AdditionalFunction() {{
                         rollup = new RollupFunction() {{
-                            aggregator = RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_MIN;
+                            aggregator = RollupFunctionAggregator.ROLLUP_AGGREGATOR_MIN;
                             interval = 97468L;
                         }};
                     }}),
                     add(new AdditionalFunction() {{
                         rollup = new RollupFunction() {{
-                            aggregator = RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_AVG;
+                            aggregator = RollupFunctionAggregator.ROLLUP_AGGREGATOR_AVG;
                             interval = 621679L;
                         }};
                     }}),
                     add(new AdditionalFunction() {{
                         rollup = new RollupFunction() {{
-                            aggregator = RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_MIN;
+                            aggregator = RollupFunctionAggregator.ROLLUP_AGGREGATOR_MIN;
                             interval = 863023L;
                         }};
                     }}),
@@ -219,14 +219,14 @@ public class Application {
                 collection = "quia";
                 db = "eveniet";
                 from = 992430L;
-                function = QueryTimeSeriesMetricsRequestFunctionEnum.NONE;
+                function = QueryTimeSeriesMetricsRequestFunction.NONE;
                 metricName = "veritatis";
                 quantile = 1594.14;
                 spaceAggregatedBy = new String[]{{
                     add("similique"),
                 }};
-                spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregationEnum.MAX;
-                tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperationEnum.READ;
+                spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation.MAX;
+                tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation.READ;
                 to = 949298L;
             }};            
 

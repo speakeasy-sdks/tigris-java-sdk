@@ -59,9 +59,9 @@ public class QueryTimeSeriesMetricsRequest {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("function")
-    public QueryTimeSeriesMetricsRequestFunctionEnum function;
+    public QueryTimeSeriesMetricsRequestFunction function;
 
-    public QueryTimeSeriesMetricsRequest withFunction(QueryTimeSeriesMetricsRequestFunctionEnum function) {
+    public QueryTimeSeriesMetricsRequest withFunction(QueryTimeSeriesMetricsRequestFunction function) {
         this.function = function;
         return this;
     }
@@ -95,18 +95,18 @@ public class QueryTimeSeriesMetricsRequest {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("space_aggregation")
-    public QueryTimeSeriesMetricsRequestSpaceAggregationEnum spaceAggregation;
+    public QueryTimeSeriesMetricsRequestSpaceAggregation spaceAggregation;
 
-    public QueryTimeSeriesMetricsRequest withSpaceAggregation(QueryTimeSeriesMetricsRequestSpaceAggregationEnum spaceAggregation) {
+    public QueryTimeSeriesMetricsRequest withSpaceAggregation(QueryTimeSeriesMetricsRequestSpaceAggregation spaceAggregation) {
         this.spaceAggregation = spaceAggregation;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tigris_operation")
-    public QueryTimeSeriesMetricsRequestTigrisOperationEnum tigrisOperation;
+    public QueryTimeSeriesMetricsRequestTigrisOperation tigrisOperation;
 
-    public QueryTimeSeriesMetricsRequest withTigrisOperation(QueryTimeSeriesMetricsRequestTigrisOperationEnum tigrisOperation) {
+    public QueryTimeSeriesMetricsRequest withTigrisOperation(QueryTimeSeriesMetricsRequestTigrisOperation tigrisOperation) {
         this.tigrisOperation = tigrisOperation;
         return this;
     }

@@ -6,7 +6,7 @@ package com.tigrisdata.tigris_core.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
-public enum QueryTimeSeriesMetricsRequestTigrisOperationEnum {
+public enum QueryTimeSeriesMetricsRequestTigrisOperation {
     ALL("ALL"),
     READ("READ"),
     WRITE("WRITE"),
@@ -15,7 +15,7 @@ public enum QueryTimeSeriesMetricsRequestTigrisOperationEnum {
     @JsonValue
     public final String value;
 
-    private QueryTimeSeriesMetricsRequestTigrisOperationEnum(String value) {
+    private QueryTimeSeriesMetricsRequestTigrisOperation(String value) {
         this.value = value;
     }
 }

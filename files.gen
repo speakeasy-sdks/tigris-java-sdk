@@ -165,7 +165,7 @@ lib/src/main/java/com/tigrisdata/tigris_core/models/operations/ManagementInsertU
 lib/src/main/java/com/tigrisdata/tigris_core/models/operations/ManagementUpdateUserMetadataRequest.java
 lib/src/main/java/com/tigrisdata/tigris_core/models/operations/ManagementUpdateUserMetadataResponse.java
 lib/src/main/java/com/tigrisdata/tigris_core/models/shared/Status.java
-lib/src/main/java/com/tigrisdata/tigris_core/models/shared/ErrorCodeEnum.java
+lib/src/main/java/com/tigrisdata/tigris_core/models/shared/ErrorCode.java
 lib/src/main/java/com/tigrisdata/tigris_core/models/shared/Error.java
 lib/src/main/java/com/tigrisdata/tigris_core/models/shared/DeleteAppKeyResponse.java
 lib/src/main/java/com/tigrisdata/tigris_core/models/shared/DeleteAppKeyRequest.java
@@ -301,12 +301,12 @@ lib/src/main/java/com/tigrisdata/tigris_core/models/shared/QuotaLimitsResponse.j
 lib/src/main/java/com/tigrisdata/tigris_core/models/shared/QueryTimeSeriesMetricsResponse.java
 lib/src/main/java/com/tigrisdata/tigris_core/models/shared/MetricSeries.java
 lib/src/main/java/com/tigrisdata/tigris_core/models/shared/DataPoint.java
-lib/src/main/java/com/tigrisdata/tigris_core/models/shared/QueryTimeSeriesMetricsRequestFunctionEnum.java
-lib/src/main/java/com/tigrisdata/tigris_core/models/shared/QueryTimeSeriesMetricsRequestSpaceAggregationEnum.java
-lib/src/main/java/com/tigrisdata/tigris_core/models/shared/QueryTimeSeriesMetricsRequestTigrisOperationEnum.java
+lib/src/main/java/com/tigrisdata/tigris_core/models/shared/QueryTimeSeriesMetricsRequestFunction.java
+lib/src/main/java/com/tigrisdata/tigris_core/models/shared/QueryTimeSeriesMetricsRequestSpaceAggregation.java
+lib/src/main/java/com/tigrisdata/tigris_core/models/shared/QueryTimeSeriesMetricsRequestTigrisOperation.java
 lib/src/main/java/com/tigrisdata/tigris_core/models/shared/QueryTimeSeriesMetricsRequest.java
 lib/src/main/java/com/tigrisdata/tigris_core/models/shared/AdditionalFunction.java
-lib/src/main/java/com/tigrisdata/tigris_core/models/shared/RollupFunctionAggregatorEnum.java
+lib/src/main/java/com/tigrisdata/tigris_core/models/shared/RollupFunctionAggregator.java
 lib/src/main/java/com/tigrisdata/tigris_core/models/shared/RollupFunction.java
 lib/src/main/java/com/tigrisdata/tigris_core/models/shared/GetUserMetadataResponse.java
 lib/src/main/java/com/tigrisdata/tigris_core/models/shared/GetUserMetadataRequest.java

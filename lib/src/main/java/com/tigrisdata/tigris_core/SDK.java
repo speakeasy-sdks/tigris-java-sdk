@@ -132,8 +132,8 @@ public class SDK {
 	private com.tigrisdata.tigris_core.models.shared.Security _security;
 	private String _serverUrl;
 	private String _language = "java";
-	private String _sdkVersion = "0.14.0";
-	private String _genVersion = "2.30.0";
+	private String _sdkVersion = "0.15.0";
+	private String _genVersion = "2.31.0";
 	/**
 	 * The Builder class allows the configuration of a new instance of the SDK.
 	 */

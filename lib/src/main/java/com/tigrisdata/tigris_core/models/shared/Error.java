@@ -17,9 +17,9 @@ public class Error {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
-    public ErrorCodeEnum code;
+    public ErrorCode code;
 
-    public Error withCode(ErrorCodeEnum code) {
+    public Error withCode(ErrorCode code) {
         this.code = code;
         return this;
     }
