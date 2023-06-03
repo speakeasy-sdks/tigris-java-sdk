@@ -18,20 +18,10 @@ import org.apache.http.NameValuePair;
  */
 public class Search {
 	
-	private HTTPClient _defaultClient;
-	private HTTPClient _securityClient;
-	private String _serverUrl;
-	private String _language;
-	private String _sdkVersion;
-	private String _genVersion;
+	private SDKConfiguration sdkConfiguration;
 
-	public Search(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
-		this._defaultClient = defaultClient;
-		this._securityClient = securityClient;
-		this._serverUrl = serverUrl;
-		this._language = language;
-		this._sdkVersion = sdkVersion;
-		this._genVersion = genVersion;
+	public Search(SDKConfiguration sdkConfiguration) {
+		this.sdkConfiguration = sdkConfiguration;
 	}
 
     /**
@@ -45,7 +35,7 @@ public class Search {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.SearchCreateByIdResponse createDocument(com.tigrisdata.tigris_core.models.operations.SearchCreateByIdRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchCreateByIdRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -58,9 +48,9 @@ public class Search {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -102,7 +92,7 @@ public class Search {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.SearchCreateResponse createDocuments(com.tigrisdata.tigris_core.models.operations.SearchCreateRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchCreateRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -115,9 +105,9 @@ public class Search {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -157,7 +147,7 @@ public class Search {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.SearchDeleteResponse deleteDocuments(com.tigrisdata.tigris_core.models.operations.SearchDeleteRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchDeleteRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -170,9 +160,9 @@ public class Search {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -209,7 +199,7 @@ public class Search {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexResponse deleteIndex(com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -222,9 +212,9 @@ public class Search {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,7 +256,7 @@ public class Search {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.SearchSearchResponse findDocuments(com.tigrisdata.tigris_core.models.operations.SearchSearchRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchSearchRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents/search", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -279,9 +269,9 @@ public class Search {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -320,7 +310,7 @@ public class Search {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.SearchGetResponse getDocuments(com.tigrisdata.tigris_core.models.operations.SearchGetRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchGetRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -328,7 +318,7 @@ public class Search {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(com.tigrisdata.tigris_core.models.operations.SearchGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -336,7 +326,7 @@ public class Search {
             }
         }
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -373,7 +363,7 @@ public class Search {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.SearchGetIndexResponse getIndex(com.tigrisdata.tigris_core.models.operations.SearchGetIndexRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchGetIndexRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -381,9 +371,9 @@ public class Search {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -420,7 +410,7 @@ public class Search {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.SearchListIndexesResponse listIndexes(com.tigrisdata.tigris_core.models.operations.SearchListIndexesRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchListIndexesRequest.class, baseUrl, "/v1/projects/{project}/search/indexes", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -428,7 +418,7 @@ public class Search {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(com.tigrisdata.tigris_core.models.operations.SearchListIndexesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -436,7 +426,7 @@ public class Search {
             }
         }
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -475,7 +465,7 @@ public class Search {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryResponse queryDeleteDocuments(com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents/deleteByQuery", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -488,9 +478,9 @@ public class Search {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -531,7 +521,7 @@ public class Search {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceResponse replaceDocuments(com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -544,9 +534,9 @@ public class Search {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,7 +577,7 @@ public class Search {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.SearchUpdateResponse updateDocuments(com.tigrisdata.tigris_core.models.operations.SearchUpdateRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchUpdateRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{index}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -600,9 +590,9 @@ public class Search {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -639,7 +629,7 @@ public class Search {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexResponse updateIndex(com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexRequest.class, baseUrl, "/v1/projects/{project}/search/indexes/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -652,9 +642,9 @@ public class Search {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

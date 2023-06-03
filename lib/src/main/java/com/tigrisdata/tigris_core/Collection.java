@@ -17,20 +17,10 @@ import java.nio.charset.StandardCharsets;
  */
 public class Collection {
 	
-	private HTTPClient _defaultClient;
-	private HTTPClient _securityClient;
-	private String _serverUrl;
-	private String _language;
-	private String _sdkVersion;
-	private String _genVersion;
+	private SDKConfiguration sdkConfiguration;
 
-	public Collection(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
-		this._defaultClient = defaultClient;
-		this._securityClient = securityClient;
-		this._serverUrl = serverUrl;
-		this._language = language;
-		this._sdkVersion = sdkVersion;
-		this._genVersion = genVersion;
+	public Collection(SDKConfiguration sdkConfiguration) {
+		this.sdkConfiguration = sdkConfiguration;
 	}
 
     /**
@@ -45,7 +35,7 @@ public class Collection {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionResponse create(com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionRequest.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/createOrUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -58,9 +48,9 @@ public class Collection {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -98,7 +88,7 @@ public class Collection {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisDeleteResponse deleteDocuments(com.tigrisdata.tigris_core.models.operations.TigrisDeleteRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisDeleteRequest.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/delete", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -111,9 +101,9 @@ public class Collection {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -151,7 +141,7 @@ public class Collection {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionResponse describe(com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionRequest.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/describe", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -164,9 +154,9 @@ public class Collection {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -205,7 +195,7 @@ public class Collection {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionResponse drop(com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionRequest.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/drop", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -218,9 +208,9 @@ public class Collection {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,7 +253,7 @@ public class Collection {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisImportResponse importDocuments(com.tigrisdata.tigris_core.models.operations.TigrisImportRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisImportRequest.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/import", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -276,9 +266,9 @@ public class Collection {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -318,7 +308,7 @@ public class Collection {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisInsertResponse insertDocuments(com.tigrisdata.tigris_core.models.operations.TigrisInsertRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisInsertRequest.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/insert", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -331,9 +321,9 @@ public class Collection {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -376,7 +366,7 @@ public class Collection {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisReadResponse readDocuments(com.tigrisdata.tigris_core.models.operations.TigrisReadRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisReadRequest.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/read", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -389,9 +379,9 @@ public class Collection {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -429,7 +419,7 @@ public class Collection {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisReplaceResponse replaceDocuments(com.tigrisdata.tigris_core.models.operations.TigrisReplaceRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisReplaceRequest.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/replace", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -442,9 +432,9 @@ public class Collection {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -485,7 +475,7 @@ public class Collection {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisSearchResponse searchDocuments(com.tigrisdata.tigris_core.models.operations.TigrisSearchRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisSearchRequest.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/search", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -498,9 +488,9 @@ public class Collection {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -538,7 +528,7 @@ public class Collection {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisUpdateResponse updateDocuments(com.tigrisdata.tigris_core.models.operations.TigrisUpdateRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisUpdateRequest.class, baseUrl, "/v1/projects/{project}/database/collections/{collection}/documents/update", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -551,9 +541,9 @@ public class Collection {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

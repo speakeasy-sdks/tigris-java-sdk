@@ -18,20 +18,10 @@ import org.apache.http.NameValuePair;
  */
 public class Database {
 	
-	private HTTPClient _defaultClient;
-	private HTTPClient _securityClient;
-	private String _serverUrl;
-	private String _language;
-	private String _sdkVersion;
-	private String _genVersion;
+	private SDKConfiguration sdkConfiguration;
 
-	public Database(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
-		this._defaultClient = defaultClient;
-		this._securityClient = securityClient;
-		this._serverUrl = serverUrl;
-		this._language = language;
-		this._sdkVersion = sdkVersion;
-		this._genVersion = genVersion;
+	public Database(SDKConfiguration sdkConfiguration) {
+		this.sdkConfiguration = sdkConfiguration;
 	}
 
     /**
@@ -44,7 +34,7 @@ public class Database {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionResponse beginTransaction(com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionRequest.class, baseUrl, "/v1/projects/{project}/database/transactions/begin", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -57,9 +47,9 @@ public class Database {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -98,7 +88,7 @@ public class Database {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionResponse commitTransaction(com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionRequest.class, baseUrl, "/v1/projects/{project}/database/transactions/commit", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -111,9 +101,9 @@ public class Database {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -151,7 +141,7 @@ public class Database {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchResponse createBranch(com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchRequest.class, baseUrl, "/v1/projects/{project}/database/branches/{branch}/create", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -164,9 +154,9 @@ public class Database {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -205,7 +195,7 @@ public class Database {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchResponse deleteBranch(com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchRequest.class, baseUrl, "/v1/projects/{project}/database/branches/{branch}/delete", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -218,9 +208,9 @@ public class Database {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -259,7 +249,7 @@ public class Database {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseResponse describe(com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseRequest.class, baseUrl, "/v1/projects/{project}/database/describe", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -272,9 +262,9 @@ public class Database {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -312,7 +302,7 @@ public class Database {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsResponse listCollections(com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsRequest.class, baseUrl, "/v1/projects/{project}/database/collections", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -320,7 +310,7 @@ public class Database {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -328,7 +318,7 @@ public class Database {
             }
         }
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -367,7 +357,7 @@ public class Database {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionResponse rollbackTransaction(com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionRequest.class, baseUrl, "/v1/projects/{project}/database/transactions/rollback", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -380,9 +370,9 @@ public class Database {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -420,7 +410,7 @@ public class Database {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisListBranchesResponse tigrisListBranches(com.tigrisdata.tigris_core.models.operations.TigrisListBranchesRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisListBranchesRequest.class, baseUrl, "/v1/projects/{project}/database/branches", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -428,9 +418,9 @@ public class Database {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

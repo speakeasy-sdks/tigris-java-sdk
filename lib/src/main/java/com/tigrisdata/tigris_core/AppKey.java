@@ -17,20 +17,10 @@ import java.nio.charset.StandardCharsets;
  */
 public class AppKey {
 	
-	private HTTPClient _defaultClient;
-	private HTTPClient _securityClient;
-	private String _serverUrl;
-	private String _language;
-	private String _sdkVersion;
-	private String _genVersion;
+	private SDKConfiguration sdkConfiguration;
 
-	public AppKey(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
-		this._defaultClient = defaultClient;
-		this._securityClient = securityClient;
-		this._serverUrl = serverUrl;
-		this._language = language;
-		this._sdkVersion = sdkVersion;
-		this._genVersion = genVersion;
+	public AppKey(SDKConfiguration sdkConfiguration) {
+		this.sdkConfiguration = sdkConfiguration;
 	}
 
     /**
@@ -41,7 +31,7 @@ public class AppKey {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse delete(com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyRequest.class, baseUrl, "/v1/projects/{project}/apps/keys/delete", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -54,9 +44,9 @@ public class AppKey {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -94,7 +84,7 @@ public class AppKey {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse list(com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysRequest.class, baseUrl, "/v1/projects/{project}/apps/keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -102,9 +92,9 @@ public class AppKey {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -142,7 +132,7 @@ public class AppKey {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse rotate(com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretRequest.class, baseUrl, "/v1/projects/{project}/apps/keys/rotate", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -155,9 +145,9 @@ public class AppKey {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -195,7 +185,7 @@ public class AppKey {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse tigrisCreateAppKey(com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyRequest.class, baseUrl, "/v1/projects/{project}/apps/keys/create", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -208,9 +198,9 @@ public class AppKey {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -248,7 +238,7 @@ public class AppKey {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse update(com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyRequest.class, baseUrl, "/v1/projects/{project}/apps/keys/update", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -261,9 +251,9 @@ public class AppKey {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

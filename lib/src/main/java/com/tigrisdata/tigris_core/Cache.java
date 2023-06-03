@@ -18,20 +18,10 @@ import org.apache.http.NameValuePair;
  */
 public class Cache {
 	
-	private HTTPClient _defaultClient;
-	private HTTPClient _securityClient;
-	private String _serverUrl;
-	private String _language;
-	private String _sdkVersion;
-	private String _genVersion;
+	private SDKConfiguration sdkConfiguration;
 
-	public Cache(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
-		this._defaultClient = defaultClient;
-		this._securityClient = securityClient;
-		this._serverUrl = serverUrl;
-		this._language = language;
-		this._sdkVersion = sdkVersion;
-		this._genVersion = genVersion;
+	public Cache(SDKConfiguration sdkConfiguration) {
+		this.sdkConfiguration = sdkConfiguration;
 	}
 
     /**
@@ -41,7 +31,7 @@ public class Cache {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse create(com.tigrisdata.tigris_core.models.operations.CacheCreateCacheRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheCreateCacheRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/create", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -54,9 +44,9 @@ public class Cache {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -93,7 +83,7 @@ public class Cache {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheResponse delete(com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/delete", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -106,9 +96,9 @@ public class Cache {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -145,7 +135,7 @@ public class Cache {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.CacheDelResponse deleteKeys(com.tigrisdata.tigris_core.models.operations.CacheDelRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheDelRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/{key}/delete", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -158,9 +148,9 @@ public class Cache {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,7 +187,7 @@ public class Cache {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.CacheGetResponse getKey(com.tigrisdata.tigris_core.models.operations.CacheGetRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheGetRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/{key}/get", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -205,9 +195,9 @@ public class Cache {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -244,7 +234,7 @@ public class Cache {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.CacheGetSetResponse getSetKey(com.tigrisdata.tigris_core.models.operations.CacheGetSetRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheGetSetRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/{key}/getset", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -257,9 +247,9 @@ public class Cache {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -296,7 +286,7 @@ public class Cache {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse list(com.tigrisdata.tigris_core.models.operations.CacheListCachesRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheListCachesRequest.class, baseUrl, "/v1/projects/{project}/caches/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -304,9 +294,9 @@ public class Cache {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -343,7 +333,7 @@ public class Cache {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.CacheKeysResponse listKeys(com.tigrisdata.tigris_core.models.operations.CacheKeysRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheKeysRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -351,7 +341,7 @@ public class Cache {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(com.tigrisdata.tigris_core.models.operations.CacheKeysRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -359,7 +349,7 @@ public class Cache {
             }
         }
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -396,7 +386,7 @@ public class Cache {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.CacheSetResponse setKey(com.tigrisdata.tigris_core.models.operations.CacheSetRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.CacheSetRequest.class, baseUrl, "/v1/projects/{project}/caches/{name}/{key}/set", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -409,9 +399,9 @@ public class Cache {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

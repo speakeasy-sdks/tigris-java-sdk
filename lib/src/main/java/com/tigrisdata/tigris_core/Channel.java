@@ -18,20 +18,10 @@ import org.apache.http.NameValuePair;
  */
 public class Channel {
 	
-	private HTTPClient _defaultClient;
-	private HTTPClient _securityClient;
-	private String _serverUrl;
-	private String _language;
-	private String _sdkVersion;
-	private String _genVersion;
+	private SDKConfiguration sdkConfiguration;
 
-	public Channel(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
-		this._defaultClient = defaultClient;
-		this._securityClient = securityClient;
-		this._serverUrl = serverUrl;
-		this._language = language;
-		this._sdkVersion = sdkVersion;
-		this._genVersion = genVersion;
+	public Channel(SDKConfiguration sdkConfiguration) {
+		this.sdkConfiguration = sdkConfiguration;
 	}
 
     /**
@@ -41,7 +31,7 @@ public class Channel {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelResponse get(com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelRequest.class, baseUrl, "/v1/projects/{project}/realtime/channels/{channel}", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -49,9 +39,9 @@ public class Channel {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -88,7 +78,7 @@ public class Channel {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesResponse getMessages(com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesRequest.class, baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/messages", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -96,7 +86,7 @@ public class Channel {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -104,7 +94,7 @@ public class Channel {
             }
         }
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -141,7 +131,7 @@ public class Channel {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsResponse list(com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsRequest.class, baseUrl, "/v1/projects/{project}/realtime/channels", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -149,9 +139,9 @@ public class Channel {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -188,7 +178,7 @@ public class Channel {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsResponse listSubscriptions(com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsRequest.class, baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/subscriptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -196,7 +186,7 @@ public class Channel {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         java.util.List<NameValuePair> queryParams = com.tigrisdata.tigris_core.utils.Utils.getQueryParams(com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -204,7 +194,7 @@ public class Channel {
             }
         }
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -241,7 +231,7 @@ public class Channel {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.RealtimeMessagesResponse pushMessages(com.tigrisdata.tigris_core.models.operations.RealtimeMessagesRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimeMessagesRequest.class, baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/messages", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -254,9 +244,9 @@ public class Channel {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -293,7 +283,7 @@ public class Channel {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.RealtimePresenceResponse realtimePresence(com.tigrisdata.tigris_core.models.operations.RealtimePresenceRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.RealtimePresenceRequest.class, baseUrl, "/v1/projects/{project}/realtime/channels/{channel}/presence", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -301,9 +291,9 @@ public class Channel {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

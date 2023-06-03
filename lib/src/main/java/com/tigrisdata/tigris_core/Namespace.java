@@ -17,20 +17,10 @@ import java.nio.charset.StandardCharsets;
  */
 public class Namespace {
 	
-	private HTTPClient _defaultClient;
-	private HTTPClient _securityClient;
-	private String _serverUrl;
-	private String _language;
-	private String _sdkVersion;
-	private String _genVersion;
+	private SDKConfiguration sdkConfiguration;
 
-	public Namespace(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
-		this._defaultClient = defaultClient;
-		this._securityClient = securityClient;
-		this._serverUrl = serverUrl;
-		this._language = language;
-		this._sdkVersion = sdkVersion;
-		this._genVersion = genVersion;
+	public Namespace(SDKConfiguration sdkConfiguration) {
+		this.sdkConfiguration = sdkConfiguration;
 	}
 
     /**
@@ -41,7 +31,7 @@ public class Namespace {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.CreateNamespaceResponse create(com.tigrisdata.tigris_core.models.shared.CreateNamespaceRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/namespaces/create");
         
         HTTPRequest req = new HTTPRequest();
@@ -54,9 +44,9 @@ public class Namespace {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -93,7 +83,7 @@ public class Namespace {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.ManagementDescribeNamespacesResponse get() throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/namespaces/describe");
         
         HTTPRequest req = new HTTPRequest();
@@ -101,9 +91,9 @@ public class Namespace {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -141,7 +131,7 @@ public class Namespace {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataResponse getMetadata(com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataRequest.class, baseUrl, "/v1/management/namespace/metadata/{metadataKey}/get", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -154,9 +144,9 @@ public class Namespace {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -194,7 +184,7 @@ public class Namespace {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataResponse insertMetadata(com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataRequest.class, baseUrl, "/v1/management/namespace/metadata/{metadataKey}/insert", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -207,9 +197,9 @@ public class Namespace {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -246,7 +236,7 @@ public class Namespace {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.ManagementListNamespacesResponse list() throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/management/namespaces/list");
         
         HTTPRequest req = new HTTPRequest();
@@ -254,9 +244,9 @@ public class Namespace {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -294,7 +284,7 @@ public class Namespace {
      * @throws Exception if the API call fails
      */
     public com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataResponse updateMetadata(com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataRequest.class, baseUrl, "/v1/management/namespace/metadata/{metadataKey}/update", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -307,9 +297,9 @@ public class Namespace {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

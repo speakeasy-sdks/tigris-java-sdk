@@ -1,3 +1,4 @@
+lib/src/main/java/com/tigrisdata/tigris_core/SDKConfiguration.java
 lib/src/main/java/com/tigrisdata/tigris_core/AppKey.java
 lib/src/main/java/com/tigrisdata/tigris_core/Auth.java
 lib/src/main/java/com/tigrisdata/tigris_core/Cache.java
