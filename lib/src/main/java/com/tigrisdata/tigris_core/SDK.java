@@ -8,7 +8,7 @@ import com.tigrisdata.tigris_core.utils.HTTPClient;
 import com.tigrisdata.tigris_core.utils.SpeakeasyHTTPClient;
 
 /**
- * # Overview
+ * Tigris API Reference: # Overview
  * This section is organized around HTTP APIs. The APIs accepts JSON requests and returns JSON-encoded responses.The APIs conforms to standard HTTP status codes.
  * 
  * # Errors
