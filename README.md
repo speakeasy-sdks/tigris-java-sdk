@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.tigrisdata.tigris_core:tigris-data:0.18.1'
+implementation 'com.tigrisdata.tigris_core:tigris-data:0.19.0'
 ```
 <!-- End SDK Installation -->
 
@@ -27,7 +27,7 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security("corrupti") {{
-                    bearerAuth = "YOUR_BEARER_TOKEN_HERE";
+                    bearerAuth = "";
                 }})
                 .build();
 
