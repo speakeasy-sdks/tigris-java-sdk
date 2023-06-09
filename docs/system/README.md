@@ -221,7 +221,7 @@ public class Application {
                 from = 992430L;
                 function = QueryTimeSeriesMetricsRequestFunction.NONE;
                 metricName = "veritatis";
-                quantile = 1594.14;
+                quantile = 1594.14f;
                 spaceAggregatedBy = new String[]{{
                     add("similique"),
                 }};
