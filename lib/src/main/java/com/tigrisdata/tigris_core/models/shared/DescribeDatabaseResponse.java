@@ -38,9 +38,9 @@ public class DescribeDatabaseResponse {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    public java.util.Map<String, Object> metadata;
+    public DatabaseMetadata metadata;
 
-    public DescribeDatabaseResponse withMetadata(java.util.Map<String, Object> metadata) {
+    public DescribeDatabaseResponse withMetadata(DatabaseMetadata metadata) {
         this.metadata = metadata;
         return this;
     }

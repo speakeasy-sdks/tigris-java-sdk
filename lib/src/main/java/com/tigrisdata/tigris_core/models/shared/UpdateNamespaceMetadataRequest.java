@@ -23,9 +23,9 @@ public class UpdateNamespaceMetadataRequest {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    public java.util.Map<String, Object> value;
+    public UpdateNamespaceMetadataRequestValue value;
 
-    public UpdateNamespaceMetadataRequest withValue(java.util.Map<String, Object> value) {
+    public UpdateNamespaceMetadataRequest withValue(UpdateNamespaceMetadataRequestValue value) {
         this.value = value;
         return this;
     }

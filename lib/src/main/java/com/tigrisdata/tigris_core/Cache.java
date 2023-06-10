@@ -89,7 +89,7 @@ public class Cache {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "deleteCacheRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -141,7 +141,7 @@ public class Cache {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "delRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

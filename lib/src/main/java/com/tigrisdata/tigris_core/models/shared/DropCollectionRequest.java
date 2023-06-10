@@ -26,9 +26,9 @@ public class DropCollectionRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
-    public java.util.Map<String, Object> options;
+    public CollectionOptions options;
 
-    public DropCollectionRequest withOptions(java.util.Map<String, Object> options) {
+    public DropCollectionRequest withOptions(CollectionOptions options) {
         this.options = options;
         return this;
     }

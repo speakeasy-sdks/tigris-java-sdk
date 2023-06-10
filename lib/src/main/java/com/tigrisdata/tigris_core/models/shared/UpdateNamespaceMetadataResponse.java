@@ -32,9 +32,9 @@ public class UpdateNamespaceMetadataResponse {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    public java.util.Map<String, Object> value;
+    public UpdateNamespaceMetadataResponseValue value;
 
-    public UpdateNamespaceMetadataResponse withValue(java.util.Map<String, Object> value) {
+    public UpdateNamespaceMetadataResponse withValue(UpdateNamespaceMetadataResponseValue value) {
         this.value = value;
         return this;
     }

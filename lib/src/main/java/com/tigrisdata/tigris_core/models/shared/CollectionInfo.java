@@ -23,9 +23,9 @@ public class CollectionInfo {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    public java.util.Map<String, Object> metadata;
+    public CollectionMetadata metadata;
 
-    public CollectionInfo withMetadata(java.util.Map<String, Object> metadata) {
+    public CollectionInfo withMetadata(CollectionMetadata metadata) {
         this.metadata = metadata;
         return this;
     }

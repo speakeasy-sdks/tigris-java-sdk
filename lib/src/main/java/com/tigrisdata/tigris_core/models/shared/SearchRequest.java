@@ -50,18 +50,18 @@ public class SearchRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facet")
-    public java.util.Map<String, Object> facet;
+    public SearchRequestFacet facet;
 
-    public SearchRequest withFacet(java.util.Map<String, Object> facet) {
+    public SearchRequest withFacet(SearchRequestFacet facet) {
         this.facet = facet;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
-    public java.util.Map<String, Object> fields;
+    public SearchRequestFields fields;
 
-    public SearchRequest withFields(java.util.Map<String, Object> fields) {
+    public SearchRequest withFields(SearchRequestFields fields) {
         this.fields = fields;
         return this;
     }
@@ -71,9 +71,9 @@ public class SearchRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
-    public java.util.Map<String, Object> filter;
+    public SearchRequestFilter filter;
 
-    public SearchRequest withFilter(java.util.Map<String, Object> filter) {
+    public SearchRequest withFilter(SearchRequestFilter filter) {
         this.filter = filter;
         return this;
     }
@@ -143,9 +143,9 @@ public class SearchRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
-    public java.util.Map<String, Object> sort;
+    public SearchRequestSort sort;
 
-    public SearchRequest withSort(java.util.Map<String, Object> sort) {
+    public SearchRequest withSort(SearchRequestSort sort) {
         this.sort = sort;
         return this;
     }

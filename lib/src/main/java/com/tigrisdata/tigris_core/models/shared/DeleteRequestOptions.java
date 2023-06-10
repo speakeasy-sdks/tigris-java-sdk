@@ -41,9 +41,9 @@ public class DeleteRequestOptions {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("write_options")
-    public java.util.Map<String, Object> writeOptions;
+    public WriteOptions writeOptions;
 
-    public DeleteRequestOptions withWriteOptions(java.util.Map<String, Object> writeOptions) {
+    public DeleteRequestOptions withWriteOptions(WriteOptions writeOptions) {
         this.writeOptions = writeOptions;
         return this;
     }

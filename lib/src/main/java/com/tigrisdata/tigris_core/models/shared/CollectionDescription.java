@@ -23,9 +23,9 @@ public class CollectionDescription {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    public java.util.Map<String, Object> metadata;
+    public CollectionMetadata metadata;
 
-    public CollectionDescription withMetadata(java.util.Map<String, Object> metadata) {
+    public CollectionDescription withMetadata(CollectionMetadata metadata) {
         this.metadata = metadata;
         return this;
     }
@@ -35,9 +35,9 @@ public class CollectionDescription {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
-    public java.util.Map<String, Object> schema;
+    public CollectionDescriptionSchema schema;
 
-    public CollectionDescription withSchema(java.util.Map<String, Object> schema) {
+    public CollectionDescription withSchema(CollectionDescriptionSchema schema) {
         this.schema = schema;
         return this;
     }

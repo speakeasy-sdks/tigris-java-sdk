@@ -1,0 +1,9 @@
+# TigrisCreateAppKeyRequest
+
+
+## Fields
+
+| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `createAppKeyRequest`                                                                                      | [com.tigrisdata.tigris_core.models.shared.CreateAppKeyRequest](../../models/shared/CreateAppKeyRequest.md) | :heavy_check_mark:                                                                                         | N/A                                                                                                        |
+| `project`                                                                                                  | *String*                                                                                                   | :heavy_check_mark:                                                                                         | Project name                                                                                               |

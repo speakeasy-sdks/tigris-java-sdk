@@ -23,9 +23,9 @@ public class GetUserMetadataRequest {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    public java.util.Map<String, Object> value;
+    public GetUserMetadataRequestValue value;
 
-    public GetUserMetadataRequest withValue(java.util.Map<String, Object> value) {
+    public GetUserMetadataRequest withValue(GetUserMetadataRequestValue value) {
         this.value = value;
         return this;
     }

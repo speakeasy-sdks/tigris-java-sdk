@@ -1,0 +1,9 @@
+# TigrisDeleteAppKeyRequest
+
+
+## Fields
+
+| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `deleteAppKeyRequest`                                                                                      | [com.tigrisdata.tigris_core.models.shared.DeleteAppKeyRequest](../../models/shared/DeleteAppKeyRequest.md) | :heavy_check_mark:                                                                                         | N/A                                                                                                        |
+| `project`                                                                                                  | *String*                                                                                                   | :heavy_check_mark:                                                                                         | project name                                                                                               |

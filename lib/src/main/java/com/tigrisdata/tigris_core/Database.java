@@ -147,7 +147,7 @@ public class Database {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "createBranchRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -201,7 +201,7 @@ public class Database {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        SerializedBody serializedRequestBody = com.tigrisdata.tigris_core.utils.Utils.serializeRequestBody(request, "deleteBranchRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

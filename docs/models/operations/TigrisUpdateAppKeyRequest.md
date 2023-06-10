@@ -1,0 +1,9 @@
+# TigrisUpdateAppKeyRequest
+
+
+## Fields
+
+| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `updateAppKeyRequest`                                                                                      | [com.tigrisdata.tigris_core.models.shared.UpdateAppKeyRequest](../../models/shared/UpdateAppKeyRequest.md) | :heavy_check_mark:                                                                                         | N/A                                                                                                        |
+| `project`                                                                                                  | *String*                                                                                                   | :heavy_check_mark:                                                                                         | project name -  this is not allowed to update                                                              |

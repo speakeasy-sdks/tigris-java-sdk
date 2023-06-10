@@ -17,9 +17,9 @@ public class ImportRequestOptions {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("write_options")
-    public java.util.Map<String, Object> writeOptions;
+    public WriteOptions writeOptions;
 
-    public ImportRequestOptions withWriteOptions(java.util.Map<String, Object> writeOptions) {
+    public ImportRequestOptions withWriteOptions(WriteOptions writeOptions) {
         this.writeOptions = writeOptions;
         return this;
     }

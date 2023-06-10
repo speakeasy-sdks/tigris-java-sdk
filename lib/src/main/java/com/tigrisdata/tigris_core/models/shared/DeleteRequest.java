@@ -26,9 +26,9 @@ public class DeleteRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
-    public java.util.Map<String, Object> filter;
+    public DeleteRequestFilter filter;
 
-    public DeleteRequest withFilter(java.util.Map<String, Object> filter) {
+    public DeleteRequest withFilter(DeleteRequestFilter filter) {
         this.filter = filter;
         return this;
     }

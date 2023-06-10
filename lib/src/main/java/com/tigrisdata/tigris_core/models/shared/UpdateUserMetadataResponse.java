@@ -41,9 +41,9 @@ public class UpdateUserMetadataResponse {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    public java.util.Map<String, Object> value;
+    public UpdateUserMetadataResponseValue value;
 
-    public UpdateUserMetadataResponse withValue(java.util.Map<String, Object> value) {
+    public UpdateUserMetadataResponse withValue(UpdateUserMetadataResponseValue value) {
         this.value = value;
         return this;
     }

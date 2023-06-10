@@ -124,7 +124,7 @@ public class System {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageResponse observabilityQuotaUsage(java.util.Map<String, Object> request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageResponse observabilityQuotaUsage(com.tigrisdata.tigris_core.models.shared.QuotaUsageRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/observability/quota/usage");
         
@@ -177,7 +177,7 @@ public class System {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsResponse queryQuotaLimits(java.util.Map<String, Object> request) throws Exception {
+    public com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsResponse queryQuotaLimits(com.tigrisdata.tigris_core.models.shared.QuotaLimitsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.tigrisdata.tigris_core.utils.Utils.generateURL(baseUrl, "/v1/observability/quota/limits");
         

@@ -26,9 +26,9 @@ public class UpdateRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
-    public java.util.Map<String, Object> fields;
+    public UpdateRequestFields fields;
 
-    public UpdateRequest withFields(java.util.Map<String, Object> fields) {
+    public UpdateRequest withFields(UpdateRequestFields fields) {
         this.fields = fields;
         return this;
     }
@@ -38,9 +38,9 @@ public class UpdateRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
-    public java.util.Map<String, Object> filter;
+    public UpdateRequestFilter filter;
 
-    public UpdateRequest withFilter(java.util.Map<String, Object> filter) {
+    public UpdateRequest withFilter(UpdateRequestFilter filter) {
         this.filter = filter;
         return this;
     }

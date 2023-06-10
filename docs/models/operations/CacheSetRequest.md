@@ -1,0 +1,11 @@
+# CacheSetRequest
+
+
+## Fields
+
+| Field                                                                                    | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `setRequest`                                                                             | [com.tigrisdata.tigris_core.models.shared.SetRequest](../../models/shared/SetRequest.md) | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `key`                                                                                    | *String*                                                                                 | :heavy_check_mark:                                                                       | cache key                                                                                |
+| `name`                                                                                   | *String*                                                                                 | :heavy_check_mark:                                                                       | cache name                                                                               |
+| `project`                                                                                | *String*                                                                                 | :heavy_check_mark:                                                                       | Tigris project name                                                                      |

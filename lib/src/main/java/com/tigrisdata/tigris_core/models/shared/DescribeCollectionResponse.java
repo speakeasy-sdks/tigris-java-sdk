@@ -26,9 +26,9 @@ public class DescribeCollectionResponse {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    public java.util.Map<String, Object> metadata;
+    public CollectionMetadata metadata;
 
-    public DescribeCollectionResponse withMetadata(java.util.Map<String, Object> metadata) {
+    public DescribeCollectionResponse withMetadata(CollectionMetadata metadata) {
         this.metadata = metadata;
         return this;
     }
@@ -38,9 +38,9 @@ public class DescribeCollectionResponse {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
-    public java.util.Map<String, Object> schema;
+    public DescribeCollectionResponseSchema schema;
 
-    public DescribeCollectionResponse withSchema(java.util.Map<String, Object> schema) {
+    public DescribeCollectionResponse withSchema(DescribeCollectionResponseSchema schema) {
         this.schema = schema;
         return this;
     }

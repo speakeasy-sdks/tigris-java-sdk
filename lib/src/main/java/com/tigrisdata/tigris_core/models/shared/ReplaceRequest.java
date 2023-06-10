@@ -26,9 +26,9 @@ public class ReplaceRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
-    public java.util.Map<String, Object>[] documents;
+    public ReplaceRequestDocuments[] documents;
 
-    public ReplaceRequest withDocuments(java.util.Map<String, Object>[] documents) {
+    public ReplaceRequest withDocuments(ReplaceRequestDocuments[] documents) {
         this.documents = documents;
         return this;
     }

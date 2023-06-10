@@ -29,9 +29,9 @@ public class BeginTransactionRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
-    public java.util.Map<String, Object> options;
+    public TransactionOptions options;
 
-    public BeginTransactionRequest withOptions(java.util.Map<String, Object> options) {
+    public BeginTransactionRequest withOptions(TransactionOptions options) {
         this.options = options;
         return this;
     }

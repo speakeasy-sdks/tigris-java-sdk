@@ -1,0 +1,10 @@
+# RealtimeMessagesRequest
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `messagesRequest`                                                                                  | [com.tigrisdata.tigris_core.models.shared.MessagesRequest](../../models/shared/MessagesRequest.md) | :heavy_check_mark:                                                                                 | N/A                                                                                                |
+| `channel`                                                                                          | *String*                                                                                           | :heavy_check_mark:                                                                                 | N/A                                                                                                |
+| `project`                                                                                          | *String*                                                                                           | :heavy_check_mark:                                                                                 | N/A                                                                                                |

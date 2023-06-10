@@ -38,9 +38,9 @@ public class DescribeCollectionRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
-    public java.util.Map<String, Object> options;
+    public CollectionOptions options;
 
-    public DescribeCollectionRequest withOptions(java.util.Map<String, Object> options) {
+    public DescribeCollectionRequest withOptions(CollectionOptions options) {
         this.options = options;
         return this;
     }

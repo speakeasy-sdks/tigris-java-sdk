@@ -50,9 +50,9 @@ public class ImportRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
-    public java.util.Map<String, Object>[] documents;
+    public ImportRequestDocuments[] documents;
 
-    public ImportRequest withDocuments(java.util.Map<String, Object>[] documents) {
+    public ImportRequest withDocuments(ImportRequestDocuments[] documents) {
         this.documents = documents;
         return this;
     }

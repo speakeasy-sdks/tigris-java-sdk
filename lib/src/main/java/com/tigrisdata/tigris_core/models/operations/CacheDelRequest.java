@@ -9,10 +9,10 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class CacheDelRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> requestBody;
+    public com.tigrisdata.tigris_core.models.shared.DelRequest delRequest;
 
-    public CacheDelRequest withRequestBody(java.util.Map<String, Object> requestBody) {
-        this.requestBody = requestBody;
+    public CacheDelRequest withDelRequest(com.tigrisdata.tigris_core.models.shared.DelRequest delRequest) {
+        this.delRequest = delRequest;
         return this;
     }
     
@@ -49,8 +49,8 @@ public class CacheDelRequest {
         return this;
     }
     
-    public CacheDelRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("key") String key, @JsonProperty("name") String name, @JsonProperty("project") String project) {
-        this.requestBody = requestBody;
+    public CacheDelRequest(@JsonProperty("DelRequest") com.tigrisdata.tigris_core.models.shared.DelRequest delRequest, @JsonProperty("key") String key, @JsonProperty("name") String name, @JsonProperty("project") String project) {
+        this.delRequest = delRequest;
         this.key = key;
         this.name = name;
         this.project = project;

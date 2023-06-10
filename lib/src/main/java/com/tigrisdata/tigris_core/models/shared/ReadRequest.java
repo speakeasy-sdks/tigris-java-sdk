@@ -26,9 +26,9 @@ public class ReadRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
-    public java.util.Map<String, Object> fields;
+    public ReadRequestFields fields;
 
-    public ReadRequest withFields(java.util.Map<String, Object> fields) {
+    public ReadRequest withFields(ReadRequestFields fields) {
         this.fields = fields;
         return this;
     }
@@ -38,9 +38,9 @@ public class ReadRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
-    public java.util.Map<String, Object> filter;
+    public ReadRequestFilter filter;
 
-    public ReadRequest withFilter(java.util.Map<String, Object> filter) {
+    public ReadRequest withFilter(ReadRequestFilter filter) {
         this.filter = filter;
         return this;
     }

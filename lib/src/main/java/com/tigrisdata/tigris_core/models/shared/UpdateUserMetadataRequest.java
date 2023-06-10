@@ -23,9 +23,9 @@ public class UpdateUserMetadataRequest {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    public java.util.Map<String, Object> value;
+    public UpdateUserMetadataRequestValue value;
 
-    public UpdateUserMetadataRequest withValue(java.util.Map<String, Object> value) {
+    public UpdateUserMetadataRequest withValue(UpdateUserMetadataRequestValue value) {
         this.value = value;
         return this;
     }

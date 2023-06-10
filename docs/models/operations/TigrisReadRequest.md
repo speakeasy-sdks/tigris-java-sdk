@@ -1,0 +1,10 @@
+# TigrisReadRequest
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `readRequest`                                                                              | [com.tigrisdata.tigris_core.models.shared.ReadRequest](../../models/shared/ReadRequest.md) | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `collection`                                                                               | *String*                                                                                   | :heavy_check_mark:                                                                         | Collection name to read documents from.                                                    |
+| `project`                                                                                  | *String*                                                                                   | :heavy_check_mark:                                                                         | Project name whose db is under target to read documents from.                              |

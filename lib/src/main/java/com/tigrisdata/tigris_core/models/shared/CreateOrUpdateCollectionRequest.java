@@ -38,9 +38,9 @@ public class CreateOrUpdateCollectionRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
-    public java.util.Map<String, Object> options;
+    public CollectionOptions options;
 
-    public CreateOrUpdateCollectionRequest withOptions(java.util.Map<String, Object> options) {
+    public CreateOrUpdateCollectionRequest withOptions(CollectionOptions options) {
         this.options = options;
         return this;
     }
@@ -50,9 +50,9 @@ public class CreateOrUpdateCollectionRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
-    public java.util.Map<String, Object> schema;
+    public CreateOrUpdateCollectionRequestSchema schema;
 
-    public CreateOrUpdateCollectionRequest withSchema(java.util.Map<String, Object> schema) {
+    public CreateOrUpdateCollectionRequest withSchema(CreateOrUpdateCollectionRequestSchema schema) {
         this.schema = schema;
         return this;
     }

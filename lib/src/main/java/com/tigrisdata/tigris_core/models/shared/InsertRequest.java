@@ -26,9 +26,9 @@ public class InsertRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
-    public java.util.Map<String, Object>[] documents;
+    public InsertRequestDocuments[] documents;
 
-    public InsertRequest withDocuments(java.util.Map<String, Object>[] documents) {
+    public InsertRequest withDocuments(InsertRequestDocuments[] documents) {
         this.documents = documents;
         return this;
     }

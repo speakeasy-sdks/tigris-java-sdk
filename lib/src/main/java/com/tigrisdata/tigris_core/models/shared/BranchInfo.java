@@ -23,9 +23,9 @@ public class BranchInfo {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    public java.util.Map<String, Object> metadata;
+    public BranchMetadata metadata;
 
-    public BranchInfo withMetadata(java.util.Map<String, Object> metadata) {
+    public BranchInfo withMetadata(BranchMetadata metadata) {
         this.metadata = metadata;
         return this;
     }

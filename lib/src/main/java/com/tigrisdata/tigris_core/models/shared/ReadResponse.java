@@ -14,9 +14,9 @@ public class ReadResponse {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
-    public java.util.Map<String, Object> data;
+    public ReadResponseData data;
 
-    public ReadResponse withData(java.util.Map<String, Object> data) {
+    public ReadResponse withData(ReadResponseData data) {
         this.data = data;
         return this;
     }

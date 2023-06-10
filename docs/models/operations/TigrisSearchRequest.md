@@ -1,0 +1,10 @@
+# TigrisSearchRequest
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `searchRequest`                                                                                | [com.tigrisdata.tigris_core.models.shared.SearchRequest](../../models/shared/SearchRequest.md) | :heavy_check_mark:                                                                             | N/A                                                                                            |
+| `collection`                                                                                   | *String*                                                                                       | :heavy_check_mark:                                                                             | Collection name to search documents from.                                                      |
+| `project`                                                                                      | *String*                                                                                       | :heavy_check_mark:                                                                             | Project name whose db is under target to search documents from.                                |

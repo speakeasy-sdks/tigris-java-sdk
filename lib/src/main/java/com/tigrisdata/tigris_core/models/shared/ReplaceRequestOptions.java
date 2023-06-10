@@ -17,9 +17,9 @@ public class ReplaceRequestOptions {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("write_options")
-    public java.util.Map<String, Object> writeOptions;
+    public WriteOptions writeOptions;
 
-    public ReplaceRequestOptions withWriteOptions(java.util.Map<String, Object> writeOptions) {
+    public ReplaceRequestOptions withWriteOptions(WriteOptions writeOptions) {
         this.writeOptions = writeOptions;
         return this;
     }

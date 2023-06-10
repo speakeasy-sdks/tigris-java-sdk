@@ -14,9 +14,9 @@ public class SearchHit {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
-    public java.util.Map<String, Object> data;
+    public SearchHitData data;
 
-    public SearchHit withData(java.util.Map<String, Object> data) {
+    public SearchHit withData(SearchHitData data) {
         this.data = data;
         return this;
     }

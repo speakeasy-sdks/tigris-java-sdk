@@ -9,10 +9,10 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisCreateProjectRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> requestBody;
+    public com.tigrisdata.tigris_core.models.shared.CreateProjectRequest createProjectRequest;
 
-    public TigrisCreateProjectRequest withRequestBody(java.util.Map<String, Object> requestBody) {
-        this.requestBody = requestBody;
+    public TigrisCreateProjectRequest withCreateProjectRequest(com.tigrisdata.tigris_core.models.shared.CreateProjectRequest createProjectRequest) {
+        this.createProjectRequest = createProjectRequest;
         return this;
     }
     
@@ -27,8 +27,8 @@ public class TigrisCreateProjectRequest {
         return this;
     }
     
-    public TigrisCreateProjectRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("project") String project) {
-        this.requestBody = requestBody;
+    public TigrisCreateProjectRequest(@JsonProperty("CreateProjectRequest") com.tigrisdata.tigris_core.models.shared.CreateProjectRequest createProjectRequest, @JsonProperty("project") String project) {
+        this.createProjectRequest = createProjectRequest;
         this.project = project;
   }
 }

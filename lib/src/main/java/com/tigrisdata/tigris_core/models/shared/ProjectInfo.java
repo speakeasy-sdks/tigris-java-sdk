@@ -11,9 +11,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProjectInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    public java.util.Map<String, Object> metadata;
+    public ProjectMetadata metadata;
 
-    public ProjectInfo withMetadata(java.util.Map<String, Object> metadata) {
+    public ProjectInfo withMetadata(ProjectMetadata metadata) {
         this.metadata = metadata;
         return this;
     }

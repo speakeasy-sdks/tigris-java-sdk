@@ -1,0 +1,9 @@
+# TigrisDescribeDatabaseRequest
+
+
+## Fields
+
+| Field                                                                                                              | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `describeDatabaseRequest`                                                                                          | [com.tigrisdata.tigris_core.models.shared.DescribeDatabaseRequest](../../models/shared/DescribeDatabaseRequest.md) | :heavy_check_mark:                                                                                                 | N/A                                                                                                                |
+| `project`                                                                                                          | *String*                                                                                                           | :heavy_check_mark:                                                                                                 | Project name whose db is under target to get description.                                                          |

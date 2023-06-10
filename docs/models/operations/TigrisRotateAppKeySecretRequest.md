@@ -1,0 +1,9 @@
+# TigrisRotateAppKeySecretRequest
+
+
+## Fields
+
+| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `rotateAppKeyRequest`                                                                                      | [com.tigrisdata.tigris_core.models.shared.RotateAppKeyRequest](../../models/shared/RotateAppKeyRequest.md) | :heavy_check_mark:                                                                                         | N/A                                                                                                        |
+| `project`                                                                                                  | *String*                                                                                                   | :heavy_check_mark:                                                                                         | project name                                                                                               |

@@ -9,10 +9,10 @@ import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
 public class TigrisDeleteProjectRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> requestBody;
+    public com.tigrisdata.tigris_core.models.shared.DeleteProjectRequest deleteProjectRequest;
 
-    public TigrisDeleteProjectRequest withRequestBody(java.util.Map<String, Object> requestBody) {
-        this.requestBody = requestBody;
+    public TigrisDeleteProjectRequest withDeleteProjectRequest(com.tigrisdata.tigris_core.models.shared.DeleteProjectRequest deleteProjectRequest) {
+        this.deleteProjectRequest = deleteProjectRequest;
         return this;
     }
     
@@ -27,8 +27,8 @@ public class TigrisDeleteProjectRequest {
         return this;
     }
     
-    public TigrisDeleteProjectRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("project") String project) {
-        this.requestBody = requestBody;
+    public TigrisDeleteProjectRequest(@JsonProperty("DeleteProjectRequest") com.tigrisdata.tigris_core.models.shared.DeleteProjectRequest deleteProjectRequest, @JsonProperty("project") String project) {
+        this.deleteProjectRequest = deleteProjectRequest;
         this.project = project;
   }
 }
