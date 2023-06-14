@@ -9,6 +9,7 @@ package com.tigrisdata.tigris_core.models.shared;
 /**
  * SearchRequestSort - Array of fields and corresponding sort orders to order the results `[{ "salary": "$desc" }]`
  */
+
 public class SearchRequestSort {
     public SearchRequestSort(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * DeleteAppKeyRequest - Request deletion of an app key
  */
+
 public class DeleteAppKeyRequest {
     /**
      * app_key id

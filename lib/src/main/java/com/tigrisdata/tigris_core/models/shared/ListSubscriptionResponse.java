@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * ListSubscriptionResponse - OK
  */
+
 public class ListSubscriptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")

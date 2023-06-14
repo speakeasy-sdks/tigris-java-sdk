@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * UpdateAppKeyRequest - To update the description of the app key
  */
+
 public class UpdateAppKeyRequest {
     /**
      * A new human readable app description

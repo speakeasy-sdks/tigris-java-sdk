@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * FacetStats - Additional stats for faceted field
  */
+
 public class FacetStats {
     /**
      * Average of all values in a field. Only available for numeric fields

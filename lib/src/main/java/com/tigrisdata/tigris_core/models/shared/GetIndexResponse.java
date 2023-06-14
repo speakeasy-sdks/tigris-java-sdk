@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * GetIndexResponse - OK
  */
+
 public class GetIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")

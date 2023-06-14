@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * CreateAppKeyResponse - CreateAppKeyResponse returns created app keys
  */
+
 public class CreateAppKeyResponse {
     /**
      * An user AppKey

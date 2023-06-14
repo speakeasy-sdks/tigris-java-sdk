@@ -7,6 +7,7 @@ package com.tigrisdata.tigris_core.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
+
 public class Security {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
     public String bearerAuth;

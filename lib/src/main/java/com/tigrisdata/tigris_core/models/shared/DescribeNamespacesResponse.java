@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * DescribeNamespacesResponse - OK
  */
+
 public class DescribeNamespacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * ListIndexesResponse - OK
  */
+
 public class ListIndexesResponse {
     /**
      * List of indexes.

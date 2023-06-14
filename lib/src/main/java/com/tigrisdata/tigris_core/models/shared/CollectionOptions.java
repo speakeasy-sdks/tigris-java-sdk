@@ -9,6 +9,7 @@ package com.tigrisdata.tigris_core.models.shared;
 /**
  * CollectionOptions - Collection requests modifying options.
  */
+
 public class CollectionOptions {
     public CollectionOptions(){}
 }

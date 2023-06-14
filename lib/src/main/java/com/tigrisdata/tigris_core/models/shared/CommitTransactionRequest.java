@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * CommitTransactionRequest - Commit transaction with the given ID
  */
+
 public class CommitTransactionRequest {
     /**
      * Optionally specify a database branch name to perform operation on

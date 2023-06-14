@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * MetricSeries - Represents series in timeseries based on input query.
  */
+
 public class MetricSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataPoints")

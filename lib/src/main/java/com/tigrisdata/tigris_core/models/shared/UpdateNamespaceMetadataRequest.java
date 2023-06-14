@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * UpdateNamespaceMetadataRequest - Request update of namespace metadata
  */
+
 public class UpdateNamespaceMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataKey")

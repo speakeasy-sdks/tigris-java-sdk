@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class DeleteByQueryRequest {
     /**
      * A filter is required to delete matching documents. To delete document by id, you can pass the filter as follows ```{"id": "test"}```

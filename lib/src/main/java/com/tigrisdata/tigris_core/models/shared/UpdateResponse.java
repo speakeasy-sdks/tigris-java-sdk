@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * UpdateResponse - OK
  */
+
 public class UpdateResponse {
     /**
      * Has metadata related to the documents stored.

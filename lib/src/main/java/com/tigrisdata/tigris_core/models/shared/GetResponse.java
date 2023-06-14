@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * GetResponse - OK
  */
+
 public class GetResponse {
     /**
      * expiration ms

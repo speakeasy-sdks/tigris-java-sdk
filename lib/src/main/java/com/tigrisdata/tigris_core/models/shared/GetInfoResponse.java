@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * GetInfoResponse - OK
  */
+
 public class GetInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server_version")

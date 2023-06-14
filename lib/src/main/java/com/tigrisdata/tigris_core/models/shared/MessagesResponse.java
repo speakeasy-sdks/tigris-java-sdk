@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * MessagesResponse - OK
  */
+
 public class MessagesResponse {
     /**
      * ids of the published messages

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * UpdateAppKeyResponse - Returns response for updating the app key description
  */
+
 public class UpdateAppKeyResponse {
     /**
      * An user AppKey

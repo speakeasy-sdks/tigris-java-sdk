@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * ListBranchesResponse - OK
  */
+
 public class ListBranchesResponse {
     /**
      * List of all the branches in this database

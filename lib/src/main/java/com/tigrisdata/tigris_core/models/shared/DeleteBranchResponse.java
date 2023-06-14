@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * DeleteBranchResponse - OK
  */
+
 public class DeleteBranchResponse {
     /**
      * A detailed response message.

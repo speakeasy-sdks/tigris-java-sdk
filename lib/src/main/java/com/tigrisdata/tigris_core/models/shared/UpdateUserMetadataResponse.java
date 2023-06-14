@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * UpdateUserMetadataResponse - Update of user metadata response
  */
+
 public class UpdateUserMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataKey")

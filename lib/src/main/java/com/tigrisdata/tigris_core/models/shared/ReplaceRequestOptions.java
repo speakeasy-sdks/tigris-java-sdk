@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * ReplaceRequestOptions - Additional options for replace requests.
  */
+
 public class ReplaceRequestOptions {
     /**
      * Additional options to modify write requests.

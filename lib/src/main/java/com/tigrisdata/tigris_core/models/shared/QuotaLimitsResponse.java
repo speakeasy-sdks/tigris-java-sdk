@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * QuotaLimitsResponse - Contains current quota limits
  */
+
 public class QuotaLimitsResponse {
     /**
      * Number of allowed read units per second

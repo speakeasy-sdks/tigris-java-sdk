@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * SetResponse - OK
  */
+
 public class SetResponse {
     /**
      * A detailed response message.

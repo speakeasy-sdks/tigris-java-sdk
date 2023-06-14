@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * QueryTimeSeriesMetricsResponse - QueryTimeSeriesMetric responds with this type.
  */
+
 public class QueryTimeSeriesMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")

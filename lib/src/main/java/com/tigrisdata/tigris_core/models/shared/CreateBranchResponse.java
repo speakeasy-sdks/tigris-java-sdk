@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * CreateBranchResponse - OK
  */
+
 public class CreateBranchResponse {
     /**
      * A detailed response message.

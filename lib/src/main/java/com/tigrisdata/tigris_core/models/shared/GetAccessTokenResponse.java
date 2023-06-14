@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * GetAccessTokenResponse - The response of GetAccessToken which contains access_token and optionally refresh_token.
  */
+
 public class GetAccessTokenResponse {
     /**
      * An Access Token.

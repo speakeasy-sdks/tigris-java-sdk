@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * Status - Default error response
  */
+
 public class Status {
     /**
      * The Error type defines a logical error model

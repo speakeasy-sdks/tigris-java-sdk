@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * DropCollectionResponse - OK
  */
+
 public class DropCollectionResponse {
     /**
      * A detailed response message.

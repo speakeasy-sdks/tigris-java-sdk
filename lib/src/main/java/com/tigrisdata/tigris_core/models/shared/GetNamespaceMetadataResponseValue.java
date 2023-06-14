@@ -6,6 +6,7 @@ package com.tigrisdata.tigris_core.models.shared;
 
 
 
+
 public class GetNamespaceMetadataResponseValue {
     public GetNamespaceMetadataResponseValue(){}
 }

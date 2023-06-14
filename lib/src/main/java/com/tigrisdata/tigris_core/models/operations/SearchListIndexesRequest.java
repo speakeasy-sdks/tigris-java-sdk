@@ -7,6 +7,7 @@ package com.tigrisdata.tigris_core.models.operations;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tigrisdata.tigris_core.utils.SpeakeasyMetadata;
 
+
 public class SearchListIndexesRequest {
     /**
      * Applicable only in case index is backed by Tigris collection. This is the database branch for the above collection. For primary database it can be omitted or "main" can be passed.

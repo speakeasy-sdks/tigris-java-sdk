@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * DeleteProjectResponse - OK
  */
+
 public class DeleteProjectResponse {
     /**
      * A detailed response message.

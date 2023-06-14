@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * GetDocumentResponse - OK
  */
+
 public class GetDocumentResponse {
     /**
      * An array of documents.

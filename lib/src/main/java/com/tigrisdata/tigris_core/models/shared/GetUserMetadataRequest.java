@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * GetUserMetadataRequest - Request user metadata
  */
+
 public class GetUserMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataKey")

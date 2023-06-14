@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * HealthCheckResponse - OK
  */
+
 public class HealthCheckResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")

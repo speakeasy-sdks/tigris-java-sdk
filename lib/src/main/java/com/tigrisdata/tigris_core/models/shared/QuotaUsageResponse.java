@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * QuotaUsageResponse - Contains current quota usage
  */
+
 public class QuotaUsageResponse {
     /**
      * Number of read units used per second

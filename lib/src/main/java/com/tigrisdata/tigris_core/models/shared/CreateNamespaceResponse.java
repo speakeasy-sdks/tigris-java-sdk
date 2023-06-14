@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * CreateNamespaceResponse - OK
  */
+
 public class CreateNamespaceResponse {
     /**
      * A detailed response message.

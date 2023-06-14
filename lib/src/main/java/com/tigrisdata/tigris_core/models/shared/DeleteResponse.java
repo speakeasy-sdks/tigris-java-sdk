@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * DeleteResponse - OK
  */
+
 public class DeleteResponse {
     /**
      * Has metadata related to the documents stored.

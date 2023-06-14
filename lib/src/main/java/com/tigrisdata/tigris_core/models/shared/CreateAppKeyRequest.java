@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * CreateAppKeyRequest - Request creation of user app key
  */
+
 public class CreateAppKeyRequest {
     /**
      * A human readable app description

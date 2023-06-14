@@ -16,6 +16,7 @@ import java.time.OffsetDateTime;
 /**
  * ResponseMetadata - Has metadata related to the documents stored.
  */
+
 public class ResponseMetadata {
     /**
      * Time at which the document was inserted/replaced. Measured in nano-seconds since the Unix epoch.

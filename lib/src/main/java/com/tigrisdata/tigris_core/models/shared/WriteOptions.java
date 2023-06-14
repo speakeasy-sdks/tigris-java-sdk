@@ -9,6 +9,7 @@ package com.tigrisdata.tigris_core.models.shared;
 /**
  * WriteOptions - Additional options to modify write requests.
  */
+
 public class WriteOptions {
     public WriteOptions(){}
 }

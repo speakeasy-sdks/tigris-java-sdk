@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * CommitTransactionResponse - OK
  */
+
 public class CommitTransactionResponse {
     /**
      * Status of commit transaction operation.

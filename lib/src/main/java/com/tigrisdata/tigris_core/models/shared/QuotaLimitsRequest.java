@@ -9,6 +9,7 @@ package com.tigrisdata.tigris_core.models.shared;
 /**
  * QuotaLimitsRequest - Request current namespace quota limits
  */
+
 public class QuotaLimitsRequest {
     public QuotaLimitsRequest(){}
 }

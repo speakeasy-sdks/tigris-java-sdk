@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * Page - Pagination metadata for SearchResponse
  */
+
 public class Page {
     /**
      * Number representing the current page of results

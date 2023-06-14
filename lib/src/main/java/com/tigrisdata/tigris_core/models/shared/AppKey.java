@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * AppKey - An user AppKey
  */
+
 public class AppKey {
     /**
      * Created at

@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class CreateOrReplaceDocumentRequest {
     /**
      * An array of documents to create. Each document is a JSON object. In case an id is missing then the server will automatically generate it for you and create the document and in case an id is provided in the document and the document already exists then that document will not index and in the response there will be an error corresponding to that document id other documents will succeed.

@@ -9,6 +9,7 @@ package com.tigrisdata.tigris_core.models.shared;
 /**
  * SearchRequestFilter - Filter stacks on top of query results to further narrow down the results. Similar to `ReadRequest.filter`
  */
+
 public class SearchRequestFilter {
     public SearchRequestFilter(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * GetRTChannelsResponse - OK
  */
+
 public class GetRTChannelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channels")

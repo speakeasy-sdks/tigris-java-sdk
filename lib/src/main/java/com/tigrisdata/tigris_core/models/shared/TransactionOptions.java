@@ -9,6 +9,7 @@ package com.tigrisdata.tigris_core.models.shared;
 /**
  * TransactionOptions - Options that can be used to modify the transaction semantics.
  */
+
 public class TransactionOptions {
     public TransactionOptions(){}
 }

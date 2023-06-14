@@ -9,6 +9,7 @@ package com.tigrisdata.tigris_core.models.shared;
 /**
  * UpdateRequestFields - Fields contains set of fields with the values which need to be updated. Should be proper JSON object.
  */
+
 public class UpdateRequestFields {
     public UpdateRequestFields(){}
 }

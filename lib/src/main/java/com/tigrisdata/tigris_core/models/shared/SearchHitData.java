@@ -9,6 +9,7 @@ package com.tigrisdata.tigris_core.models.shared;
 /**
  * SearchHitData - Actual search document
  */
+
 public class SearchHitData {
     public SearchHitData(){}
 }

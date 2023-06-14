@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * DescribeDatabaseResponse - A detailed description of the database and all the associated collections. Description of the collection includes schema details as well.
  */
+
 public class DescribeDatabaseResponse {
     /**
      * List of all the branches in this database

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * RollupFunction - Rollup function aggregates the slices of metrics returned by original query and lets you operate on the slices using aggregator and constructs the bigger slice of your choice of interval (specified in seconds).
  */
+
 public class RollupFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregator")

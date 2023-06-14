@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * CreateOrUpdateIndexResponse - OK
  */
+
 public class CreateOrUpdateIndexResponse {
     /**
      * A detailed response message.

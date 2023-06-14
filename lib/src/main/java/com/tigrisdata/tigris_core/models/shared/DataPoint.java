@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * DataPoint - Represents the data point in timeseries.
  */
+
 public class DataPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")

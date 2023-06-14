@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * DeleteByQueryResponse - OK
  */
+
 public class DeleteByQueryResponse {
     /**
      * The number of documents deleted.

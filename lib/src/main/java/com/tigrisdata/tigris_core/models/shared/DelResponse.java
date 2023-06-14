@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * DelResponse - OK
  */
+
 public class DelResponse {
     /**
      * A detailed response message.

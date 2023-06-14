@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * ListNamespacesResponse - OK
  */
+
 public class ListNamespacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaces")

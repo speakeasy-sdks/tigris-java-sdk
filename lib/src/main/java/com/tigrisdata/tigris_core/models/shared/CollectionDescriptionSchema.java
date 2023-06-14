@@ -9,6 +9,7 @@ package com.tigrisdata.tigris_core.models.shared;
 /**
  * CollectionDescriptionSchema - Collections schema
  */
+
 public class CollectionDescriptionSchema {
     public CollectionDescriptionSchema(){}
 }

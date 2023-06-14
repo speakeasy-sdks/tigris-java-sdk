@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * RollbackTransactionRequest - Rollback transaction with the given ID
  */
+
 public class RollbackTransactionRequest {
     /**
      * Optionally specify a database branch name to perform operation on

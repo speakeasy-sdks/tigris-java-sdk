@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * QueryTimeSeriesMetricsRequest - Requests the time series metrics
  */
+
 public class QueryTimeSeriesMetricsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalFunctions")

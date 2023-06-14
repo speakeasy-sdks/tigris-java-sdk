@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * DeleteCacheResponse - OK
  */
+
 public class DeleteCacheResponse {
     /**
      * A detailed response message.

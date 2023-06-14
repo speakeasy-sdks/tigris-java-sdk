@@ -9,6 +9,7 @@ package com.tigrisdata.tigris_core.models.shared;
 /**
  * DescribeCollectionResponseSchema - Schema of this collection.
  */
+
 public class DescribeCollectionResponseSchema {
     public DescribeCollectionResponseSchema(){}
 }

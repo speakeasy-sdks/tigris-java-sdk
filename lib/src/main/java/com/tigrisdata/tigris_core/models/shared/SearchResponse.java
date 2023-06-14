@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * SearchResponse - Response struct for search
  */
+
 public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facets")

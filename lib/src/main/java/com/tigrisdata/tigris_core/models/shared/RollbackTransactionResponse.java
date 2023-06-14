@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * RollbackTransactionResponse - OK
  */
+
 public class RollbackTransactionResponse {
     /**
      * Status of rollback transaction operation.

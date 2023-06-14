@@ -16,6 +16,7 @@ import java.time.OffsetDateTime;
 /**
  * DocMeta - Contains metadata related to the search hit, has information about document created_at/updated_at as well.
  */
+
 public class DocMeta {
     /**
      * Time at which the document was inserted/replaced. Measured in nano-seconds since the Unix epoch.

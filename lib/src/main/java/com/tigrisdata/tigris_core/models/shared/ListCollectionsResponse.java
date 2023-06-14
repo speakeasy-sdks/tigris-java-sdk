@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * ListCollectionsResponse - OK
  */
+
 public class ListCollectionsResponse {
     /**
      * List of the collections info in the database.

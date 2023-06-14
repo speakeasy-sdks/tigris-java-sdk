@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * ReadRequestOptions - Options that can be used to modify the results, for example "limit" to control the number of documents returned by the server.
  */
+
 public class ReadRequestOptions {
     /**
      * A collation allows you to specify string comparison rules. Default is case-sensitive, to override it you can set this option to 'ci' that will apply to all the text fields in the filters.

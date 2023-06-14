@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * PresenceResponse - OK
  */
+
 public class PresenceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")

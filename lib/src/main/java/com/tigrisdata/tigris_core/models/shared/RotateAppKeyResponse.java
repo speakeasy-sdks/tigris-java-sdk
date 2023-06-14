@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * RotateAppKeyResponse - RotateAppKeyResponse returns the new app key with rotated secret
  */
+
 public class RotateAppKeyResponse {
     /**
      * An user AppKey

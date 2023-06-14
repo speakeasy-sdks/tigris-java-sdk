@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * StreamingSearchResponse - OK
  */
+
 public class StreamingSearchResponse {
     /**
      * The Error type defines a logical error model

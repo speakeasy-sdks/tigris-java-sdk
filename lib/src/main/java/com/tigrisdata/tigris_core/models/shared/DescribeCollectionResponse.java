@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * DescribeCollectionResponse - A detailed description of the collection. The description returns collection metadata and the schema.
  */
+
 public class DescribeCollectionResponse {
     /**
      * Name of the collection.
