@@ -12,7 +12,6 @@ lib/src/main/java/com/tigrisdata/tigris_core/System.java
 lib/src/main/java/com/tigrisdata/tigris_core/User.java
 lib/src/main/java/com/tigrisdata/tigris_core/SDK.java
 .gitattributes
-.gitignore
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
 gradlew
