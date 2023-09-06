@@ -29,7 +29,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("tempore") {{
+                .setSecurity(new Security("ipsum") {{
                     bearerAuth = "";
                 }})
                 .build();
@@ -69,7 +69,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("cupiditate") {{
+                .setSecurity(new Security("incidunt") {{
                     bearerAuth = "";
                 }})
                 .build();
@@ -110,7 +110,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("aperiam") {{
+                .setSecurity(new Security("qui") {{
                     bearerAuth = "";
                 }})
                 .build();
@@ -159,7 +159,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("delectus") {{
+                .setSecurity(new Security("cupiditate") {{
                     bearerAuth = "";
                 }})
                 .build();
@@ -214,7 +214,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("dolorem") {{
+                .setSecurity(new Security("maxime") {{
                     bearerAuth = "";
                 }})
                 .build();
@@ -223,33 +223,24 @@ public class Application {
                 additionalFunctions = new com.tigrisdata.tigris_core.models.shared.AdditionalFunction[]{{
                     add(new AdditionalFunction() {{
                         rollup = new RollupFunction() {{
-                            aggregator = RollupFunctionAggregator.ROLLUP_AGGREGATOR_COUNT;
-                            interval = 240829L;
-                        }};
-                    }}),
-                    add(new AdditionalFunction() {{
-                        rollup = new RollupFunction() {{
-                            aggregator = RollupFunctionAggregator.ROLLUP_AGGREGATOR_MAX;
-                            interval = 100294L;
+                            aggregator = RollupFunctionAggregator.ROLLUP_AGGREGATOR_AVG;
+                            interval = 747080L;
                         }};
                     }}),
                 }};
-                branch = "quae";
-                collection = "aut";
-                db = "quas";
-                from = 929530L;
+                branch = "dicta";
+                collection = "laborum";
+                db = "totam";
+                from = 276894L;
                 function = QueryTimeSeriesMetricsRequestFunction.RATE;
-                metricName = "est";
-                quantile = 8330.38f;
+                metricName = "dolores";
+                quantile = 7168.6f;
                 spaceAggregatedBy = new String[]{{
-                    add("doloribus"),
-                    add("ut"),
                     add("facilis"),
-                    add("cupiditate"),
                 }};
-                spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation.AVG;
-                tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation.ALL;
-                to = 512393L;
+                spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation.MIN;
+                tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation.READ;
+                to = 565421L;
             }};            
 
             ObservabilityQueryTimeSeriesMetricsResponse res = sdk.system.queryTimeSeriesMetrics(req);

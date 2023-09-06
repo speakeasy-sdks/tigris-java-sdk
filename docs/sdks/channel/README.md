@@ -248,14 +248,14 @@ public class Application {
                                 channel = "sint";
                                 messages = new com.tigrisdata.tigris_core.models.shared.Message[]{{
                                     add(new Message() {{
-                                        data = "itaque";
-                                        id = "450ad2ab-d442-4698-82d5-02a94bb4f63c";
-                                        name = "Gilbert Medhurst";
-                                        sequence = "officia";
+                                        data = "veritatis";
+                                        id = "e450ad2a-bd44-4269-802d-502a94bb4f63";
+                                        name = "Sergio Hyatt";
+                                        sequence = "sint";
                                     }}),
                                 }};
-                                project = "dolor";
-                            }};, "debitis", "a");            
+                                project = "officia";
+                            }};, "dolor", "debitis");            
 
             RealtimeMessagesResponse res = sdk.channel.pushMessages(req);
 
@@ -299,12 +299,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("dolorum") {{
+                .setSecurity(new Security("a") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimePresenceRequest req = new RealtimePresenceRequest("in", "in");            
+            RealtimePresenceRequest req = new RealtimePresenceRequest("dolorum", "in");            
 
             RealtimePresenceResponse res = sdk.channel.realtimePresence(req);
 
