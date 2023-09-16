@@ -8,9 +8,6 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * DeleteProjectResponse - OK
- */
 
 public class DeleteProjectResponse {
     /**

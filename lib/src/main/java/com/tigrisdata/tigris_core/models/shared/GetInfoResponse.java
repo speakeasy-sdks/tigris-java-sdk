@@ -8,9 +8,6 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * GetInfoResponse - OK
- */
 
 public class GetInfoResponse {
     @JsonInclude(Include.NON_ABSENT)

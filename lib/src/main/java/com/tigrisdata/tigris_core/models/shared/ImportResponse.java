@@ -8,9 +8,6 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * ImportResponse - OK
- */
 
 public class ImportResponse {
     /**

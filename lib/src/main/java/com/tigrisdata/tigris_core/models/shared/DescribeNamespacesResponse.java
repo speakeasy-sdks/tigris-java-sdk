@@ -8,9 +8,6 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * DescribeNamespacesResponse - OK
- */
 
 public class DescribeNamespacesResponse {
     @JsonInclude(Include.NON_ABSENT)

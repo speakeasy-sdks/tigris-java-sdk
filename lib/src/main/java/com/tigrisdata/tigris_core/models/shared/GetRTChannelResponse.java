@@ -8,9 +8,6 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * GetRTChannelResponse - OK
- */
 
 public class GetRTChannelResponse {
     @JsonInclude(Include.NON_ABSENT)

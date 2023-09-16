@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.tigrisdata.tigris_core:tigris-data:0.43.2'
+implementation 'com.tigrisdata.tigris_core:tigris-data:0.43.3'
 ```
 <!-- End SDK Installation -->
 
@@ -56,7 +56,7 @@ public class Application {
 ## Available Resources and Operations
 
 
-### [appKey](docs/sdks/appkey/README.md)
+### [AppKey](docs/sdks/appkey/README.md)
 
 * [delete](docs/sdks/appkey/README.md#delete) - Deletes the app key
 * [list](docs/sdks/appkey/README.md#list) - List all the app keys
@@ -64,11 +64,11 @@ public class Application {
 * [tigrisCreateAppKey](docs/sdks/appkey/README.md#tigriscreateappkey) - Creates the app key
 * [update](docs/sdks/appkey/README.md#update) - Updates the description of the app key
 
-### [auth](docs/sdks/auth/README.md)
+### [Auth](docs/sdks/auth/README.md)
 
 * [get](docs/sdks/auth/README.md#get) - Access Token
 
-### [cache](docs/sdks/cache/README.md)
+### [Cache](docs/sdks/cache/README.md)
 
 * [create](docs/sdks/cache/README.md#create) - Creates the cache
 * [delete](docs/sdks/cache/README.md#delete) - Deletes the cache
@@ -79,7 +79,7 @@ public class Application {
 * [listKeys](docs/sdks/cache/README.md#listkeys) - Lists all the key for this cache
 * [setKey](docs/sdks/cache/README.md#setkey) - Sets an entry in the cache
 
-### [channel](docs/sdks/channel/README.md)
+### [Channel](docs/sdks/channel/README.md)
 
 * [get](docs/sdks/channel/README.md#get) - Get the details about a channel
 * [getMessages](docs/sdks/channel/README.md#getmessages) - Get all messages for a channel
@@ -88,7 +88,7 @@ public class Application {
 * [pushMessages](docs/sdks/channel/README.md#pushmessages) - push messages to a single channel
 * [realtimePresence](docs/sdks/channel/README.md#realtimepresence) - Presence about the channel
 
-### [collection](docs/sdks/collection/README.md)
+### [Collection](docs/sdks/collection/README.md)
 
 * [create](docs/sdks/collection/README.md#create) - Create or update a collection
 * [deleteDocuments](docs/sdks/collection/README.md#deletedocuments) - Delete Documents
@@ -101,7 +101,7 @@ public class Application {
 * [searchDocuments](docs/sdks/collection/README.md#searchdocuments) - Search Documents.
 * [updateDocuments](docs/sdks/collection/README.md#updatedocuments) - Update Documents.
 
-### [database](docs/sdks/database/README.md)
+### [Database](docs/sdks/database/README.md)
 
 * [beginTransaction](docs/sdks/database/README.md#begintransaction) - Begin a transaction
 * [commitTransaction](docs/sdks/database/README.md#committransaction) - Commit a Transaction
@@ -112,7 +112,7 @@ public class Application {
 * [rollbackTransaction](docs/sdks/database/README.md#rollbacktransaction) - Rollback a transaction
 * [tigrisListBranches](docs/sdks/database/README.md#tigrislistbranches) - List database branches
 
-### [namespace](docs/sdks/namespace/README.md)
+### [Namespace](docs/sdks/namespace/README.md)
 
 * [create](docs/sdks/namespace/README.md#create) - Creates a Namespace
 * [get](docs/sdks/namespace/README.md#get) - Describe the details of all namespaces
@@ -121,13 +121,13 @@ public class Application {
 * [list](docs/sdks/namespace/README.md#list) - Lists all Namespaces
 * [updateMetadata](docs/sdks/namespace/README.md#updatemetadata) - Updates Namespace Metadata
 
-### [project](docs/sdks/project/README.md)
+### [Project](docs/sdks/project/README.md)
 
 * [create](docs/sdks/project/README.md#create) - Create Project
 * [deleteProject](docs/sdks/project/README.md#deleteproject) - Delete Project and all resources under project
 * [list](docs/sdks/project/README.md#list) - List Projects
 
-### [search](docs/sdks/search/README.md)
+### [Search](docs/sdks/search/README.md)
 
 * [createDocument](docs/sdks/search/README.md#createdocument) - Create a single document
 * [createDocuments](docs/sdks/search/README.md#createdocuments) - Create multiple documents
@@ -142,7 +142,7 @@ public class Application {
 * [updateDocuments](docs/sdks/search/README.md#updatedocuments) - Update documents in an index
 * [updateIndex](docs/sdks/search/README.md#updateindex) - Creates or updates search index
 
-### [system](docs/sdks/system/README.md)
+### [System](docs/sdks/system/README.md)
 
 * [getHealth](docs/sdks/system/README.md#gethealth) - Health Check
 * [getServerInfo](docs/sdks/system/README.md#getserverinfo) - Information about the server
@@ -150,7 +150,7 @@ public class Application {
 * [queryQuotaLimits](docs/sdks/system/README.md#queryquotalimits) - Queries current namespace quota limits
 * [queryTimeSeriesMetrics](docs/sdks/system/README.md#querytimeseriesmetrics) - Queries time series metrics
 
-### [user](docs/sdks/user/README.md)
+### [User](docs/sdks/user/README.md)
 
 * [getMetadata](docs/sdks/user/README.md#getmetadata) - Reads the User Metadata
 * [insertMetadata](docs/sdks/user/README.md#insertmetadata) - Inserts User Metadata
