@@ -30,15 +30,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("temporibus") {{
+                .setSecurity(new Security("odio") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             ManagementGetUserMetadataRequest req = new ManagementGetUserMetadataRequest(                new GetUserMetadataRequest() {{
-                                metadataKey = "qui";
+                                metadataKey = "sunt";
                                 value = new GetUserMetadataRequestValue();;
-                            }};, "neque");            
+                            }};, "ullam");            
 
             ManagementGetUserMetadataResponse res = sdk.user.getMetadata(req);
 
@@ -84,15 +84,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("fugit") {{
+                .setSecurity(new Security("nam") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             ManagementInsertUserMetadataRequest req = new ManagementInsertUserMetadataRequest(                new InsertUserMetadataRequest() {{
-                                metadataKey = "magni";
+                                metadataKey = "hic";
                                 value = new InsertUserMetadataRequestValue();;
-                            }};, "odio");            
+                            }};, "voluptatem");            
 
             ManagementInsertUserMetadataResponse res = sdk.user.insertMetadata(req);
 
@@ -138,15 +138,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("sunt") {{
+                .setSecurity(new Security("cumque") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             ManagementUpdateUserMetadataRequest req = new ManagementUpdateUserMetadataRequest(                new UpdateUserMetadataRequest() {{
-                                metadataKey = "ullam";
+                                metadataKey = "soluta";
                                 value = new UpdateUserMetadataRequestValue();;
-                            }};, "nam");            
+                            }};, "nobis");            
 
             ManagementUpdateUserMetadataResponse res = sdk.user.updateMetadata(req);
 

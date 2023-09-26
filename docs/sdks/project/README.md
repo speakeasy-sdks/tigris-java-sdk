@@ -29,12 +29,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("facilis") {{
+                .setSecurity(new Security("blanditiis") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisCreateProjectRequest req = new TigrisCreateProjectRequest(                new CreateProjectRequest();, "perspiciatis");            
+            TigrisCreateProjectRequest req = new TigrisCreateProjectRequest(                new CreateProjectRequest();, "error");            
 
             TigrisCreateProjectResponse res = sdk.project.create(req);
 
@@ -79,12 +79,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("voluptatem") {{
+                .setSecurity(new Security("eaque") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisDeleteProjectRequest req = new TigrisDeleteProjectRequest(                new DeleteProjectRequest();, "porro");            
+            TigrisDeleteProjectRequest req = new TigrisDeleteProjectRequest(                new DeleteProjectRequest();, "occaecati");            
 
             TigrisDeleteProjectResponse res = sdk.project.deleteProject(req);
 
@@ -127,7 +127,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("consequuntur") {{
+                .setSecurity(new Security("rerum") {{
                     bearerAuth = "";
                 }})
                 .build();

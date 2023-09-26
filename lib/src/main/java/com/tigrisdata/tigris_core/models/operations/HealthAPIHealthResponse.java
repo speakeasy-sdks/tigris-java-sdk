@@ -9,6 +9,9 @@ import java.net.http.HttpResponse;
 
 
 public class HealthAPIHealthResponse {
+    /**
+     * HTTP response content type for this operation
+     */
     
     public String contentType;
 
@@ -39,6 +42,9 @@ public class HealthAPIHealthResponse {
         return this;
     }
     
+    /**
+     * HTTP response status code for this operation
+     */
     
     public Integer statusCode;
 
@@ -47,6 +53,9 @@ public class HealthAPIHealthResponse {
         return this;
     }
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     
     public HttpResponse<byte[]> rawResponse;
 

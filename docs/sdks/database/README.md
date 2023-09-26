@@ -37,15 +37,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("nemo") {{
+                .setSecurity(new Security("eius") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             TigrisBeginTransactionRequest req = new TigrisBeginTransactionRequest(                new BeginTransactionRequest() {{
-                                branch = "quasi";
+                                branch = "maxime";
                                 options = new TransactionOptions();;
-                            }};, "iure");            
+                            }};, "deleniti");            
 
             TigrisBeginTransactionResponse res = sdk.database.beginTransaction(req);
 
@@ -91,14 +91,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("doloribus") {{
+                .setSecurity(new Security("facilis") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             TigrisCommitTransactionRequest req = new TigrisCommitTransactionRequest(                new CommitTransactionRequest() {{
-                                branch = "debitis";
-                            }};, "eius");            
+                                branch = "in";
+                            }};, "architecto");            
 
             TigrisCommitTransactionResponse res = sdk.database.commitTransaction(req);
 
@@ -143,12 +143,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("maxime") {{
+                .setSecurity(new Security("architecto") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisCreateBranchRequest req = new TigrisCreateBranchRequest(                new CreateBranchRequest();, "deleniti", "facilis");            
+            TigrisCreateBranchRequest req = new TigrisCreateBranchRequest(                new CreateBranchRequest();, "repudiandae", "ullam");            
 
             TigrisCreateBranchResponse res = sdk.database.createBranch(req);
 
@@ -194,12 +194,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("in") {{
+                .setSecurity(new Security("expedita") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisDeleteBranchRequest req = new TigrisDeleteBranchRequest(                new DeleteBranchRequest();, "architecto", "architecto");            
+            TigrisDeleteBranchRequest req = new TigrisDeleteBranchRequest(                new DeleteBranchRequest();, "nihil", "repellat");            
 
             TigrisDeleteBranchResponse res = sdk.database.deleteBranch(req);
 
@@ -245,16 +245,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("repudiandae") {{
+                .setSecurity(new Security("quibusdam") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             TigrisDescribeDatabaseRequest req = new TigrisDescribeDatabaseRequest(                new DescribeDatabaseRequest() {{
-                                branch = "ullam";
-                                project = "expedita";
-                                schemaFormat = "nihil";
-                            }};, "repellat");            
+                                branch = "sed";
+                                project = "saepe";
+                                schemaFormat = "pariatur";
+                            }};, "accusantium");            
 
             TigrisDescribeDatabaseResponse res = sdk.database.describe(req);
 
@@ -298,13 +298,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("quibusdam") {{
+                .setSecurity(new Security("consequuntur") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisListCollectionsRequest req = new TigrisListCollectionsRequest("sed") {{
-                branch = "saepe";
+            TigrisListCollectionsRequest req = new TigrisListCollectionsRequest("praesentium") {{
+                branch = "natus";
             }};            
 
             TigrisListCollectionsResponse res = sdk.database.listCollections(req);
@@ -351,14 +351,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("pariatur") {{
+                .setSecurity(new Security("magni") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             TigrisRollbackTransactionRequest req = new TigrisRollbackTransactionRequest(                new RollbackTransactionRequest() {{
-                                branch = "accusantium";
-                            }};, "consequuntur");            
+                                branch = "sunt";
+                            }};, "quo");            
 
             TigrisRollbackTransactionResponse res = sdk.database.rollbackTransaction(req);
 
@@ -402,12 +402,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("praesentium") {{
+                .setSecurity(new Security("illum") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisListBranchesRequest req = new TigrisListBranchesRequest("natus");            
+            TigrisListBranchesRequest req = new TigrisListBranchesRequest("pariatur");            
 
             TigrisListBranchesResponse res = sdk.database.tigrisListBranches(req);
 

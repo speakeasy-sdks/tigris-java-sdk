@@ -31,15 +31,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("magni") {{
+                .setSecurity(new Security("maxime") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             com.tigrisdata.tigris_core.models.shared.CreateNamespaceRequest req = new CreateNamespaceRequest() {{
-                code = 123820L;
-                id = "cddc6926-01fb-4576-b0d5-f0d30c5fbb25";
-                name = "Lance Becker";
+                code = 411397L;
+                id = "92601fb5-76b0-4d5f-8d30-c5fbb2587053";
+                name = "Dorothy Dach";
             }};            
 
             CreateNamespaceResponse res = sdk.namespace.create(req);
@@ -83,7 +83,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("eos") {{
+                .setSecurity(new Security("dolor") {{
                     bearerAuth = "";
                 }})
                 .build();
@@ -126,15 +126,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("perferendis") {{
+                .setSecurity(new Security("vero") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             ManagementGetNamespaceMetadataRequest req = new ManagementGetNamespaceMetadataRequest(                new GetNamespaceMetadataRequest() {{
-                                metadataKey = "dolores";
+                                metadataKey = "nostrum";
                                 value = new GetNamespaceMetadataRequestValue();;
-                            }};, "minus");            
+                            }};, "hic");            
 
             ManagementGetNamespaceMetadataResponse res = sdk.namespace.getMetadata(req);
 
@@ -180,15 +180,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("quam") {{
+                .setSecurity(new Security("recusandae") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             ManagementInsertNamespaceMetadataRequest req = new ManagementInsertNamespaceMetadataRequest(                new InsertNamespaceMetadataRequest() {{
-                                metadataKey = "dolor";
+                                metadataKey = "omnis";
                                 value = new InsertNamespaceMetadataRequestValue();;
-                            }};, "vero");            
+                            }};, "facilis");            
 
             ManagementInsertNamespaceMetadataResponse res = sdk.namespace.insertMetadata(req);
 
@@ -231,7 +231,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("nostrum") {{
+                .setSecurity(new Security("perspiciatis") {{
                     bearerAuth = "";
                 }})
                 .build();
@@ -274,15 +274,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("hic") {{
+                .setSecurity(new Security("voluptatem") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             ManagementUpdateNamespaceMetadataRequest req = new ManagementUpdateNamespaceMetadataRequest(                new UpdateNamespaceMetadataRequest() {{
-                                metadataKey = "recusandae";
+                                metadataKey = "porro";
                                 value = new UpdateNamespaceMetadataRequestValue();;
-                            }};, "omnis");            
+                            }};, "consequuntur");            
 
             ManagementUpdateNamespaceMetadataResponse res = sdk.namespace.updateMetadata(req);
 

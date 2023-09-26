@@ -35,16 +35,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("quis") {{
+                .setSecurity(new Security("odit") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             CacheCreateCacheRequest req = new CacheCreateCacheRequest(                new CreateCacheRequest() {{
                                 options = new CreateCacheOptions() {{
-                                    ttlMs = 110375L;
+                                    ttlMs = 778346L;
                                 }};;
-                            }};, "laborum", "animi");            
+                            }};, "sequi", "tenetur");            
 
             CacheCreateCacheResponse res = sdk.cache.create(req);
 
@@ -89,12 +89,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("enim") {{
+                .setSecurity(new Security("ipsam") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheDeleteCacheRequest req = new CacheDeleteCacheRequest(                new DeleteCacheRequest();, "odit", "quo");            
+            CacheDeleteCacheRequest req = new CacheDeleteCacheRequest(                new DeleteCacheRequest();, "id", "possimus");            
 
             CacheDeleteCacheResponse res = sdk.cache.delete(req);
 
@@ -139,12 +139,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("sequi") {{
+                .setSecurity(new Security("aut") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheDelRequest req = new CacheDelRequest(                new DelRequest();, "tenetur", "ipsam", "id");            
+            CacheDelRequest req = new CacheDelRequest(                new DelRequest();, "quasi", "error", "temporibus");            
 
             CacheDelResponse res = sdk.cache.deleteKeys(req);
 
@@ -188,12 +188,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("possimus") {{
+                .setSecurity(new Security("laborum") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheGetRequest req = new CacheGetRequest("aut", "quasi", "error");            
+            CacheGetRequest req = new CacheGetRequest("quasi", "reiciendis", "voluptatibus");            
 
             CacheGetResponse res = sdk.cache.getKey(req);
 
@@ -238,14 +238,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("temporibus") {{
+                .setSecurity(new Security("vero") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             CacheGetSetRequest req = new CacheGetSetRequest(                new GetSetRequest() {{
-                                value = "laborum";
-                            }};, "quasi", "reiciendis", "voluptatibus");            
+                                value = "nihil";
+                            }};, "praesentium", "voluptatibus", "ipsa");            
 
             CacheGetSetResponse res = sdk.cache.getSetKey(req);
 
@@ -289,12 +289,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("vero") {{
+                .setSecurity(new Security("omnis") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheListCachesRequest req = new CacheListCachesRequest("nihil");            
+            CacheListCachesRequest req = new CacheListCachesRequest("voluptate");            
 
             CacheListCachesResponse res = sdk.cache.list(req);
 
@@ -338,15 +338,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("praesentium") {{
+                .setSecurity(new Security("cum") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheKeysRequest req = new CacheKeysRequest("voluptatibus", "ipsa") {{
-                count = 604846L;
-                cursor = 451159L;
-                pattern = "cum";
+            CacheKeysRequest req = new CacheKeysRequest("perferendis", "doloremque") {{
+                count = 441711L;
+                cursor = 282807L;
+                pattern = "maiores";
             }};            
 
             CacheKeysResponse res = sdk.cache.listKeys(req);
@@ -392,18 +392,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("perferendis") {{
+                .setSecurity(new Security("dicta") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             CacheSetRequest req = new CacheSetRequest(                new SetRequest() {{
-                                ex = 39187L;
+                                ex = 359444L;
                                 nx = false;
-                                px = 441711L;
-                                value = "ut";
+                                px = 296140L;
+                                value = "iusto";
                                 xx = false;
-                            }};, "maiores", "dicta", "corporis");            
+                            }};, "dicta", "harum", "enim");            
 
             CacheSetResponse res = sdk.cache.setKey(req);
 

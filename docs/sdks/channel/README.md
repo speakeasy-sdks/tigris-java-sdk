@@ -31,12 +31,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("dolore") {{
+                .setSecurity(new Security("accusamus") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimeGetRTChannelRequest req = new RealtimeGetRTChannelRequest("iusto", "dicta");            
+            RealtimeGetRTChannelRequest req = new RealtimeGetRTChannelRequest("commodi", "repudiandae");            
 
             RealtimeGetRTChannelResponse res = sdk.channel.get(req);
 
@@ -80,18 +80,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("harum") {{
+                .setSecurity(new Security("quae") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimeReadMessagesRequest req = new RealtimeReadMessagesRequest("enim", "accusamus") {{
-                end = "commodi";
-                event = "repudiandae";
-                limit = 64147L;
-                sessionId = "ipsum";
-                socketId = "quidem";
-                start = "molestias";
+            RealtimeReadMessagesRequest req = new RealtimeReadMessagesRequest("ipsum", "quidem") {{
+                end = "molestias";
+                event = "excepturi";
+                limit = 865103L;
+                sessionId = "modi";
+                socketId = "praesentium";
+                start = "rem";
             }};            
 
             RealtimeReadMessagesResponse res = sdk.channel.getMessages(req);
@@ -136,12 +136,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("excepturi") {{
+                .setSecurity(new Security("voluptates") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimeGetRTChannelsRequest req = new RealtimeGetRTChannelsRequest("pariatur");            
+            RealtimeGetRTChannelsRequest req = new RealtimeGetRTChannelsRequest("quasi");            
 
             RealtimeGetRTChannelsResponse res = sdk.channel.list(req);
 
@@ -185,14 +185,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("modi") {{
+                .setSecurity(new Security("repudiandae") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimeListSubscriptionsRequest req = new RealtimeListSubscriptionsRequest("praesentium", "rem") {{
-                page = 916723;
-                pageSize = 93940;
+            RealtimeListSubscriptionsRequest req = new RealtimeListSubscriptionsRequest("sint", "veritatis") {{
+                page = 929297;
+                pageSize = 277718;
             }};            
 
             RealtimeListSubscriptionsResponse res = sdk.channel.listSubscriptions(req);
@@ -239,23 +239,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("repudiandae") {{
+                .setSecurity(new Security("enim") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             RealtimeMessagesRequest req = new RealtimeMessagesRequest(                new MessagesRequest() {{
-                                channel = "sint";
+                                channel = "consequatur";
                                 messages = new com.tigrisdata.tigris_core.models.shared.Message[]{{
                                     add(new Message() {{
-                                        data = "veritatis";
-                                        id = "e450ad2a-bd44-4269-802d-502a94bb4f63";
-                                        name = "Sergio Hyatt";
-                                        sequence = "sint";
+                                        data = "est";
+                                        id = "d2abd442-6980-42d5-82a9-4bb4f63c969e";
+                                        name = "Luke Fadel";
+                                        sequence = "dolorum";
                                     }}),
                                 }};
-                                project = "officia";
-                            }};, "dolor", "debitis");            
+                                project = "in";
+                            }};, "in", "illum");            
 
             RealtimeMessagesResponse res = sdk.channel.pushMessages(req);
 
@@ -299,12 +299,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("a") {{
+                .setSecurity(new Security("maiores") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimePresenceRequest req = new RealtimePresenceRequest("dolorum", "in");            
+            RealtimePresenceRequest req = new RealtimePresenceRequest("rerum", "dicta");            
 
             RealtimePresenceResponse res = sdk.channel.realtimePresence(req);
 
