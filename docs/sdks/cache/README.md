@@ -36,16 +36,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("odit") {{
+                .setSecurity(new Security("neural") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             CacheCreateCacheRequest req = new CacheCreateCacheRequest(                new CreateCacheRequest() {{
                                 options = new CreateCacheOptions() {{
-                                    ttlMs = 778346L;
+                                    ttlMs = 264917L;
                                 }};;
-                            }};, "sequi", "tenetur");            
+                            }};, "pirouette", "conglomeration");            
 
             CacheCreateCacheResponse res = sdk.cache.create(req);
 
@@ -90,12 +90,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("ipsam") {{
+                .setSecurity(new Security("roughly") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheDeleteCacheRequest req = new CacheDeleteCacheRequest(                new DeleteCacheRequest();, "id", "possimus");            
+            CacheDeleteCacheRequest req = new CacheDeleteCacheRequest(                new DeleteCacheRequest();, "EXE", "haptic");            
 
             CacheDeleteCacheResponse res = sdk.cache.delete(req);
 
@@ -140,12 +140,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("aut") {{
+                .setSecurity(new Security("Orchestrator") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheDelRequest req = new CacheDelRequest(                new DelRequest();, "quasi", "error", "temporibus");            
+            CacheDelRequest req = new CacheDelRequest(                new DelRequest();, "gray", "Seamless", "before");            
 
             CacheDelResponse res = sdk.cache.deleteKeys(req);
 
@@ -189,12 +189,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("laborum") {{
+                .setSecurity(new Security("man") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheGetRequest req = new CacheGetRequest("quasi", "reiciendis", "voluptatibus");            
+            CacheGetRequest req = new CacheGetRequest("robust", "deliver", "Loan");            
 
             CacheGetResponse res = sdk.cache.getKey(req);
 
@@ -239,14 +239,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("vero") {{
+                .setSecurity(new Security("black") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             CacheGetSetRequest req = new CacheGetSetRequest(                new GetSetRequest() {{
-                                value = "nihil";
-                            }};, "praesentium", "voluptatibus", "ipsa");            
+                                value = "Hampshire Regional";
+                            }};, "steradian", "connect", "kelvin");            
 
             CacheGetSetResponse res = sdk.cache.getSetKey(req);
 
@@ -290,12 +290,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("omnis") {{
+                .setSecurity(new Security("Future") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheListCachesRequest req = new CacheListCachesRequest("voluptate");            
+            CacheListCachesRequest req = new CacheListCachesRequest("Southeast");            
 
             CacheListCachesResponse res = sdk.cache.list(req);
 
@@ -339,15 +339,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("cum") {{
+                .setSecurity(new Security("Trans") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheKeysRequest req = new CacheKeysRequest("perferendis", "doloremque") {{
-                count = 441711L;
-                cursor = 282807L;
-                pattern = "maiores";
+            CacheKeysRequest req = new CacheKeysRequest("invoice", "pink") {{
+                count = 857202L;
+                cursor = 900005L;
+                pattern = "West vivid compressing";
             }};            
 
             CacheKeysResponse res = sdk.cache.listKeys(req);
@@ -393,18 +393,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("dicta") {{
+                .setSecurity(new Security("red") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             CacheSetRequest req = new CacheSetRequest(                new SetRequest() {{
-                                ex = 359444L;
+                                ex = 212042L;
                                 nx = false;
-                                px = 296140L;
-                                value = "iusto";
+                                px = 314702L;
+                                value = "Account";
                                 xx = false;
-                            }};, "dicta", "harum", "enim");            
+                            }};, "Toyota", "Demiflux", "Gasoline");            
 
             CacheSetResponse res = sdk.cache.setKey(req);
 

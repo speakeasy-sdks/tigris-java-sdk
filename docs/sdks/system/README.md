@@ -30,7 +30,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("pariatur") {{
+                .setSecurity(new Security("Health") {{
                     bearerAuth = "";
                 }})
                 .build();
@@ -70,7 +70,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("soluta") {{
+                .setSecurity(new Security("salmon") {{
                     bearerAuth = "";
                 }})
                 .build();
@@ -111,7 +111,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("dicta") {{
+                .setSecurity(new Security("Strategist") {{
                     bearerAuth = "";
                 }})
                 .build();
@@ -160,7 +160,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("laborum") {{
+                .setSecurity(new Security("Concrete") {{
                     bearerAuth = "";
                 }})
                 .build();
@@ -215,7 +215,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("totam") {{
+                .setSecurity(new Security("Concrete") {{
                     bearerAuth = "";
                 }})
                 .build();
@@ -224,24 +224,24 @@ public class Application {
                 additionalFunctions = new com.tigrisdata.tigris_core.models.shared.AdditionalFunction[]{{
                     add(new AdditionalFunction() {{
                         rollup = new RollupFunction() {{
-                            aggregator = RollupFunctionAggregator.ROLLUP_AGGREGATOR_COUNT;
-                            interval = 132068L;
+                            aggregator = RollupFunctionAggregator.ROLLUP_AGGREGATOR_MIN;
+                            interval = 964307L;
                         }};
                     }}),
                 }};
-                branch = "dolores";
-                collection = "distinctio";
-                db = "facilis";
-                from = 396060L;
-                function = QueryTimeSeriesMetricsRequestFunction.COUNT;
-                metricName = "molestias";
-                quantile = 8404.29f;
+                branch = "regional";
+                collection = "provided Gasoline";
+                db = "where";
+                from = 404638L;
+                function = QueryTimeSeriesMetricsRequestFunction.NONE;
+                metricName = "Southwest Hat";
+                quantile = 4863.24f;
                 spaceAggregatedBy = new String[]{{
-                    add("qui"),
+                    add("optimal"),
                 }};
-                spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation.AVG;
-                tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation.ALL;
-                to = 164959L;
+                spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation.MIN;
+                tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation.METADATA;
+                to = 60030L;
             }};            
 
             ObservabilityQueryTimeSeriesMetricsResponse res = sdk.system.queryTimeSeriesMetrics(req);

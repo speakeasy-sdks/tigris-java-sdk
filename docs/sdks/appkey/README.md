@@ -32,14 +32,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("vel") {{
+                .setSecurity(new Security("roughly") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             TigrisDeleteAppKeyRequest req = new TigrisDeleteAppKeyRequest(                new DeleteAppKeyRequest() {{
-                                id = "9a674e0f-467c-4c87-96ed-151a05dfc2dd";
-                            }};, "maiores");            
+                                id = "<ID>";
+                            }};, "EXE");            
 
             TigrisDeleteAppKeyResponse res = sdk.appKey.delete(req);
 
@@ -83,12 +83,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("molestiae") {{
+                .setSecurity(new Security("Future") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisListAppKeysRequest req = new TigrisListAppKeysRequest("quod");            
+            TigrisListAppKeysRequest req = new TigrisListAppKeysRequest("Southeast");            
 
             TigrisListAppKeysResponse res = sdk.appKey.list(req);
 
@@ -133,15 +133,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("quod") {{
+                .setSecurity(new Security("visualize") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             TigrisRotateAppKeySecretRequest req = new TigrisRotateAppKeySecretRequest(                new RotateAppKeyRequest() {{
-                                id = "78ca1ba9-28fc-4816-b42c-b73920592939";
-                                project = "laboriosam";
-                            }};, "hic");            
+                                id = "<ID>";
+                                project = "Dalasi quas Licensed";
+                            }};, "Phased");            
 
             TigrisRotateAppKeySecretResponse res = sdk.appKey.rotate(req);
 
@@ -186,15 +186,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("saepe") {{
+                .setSecurity(new Security("causal") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             TigrisCreateAppKeyRequest req = new TigrisCreateAppKeyRequest(                new CreateAppKeyRequest() {{
-                                description = "fuga";
-                                name = "Stacy Moore";
-                            }};, "quidem");            
+                                description = "Robust content-based challenge";
+                                name = "Florida City magni";
+                            }};, "parallelism");            
 
             TigrisCreateAppKeyResponse res = sdk.appKey.tigrisCreateAppKey(req);
 
@@ -239,16 +239,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("architecto") {{
+                .setSecurity(new Security("up") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             TigrisUpdateAppKeyRequest req = new TigrisUpdateAppKeyRequest(                new UpdateAppKeyRequest() {{
-                                description = "ipsa";
-                                id = "faaa2352-c595-4590-baff-1a3a2fa94677";
-                                name = "Sabrina Cronin MD";
-                            }};, "animi");            
+                                description = "Innovative coherent open architecture";
+                                id = "<ID>";
+                                name = "less";
+                            }};, "Ohio");            
 
             TigrisUpdateAppKeyResponse res = sdk.appKey.update(req);
 

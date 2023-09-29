@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.tigrisdata.tigris_core:tigris-data:0.44.1'
+implementation 'com.tigrisdata.tigris_core:tigris-data:0.45.0'
 ```
 <!-- End SDK Installation -->
 
@@ -26,16 +26,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("unde") {{
+                .setSecurity(new Security("neural") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             CacheCreateCacheRequest req = new CacheCreateCacheRequest(                new CreateCacheRequest() {{
                                 options = new CreateCacheOptions() {{
-                                    ttlMs = 857946L;
+                                    ttlMs = 264917L;
                                 }};;
-                            }};, "corrupti", "illum");            
+                            }};, "pirouette", "conglomeration");            
 
             CacheCreateCacheResponse res = sdk.cache.create(req);
 

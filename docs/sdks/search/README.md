@@ -42,17 +42,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("adipisci") {{
+                .setSecurity(new Security("Bicycle") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             SearchCreateByIdRequest req = new SearchCreateByIdRequest(                new CreateByIdRequest() {{
-                                document = "asperiores";
-                                id = "e49a8d9c-bf48-4633-b23f-9b77f3a41006";
-                                index = "odio";
-                                project = "quaerat";
-                            }};, "accusamus", "quidem", "voluptatibus");            
+                                document = "feed SDD Electric";
+                                id = "<ID>";
+                                index = "Corporate cyan Pickup";
+                                project = "expensive benchmark reshape";
+                            }};, "provident", "Investor", "upon");            
 
             SearchCreateByIdResponse res = sdk.search.createDocument(req);
 
@@ -101,18 +101,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("voluptas") {{
+                .setSecurity(new Security("Ohio") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             SearchCreateRequest req = new SearchCreateRequest(                new CreateDocumentRequest() {{
                                 documents = new String[]{{
-                                    add("natus"),
+                                    add("mmm Account West"),
                                 }};
-                                index = "eos";
-                                project = "atque";
-                            }};, "sit", "fugiat");            
+                                index = "majestically Israeli";
+                                project = "Northeast Tala Plastic";
+                            }};, "female", "Outdoors");            
 
             SearchCreateResponse res = sdk.search.createDocuments(req);
 
@@ -159,18 +159,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("ab") {{
+                .setSecurity(new Security("times") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             SearchDeleteRequest req = new SearchDeleteRequest(                new DeleteDocumentRequest() {{
                                 ids = new String[]{{
-                                    add("soluta"),
+                                    add("Southwest"),
                                 }};
-                                index = "dolorum";
-                                project = "iusto";
-                            }};, "voluptate", "dolorum");            
+                                index = "female";
+                                project = "Card";
+                            }};, "Samarium", "Programmable");            
 
             SearchDeleteResponse res = sdk.search.deleteDocuments(req);
 
@@ -215,15 +215,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("deleniti") {{
+                .setSecurity(new Security("Liaison") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             SearchDeleteIndexRequest req = new SearchDeleteIndexRequest(                new DeleteIndexRequest() {{
-                                name = "Terence Rau";
-                                project = "ipsum";
-                            }};, "voluptate", "id");            
+                                name = "ivory Cobalt";
+                                project = "Americium";
+                            }};, "Executive", "minor");            
 
             SearchDeleteIndexResponse res = sdk.search.deleteIndex(req);
 
@@ -273,33 +273,33 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("saepe") {{
+                .setSecurity(new Security("Cambridgeshire") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             SearchSearchRequest req = new SearchSearchRequest(                new SearchIndexRequest() {{
                                 collation = new Collation() {{
-                                    case_ = "eius";
+                                    case_ = "how";
                                 }};;
                                 excludeFields = new String[]{{
-                                    add("aspernatur"),
+                                    add("Einsteinium"),
                                 }};
-                                facet = "perferendis";
-                                filter = "amet";
+                                facet = "Stage Salad dolorum";
+                                filter = "Roentgenium";
                                 includeFields = new String[]{{
-                                    add("optio"),
+                                    add("Oregon"),
                                 }};
-                                index = "accusamus";
-                                page = 320017;
-                                pageSize = 904425;
-                                project = "suscipit";
-                                q = "deserunt";
+                                index = "World Trial";
+                                page = 912756;
+                                pageSize = 584808;
+                                project = "copying Cambridgeshire degree";
+                                q = "Car";
                                 searchFields = new String[]{{
-                                    add("provident"),
+                                    add("Music"),
                                 }};
-                                sort = "minima";
-                            }};, "repellendus", "totam");            
+                                sort = "afore Trial Steel";
+                            }};, "green", "collaborative");            
 
             SearchSearchResponse res = sdk.search.findDocuments(req);
 
@@ -344,14 +344,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("similique") {{
+                .setSecurity(new Security("turquoise") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            SearchGetRequest req = new SearchGetRequest("alias", "at") {{
+            SearchGetRequest req = new SearchGetRequest("navigating", "generating") {{
                 ids = new String[]{{
-                    add("quaerat"),
+                    add("Northwest"),
                 }};
             }};            
 
@@ -397,12 +397,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("tempora") {{
+                .setSecurity(new Security("woman") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            SearchGetIndexRequest req = new SearchGetIndexRequest("vel", "quod");            
+            SearchGetIndexRequest req = new SearchGetIndexRequest("female", "Peru");            
 
             SearchGetIndexResponse res = sdk.search.getIndex(req);
 
@@ -446,15 +446,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("officiis") {{
+                .setSecurity(new Security("Avon") {{
                     bearerAuth = "";
                 }})
                 .build();
 
-            SearchListIndexesRequest req = new SearchListIndexesRequest("qui") {{
-                filterBranch = "dolorum";
-                filterCollection = "a";
-                filterType = "esse";
+            SearchListIndexesRequest req = new SearchListIndexesRequest("executive") {{
+                filterBranch = "Managed";
+                filterCollection = "Cisgender port Internal";
+                filterType = "violet Denar Jazz";
             }};            
 
             SearchListIndexesResponse res = sdk.search.listIndexes(req);
@@ -501,16 +501,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("harum") {{
+                .setSecurity(new Security("unnaturally") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             SearchDeleteByQueryRequest req = new SearchDeleteByQueryRequest(                new DeleteByQueryRequest() {{
-                                filter = "iusto";
-                                index = "ipsum";
-                                project = "quisquam";
-                            }};, "tenetur", "amet");            
+                                filter = "whose IB Connecticut";
+                                index = "transmit Southeast Planner";
+                                project = "since";
+                            }};, "payment", "Ytterbium");            
 
             SearchDeleteByQueryResponse res = sdk.search.queryDeleteDocuments(req);
 
@@ -558,18 +558,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("tempore") {{
+                .setSecurity(new Security("male") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             SearchCreateOrReplaceRequest req = new SearchCreateOrReplaceRequest(                new CreateOrReplaceDocumentRequest() {{
                                 documents = new String[]{{
-                                    add("accusamus"),
+                                    add("West"),
                                 }};
-                                index = "numquam";
-                                project = "enim";
-                            }};, "dolorem", "sapiente");            
+                                index = "great";
+                                project = "verbally gee";
+                            }};, "Coupe", "Bicycle");            
 
             SearchCreateOrReplaceResponse res = sdk.search.replaceDocuments(req);
 
@@ -617,18 +617,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("totam") {{
+                .setSecurity(new Security("revolutionary") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             SearchUpdateRequest req = new SearchUpdateRequest(                new UpdateDocumentRequest() {{
                                 documents = new String[]{{
-                                    add("nihil"),
+                                    add("Algeria to"),
                                 }};
-                                index = "sit";
-                                project = "expedita";
-                            }};, "neque", "sed");            
+                                index = "Cruiser";
+                                project = "Steel Market";
+                            }};, "panic", "purple");            
 
             SearchUpdateResponse res = sdk.search.updateDocuments(req);
 
@@ -673,17 +673,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("vel") {{
+                .setSecurity(new Security("Agent") {{
                     bearerAuth = "";
                 }})
                 .build();
 
             SearchCreateOrUpdateIndexRequest req = new SearchCreateOrUpdateIndexRequest(                new CreateOrUpdateIndexRequest() {{
-                                name = "Glen Oberbrunner";
+                                name = "bus eius optical";
                                 onlyCreate = false;
-                                project = "incidunt";
-                                schema = "qui";
-                            }};, "cupiditate", "maxime");            
+                                project = "especially";
+                                schema = "Metrics parse East";
+                            }};, "Arsenic", "IB");            
 
             SearchCreateOrUpdateIndexResponse res = sdk.search.updateIndex(req);
 
