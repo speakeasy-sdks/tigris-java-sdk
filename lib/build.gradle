@@ -41,7 +41,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.tigrisdata'
             artifactId = 'tigris-core'
-            version = '0.46.0'
+            version = '0.46.1'
 
             from components.java
 
