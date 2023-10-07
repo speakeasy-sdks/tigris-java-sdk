@@ -36,16 +36,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("neural") {{
+                .setSecurity(new Security("neural"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheCreateCacheRequest req = new CacheCreateCacheRequest(                new CreateCacheRequest() {{
-                                options = new CreateCacheOptions() {{
-                                    ttlMs = 264917L;
-                                }};;
-                            }};, "pirouette", "conglomeration");            
+            CacheCreateCacheRequest req = new CacheCreateCacheRequest(new CreateCacheRequest(){{
+options = new CreateCacheOptions(){{
+    ttlMs = 264917L;
+}};
+}}, "pirouette", "conglomeration");            
 
             CacheCreateCacheResponse res = sdk.cache.create(req);
 
@@ -90,12 +90,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("roughly") {{
+                .setSecurity(new Security("roughly"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheDeleteCacheRequest req = new CacheDeleteCacheRequest(                new DeleteCacheRequest();, "EXE", "haptic");            
+            CacheDeleteCacheRequest req = new CacheDeleteCacheRequest(new DeleteCacheRequest(), "EXE", "haptic");            
 
             CacheDeleteCacheResponse res = sdk.cache.delete(req);
 
@@ -140,12 +140,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Orchestrator") {{
+                .setSecurity(new Security("Orchestrator"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheDelRequest req = new CacheDelRequest(                new DelRequest();, "gray", "Seamless", "before");            
+            CacheDelRequest req = new CacheDelRequest(new DelRequest(), "gray", "Seamless", "before");            
 
             CacheDelResponse res = sdk.cache.deleteKeys(req);
 
@@ -189,7 +189,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("man") {{
+                .setSecurity(new Security("man"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -239,14 +239,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("black") {{
+                .setSecurity(new Security("black"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheGetSetRequest req = new CacheGetSetRequest(                new GetSetRequest() {{
-                                value = "Hampshire Regional";
-                            }};, "steradian", "connect", "kelvin");            
+            CacheGetSetRequest req = new CacheGetSetRequest(new GetSetRequest(){{
+value = "Hampshire Regional";
+}}, "steradian", "connect", "kelvin");            
 
             CacheGetSetResponse res = sdk.cache.getSetKey(req);
 
@@ -290,7 +290,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Future") {{
+                .setSecurity(new Security("Future"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -339,12 +339,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Trans") {{
+                .setSecurity(new Security("Trans"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheKeysRequest req = new CacheKeysRequest("invoice", "pink") {{
+            CacheKeysRequest req = new CacheKeysRequest("invoice", "pink"){{
                 count = 857202L;
                 cursor = 900005L;
                 pattern = "West vivid compressing";
@@ -393,18 +393,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("red") {{
+                .setSecurity(new Security("red"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheSetRequest req = new CacheSetRequest(                new SetRequest() {{
-                                ex = 212042L;
-                                nx = false;
-                                px = 314702L;
-                                value = "Account";
-                                xx = false;
-                            }};, "Toyota", "Demiflux", "Gasoline");            
+            CacheSetRequest req = new CacheSetRequest(new SetRequest(){{
+ex = 212042L;
+nx = false;
+px = 314702L;
+value = "Account";
+xx = false;
+}}, "Toyota", "Demiflux", "Gasoline");            
 
             CacheSetResponse res = sdk.cache.setKey(req);
 

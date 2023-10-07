@@ -32,12 +32,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("neural") {{
+                .setSecurity(new Security("neural"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            com.tigrisdata.tigris_core.models.shared.CreateNamespaceRequest req = new CreateNamespaceRequest() {{
+            com.tigrisdata.tigris_core.models.shared.CreateNamespaceRequest req = new CreateNamespaceRequest(){{
                 code = 264917L;
                 id = "<ID>";
                 name = "Markets Sausages ASCII";
@@ -84,7 +84,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("motivating") {{
+                .setSecurity(new Security("motivating"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -127,15 +127,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Chief") {{
+                .setSecurity(new Security("Chief"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            ManagementGetNamespaceMetadataRequest req = new ManagementGetNamespaceMetadataRequest(                new GetNamespaceMetadataRequest() {{
-                                metadataKey = "Plastic Silver";
-                                value = new GetNamespaceMetadataRequestValue();;
-                            }};, "transmit");            
+            ManagementGetNamespaceMetadataRequest req = new ManagementGetNamespaceMetadataRequest(new GetNamespaceMetadataRequest(){{
+metadataKey = "Plastic Silver";
+value = new GetNamespaceMetadataRequestValue();
+}}, "transmit");            
 
             ManagementGetNamespaceMetadataResponse res = sdk.namespace.getMetadata(req);
 
@@ -181,15 +181,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Diesel") {{
+                .setSecurity(new Security("Diesel"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            ManagementInsertNamespaceMetadataRequest req = new ManagementInsertNamespaceMetadataRequest(                new InsertNamespaceMetadataRequest() {{
-                                metadataKey = "female quantifying indigo";
-                                value = new InsertNamespaceMetadataRequestValue();;
-                            }};, "Plain");            
+            ManagementInsertNamespaceMetadataRequest req = new ManagementInsertNamespaceMetadataRequest(new InsertNamespaceMetadataRequest(){{
+metadataKey = "female quantifying indigo";
+value = new InsertNamespaceMetadataRequestValue();
+}}, "Plain");            
 
             ManagementInsertNamespaceMetadataResponse res = sdk.namespace.insertMetadata(req);
 
@@ -232,7 +232,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Future") {{
+                .setSecurity(new Security("Future"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -275,15 +275,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("fate") {{
+                .setSecurity(new Security("fate"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            ManagementUpdateNamespaceMetadataRequest req = new ManagementUpdateNamespaceMetadataRequest(                new UpdateNamespaceMetadataRequest() {{
-                                metadataKey = "Concrete";
-                                value = new UpdateNamespaceMetadataRequestValue();;
-                            }};, "Tempe");            
+            ManagementUpdateNamespaceMetadataRequest req = new ManagementUpdateNamespaceMetadataRequest(new UpdateNamespaceMetadataRequest(){{
+metadataKey = "Concrete";
+value = new UpdateNamespaceMetadataRequestValue();
+}}, "Tempe");            
 
             ManagementUpdateNamespaceMetadataResponse res = sdk.namespace.updateMetadata(req);
 

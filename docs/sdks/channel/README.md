@@ -32,7 +32,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("motivating") {{
+                .setSecurity(new Security("motivating"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -81,12 +81,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("East") {{
+                .setSecurity(new Security("East"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimeReadMessagesRequest req = new RealtimeReadMessagesRequest("Platinum", "sympathetic") {{
+            RealtimeReadMessagesRequest req = new RealtimeReadMessagesRequest("Platinum", "sympathetic"){{
                 end = "asymmetric withdrawal";
                 event = "Generic Bypass";
                 limit = 32889L;
@@ -137,7 +137,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Future") {{
+                .setSecurity(new Security("Future"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -186,12 +186,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("internationalise") {{
+                .setSecurity(new Security("internationalise"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimeListSubscriptionsRequest req = new RealtimeListSubscriptionsRequest("which", "Car") {{
+            RealtimeListSubscriptionsRequest req = new RealtimeListSubscriptionsRequest("which", "Car"){{
                 page = 121134;
                 pageSize = 980290;
             }};            
@@ -240,23 +240,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("payment") {{
+                .setSecurity(new Security("payment"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimeMessagesRequest req = new RealtimeMessagesRequest(                new MessagesRequest() {{
-                                channel = "Manager seamless Folk";
-                                messages = new com.tigrisdata.tigris_core.models.shared.Message[]{{
-                                    add(new Message() {{
-                                        data = "City niches Directives";
-                                        id = "<ID>";
-                                        name = "Zulauf World frictionless";
-                                        sequence = "scripture Division";
-                                    }}),
-                                }};
-                                project = "elbow secured";
-                            }};, "Salad", "Chevrolet");            
+            RealtimeMessagesRequest req = new RealtimeMessagesRequest(new MessagesRequest(){{
+channel = "Manager seamless Folk";
+messages = new com.tigrisdata.tigris_core.models.shared.Message[]{{
+    add(new Message(){{}}),
+}};
+project = "City niches Directives";
+}}, "purple", "yet");            
 
             RealtimeMessagesResponse res = sdk.channel.pushMessages(req);
 
@@ -300,7 +295,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("successfully") {{
+                .setSecurity(new Security("successfully"){{
                     bearerAuth = "";
                 }})
                 .build();

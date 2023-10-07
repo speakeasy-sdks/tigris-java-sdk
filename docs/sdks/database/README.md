@@ -38,15 +38,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("ew") {{
+                .setSecurity(new Security("ew"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisBeginTransactionRequest req = new TigrisBeginTransactionRequest(                new BeginTransactionRequest() {{
-                                branch = "Cambridgeshire ability";
-                                options = new TransactionOptions();;
-                            }};, "interface");            
+            TigrisBeginTransactionRequest req = new TigrisBeginTransactionRequest(new BeginTransactionRequest(){{
+branch = "Cambridgeshire ability";
+options = new TransactionOptions();
+}}, "interface");            
 
             TigrisBeginTransactionResponse res = sdk.database.beginTransaction(req);
 
@@ -92,14 +92,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Metrics") {{
+                .setSecurity(new Security("Metrics"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisCommitTransactionRequest req = new TigrisCommitTransactionRequest(                new CommitTransactionRequest() {{
-                                branch = "Assurance";
-                            }};, "paradigm");            
+            TigrisCommitTransactionRequest req = new TigrisCommitTransactionRequest(new CommitTransactionRequest(){{
+branch = "Assurance";
+}}, "paradigm");            
 
             TigrisCommitTransactionResponse res = sdk.database.commitTransaction(req);
 
@@ -144,12 +144,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Nissan") {{
+                .setSecurity(new Security("Nissan"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisCreateBranchRequest req = new TigrisCreateBranchRequest(                new CreateBranchRequest();, "majestically", "dental");            
+            TigrisCreateBranchRequest req = new TigrisCreateBranchRequest(new CreateBranchRequest(), "majestically", "dental");            
 
             TigrisCreateBranchResponse res = sdk.database.createBranch(req);
 
@@ -195,12 +195,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Berkshire") {{
+                .setSecurity(new Security("Berkshire"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisDeleteBranchRequest req = new TigrisDeleteBranchRequest(                new DeleteBranchRequest();, "Shoes", "Pants");            
+            TigrisDeleteBranchRequest req = new TigrisDeleteBranchRequest(new DeleteBranchRequest(), "Shoes", "Pants");            
 
             TigrisDeleteBranchResponse res = sdk.database.deleteBranch(req);
 
@@ -246,16 +246,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("copy") {{
+                .setSecurity(new Security("copy"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisDescribeDatabaseRequest req = new TigrisDescribeDatabaseRequest(                new DescribeDatabaseRequest() {{
-                                branch = "Pickup";
-                                project = "Home";
-                                schemaFormat = "payment And Cloned";
-                            }};, "alias");            
+            TigrisDescribeDatabaseRequest req = new TigrisDescribeDatabaseRequest(new DescribeDatabaseRequest(){{
+branch = "Pickup";
+project = "Home";
+schemaFormat = "payment And Cloned";
+}}, "alias");            
 
             TigrisDescribeDatabaseResponse res = sdk.database.describe(req);
 
@@ -299,12 +299,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("blah") {{
+                .setSecurity(new Security("blah"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisListCollectionsRequest req = new TigrisListCollectionsRequest("Porsche") {{
+            TigrisListCollectionsRequest req = new TigrisListCollectionsRequest("Porsche"){{
                 branch = "Djibouti";
             }};            
 
@@ -352,14 +352,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("optimisation") {{
+                .setSecurity(new Security("optimisation"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisRollbackTransactionRequest req = new TigrisRollbackTransactionRequest(                new RollbackTransactionRequest() {{
-                                branch = "unethically";
-                            }};, "Oregon");            
+            TigrisRollbackTransactionRequest req = new TigrisRollbackTransactionRequest(new RollbackTransactionRequest(){{
+branch = "unethically";
+}}, "Oregon");            
 
             TigrisRollbackTransactionResponse res = sdk.database.rollbackTransaction(req);
 
@@ -403,7 +403,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("withdrawal") {{
+                .setSecurity(new Security("withdrawal"){{
                     bearerAuth = "";
                 }})
                 .build();

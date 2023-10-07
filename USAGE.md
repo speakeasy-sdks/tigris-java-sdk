@@ -15,16 +15,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("neural") {{
+                .setSecurity(new Security("neural"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheCreateCacheRequest req = new CacheCreateCacheRequest(                new CreateCacheRequest() {{
-                                options = new CreateCacheOptions() {{
-                                    ttlMs = 264917L;
-                                }};;
-                            }};, "pirouette", "conglomeration");            
+            CacheCreateCacheRequest req = new CacheCreateCacheRequest(new CreateCacheRequest(){{
+options = new CreateCacheOptions(){{
+    ttlMs = 264917L;
+}};
+}}, "pirouette", "conglomeration");            
 
             CacheCreateCacheResponse res = sdk.cache.create(req);
 

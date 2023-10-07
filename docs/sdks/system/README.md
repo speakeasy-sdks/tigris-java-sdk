@@ -30,7 +30,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Health") {{
+                .setSecurity(new Security("Health"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -70,7 +70,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("salmon") {{
+                .setSecurity(new Security("salmon"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -111,7 +111,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Strategist") {{
+                .setSecurity(new Security("Strategist"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -160,7 +160,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Concrete") {{
+                .setSecurity(new Security("Concrete"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -215,21 +215,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Concrete") {{
+                .setSecurity(new Security("Concrete"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequest req = new QueryTimeSeriesMetricsRequest() {{
+            com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequest req = new QueryTimeSeriesMetricsRequest(){{
                 additionalFunctions = new com.tigrisdata.tigris_core.models.shared.AdditionalFunction[]{{
-                    add(new AdditionalFunction() {{
-                        rollup = new RollupFunction() {{
-                            aggregator = RollupFunctionAggregator.ROLLUP_AGGREGATOR_MIN;
-                            interval = 964307L;
-                        }};
+                    add(new AdditionalFunction(){{
+                        rollup = new RollupFunction(){{}};
                     }}),
                 }};
-                branch = "regional";
+                branch = "against regional";
                 collection = "provided Gasoline";
                 db = "where";
                 from = 404638L;

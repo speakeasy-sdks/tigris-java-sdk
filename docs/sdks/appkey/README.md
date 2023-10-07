@@ -32,14 +32,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("roughly") {{
+                .setSecurity(new Security("roughly"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisDeleteAppKeyRequest req = new TigrisDeleteAppKeyRequest(                new DeleteAppKeyRequest() {{
-                                id = "<ID>";
-                            }};, "EXE");            
+            TigrisDeleteAppKeyRequest req = new TigrisDeleteAppKeyRequest(new DeleteAppKeyRequest(){{
+id = "<ID>";
+}}, "EXE");            
 
             TigrisDeleteAppKeyResponse res = sdk.appKey.delete(req);
 
@@ -83,7 +83,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Future") {{
+                .setSecurity(new Security("Future"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -133,15 +133,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("visualize") {{
+                .setSecurity(new Security("visualize"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisRotateAppKeySecretRequest req = new TigrisRotateAppKeySecretRequest(                new RotateAppKeyRequest() {{
-                                id = "<ID>";
-                                project = "Dalasi quas Licensed";
-                            }};, "Phased");            
+            TigrisRotateAppKeySecretRequest req = new TigrisRotateAppKeySecretRequest(new RotateAppKeyRequest(){{
+id = "<ID>";
+project = "Dalasi quas Licensed";
+}}, "Phased");            
 
             TigrisRotateAppKeySecretResponse res = sdk.appKey.rotate(req);
 
@@ -186,15 +186,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("causal") {{
+                .setSecurity(new Security("causal"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisCreateAppKeyRequest req = new TigrisCreateAppKeyRequest(                new CreateAppKeyRequest() {{
-                                description = "Robust content-based challenge";
-                                name = "Florida City magni";
-                            }};, "parallelism");            
+            TigrisCreateAppKeyRequest req = new TigrisCreateAppKeyRequest(new CreateAppKeyRequest(){{
+description = "Robust content-based challenge";
+name = "Florida City magni";
+}}, "parallelism");            
 
             TigrisCreateAppKeyResponse res = sdk.appKey.tigrisCreateAppKey(req);
 
@@ -239,16 +239,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("up") {{
+                .setSecurity(new Security("up"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisUpdateAppKeyRequest req = new TigrisUpdateAppKeyRequest(                new UpdateAppKeyRequest() {{
-                                description = "Innovative coherent open architecture";
-                                id = "<ID>";
-                                name = "less";
-                            }};, "Ohio");            
+            TigrisUpdateAppKeyRequest req = new TigrisUpdateAppKeyRequest(new UpdateAppKeyRequest(){{
+description = "Innovative coherent open architecture";
+id = "<ID>";
+name = "less";
+}}, "Ohio");            
 
             TigrisUpdateAppKeyResponse res = sdk.appKey.update(req);
 

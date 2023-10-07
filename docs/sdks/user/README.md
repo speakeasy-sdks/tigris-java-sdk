@@ -31,15 +31,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Chief") {{
+                .setSecurity(new Security("Chief"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            ManagementGetUserMetadataRequest req = new ManagementGetUserMetadataRequest(                new GetUserMetadataRequest() {{
-                                metadataKey = "Plastic Silver";
-                                value = new GetUserMetadataRequestValue();;
-                            }};, "transmit");            
+            ManagementGetUserMetadataRequest req = new ManagementGetUserMetadataRequest(new GetUserMetadataRequest(){{
+metadataKey = "Plastic Silver";
+value = new GetUserMetadataRequestValue();
+}}, "transmit");            
 
             ManagementGetUserMetadataResponse res = sdk.user.getMetadata(req);
 
@@ -85,15 +85,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Diesel") {{
+                .setSecurity(new Security("Diesel"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            ManagementInsertUserMetadataRequest req = new ManagementInsertUserMetadataRequest(                new InsertUserMetadataRequest() {{
-                                metadataKey = "female quantifying indigo";
-                                value = new InsertUserMetadataRequestValue();;
-                            }};, "Plain");            
+            ManagementInsertUserMetadataRequest req = new ManagementInsertUserMetadataRequest(new InsertUserMetadataRequest(){{
+metadataKey = "female quantifying indigo";
+value = new InsertUserMetadataRequestValue();
+}}, "Plain");            
 
             ManagementInsertUserMetadataResponse res = sdk.user.insertMetadata(req);
 
@@ -139,15 +139,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("fate") {{
+                .setSecurity(new Security("fate"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            ManagementUpdateUserMetadataRequest req = new ManagementUpdateUserMetadataRequest(                new UpdateUserMetadataRequest() {{
-                                metadataKey = "Concrete";
-                                value = new UpdateUserMetadataRequestValue();;
-                            }};, "Tempe");            
+            ManagementUpdateUserMetadataRequest req = new ManagementUpdateUserMetadataRequest(new UpdateUserMetadataRequest(){{
+metadataKey = "Concrete";
+value = new UpdateUserMetadataRequestValue();
+}}, "Tempe");            
 
             ManagementUpdateUserMetadataResponse res = sdk.user.updateMetadata(req);
 

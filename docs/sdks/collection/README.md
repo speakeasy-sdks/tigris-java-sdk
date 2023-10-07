@@ -43,17 +43,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("neural") {{
+                .setSecurity(new Security("neural"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisCreateOrUpdateCollectionRequest req = new TigrisCreateOrUpdateCollectionRequest(                new CreateOrUpdateCollectionRequest() {{
-                                branch = "pirouette";
-                                onlyCreate = false;
-                                options = new CollectionOptions();;
-                                schema = new CreateOrUpdateCollectionRequestSchema();;
-                            }};, "conglomeration", "island");            
+            TigrisCreateOrUpdateCollectionRequest req = new TigrisCreateOrUpdateCollectionRequest(new CreateOrUpdateCollectionRequest(){{
+branch = "pirouette";
+onlyCreate = false;
+options = new CollectionOptions();
+schema = new CreateOrUpdateCollectionRequestSchema();
+}}, "conglomeration", "island");            
 
             TigrisCreateOrUpdateCollectionResponse res = sdk.collection.create(req);
 
@@ -102,22 +102,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("times") {{
+                .setSecurity(new Security("times"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisDeleteRequest req = new TigrisDeleteRequest(                new DeleteRequest() {{
-                                branch = "consequently";
-                                filter = new DeleteRequestFilter();;
-                                options = new DeleteRequestOptions() {{
-                                    collation = new Collation() {{
-                                        case_ = "Plastic Samarium Programmable";
-                                    }};;
-                                    limit = 950388L;
-                                    writeOptions = new WriteOptions();;
-                                }};;
-                            }};, "likewise", "Awesome");            
+            TigrisDeleteRequest req = new TigrisDeleteRequest(new DeleteRequest(){{
+branch = "consequently";
+filter = new DeleteRequestFilter();
+options = new DeleteRequestOptions(){{
+    collation = new Collation(){{
+        case_ = "Plastic Samarium Programmable";
+    }};
+    limit = 950388L;
+    writeOptions = new WriteOptions();
+}};
+}}, "likewise", "Awesome");            
 
             TigrisDeleteResponse res = sdk.collection.deleteDocuments(req);
 
@@ -163,18 +163,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("copy") {{
+                .setSecurity(new Security("copy"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisDescribeCollectionRequest req = new TigrisDescribeCollectionRequest(                new DescribeCollectionRequest() {{
-                                branch = "Pickup";
-                                collection = "Home";
-                                options = new CollectionOptions();;
-                                project = "payment And Cloned";
-                                schemaFormat = "South whoever";
-                            }};, "Awesome", "Pharr");            
+            TigrisDescribeCollectionRequest req = new TigrisDescribeCollectionRequest(new DescribeCollectionRequest(){{
+branch = "Pickup";
+collection = "Home";
+options = new CollectionOptions();
+project = "payment And Cloned";
+schemaFormat = "South whoever";
+}}, "Awesome", "Pharr");            
 
             TigrisDescribeCollectionResponse res = sdk.collection.describe(req);
 
@@ -221,15 +221,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("SSL") {{
+                .setSecurity(new Security("SSL"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisDropCollectionRequest req = new TigrisDropCollectionRequest(                new DropCollectionRequest() {{
-                                branch = "Cummings Optimized and";
-                                options = new CollectionOptions();;
-                            }};, "Liaison", "Extension");            
+            TigrisDropCollectionRequest req = new TigrisDropCollectionRequest(new DropCollectionRequest(){{
+branch = "Cummings Optimized and";
+options = new CollectionOptions();
+}}, "Liaison", "Extension");            
 
             TigrisDropCollectionResponse res = sdk.collection.drop(req);
 
@@ -282,27 +282,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("voyage") {{
+                .setSecurity(new Security("voyage"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisImportRequest req = new TigrisImportRequest(                new ImportRequest() {{
-                                autogenerated = new String[]{{
-                                    add("calmly"),
-                                }};
-                                branch = "Sedan Peru";
-                                createCollection = false;
-                                documents = new com.tigrisdata.tigris_core.models.shared.ImportRequestDocuments[]{{
-                                    add(new ImportRequestDocuments() {{}}),
-                                }};
-                                options = new ImportRequestOptions() {{
-                                    writeOptions = new WriteOptions();;
-                                }};;
-                                primaryKey = new String[]{{
-                                    add("invoice"),
-                                }};
-                            }};, "Van", "scornful");            
+            TigrisImportRequest req = new TigrisImportRequest(new ImportRequest(){{
+autogenerated = new String[]{{
+    add("calmly"),
+}};
+branch = "Sedan Peru";
+createCollection = false;
+documents = new com.tigrisdata.tigris_core.models.shared.ImportRequestDocuments[]{{
+    add(new ImportRequestDocuments(){{}}),
+}};
+options = new ImportRequestOptions(){{
+    writeOptions = new WriteOptions();
+}};
+primaryKey = new String[]{{
+    add("invoice"),
+}};
+}}, "Van", "scornful");            
 
             TigrisImportResponse res = sdk.collection.importDocuments(req);
 
@@ -352,20 +352,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("ew") {{
+                .setSecurity(new Security("ew"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisInsertRequest req = new TigrisInsertRequest(                new InsertRequest() {{
-                                branch = "Hong National";
-                                documents = new com.tigrisdata.tigris_core.models.shared.InsertRequestDocuments[]{{
-                                    add(new InsertRequestDocuments() {{}}),
-                                }};
-                                options = new InsertRequestOptions() {{
-                                    writeOptions = new WriteOptions();;
-                                }};;
-                            }};, "Hat", "Avon");            
+            TigrisInsertRequest req = new TigrisInsertRequest(new InsertRequest(){{
+branch = "Hong National";
+documents = new com.tigrisdata.tigris_core.models.shared.InsertRequestDocuments[]{{
+    add(new InsertRequestDocuments(){{}}),
+}};
+options = new InsertRequestOptions(){{
+    writeOptions = new WriteOptions();
+}};
+}}, "Hat", "Avon");            
 
             TigrisInsertResponse res = sdk.collection.insertDocuments(req);
 
@@ -419,25 +419,25 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Lead") {{
+                .setSecurity(new Security("Lead"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisReadRequest req = new TigrisReadRequest(                new ReadRequest() {{
-                                branch = "farad Dynamic Chino";
-                                fields = new ReadRequestFields();;
-                                filter = new ReadRequestFilter();;
-                                options = new ReadRequestOptions() {{
-                                    collation = new Collation() {{
-                                        case_ = "Creative";
-                                    }};;
-                                    limit = 738813L;
-                                    offset = "Aston Lari";
-                                    skip = 711394L;
-                                }};;
-                                sort = "Generic meter";
-                            }};, "International", "Avon");            
+            TigrisReadRequest req = new TigrisReadRequest(new ReadRequest(){{
+branch = "farad Dynamic Chino";
+fields = new ReadRequestFields();
+filter = new ReadRequestFilter();
+options = new ReadRequestOptions(){{
+    collation = new Collation(){{
+        case_ = "Creative";
+    }};
+    limit = 738813L;
+    offset = "Aston Lari";
+    skip = 711394L;
+}};
+sort = "Generic meter";
+}}, "International", "Avon");            
 
             TigrisReadResponse res = sdk.collection.readDocuments(req);
 
@@ -485,20 +485,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("male") {{
+                .setSecurity(new Security("male"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisReplaceRequest req = new TigrisReplaceRequest(                new ReplaceRequest() {{
-                                branch = "West";
-                                documents = new com.tigrisdata.tigris_core.models.shared.ReplaceRequestDocuments[]{{
-                                    add(new ReplaceRequestDocuments() {{}}),
-                                }};
-                                options = new ReplaceRequestOptions() {{
-                                    writeOptions = new WriteOptions();;
-                                }};;
-                            }};, "Southeast", "verbally");            
+            TigrisReplaceRequest req = new TigrisReplaceRequest(new ReplaceRequest(){{
+branch = "West";
+documents = new com.tigrisdata.tigris_core.models.shared.ReplaceRequestDocuments[]{{
+    add(new ReplaceRequestDocuments(){{}}),
+}};
+options = new ReplaceRequestOptions(){{
+    writeOptions = new WriteOptions();
+}};
+}}, "Southeast", "verbally");            
 
             TigrisReplaceResponse res = sdk.collection.replaceDocuments(req);
 
@@ -551,33 +551,33 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("California") {{
+                .setSecurity(new Security("California"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisSearchRequest req = new TigrisSearchRequest(                new SearchRequest() {{
-                                branch = "Bacon Borders yippee";
-                                collation = new Collation() {{
-                                    case_ = "monitor Chair Folk";
-                                }};;
-                                excludeFields = new String[]{{
-                                    add("Cambridgeshire"),
-                                }};
-                                facet = new SearchRequestFacet();;
-                                fields = new SearchRequestFields();;
-                                filter = new SearchRequestFilter();;
-                                includeFields = new String[]{{
-                                    add("Holmium"),
-                                }};
-                                page = 12598;
-                                pageSize = 328513;
-                                q = "questionably Lorain";
-                                searchFields = new String[]{{
-                                    add("blah"),
-                                }};
-                                sort = new SearchRequestSort();;
-                            }};, "utterly", "viral");            
+            TigrisSearchRequest req = new TigrisSearchRequest(new SearchRequest(){{
+branch = "Bacon Borders yippee";
+collation = new Collation(){{
+    case_ = "monitor Chair Folk";
+}};
+excludeFields = new String[]{{
+    add("Cambridgeshire"),
+}};
+facet = new SearchRequestFacet();
+fields = new SearchRequestFields();
+filter = new SearchRequestFilter();
+includeFields = new String[]{{
+    add("Holmium"),
+}};
+page = 12598;
+pageSize = 328513;
+q = "questionably Lorain";
+searchFields = new String[]{{
+    add("blah"),
+}};
+sort = new SearchRequestSort();
+}}, "utterly", "viral");            
 
             TigrisSearchResponse res = sdk.collection.searchDocuments(req);
 
@@ -627,23 +627,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("revolutionary") {{
+                .setSecurity(new Security("revolutionary"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisUpdateRequest req = new TigrisUpdateRequest(                new UpdateRequest() {{
-                                branch = "Algeria to";
-                                fields = new UpdateRequestFields();;
-                                filter = new UpdateRequestFilter();;
-                                options = new UpdateRequestOptions() {{
-                                    collation = new Collation() {{
-                                        case_ = "Cruiser";
-                                    }};;
-                                    limit = 638262L;
-                                    writeOptions = new WriteOptions();;
-                                }};;
-                            }};, "Steel", "Market");            
+            TigrisUpdateRequest req = new TigrisUpdateRequest(new UpdateRequest(){{
+branch = "Algeria to";
+fields = new UpdateRequestFields();
+filter = new UpdateRequestFilter();
+options = new UpdateRequestOptions(){{
+    collation = new Collation(){{
+        case_ = "Cruiser";
+    }};
+    limit = 638262L;
+    writeOptions = new WriteOptions();
+}};
+}}, "Steel", "Market");            
 
             TigrisUpdateResponse res = sdk.collection.updateDocuments(req);
 
