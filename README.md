@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.tigrisdata.tigris_core:tigris-data:0.46.2'
+implementation 'com.tigrisdata.tigris_core:tigris-data:0.47.0'
 ```
 <!-- End SDK Installation -->
 
