@@ -48,11 +48,11 @@ public class Application {
                 .build();
 
             SearchCreateByIdRequest req = new SearchCreateByIdRequest(new CreateByIdRequest(){{
-document = "feed SDD Electric";
+document = "mRNA";
 id = "<ID>";
-index = "Corporate cyan Pickup";
-project = "expensive benchmark reshape";
-}}, "provident", "Investor", "upon");            
+index = "female";
+project = "Internal";
+}}, "Palladium", "Corporate", "cyan");            
 
             SearchCreateByIdResponse res = sdk.search.createDocument(req);
 
@@ -108,11 +108,11 @@ public class Application {
 
             SearchCreateRequest req = new SearchCreateRequest(new CreateDocumentRequest(){{
 documents = new String[]{{
-    add("mmm Account West"),
+    add("Toyota"),
 }};
-index = "majestically Israeli";
-project = "Northeast Tala Plastic";
-}}, "female", "Outdoors");            
+index = "Cadmium";
+project = "monitor";
+}}, "West", "Applications");            
 
             SearchCreateResponse res = sdk.search.createDocuments(req);
 
@@ -168,8 +168,8 @@ public class Application {
 ids = new String[]{{
     add("Southwest"),
 }};
-index = "female";
-project = "Card";
+index = "Glover";
+project = "Planner";
 }}, "Samarium", "Programmable");            
 
             SearchDeleteResponse res = sdk.search.deleteDocuments(req);
@@ -221,9 +221,9 @@ public class Application {
                 .build();
 
             SearchDeleteIndexRequest req = new SearchDeleteIndexRequest(new DeleteIndexRequest(){{
-name = "ivory Cobalt";
-project = "Americium";
-}}, "Executive", "minor");            
+name = "Marketing";
+project = "Tandem";
+}}, "Romania", "magenta");            
 
             SearchDeleteIndexResponse res = sdk.search.deleteIndex(req);
 
@@ -280,26 +280,26 @@ public class Application {
 
             SearchSearchRequest req = new SearchSearchRequest(new SearchIndexRequest(){{
 collation = new Collation(){{
-    case_ = "how";
+    case_ = "Unbranded";
 }};
 excludeFields = new String[]{{
-    add("Einsteinium"),
+    add("Soft"),
 }};
-facet = "Stage Salad dolorum";
-filter = "Roentgenium";
+facet = "green";
+filter = "Salad";
 includeFields = new String[]{{
-    add("Oregon"),
+    add("dolorum"),
 }};
-index = "World Trial";
-page = 912756;
-pageSize = 584808;
-project = "copying Cambridgeshire degree";
-q = "Car";
+index = "Buckinghamshire";
+page = 940560;
+pageSize = 128476;
+project = "Terbium";
+q = "World";
 searchFields = new String[]{{
-    add("Music"),
+    add("Trial"),
 }};
-sort = "afore Trial Steel";
-}}, "green", "collaborative");            
+sort = "so";
+}}, "volt", "paradigms");            
 
             SearchSearchResponse res = sdk.search.findDocuments(req);
 
@@ -452,9 +452,9 @@ public class Application {
                 .build();
 
             SearchListIndexesRequest req = new SearchListIndexesRequest("executive"){{
-                filterBranch = "Managed";
-                filterCollection = "Cisgender port Internal";
-                filterType = "violet Denar Jazz";
+                filterBranch = "harness";
+                filterCollection = "bolívar";
+                filterType = "Flat";
             }};            
 
             SearchListIndexesResponse res = sdk.search.listIndexes(req);
@@ -507,10 +507,10 @@ public class Application {
                 .build();
 
             SearchDeleteByQueryRequest req = new SearchDeleteByQueryRequest(new DeleteByQueryRequest(){{
-filter = "whose IB Connecticut";
-index = "transmit Southeast Planner";
-project = "since";
-}}, "payment", "Ytterbium");            
+filter = "zowie";
+index = "jet";
+project = "budgetary";
+}}, "nag", "Diesel");            
 
             SearchDeleteByQueryResponse res = sdk.search.queryDeleteDocuments(req);
 
@@ -565,11 +565,11 @@ public class Application {
 
             SearchCreateOrReplaceRequest req = new SearchCreateOrReplaceRequest(new CreateOrReplaceDocumentRequest(){{
 documents = new String[]{{
-    add("West"),
+    add("Avon"),
 }};
-index = "great";
-project = "verbally gee";
-}}, "Coupe", "Bicycle");            
+index = "before";
+project = "great";
+}}, "Total", "phew");            
 
             SearchCreateOrReplaceResponse res = sdk.search.replaceDocuments(req);
 
@@ -624,11 +624,11 @@ public class Application {
 
             SearchUpdateRequest req = new SearchUpdateRequest(new UpdateDocumentRequest(){{
 documents = new String[]{{
-    add("Algeria to"),
+    add("Strategist"),
 }};
-index = "Cruiser";
-project = "Steel Market";
-}}, "panic", "purple");            
+index = "Jewelery";
+project = "black";
+}}, "Functionality", "East");            
 
             SearchUpdateResponse res = sdk.search.updateDocuments(req);
 
@@ -679,11 +679,11 @@ public class Application {
                 .build();
 
             SearchCreateOrUpdateIndexRequest req = new SearchCreateOrUpdateIndexRequest(new CreateOrUpdateIndexRequest(){{
-name = "bus eius optical";
+name = "male";
 onlyCreate = false;
-project = "especially";
-schema = "Metrics parse East";
-}}, "Arsenic", "IB");            
+project = "Land";
+schema = "optical";
+}}, "West", "Pizza");            
 
             SearchCreateOrUpdateIndexResponse res = sdk.search.updateIndex(req);
 

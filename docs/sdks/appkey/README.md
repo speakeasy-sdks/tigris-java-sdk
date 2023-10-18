@@ -140,8 +140,8 @@ public class Application {
 
             TigrisRotateAppKeySecretRequest req = new TigrisRotateAppKeySecretRequest(new RotateAppKeyRequest(){{
 id = "<ID>";
-project = "Dalasi quas Licensed";
-}}, "Phased");            
+project = "impressionable";
+}}, "efficient");            
 
             TigrisRotateAppKeySecretResponse res = sdk.appKey.rotate(req);
 
@@ -193,8 +193,8 @@ public class Application {
 
             TigrisCreateAppKeyRequest req = new TigrisCreateAppKeyRequest(new CreateAppKeyRequest(){{
 description = "Robust content-based challenge";
-name = "Florida City magni";
-}}, "parallelism");            
+name = "Liaison";
+}}, "indigo");            
 
             TigrisCreateAppKeyResponse res = sdk.appKey.tigrisCreateAppKey(req);
 
@@ -247,8 +247,8 @@ public class Application {
             TigrisUpdateAppKeyRequest req = new TigrisUpdateAppKeyRequest(new UpdateAppKeyRequest(){{
 description = "Innovative coherent open architecture";
 id = "<ID>";
-name = "less";
-}}, "Ohio");            
+name = "Tempe";
+}}, "Ruble");            
 
             TigrisUpdateAppKeyResponse res = sdk.appKey.update(req);
 

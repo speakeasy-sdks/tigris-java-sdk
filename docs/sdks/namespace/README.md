@@ -40,7 +40,7 @@ public class Application {
             com.tigrisdata.tigris_core.models.shared.CreateNamespaceRequest req = new CreateNamespaceRequest(){{
                 code = 264917L;
                 id = "<ID>";
-                name = "Markets Sausages ASCII";
+                name = "pirouette";
             }};            
 
             CreateNamespaceResponse res = sdk.namespace.create(req);
@@ -133,9 +133,9 @@ public class Application {
                 .build();
 
             ManagementGetNamespaceMetadataRequest req = new ManagementGetNamespaceMetadataRequest(new GetNamespaceMetadataRequest(){{
-metadataKey = "Plastic Silver";
+metadataKey = "port";
 value = new GetNamespaceMetadataRequestValue();
-}}, "transmit");            
+}}, "offensively");            
 
             ManagementGetNamespaceMetadataResponse res = sdk.namespace.getMetadata(req);
 
@@ -187,9 +187,9 @@ public class Application {
                 .build();
 
             ManagementInsertNamespaceMetadataRequest req = new ManagementInsertNamespaceMetadataRequest(new InsertNamespaceMetadataRequest(){{
-metadataKey = "female quantifying indigo";
+metadataKey = "Developer";
 value = new InsertNamespaceMetadataRequestValue();
-}}, "Plain");            
+}}, "blue");            
 
             ManagementInsertNamespaceMetadataResponse res = sdk.namespace.insertMetadata(req);
 
@@ -281,9 +281,9 @@ public class Application {
                 .build();
 
             ManagementUpdateNamespaceMetadataRequest req = new ManagementUpdateNamespaceMetadataRequest(new UpdateNamespaceMetadataRequest(){{
-metadataKey = "Concrete";
+metadataKey = "Illinois";
 value = new UpdateNamespaceMetadataRequestValue();
-}}, "Tempe");            
+}}, "utilize");            
 
             ManagementUpdateNamespaceMetadataResponse res = sdk.namespace.updateMetadata(req);
 

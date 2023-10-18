@@ -87,12 +87,12 @@ public class Application {
                 .build();
 
             RealtimeReadMessagesRequest req = new RealtimeReadMessagesRequest("Platinum", "sympathetic"){{
-                end = "asymmetric withdrawal";
-                event = "Generic Bypass";
-                limit = 32889L;
-                sessionId = "Rock Automotive Grove";
-                socketId = "vortals Sedan";
-                start = "to Drive monitor";
+                end = "array";
+                event = "West";
+                limit = 399396L;
+                sessionId = "withdrawal";
+                socketId = "Account";
+                start = "Bypass";
             }};            
 
             RealtimeReadMessagesResponse res = sdk.channel.getMessages(req);
@@ -246,12 +246,12 @@ public class Application {
                 .build();
 
             RealtimeMessagesRequest req = new RealtimeMessagesRequest(new MessagesRequest(){{
-channel = "Manager seamless Folk";
+channel = "pronoun";
 messages = new com.tigrisdata.tigris_core.models.shared.Message[]{{
     add(new Message(){{}}),
 }};
-project = "City niches Directives";
-}}, "purple", "yet");            
+project = "Elegant";
+}}, "Man", "Frozen");            
 
             RealtimeMessagesResponse res = sdk.channel.pushMessages(req);
 

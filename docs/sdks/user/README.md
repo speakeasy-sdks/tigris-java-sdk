@@ -37,9 +37,9 @@ public class Application {
                 .build();
 
             ManagementGetUserMetadataRequest req = new ManagementGetUserMetadataRequest(new GetUserMetadataRequest(){{
-metadataKey = "Plastic Silver";
+metadataKey = "port";
 value = new GetUserMetadataRequestValue();
-}}, "transmit");            
+}}, "offensively");            
 
             ManagementGetUserMetadataResponse res = sdk.user.getMetadata(req);
 
@@ -91,9 +91,9 @@ public class Application {
                 .build();
 
             ManagementInsertUserMetadataRequest req = new ManagementInsertUserMetadataRequest(new InsertUserMetadataRequest(){{
-metadataKey = "female quantifying indigo";
+metadataKey = "Developer";
 value = new InsertUserMetadataRequestValue();
-}}, "Plain");            
+}}, "blue");            
 
             ManagementInsertUserMetadataResponse res = sdk.user.insertMetadata(req);
 
@@ -145,9 +145,9 @@ public class Application {
                 .build();
 
             ManagementUpdateUserMetadataRequest req = new ManagementUpdateUserMetadataRequest(new UpdateUserMetadataRequest(){{
-metadataKey = "Concrete";
+metadataKey = "Illinois";
 value = new UpdateUserMetadataRequestValue();
-}}, "Tempe");            
+}}, "utilize");            
 
             ManagementUpdateUserMetadataResponse res = sdk.user.updateMetadata(req);
 

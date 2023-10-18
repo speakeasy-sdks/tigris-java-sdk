@@ -44,9 +44,9 @@ public class Application {
                 .build();
 
             TigrisBeginTransactionRequest req = new TigrisBeginTransactionRequest(new BeginTransactionRequest(){{
-branch = "Cambridgeshire ability";
+branch = "deposit";
 options = new TransactionOptions();
-}}, "interface");            
+}}, "gore");            
 
             TigrisBeginTransactionResponse res = sdk.database.beginTransaction(req);
 
@@ -98,8 +98,8 @@ public class Application {
                 .build();
 
             TigrisCommitTransactionRequest req = new TigrisCommitTransactionRequest(new CommitTransactionRequest(){{
-branch = "Assurance";
-}}, "paradigm");            
+branch = "extensible";
+}}, "female");            
 
             TigrisCommitTransactionResponse res = sdk.database.commitTransaction(req);
 
@@ -252,10 +252,10 @@ public class Application {
                 .build();
 
             TigrisDescribeDatabaseRequest req = new TigrisDescribeDatabaseRequest(new DescribeDatabaseRequest(){{
-branch = "Pickup";
+branch = "Luxurious";
 project = "Home";
-schemaFormat = "payment And Cloned";
-}}, "alias");            
+schemaFormat = "turquoise";
+}}, "generating");            
 
             TigrisDescribeDatabaseResponse res = sdk.database.describe(req);
 
@@ -305,7 +305,7 @@ public class Application {
                 .build();
 
             TigrisListCollectionsRequest req = new TigrisListCollectionsRequest("Porsche"){{
-                branch = "Djibouti";
+                branch = "Armenia";
             }};            
 
             TigrisListCollectionsResponse res = sdk.database.listCollections(req);
@@ -358,8 +358,8 @@ public class Application {
                 .build();
 
             TigrisRollbackTransactionRequest req = new TigrisRollbackTransactionRequest(new RollbackTransactionRequest(){{
-branch = "unethically";
-}}, "Oregon");            
+branch = "Southwest";
+}}, "Convertible");            
 
             TigrisRollbackTransactionResponse res = sdk.database.rollbackTransaction(req);
 

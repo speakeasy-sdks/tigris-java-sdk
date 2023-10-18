@@ -226,19 +226,19 @@ public class Application {
                         rollup = new RollupFunction(){{}};
                     }}),
                 }};
-                branch = "against regional";
-                collection = "provided Gasoline";
-                db = "where";
-                from = 404638L;
-                function = QueryTimeSeriesMetricsRequestFunction.NONE;
-                metricName = "Southwest Hat";
-                quantile = 4863.24f;
+                branch = "Codes";
+                collection = "regional";
+                db = "state";
+                from = 812824L;
+                function = QueryTimeSeriesMetricsRequestFunction.COUNT;
+                metricName = "Southwest";
+                quantile = 7892.63f;
                 spaceAggregatedBy = new String[]{{
-                    add("optimal"),
+                    add("Card"),
                 }};
-                spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation.MIN;
+                spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation.AVG;
                 tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation.METADATA;
-                to = 60030L;
+                to = 201203L;
             }};            
 
             ObservabilityQueryTimeSeriesMetricsResponse res = sdk.system.queryTimeSeriesMetrics(req);

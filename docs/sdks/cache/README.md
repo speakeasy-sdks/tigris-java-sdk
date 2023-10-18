@@ -245,8 +245,8 @@ public class Application {
                 .build();
 
             CacheGetSetRequest req = new CacheGetSetRequest(new GetSetRequest(){{
-value = "Hampshire Regional";
-}}, "steradian", "connect", "kelvin");            
+value = "Direct";
+}}, "deleniti", "Regional", "steradian");            
 
             CacheGetSetResponse res = sdk.cache.getSetKey(req);
 
@@ -347,7 +347,7 @@ public class Application {
             CacheKeysRequest req = new CacheKeysRequest("invoice", "pink"){{
                 count = 857202L;
                 cursor = 900005L;
-                pattern = "West vivid compressing";
+                pattern = "achievement";
             }};            
 
             CacheKeysResponse res = sdk.cache.listKeys(req);
@@ -402,9 +402,9 @@ public class Application {
 ex = 212042L;
 nx = false;
 px = 314702L;
-value = "Account";
+value = "synergize";
 xx = false;
-}}, "Toyota", "Demiflux", "Gasoline");            
+}}, "Shanahan", "Phased", "Soft");            
 
             CacheSetResponse res = sdk.cache.setKey(req);
 
