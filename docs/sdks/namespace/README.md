@@ -32,15 +32,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("neural"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
             com.tigrisdata.tigris_core.models.shared.CreateNamespaceRequest req = new CreateNamespaceRequest(){{
-                code = 264917L;
+                code = 481196L;
                 id = "<ID>";
-                name = "pirouette";
+                name = "string";
             }};            
 
             CreateNamespaceResponse res = sdk.namespace.create(req);
@@ -84,7 +84,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("motivating"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -127,15 +127,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Chief"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
             ManagementGetNamespaceMetadataRequest req = new ManagementGetNamespaceMetadataRequest(new GetNamespaceMetadataRequest(){{
-metadataKey = "port";
+metadataKey = "string";
 value = new GetNamespaceMetadataRequestValue();
-}}, "offensively");            
+}}, "string");            
 
             ManagementGetNamespaceMetadataResponse res = sdk.namespace.getMetadata(req);
 
@@ -181,15 +181,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Diesel"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
             ManagementInsertNamespaceMetadataRequest req = new ManagementInsertNamespaceMetadataRequest(new InsertNamespaceMetadataRequest(){{
-metadataKey = "Developer";
+metadataKey = "string";
 value = new InsertNamespaceMetadataRequestValue();
-}}, "blue");            
+}}, "string");            
 
             ManagementInsertNamespaceMetadataResponse res = sdk.namespace.insertMetadata(req);
 
@@ -232,7 +232,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Future"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -275,15 +275,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("fate"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
             ManagementUpdateNamespaceMetadataRequest req = new ManagementUpdateNamespaceMetadataRequest(new UpdateNamespaceMetadataRequest(){{
-metadataKey = "Illinois";
+metadataKey = "string";
 value = new UpdateNamespaceMetadataRequestValue();
-}}, "utilize");            
+}}, "string");            
 
             ManagementUpdateNamespaceMetadataResponse res = sdk.namespace.updateMetadata(req);
 

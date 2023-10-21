@@ -30,7 +30,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Health"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -70,7 +70,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("salmon"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -111,7 +111,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Strategist"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -160,7 +160,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Concrete"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -215,7 +215,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Concrete"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
@@ -226,19 +226,19 @@ public class Application {
                         rollup = new RollupFunction(){{}};
                     }}),
                 }};
-                branch = "Codes";
-                collection = "regional";
-                db = "state";
-                from = 812824L;
-                function = QueryTimeSeriesMetricsRequestFunction.COUNT;
-                metricName = "Southwest";
-                quantile = 7892.63f;
+                branch = "string";
+                collection = "string";
+                db = "string";
+                from = 262768L;
+                function = QueryTimeSeriesMetricsRequestFunction.NONE;
+                metricName = "string";
+                quantile = 3054.25f;
                 spaceAggregatedBy = new String[]{{
-                    add("Card"),
+                    add("string"),
                 }};
-                spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation.AVG;
-                tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation.METADATA;
-                to = 201203L;
+                spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation.MAX;
+                tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation.READ;
+                to = 424991L;
             }};            
 
             ObservabilityQueryTimeSeriesMetricsResponse res = sdk.system.queryTimeSeriesMetrics(req);

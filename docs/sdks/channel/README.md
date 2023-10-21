@@ -32,12 +32,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("motivating"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimeGetRTChannelRequest req = new RealtimeGetRTChannelRequest("Account", "if");            
+            RealtimeGetRTChannelRequest req = new RealtimeGetRTChannelRequest("string", "string");            
 
             RealtimeGetRTChannelResponse res = sdk.channel.get(req);
 
@@ -81,18 +81,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("East"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimeReadMessagesRequest req = new RealtimeReadMessagesRequest("Platinum", "sympathetic"){{
-                end = "array";
-                event = "West";
-                limit = 399396L;
-                sessionId = "withdrawal";
-                socketId = "Account";
-                start = "Bypass";
+            RealtimeReadMessagesRequest req = new RealtimeReadMessagesRequest("string", "string"){{
+                end = "string";
+                event = "string";
+                limit = 7235L;
+                sessionId = "string";
+                socketId = "string";
+                start = "string";
             }};            
 
             RealtimeReadMessagesResponse res = sdk.channel.getMessages(req);
@@ -137,12 +137,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Future"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimeGetRTChannelsRequest req = new RealtimeGetRTChannelsRequest("Southeast");            
+            RealtimeGetRTChannelsRequest req = new RealtimeGetRTChannelsRequest("string");            
 
             RealtimeGetRTChannelsResponse res = sdk.channel.list(req);
 
@@ -186,14 +186,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("internationalise"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimeListSubscriptionsRequest req = new RealtimeListSubscriptionsRequest("which", "Car"){{
-                page = 121134;
-                pageSize = 980290;
+            RealtimeListSubscriptionsRequest req = new RealtimeListSubscriptionsRequest("string", "string"){{
+                page = 994262;
+                pageSize = 462408;
             }};            
 
             RealtimeListSubscriptionsResponse res = sdk.channel.listSubscriptions(req);
@@ -240,18 +240,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("payment"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
             RealtimeMessagesRequest req = new RealtimeMessagesRequest(new MessagesRequest(){{
-channel = "pronoun";
+channel = "string";
 messages = new com.tigrisdata.tigris_core.models.shared.Message[]{{
     add(new Message(){{}}),
 }};
-project = "Elegant";
-}}, "Man", "Frozen");            
+project = "string";
+}}, "string", "string");            
 
             RealtimeMessagesResponse res = sdk.channel.pushMessages(req);
 
@@ -295,12 +295,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("successfully"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimePresenceRequest req = new RealtimePresenceRequest("Applications", "Buckinghamshire");            
+            RealtimePresenceRequest req = new RealtimePresenceRequest("string", "string");            
 
             RealtimePresenceResponse res = sdk.channel.realtimePresence(req);
 

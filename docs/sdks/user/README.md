@@ -31,15 +31,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Chief"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
             ManagementGetUserMetadataRequest req = new ManagementGetUserMetadataRequest(new GetUserMetadataRequest(){{
-metadataKey = "port";
+metadataKey = "string";
 value = new GetUserMetadataRequestValue();
-}}, "offensively");            
+}}, "string");            
 
             ManagementGetUserMetadataResponse res = sdk.user.getMetadata(req);
 
@@ -85,15 +85,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("Diesel"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
             ManagementInsertUserMetadataRequest req = new ManagementInsertUserMetadataRequest(new InsertUserMetadataRequest(){{
-metadataKey = "Developer";
+metadataKey = "string";
 value = new InsertUserMetadataRequestValue();
-}}, "blue");            
+}}, "string");            
 
             ManagementInsertUserMetadataResponse res = sdk.user.insertMetadata(req);
 
@@ -139,15 +139,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("fate"){{
+                .setSecurity(new Security("string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
             ManagementUpdateUserMetadataRequest req = new ManagementUpdateUserMetadataRequest(new UpdateUserMetadataRequest(){{
-metadataKey = "Illinois";
+metadataKey = "string";
 value = new UpdateUserMetadataRequestValue();
-}}, "utilize");            
+}}, "string");            
 
             ManagementUpdateUserMetadataResponse res = sdk.user.updateMetadata(req);
 
