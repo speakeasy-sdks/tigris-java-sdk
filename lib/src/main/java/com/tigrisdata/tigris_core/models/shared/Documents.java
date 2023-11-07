@@ -7,6 +7,6 @@ package com.tigrisdata.tigris_core.models.shared;
 
 
 
-public class GetNamespaceMetadataRequestValue {
-    public GetNamespaceMetadataRequestValue(){}
+public class Documents {
+    public Documents(){}
 }

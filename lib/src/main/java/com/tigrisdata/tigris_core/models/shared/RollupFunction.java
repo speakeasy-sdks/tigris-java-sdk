@@ -15,9 +15,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RollupFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregator")
-    public RollupFunctionAggregator aggregator;
+    public Aggregator aggregator;
 
-    public RollupFunction withAggregator(RollupFunctionAggregator aggregator) {
+    public RollupFunction withAggregator(Aggregator aggregator) {
         this.aggregator = aggregator;
         return this;
     }

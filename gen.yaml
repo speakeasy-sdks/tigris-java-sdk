@@ -2,28 +2,35 @@ configVersion: 1.0.0
 management:
   docChecksum: db7bd8f69518c551928aef7eb16008e2
   docVersion: 0.0.1
-  speakeasyVersion: 1.104.0
-  generationVersion: 2.169.0
+  speakeasyVersion: 1.114.1
+  generationVersion: 2.181.1
 generation:
-  repoURL: https://github.com/speakeasy-sdks/tigris-java-sdk.git
+  comments: {}
   sdkClassName: SDK
-  singleTagPerOp: false
-  telemetryEnabled: false
+  repoURL: https://github.com/speakeasy-sdks/tigris-java-sdk.git
 features:
   java:
-    core: 2.94.0
+    core: 3.0.1
     examples: 2.81.3
     globalSecurity: 2.81.1
     globalServerURLs: 2.82.0
     nameOverrides: 2.81.1
 java:
-  version: 0.50.0
+  version: 0.51.0
   artifactID: tigris-core
   companyEmail: info@mycompany.com
   companyName: My Company
   companyURL: www.mycompany.com
   githubURL: github.com/owner/repo
   groupID: com.tigrisdata
+  imports:
+    option: openapi
+    paths:
+      callbacks: models/callbacks
+      errors: models/errors
+      operations: models/operations
+      shared: models/shared
+      webhooks: models/webhooks
   maxMethodParams: 0
   ossrhURL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
   projectName: tigris-data

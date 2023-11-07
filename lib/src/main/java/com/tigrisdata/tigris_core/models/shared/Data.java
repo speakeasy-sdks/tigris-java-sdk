@@ -7,9 +7,9 @@ package com.tigrisdata.tigris_core.models.shared;
 
 
 /**
- * ReadResponseData - Object containing the collection document.
+ * Data - Object containing the collection document.
  */
 
-public class ReadResponseData {
-    public ReadResponseData(){}
+public class Data {
+    public Data(){}
 }

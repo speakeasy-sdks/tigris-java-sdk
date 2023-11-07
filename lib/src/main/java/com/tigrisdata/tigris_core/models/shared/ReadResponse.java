@@ -15,9 +15,9 @@ public class ReadResponse {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
-    public ReadResponseData data;
+    public Data data;
 
-    public ReadResponse withData(ReadResponseData data) {
+    public ReadResponse withData(Data data) {
         this.data = data;
         return this;
     }

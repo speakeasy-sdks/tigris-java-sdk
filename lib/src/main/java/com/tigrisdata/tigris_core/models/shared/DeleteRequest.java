@@ -27,9 +27,9 @@ public class DeleteRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
-    public DeleteRequestFilter filter;
+    public Filter filter;
 
-    public DeleteRequest withFilter(DeleteRequestFilter filter) {
+    public DeleteRequest withFilter(Filter filter) {
         this.filter = filter;
         return this;
     }

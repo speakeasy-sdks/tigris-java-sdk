@@ -1,5 +1,5 @@
 # Namespace
-(*namespace*)
+(*.namespace*)
 
 ## Overview
 
@@ -120,8 +120,8 @@ import com.tigrisdata.tigris_core.SDK;
 import com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataRequest;
 import com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataResponse;
 import com.tigrisdata.tigris_core.models.shared.GetNamespaceMetadataRequest;
-import com.tigrisdata.tigris_core.models.shared.GetNamespaceMetadataRequestValue;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import com.tigrisdata.tigris_core.models.shared.Value;
 
 public class Application {
     public static void main(String[] args) {
@@ -134,7 +134,7 @@ public class Application {
 
             ManagementGetNamespaceMetadataRequest req = new ManagementGetNamespaceMetadataRequest(new GetNamespaceMetadataRequest(){{
 metadataKey = "string";
-value = new GetNamespaceMetadataRequestValue();
+value = new Value();
 }}, "string");            
 
             ManagementGetNamespaceMetadataResponse res = sdk.namespace.getMetadata(req);

@@ -51,9 +51,9 @@ public class SearchRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facet")
-    public SearchRequestFacet facet;
+    public Facet facet;
 
-    public SearchRequest withFacet(SearchRequestFacet facet) {
+    public SearchRequest withFacet(Facet facet) {
         this.facet = facet;
         return this;
     }
@@ -144,9 +144,9 @@ public class SearchRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
-    public SearchRequestSort sort;
+    public Sort sort;
 
-    public SearchRequest withSort(SearchRequestSort sort) {
+    public SearchRequest withSort(Sort sort) {
         this.sort = sort;
         return this;
     }

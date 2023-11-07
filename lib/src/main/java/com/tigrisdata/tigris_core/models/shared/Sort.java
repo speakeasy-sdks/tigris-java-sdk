@@ -7,9 +7,9 @@ package com.tigrisdata.tigris_core.models.shared;
 
 
 /**
- * CollectionDescriptionSchema - Collections schema
+ * Sort - Array of fields and corresponding sort orders to order the results `[{ "salary": "$desc" }]`
  */
 
-public class CollectionDescriptionSchema {
-    public CollectionDescriptionSchema(){}
+public class Sort {
+    public Sort(){}
 }

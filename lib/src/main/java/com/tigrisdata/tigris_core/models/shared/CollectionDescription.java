@@ -36,9 +36,9 @@ public class CollectionDescription {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
-    public CollectionDescriptionSchema schema;
+    public Schema schema;
 
-    public CollectionDescription withSchema(CollectionDescriptionSchema schema) {
+    public CollectionDescription withSchema(Schema schema) {
         this.schema = schema;
         return this;
     }

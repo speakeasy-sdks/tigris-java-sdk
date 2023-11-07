@@ -51,9 +51,9 @@ public class ImportRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
-    public ImportRequestDocuments[] documents;
+    public Documents[] documents;
 
-    public ImportRequest withDocuments(ImportRequestDocuments[] documents) {
+    public ImportRequest withDocuments(Documents[] documents) {
         this.documents = documents;
         return this;
     }

@@ -7,6 +7,6 @@ package com.tigrisdata.tigris_core.models.shared;
 
 
 
-public class ImportRequestDocuments {
-    public ImportRequestDocuments(){}
+public class Value {
+    public Value(){}
 }

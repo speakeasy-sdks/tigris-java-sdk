@@ -5,7 +5,7 @@ Rollup function aggregates the slices of metrics returned by original query and 
 
 ## Fields
 
-| Field                                                                       | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `aggregator`                                                                | [RollupFunctionAggregator](../../models/shared/RollupFunctionAggregator.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
-| `interval`                                                                  | *Long*                                                                      | :heavy_minus_sign:                                                          | N/A                                                                         |
+| Field                                           | Type                                            | Required                                        | Description                                     |
+| ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- |
+| `aggregator`                                    | [Aggregator](../../models/shared/Aggregator.md) | :heavy_minus_sign:                              | N/A                                             |
+| `interval`                                      | *Long*                                          | :heavy_minus_sign:                              | N/A                                             |

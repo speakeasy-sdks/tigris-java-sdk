@@ -1,5 +1,5 @@
 # System
-(*system*)
+(*.system*)
 
 ## Overview
 
@@ -203,13 +203,13 @@ package hello.world;
 import com.tigrisdata.tigris_core.SDK;
 import com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsResponse;
 import com.tigrisdata.tigris_core.models.shared.AdditionalFunction;
+import com.tigrisdata.tigris_core.models.shared.Aggregator;
+import com.tigrisdata.tigris_core.models.shared.Function;
 import com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequest;
-import com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequestFunction;
-import com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequestSpaceAggregation;
-import com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequestTigrisOperation;
 import com.tigrisdata.tigris_core.models.shared.RollupFunction;
-import com.tigrisdata.tigris_core.models.shared.RollupFunctionAggregator;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import com.tigrisdata.tigris_core.models.shared.SpaceAggregation;
+import com.tigrisdata.tigris_core.models.shared.TigrisOperation;
 
 public class Application {
     public static void main(String[] args) {
@@ -230,14 +230,14 @@ public class Application {
                 collection = "string";
                 db = "string";
                 from = 262768L;
-                function = QueryTimeSeriesMetricsRequestFunction.NONE;
+                function = Function.NONE;
                 metricName = "string";
                 quantile = 3054.25f;
                 spaceAggregatedBy = new String[]{{
                     add("string"),
                 }};
-                spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation.MAX;
-                tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation.READ;
+                spaceAggregation = SpaceAggregation.MAX;
+                tigrisOperation = TigrisOperation.READ;
                 to = 424991L;
             }};            
 

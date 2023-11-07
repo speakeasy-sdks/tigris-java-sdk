@@ -7,9 +7,9 @@ package com.tigrisdata.tigris_core.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * ErrorCode - The status code is a short, machine parsable string, which uniquely identifies the error type. Tigris to HTTP code mapping [here](/reference/http-code)
+ * Code - The status code is a short, machine parsable string, which uniquely identifies the error type. Tigris to HTTP code mapping [here](/reference/http-code)
  */
-public enum ErrorCode {
+public enum Code {
     OK("OK"),
     CANCELLED("CANCELLED"),
     UNKNOWN("UNKNOWN"),
@@ -34,7 +34,7 @@ public enum ErrorCode {
     @JsonValue
     public final String value;
 
-    private ErrorCode(String value) {
+    private Code(String value) {
         this.value = value;
     }
 }

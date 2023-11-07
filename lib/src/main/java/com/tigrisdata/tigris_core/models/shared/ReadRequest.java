@@ -27,9 +27,9 @@ public class ReadRequest {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
-    public ReadRequestFields fields;
+    public Fields fields;
 
-    public ReadRequest withFields(ReadRequestFields fields) {
+    public ReadRequest withFields(Fields fields) {
         this.fields = fields;
         return this;
     }

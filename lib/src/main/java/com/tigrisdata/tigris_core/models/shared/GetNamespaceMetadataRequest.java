@@ -24,9 +24,9 @@ public class GetNamespaceMetadataRequest {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    public GetNamespaceMetadataRequestValue value;
+    public Value value;
 
-    public GetNamespaceMetadataRequest withValue(GetNamespaceMetadataRequestValue value) {
+    public GetNamespaceMetadataRequest withValue(Value value) {
         this.value = value;
         return this;
     }

@@ -6,15 +6,16 @@ package com.tigrisdata.tigris_core.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
-public enum QueryTimeSeriesMetricsRequestFunction {
-    RATE("RATE"),
-    COUNT("COUNT"),
-    NONE("NONE");
+public enum SpaceAggregation {
+    AVG("AVG"),
+    MIN("MIN"),
+    MAX("MAX"),
+    SUM("SUM");
 
     @JsonValue
     public final String value;
 
-    private QueryTimeSeriesMetricsRequestFunction(String value) {
+    private SpaceAggregation(String value) {
         this.value = value;
     }
 }
