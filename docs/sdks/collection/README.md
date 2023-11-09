@@ -1,5 +1,5 @@
 # Collection
-(*.collection*)
+(*collection*)
 
 ## Overview
 

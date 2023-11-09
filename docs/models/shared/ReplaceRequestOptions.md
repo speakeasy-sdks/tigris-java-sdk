@@ -5,6 +5,6 @@ Additional options for replace requests.
 
 ## Fields
 
-| Field                                               | Type                                                | Required                                            | Description                                         |
-| --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
-| `writeOptions`                                      | [WriteOptions](../../models/shared/WriteOptions.md) | :heavy_minus_sign:                                  | Additional options to modify write requests.        |
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `writeOptions`                                                                               | [com.tigrisdata.tigris_core.models.shared.WriteOptions](../../models/shared/WriteOptions.md) | :heavy_minus_sign:                                                                           | Additional options to modify write requests.                                                 |

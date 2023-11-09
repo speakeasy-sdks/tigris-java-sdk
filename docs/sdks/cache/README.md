@@ -1,5 +1,5 @@
 # Cache
-(*.cache*)
+(*cache*)
 
 ## Overview
 

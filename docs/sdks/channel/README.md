@@ -1,5 +1,5 @@
 # Channel
-(*.channel*)
+(*channel*)
 
 ## Overview
 

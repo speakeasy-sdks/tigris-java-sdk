@@ -1,5 +1,5 @@
 # AppKey
-(*.appKey*)
+(*appKey*)
 
 ## Overview
 

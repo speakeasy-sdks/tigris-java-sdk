@@ -1,5 +1,5 @@
 # Namespace
-(*.namespace*)
+(*namespace*)
 
 ## Overview
 

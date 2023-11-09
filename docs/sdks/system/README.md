@@ -1,5 +1,5 @@
 # System
-(*.system*)
+(*system*)
 
 ## Overview
 
