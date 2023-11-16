@@ -51,12 +51,11 @@ public class Project {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectResponse(contentType, httpRes.statusCode(), httpRes) {{
             createProjectResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -104,12 +103,11 @@ public class Project {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectResponse(contentType, httpRes.statusCode(), httpRes) {{
             deleteProjectResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -151,12 +149,11 @@ public class Project {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisListProjectsResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisListProjectsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisListProjectsResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisListProjectsResponse(contentType, httpRes.statusCode(), httpRes) {{
             listProjectsResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {

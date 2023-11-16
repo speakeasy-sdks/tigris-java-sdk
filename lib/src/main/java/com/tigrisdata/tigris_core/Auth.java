@@ -46,12 +46,11 @@ public class Auth {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse res = new com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse res = new com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse(contentType, httpRes.statusCode(), httpRes) {{
             getAccessTokenResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {

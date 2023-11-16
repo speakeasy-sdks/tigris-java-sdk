@@ -46,12 +46,11 @@ public class Channel {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelResponse(contentType, httpRes.statusCode(), httpRes) {{
             getRTChannelResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -99,12 +98,11 @@ public class Channel {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesResponse(contentType, httpRes.statusCode(), httpRes) {{
             readMessagesResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -146,12 +144,11 @@ public class Channel {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsResponse(contentType, httpRes.statusCode(), httpRes) {{
             getRTChannelsResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -199,12 +196,11 @@ public class Channel {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsResponse(contentType, httpRes.statusCode(), httpRes) {{
             listSubscriptionResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -251,12 +247,11 @@ public class Channel {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.RealtimeMessagesResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimeMessagesResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.RealtimeMessagesResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimeMessagesResponse(contentType, httpRes.statusCode(), httpRes) {{
             messagesResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -298,12 +293,11 @@ public class Channel {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.RealtimePresenceResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimePresenceResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.RealtimePresenceResponse res = new com.tigrisdata.tigris_core.models.operations.RealtimePresenceResponse(contentType, httpRes.statusCode(), httpRes) {{
             presenceResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {

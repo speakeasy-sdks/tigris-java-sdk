@@ -51,12 +51,11 @@ public class User {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataResponse(contentType, httpRes.statusCode(), httpRes) {{
             getUserMetadataResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -104,12 +103,11 @@ public class User {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataResponse(contentType, httpRes.statusCode(), httpRes) {{
             insertUserMetadataResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -157,12 +155,11 @@ public class User {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataResponse res = new com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataResponse(contentType, httpRes.statusCode(), httpRes) {{
             updateUserMetadataResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {

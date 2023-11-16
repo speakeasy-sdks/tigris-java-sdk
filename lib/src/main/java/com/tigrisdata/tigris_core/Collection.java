@@ -55,12 +55,11 @@ public class Collection {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             createOrUpdateCollectionResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -108,12 +107,11 @@ public class Collection {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisDeleteResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDeleteResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisDeleteResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDeleteResponse(contentType, httpRes.statusCode(), httpRes) {{
             deleteResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -161,12 +159,11 @@ public class Collection {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             describeCollectionResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -215,12 +212,11 @@ public class Collection {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             dropCollectionResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -273,12 +269,11 @@ public class Collection {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisImportResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisImportResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisImportResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisImportResponse(contentType, httpRes.statusCode(), httpRes) {{
             importResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -328,12 +323,11 @@ public class Collection {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisInsertResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisInsertResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisInsertResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisInsertResponse(contentType, httpRes.statusCode(), httpRes) {{
             insertResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -386,12 +380,11 @@ public class Collection {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisReadResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisReadResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisReadResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisReadResponse(contentType, httpRes.statusCode(), httpRes) {{
             streamingReadResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -439,12 +432,11 @@ public class Collection {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisReplaceResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisReplaceResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisReplaceResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisReplaceResponse(contentType, httpRes.statusCode(), httpRes) {{
             replaceResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -495,12 +487,11 @@ public class Collection {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisSearchResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisSearchResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisSearchResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisSearchResponse(contentType, httpRes.statusCode(), httpRes) {{
             streamingSearchResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -548,12 +539,11 @@ public class Collection {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisUpdateResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisUpdateResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisUpdateResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisUpdateResponse(contentType, httpRes.statusCode(), httpRes) {{
             updateResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {

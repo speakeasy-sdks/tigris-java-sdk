@@ -51,12 +51,11 @@ public class AppKey {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse(contentType, httpRes.statusCode(), httpRes) {{
             deleteAppKeyResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -99,12 +98,11 @@ public class AppKey {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse(contentType, httpRes.statusCode(), httpRes) {{
             listAppKeysResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -152,12 +150,11 @@ public class AppKey {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse(contentType, httpRes.statusCode(), httpRes) {{
             rotateAppKeyResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -205,12 +202,11 @@ public class AppKey {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse(contentType, httpRes.statusCode(), httpRes) {{
             createAppKeyResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -258,12 +254,11 @@ public class AppKey {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse(contentType, httpRes.statusCode()) {{
+        
+        com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse res = new com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse(contentType, httpRes.statusCode(), httpRes) {{
             updateAppKeyResponse = null;
             status = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.tigrisdata.tigris_core.utils.Utils.matchContentType(contentType, "application/json")) {

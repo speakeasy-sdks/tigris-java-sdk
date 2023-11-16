@@ -6,12 +6,14 @@
 ### Gradle
 
 ```groovy
-implementation 'com.tigrisdata.tigris_core:tigris-data:0.51.1'
+implementation 'com.tigrisdata.tigris_core:tigris-data:0.51.2'
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+### Example
+
 ```java
 package hello.world;
 
