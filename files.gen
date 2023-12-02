@@ -358,7 +358,6 @@ lib/src/main/java/com/tigrisdata/tigris_core/models/shared/UpdateDocumentRequest
 lib/src/main/java/com/tigrisdata/tigris_core/models/shared/CreateOrUpdateIndexResponse.java
 lib/src/main/java/com/tigrisdata/tigris_core/models/shared/CreateOrUpdateIndexRequest.java
 lib/src/main/java/com/tigrisdata/tigris_core/models/shared/Security.java
-USAGE.md
 docs/models/operations/AuthGetAccessTokenResponse.md
 docs/models/operations/HealthAPIHealthResponse.md
 docs/models/operations/ObservabilityGetInfoResponse.md
@@ -689,3 +688,4 @@ docs/sdks/database/README.md
 docs/sdks/collection/README.md
 docs/sdks/channel/README.md
 docs/sdks/search/README.md
+USAGE.md

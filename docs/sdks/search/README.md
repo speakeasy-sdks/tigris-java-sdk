@@ -42,19 +42,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            SearchCreateByIdRequest req = new SearchCreateByIdRequest(new CreateByIdRequest(){{
-document = "string";
-id = "<ID>";
-index = "string";
-project = "string";
-}}, "string", "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.SearchCreateByIdRequest req = new SearchCreateByIdRequest(
+                new CreateByIdRequest(
+){{
+                    document = "string";
+                    id = "<ID>";
+                    index = "string";
+                    project = "string";
 
-            SearchCreateByIdResponse res = sdk.search.createDocument(req);
+                }},
+                "string",
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.SearchCreateByIdResponse res = sdk.search.createDocument(req);
 
             if (res.createByIdResponse != null) {
                 // handle response
@@ -101,20 +108,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            SearchCreateRequest req = new SearchCreateRequest(new CreateDocumentRequest(){{
-documents = new String[]{{
-    add("string"),
-}};
-index = "string";
-project = "string";
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.SearchCreateRequest req = new SearchCreateRequest(
+                new CreateDocumentRequest(
+){{
+                    documents = new String[]{{
+                        add("string"),
+                    }};
+                    index = "string";
+                    project = "string";
 
-            SearchCreateResponse res = sdk.search.createDocuments(req);
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.SearchCreateResponse res = sdk.search.createDocuments(req);
 
             if (res.createDocumentResponse != null) {
                 // handle response
@@ -159,20 +172,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            SearchDeleteRequest req = new SearchDeleteRequest(new DeleteDocumentRequest(){{
-ids = new String[]{{
-    add("string"),
-}};
-index = "string";
-project = "string";
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.SearchDeleteRequest req = new SearchDeleteRequest(
+                new DeleteDocumentRequest(
+){{
+                    ids = new String[]{{
+                        add("string"),
+                    }};
+                    index = "string";
+                    project = "string";
 
-            SearchDeleteResponse res = sdk.search.deleteDocuments(req);
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.SearchDeleteResponse res = sdk.search.deleteDocuments(req);
 
             if (res.deleteDocumentResponse != null) {
                 // handle response
@@ -215,17 +234,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            SearchDeleteIndexRequest req = new SearchDeleteIndexRequest(new DeleteIndexRequest(){{
-name = "string";
-project = "string";
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexRequest req = new SearchDeleteIndexRequest(
+                new DeleteIndexRequest(
+){{
+                    name = "string";
+                    project = "string";
 
-            SearchDeleteIndexResponse res = sdk.search.deleteIndex(req);
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexResponse res = sdk.search.deleteIndex(req);
 
             if (res.deleteIndexResponse != null) {
                 // handle response
@@ -273,35 +298,43 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            SearchSearchRequest req = new SearchSearchRequest(new SearchIndexRequest(){{
-collation = new Collation(){{
-    case_ = "string";
-}};
-excludeFields = new String[]{{
-    add("string"),
-}};
-facet = "string";
-filter = "string";
-includeFields = new String[]{{
-    add("string"),
-}};
-index = "string";
-page = 71364;
-pageSize = 998280;
-project = "string";
-q = "string";
-searchFields = new String[]{{
-    add("string"),
-}};
-sort = "string";
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.SearchSearchRequest req = new SearchSearchRequest(
+                new SearchIndexRequest(
+){{
+                    collation = new Collation(
+){{
+                        case_ = "string";
 
-            SearchSearchResponse res = sdk.search.findDocuments(req);
+                    }};
+                    excludeFields = new String[]{{
+                        add("string"),
+                    }};
+                    facet = "string";
+                    filter = "string";
+                    includeFields = new String[]{{
+                        add("string"),
+                    }};
+                    index = "string";
+                    page = 71364;
+                    pageSize = 998280;
+                    project = "string";
+                    q = "string";
+                    searchFields = new String[]{{
+                        add("string"),
+                    }};
+                    sort = "string";
+
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.SearchSearchResponse res = sdk.search.findDocuments(req);
 
             if (res.searchIndexResponse != null) {
                 // handle response
@@ -344,18 +377,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            SearchGetRequest req = new SearchGetRequest("string", "string"){{
+            com.tigrisdata.tigris_core.models.operations.SearchGetRequest req = new SearchGetRequest(
+                "string",
+                "string"){{
                 ids = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            SearchGetResponse res = sdk.search.getDocuments(req);
+            }};
+
+            com.tigrisdata.tigris_core.models.operations.SearchGetResponse res = sdk.search.getDocuments(req);
 
             if (res.getDocumentResponse != null) {
                 // handle response
@@ -397,14 +434,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            SearchGetIndexRequest req = new SearchGetIndexRequest("string", "string");            
+            com.tigrisdata.tigris_core.models.operations.SearchGetIndexRequest req = new SearchGetIndexRequest(
+                "string",
+                "string");
 
-            SearchGetIndexResponse res = sdk.search.getIndex(req);
+            com.tigrisdata.tigris_core.models.operations.SearchGetIndexResponse res = sdk.search.getIndex(req);
 
             if (res.getIndexResponse != null) {
                 // handle response
@@ -446,18 +486,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            SearchListIndexesRequest req = new SearchListIndexesRequest("string"){{
+            com.tigrisdata.tigris_core.models.operations.SearchListIndexesRequest req = new SearchListIndexesRequest(
+                "string"){{
                 filterBranch = "string";
                 filterCollection = "string";
                 filterType = "string";
-            }};            
 
-            SearchListIndexesResponse res = sdk.search.listIndexes(req);
+            }};
+
+            com.tigrisdata.tigris_core.models.operations.SearchListIndexesResponse res = sdk.search.listIndexes(req);
 
             if (res.listIndexesResponse != null) {
                 // handle response
@@ -501,18 +544,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            SearchDeleteByQueryRequest req = new SearchDeleteByQueryRequest(new DeleteByQueryRequest(){{
-filter = "string";
-index = "string";
-project = "string";
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryRequest req = new SearchDeleteByQueryRequest(
+                new DeleteByQueryRequest(
+){{
+                    filter = "string";
+                    index = "string";
+                    project = "string";
 
-            SearchDeleteByQueryResponse res = sdk.search.queryDeleteDocuments(req);
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryResponse res = sdk.search.queryDeleteDocuments(req);
 
             if (res.deleteByQueryResponse != null) {
                 // handle response
@@ -558,20 +607,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            SearchCreateOrReplaceRequest req = new SearchCreateOrReplaceRequest(new CreateOrReplaceDocumentRequest(){{
-documents = new String[]{{
-    add("string"),
-}};
-index = "string";
-project = "string";
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceRequest req = new SearchCreateOrReplaceRequest(
+                new CreateOrReplaceDocumentRequest(
+){{
+                    documents = new String[]{{
+                        add("string"),
+                    }};
+                    index = "string";
+                    project = "string";
 
-            SearchCreateOrReplaceResponse res = sdk.search.replaceDocuments(req);
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceResponse res = sdk.search.replaceDocuments(req);
 
             if (res.createOrReplaceDocumentResponse != null) {
                 // handle response
@@ -617,20 +672,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            SearchUpdateRequest req = new SearchUpdateRequest(new UpdateDocumentRequest(){{
-documents = new String[]{{
-    add("string"),
-}};
-index = "string";
-project = "string";
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.SearchUpdateRequest req = new SearchUpdateRequest(
+                new UpdateDocumentRequest(
+){{
+                    documents = new String[]{{
+                        add("string"),
+                    }};
+                    index = "string";
+                    project = "string";
 
-            SearchUpdateResponse res = sdk.search.updateDocuments(req);
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.SearchUpdateResponse res = sdk.search.updateDocuments(req);
 
             if (res.updateDocumentResponse != null) {
                 // handle response
@@ -673,19 +734,25 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            SearchCreateOrUpdateIndexRequest req = new SearchCreateOrUpdateIndexRequest(new CreateOrUpdateIndexRequest(){{
-name = "string";
-onlyCreate = false;
-project = "string";
-schema = "string";
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexRequest req = new SearchCreateOrUpdateIndexRequest(
+                new CreateOrUpdateIndexRequest(
+){{
+                    name = "string";
+                    onlyCreate = false;
+                    project = "string";
+                    schema = "string";
 
-            SearchCreateOrUpdateIndexResponse res = sdk.search.updateIndex(req);
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexResponse res = sdk.search.updateIndex(req);
 
             if (res.createOrUpdateIndexResponse != null) {
                 // handle response

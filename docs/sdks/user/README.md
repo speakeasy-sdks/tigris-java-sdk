@@ -31,17 +31,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            ManagementGetUserMetadataRequest req = new ManagementGetUserMetadataRequest(new GetUserMetadataRequest(){{
-metadataKey = "string";
-value = new GetUserMetadataRequestValue();
-}}, "string");            
+            com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataRequest req = new ManagementGetUserMetadataRequest(
+                new GetUserMetadataRequest(
+){{
+                    metadataKey = "string";
+                    value = new GetUserMetadataRequestValue(
+);
 
-            ManagementGetUserMetadataResponse res = sdk.user.getMetadata(req);
+                }},
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.ManagementGetUserMetadataResponse res = sdk.user.getMetadata(req);
 
             if (res.getUserMetadataResponse != null) {
                 // handle response
@@ -85,17 +91,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            ManagementInsertUserMetadataRequest req = new ManagementInsertUserMetadataRequest(new InsertUserMetadataRequest(){{
-metadataKey = "string";
-value = new InsertUserMetadataRequestValue();
-}}, "string");            
+            com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataRequest req = new ManagementInsertUserMetadataRequest(
+                new InsertUserMetadataRequest(
+){{
+                    metadataKey = "string";
+                    value = new InsertUserMetadataRequestValue(
+);
 
-            ManagementInsertUserMetadataResponse res = sdk.user.insertMetadata(req);
+                }},
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.ManagementInsertUserMetadataResponse res = sdk.user.insertMetadata(req);
 
             if (res.insertUserMetadataResponse != null) {
                 // handle response
@@ -139,17 +151,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            ManagementUpdateUserMetadataRequest req = new ManagementUpdateUserMetadataRequest(new UpdateUserMetadataRequest(){{
-metadataKey = "string";
-value = new UpdateUserMetadataRequestValue();
-}}, "string");            
+            com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataRequest req = new ManagementUpdateUserMetadataRequest(
+                new UpdateUserMetadataRequest(
+){{
+                    metadataKey = "string";
+                    value = new UpdateUserMetadataRequestValue(
+);
 
-            ManagementUpdateUserMetadataResponse res = sdk.user.updateMetadata(req);
+                }},
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.ManagementUpdateUserMetadataResponse res = sdk.user.updateMetadata(req);
 
             if (res.updateUserMetadataResponse != null) {
                 // handle response

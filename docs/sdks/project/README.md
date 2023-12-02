@@ -30,14 +30,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisCreateProjectRequest req = new TigrisCreateProjectRequest(new CreateProjectRequest(), "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectRequest req = new TigrisCreateProjectRequest(
+                new CreateProjectRequest(
+),
+                "string");
 
-            TigrisCreateProjectResponse res = sdk.project.create(req);
+            com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectResponse res = sdk.project.create(req);
 
             if (res.createProjectResponse != null) {
                 // handle response
@@ -80,14 +84,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisDeleteProjectRequest req = new TigrisDeleteProjectRequest(new DeleteProjectRequest(), "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectRequest req = new TigrisDeleteProjectRequest(
+                new DeleteProjectRequest(
+),
+                "string");
 
-            TigrisDeleteProjectResponse res = sdk.project.deleteProject(req);
+            com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectResponse res = sdk.project.deleteProject(req);
 
             if (res.deleteProjectResponse != null) {
                 // handle response
@@ -128,12 +136,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisListProjectsResponse res = sdk.project.list();
+            com.tigrisdata.tigris_core.models.operations.TigrisListProjectsResponse res = sdk.project.list();
 
             if (res.listProjectsResponse != null) {
                 // handle response

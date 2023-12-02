@@ -38,17 +38,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisBeginTransactionRequest req = new TigrisBeginTransactionRequest(new BeginTransactionRequest(){{
-branch = "string";
-options = new TransactionOptions();
-}}, "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionRequest req = new TigrisBeginTransactionRequest(
+                new BeginTransactionRequest(
+){{
+                    branch = "string";
+                    options = new TransactionOptions(
+);
 
-            TigrisBeginTransactionResponse res = sdk.database.beginTransaction(req);
+                }},
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionResponse res = sdk.database.beginTransaction(req);
 
             if (res.beginTransactionResponse != null) {
                 // handle response
@@ -92,16 +98,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisCommitTransactionRequest req = new TigrisCommitTransactionRequest(new CommitTransactionRequest(){{
-branch = "string";
-}}, "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionRequest req = new TigrisCommitTransactionRequest(
+                new CommitTransactionRequest(
+){{
+                    branch = "string";
 
-            TigrisCommitTransactionResponse res = sdk.database.commitTransaction(req);
+                }},
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionResponse res = sdk.database.commitTransaction(req);
 
             if (res.commitTransactionResponse != null) {
                 // handle response
@@ -144,14 +155,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisCreateBranchRequest req = new TigrisCreateBranchRequest(new CreateBranchRequest(), "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchRequest req = new TigrisCreateBranchRequest(
+                new CreateBranchRequest(
+),
+                "string",
+                "string");
 
-            TigrisCreateBranchResponse res = sdk.database.createBranch(req);
+            com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchResponse res = sdk.database.createBranch(req);
 
             if (res.createBranchResponse != null) {
                 // handle response
@@ -195,14 +211,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisDeleteBranchRequest req = new TigrisDeleteBranchRequest(new DeleteBranchRequest(), "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchRequest req = new TigrisDeleteBranchRequest(
+                new DeleteBranchRequest(
+),
+                "string",
+                "string");
 
-            TigrisDeleteBranchResponse res = sdk.database.deleteBranch(req);
+            com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchResponse res = sdk.database.deleteBranch(req);
 
             if (res.deleteBranchResponse != null) {
                 // handle response
@@ -246,18 +267,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisDescribeDatabaseRequest req = new TigrisDescribeDatabaseRequest(new DescribeDatabaseRequest(){{
-branch = "string";
-project = "string";
-schemaFormat = "string";
-}}, "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseRequest req = new TigrisDescribeDatabaseRequest(
+                new DescribeDatabaseRequest(
+){{
+                    branch = "string";
+                    project = "string";
+                    schemaFormat = "string";
 
-            TigrisDescribeDatabaseResponse res = sdk.database.describe(req);
+                }},
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseResponse res = sdk.database.describe(req);
 
             if (res.describeDatabaseResponse != null) {
                 // handle response
@@ -299,16 +325,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisListCollectionsRequest req = new TigrisListCollectionsRequest("string"){{
+            com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsRequest req = new TigrisListCollectionsRequest(
+                "string"){{
                 branch = "string";
-            }};            
 
-            TigrisListCollectionsResponse res = sdk.database.listCollections(req);
+            }};
+
+            com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsResponse res = sdk.database.listCollections(req);
 
             if (res.listCollectionsResponse != null) {
                 // handle response
@@ -352,16 +381,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisRollbackTransactionRequest req = new TigrisRollbackTransactionRequest(new RollbackTransactionRequest(){{
-branch = "string";
-}}, "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionRequest req = new TigrisRollbackTransactionRequest(
+                new RollbackTransactionRequest(
+){{
+                    branch = "string";
 
-            TigrisRollbackTransactionResponse res = sdk.database.rollbackTransaction(req);
+                }},
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionResponse res = sdk.database.rollbackTransaction(req);
 
             if (res.rollbackTransactionResponse != null) {
                 // handle response
@@ -403,14 +437,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisListBranchesRequest req = new TigrisListBranchesRequest("string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisListBranchesRequest req = new TigrisListBranchesRequest(
+                "string");
 
-            TigrisListBranchesResponse res = sdk.database.tigrisListBranches(req);
+            com.tigrisdata.tigris_core.models.operations.TigrisListBranchesResponse res = sdk.database.tigrisListBranches(req);
 
             if (res.listBranchesResponse != null) {
                 // handle response

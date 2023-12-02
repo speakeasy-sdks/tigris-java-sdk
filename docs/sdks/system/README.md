@@ -30,12 +30,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            HealthAPIHealthResponse res = sdk.system.getHealth();
+            com.tigrisdata.tigris_core.models.operations.HealthAPIHealthResponse res = sdk.system.getHealth();
 
             if (res.healthCheckResponse != null) {
                 // handle response
@@ -70,12 +71,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            ObservabilityGetInfoResponse res = sdk.system.getServerInfo();
+            com.tigrisdata.tigris_core.models.operations.ObservabilityGetInfoResponse res = sdk.system.getServerInfo();
 
             if (res.getInfoResponse != null) {
                 // handle response
@@ -111,14 +113,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            com.tigrisdata.tigris_core.models.shared.QuotaUsageRequest req = new QuotaUsageRequest();            
+            com.tigrisdata.tigris_core.models.shared.QuotaUsageRequest req = new QuotaUsageRequest(
+);
 
-            ObservabilityQuotaUsageResponse res = sdk.system.observabilityQuotaUsage(req);
+            com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageResponse res = sdk.system.observabilityQuotaUsage(req);
 
             if (res.quotaUsageResponse != null) {
                 // handle response
@@ -160,14 +164,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            com.tigrisdata.tigris_core.models.shared.QuotaLimitsRequest req = new QuotaLimitsRequest();            
+            com.tigrisdata.tigris_core.models.shared.QuotaLimitsRequest req = new QuotaLimitsRequest(
+);
 
-            ObservabilityQuotaLimitsResponse res = sdk.system.queryQuotaLimits(req);
+            com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsResponse res = sdk.system.queryQuotaLimits(req);
 
             if (res.quotaLimitsResponse != null) {
                 // handle response
@@ -215,15 +221,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequest req = new QueryTimeSeriesMetricsRequest(){{
+            com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequest req = new QueryTimeSeriesMetricsRequest(
+){{
                 additionalFunctions = new com.tigrisdata.tigris_core.models.shared.AdditionalFunction[]{{
-                    add(new AdditionalFunction(){{
-                        rollup = new RollupFunction(){{}};
+                    add(new AdditionalFunction(
+                    ){{
+                        rollup = new RollupFunction(
+                        ){{}};
                     }}),
                 }};
                 branch = "string";
@@ -239,9 +249,10 @@ public class Application {
                 spaceAggregation = SpaceAggregation.MAX;
                 tigrisOperation = TigrisOperation.READ;
                 to = 424991L;
-            }};            
 
-            ObservabilityQueryTimeSeriesMetricsResponse res = sdk.system.queryTimeSeriesMetrics(req);
+            }};
+
+            com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsResponse res = sdk.system.queryTimeSeriesMetrics(req);
 
             if (res.queryTimeSeriesMetricsResponse != null) {
                 // handle response

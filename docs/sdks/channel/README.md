@@ -32,14 +32,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimeGetRTChannelRequest req = new RealtimeGetRTChannelRequest("string", "string");            
+            com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelRequest req = new RealtimeGetRTChannelRequest(
+                "string",
+                "string");
 
-            RealtimeGetRTChannelResponse res = sdk.channel.get(req);
+            com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelResponse res = sdk.channel.get(req);
 
             if (res.getRTChannelResponse != null) {
                 // handle response
@@ -81,21 +84,25 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimeReadMessagesRequest req = new RealtimeReadMessagesRequest("string", "string"){{
+            com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesRequest req = new RealtimeReadMessagesRequest(
+                "string",
+                "string"){{
                 end = "string";
                 event = "string";
                 limit = 7235L;
                 sessionId = "string";
                 socketId = "string";
                 start = "string";
-            }};            
 
-            RealtimeReadMessagesResponse res = sdk.channel.getMessages(req);
+            }};
+
+            com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesResponse res = sdk.channel.getMessages(req);
 
             if (res.readMessagesResponse != null) {
                 // handle response
@@ -137,14 +144,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimeGetRTChannelsRequest req = new RealtimeGetRTChannelsRequest("string");            
+            com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsRequest req = new RealtimeGetRTChannelsRequest(
+                "string");
 
-            RealtimeGetRTChannelsResponse res = sdk.channel.list(req);
+            com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsResponse res = sdk.channel.list(req);
 
             if (res.getRTChannelsResponse != null) {
                 // handle response
@@ -186,17 +195,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimeListSubscriptionsRequest req = new RealtimeListSubscriptionsRequest("string", "string"){{
+            com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsRequest req = new RealtimeListSubscriptionsRequest(
+                "string",
+                "string"){{
                 page = 994262;
                 pageSize = 462408;
-            }};            
 
-            RealtimeListSubscriptionsResponse res = sdk.channel.listSubscriptions(req);
+            }};
+
+            com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsResponse res = sdk.channel.listSubscriptions(req);
 
             if (res.listSubscriptionResponse != null) {
                 // handle response
@@ -240,20 +253,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimeMessagesRequest req = new RealtimeMessagesRequest(new MessagesRequest(){{
-channel = "string";
-messages = new com.tigrisdata.tigris_core.models.shared.Message[]{{
-    add(new Message(){{}}),
-}};
-project = "string";
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.RealtimeMessagesRequest req = new RealtimeMessagesRequest(
+                new MessagesRequest(
+){{
+                    channel = "string";
+                    messages = new com.tigrisdata.tigris_core.models.shared.Message[]{{
+                        add(new Message(
+                        ){{}}),
+                    }};
+                    project = "string";
 
-            RealtimeMessagesResponse res = sdk.channel.pushMessages(req);
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.RealtimeMessagesResponse res = sdk.channel.pushMessages(req);
 
             if (res.messagesResponse != null) {
                 // handle response
@@ -295,14 +315,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            RealtimePresenceRequest req = new RealtimePresenceRequest("string", "string");            
+            com.tigrisdata.tigris_core.models.operations.RealtimePresenceRequest req = new RealtimePresenceRequest(
+                "string",
+                "string");
 
-            RealtimePresenceResponse res = sdk.channel.realtimePresence(req);
+            com.tigrisdata.tigris_core.models.operations.RealtimePresenceResponse res = sdk.channel.realtimePresence(req);
 
             if (res.presenceResponse != null) {
                 // handle response

@@ -1,17 +1,18 @@
 # tigris-data
 
-<!-- Start SDK Installation -->
+<!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
 ### Gradle
 
 ```groovy
-implementation 'com.tigrisdata.tigris_core:tigris-data:0.51.3'
+implementation 'com.tigrisdata.tigris_core:tigris-data:0.51.4'
 ```
-<!-- End SDK Installation -->
+<!-- End SDK Installation [installation] -->
 
+<!-- Start SDK Example Usage [usage] -->
 ## SDK Example Usage
-<!-- Start SDK Example Usage -->
+
 ### Example
 
 ```java
@@ -28,18 +29,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheCreateCacheRequest req = new CacheCreateCacheRequest(new CreateCacheRequest(){{
-options = new CreateCacheOptions(){{
-    ttlMs = 481196L;
-}};
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.CacheCreateCacheRequest req = new CacheCreateCacheRequest(
+                new CreateCacheRequest(
+){{
+                    options = new CreateCacheOptions(
+){{
+                        ttlMs = 481196L;
 
-            CacheCreateCacheResponse res = sdk.cache.create(req);
+                    }};
+
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse res = sdk.cache.create(req);
 
             if (res.createCacheResponse != null) {
                 // handle response
@@ -50,11 +59,10 @@ options = new CreateCacheOptions(){{
     }
 }
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
 
-<!-- Start SDK Available Operations -->
+<!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
-
 
 ### [auth](docs/sdks/auth/README.md)
 
@@ -155,13 +163,31 @@ options = new CreateCacheOptions(){{
 * [replaceDocuments](docs/sdks/search/README.md#replacedocuments) - Create or replace documents in an index
 * [updateDocuments](docs/sdks/search/README.md#updatedocuments) - Update documents in an index
 * [updateIndex](docs/sdks/search/README.md#updateindex) - Creates or updates search index
-<!-- End SDK Available Operations -->
+<!-- End Available Resources and Operations [operations] -->
 
 
 
-<!-- Start Dev Containers -->
+<!-- Start Server Selection [server] -->
+## Server Selection
 
-<!-- End Dev Containers -->
+## Server Selection
+
+### Select Server by Index
+
+You can override the default server globally using the `setServerIndex` option when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| # | Server | Variables |
+| - | ------ | --------- |
+| 0 | `https://api.preview.tigrisdata.cloud` | None |
+| 1 | `http://localhost:8081` | None |
+
+
+
+
+### Override Server URL Per-Client
+
+The default server can also be overridden globally using the `setServerURL` option when initializing the SDK client instance. For example:
+<!-- End Server Selection [server] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

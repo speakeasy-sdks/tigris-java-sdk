@@ -1,4 +1,4 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```java
 package hello.world;
 
@@ -13,18 +13,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheCreateCacheRequest req = new CacheCreateCacheRequest(new CreateCacheRequest(){{
-options = new CreateCacheOptions(){{
-    ttlMs = 481196L;
-}};
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.CacheCreateCacheRequest req = new CacheCreateCacheRequest(
+                new CreateCacheRequest(
+){{
+                    options = new CreateCacheOptions(
+){{
+                        ttlMs = 481196L;
 
-            CacheCreateCacheResponse res = sdk.cache.create(req);
+                    }};
+
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse res = sdk.cache.create(req);
 
             if (res.createCacheResponse != null) {
                 // handle response
@@ -35,4 +43,4 @@ options = new CreateCacheOptions(){{
     }
 }
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

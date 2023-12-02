@@ -43,19 +43,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisCreateOrUpdateCollectionRequest req = new TigrisCreateOrUpdateCollectionRequest(new CreateOrUpdateCollectionRequest(){{
-branch = "string";
-onlyCreate = false;
-options = new CollectionOptions();
-schema = new CreateOrUpdateCollectionRequestSchema();
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionRequest req = new TigrisCreateOrUpdateCollectionRequest(
+                new CreateOrUpdateCollectionRequest(
+){{
+                    branch = "string";
+                    onlyCreate = false;
+                    options = new CollectionOptions(
+);
+                    schema = new CreateOrUpdateCollectionRequestSchema(
+);
 
-            TigrisCreateOrUpdateCollectionResponse res = sdk.collection.create(req);
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisCreateOrUpdateCollectionResponse res = sdk.collection.create(req);
 
             if (res.createOrUpdateCollectionResponse != null) {
                 // handle response
@@ -102,24 +110,36 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisDeleteRequest req = new TigrisDeleteRequest(new DeleteRequest(){{
-branch = "string";
-filter = new Filter();
-options = new DeleteRequestOptions(){{
-    collation = new Collation(){{
-        case_ = "string";
-    }};
-    limit = 968874L;
-    writeOptions = new WriteOptions();
-}};
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisDeleteRequest req = new TigrisDeleteRequest(
+                new DeleteRequest(
+){{
+                    branch = "string";
+                    filter = new Filter(
+);
+                    options = new DeleteRequestOptions(
+){{
+                        collation = new Collation(
+){{
+                            case_ = "string";
 
-            TigrisDeleteResponse res = sdk.collection.deleteDocuments(req);
+                        }};
+                        limit = 968874L;
+                        writeOptions = new WriteOptions(
+);
+
+                    }};
+
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisDeleteResponse res = sdk.collection.deleteDocuments(req);
 
             if (res.deleteResponse != null) {
                 // handle response
@@ -163,20 +183,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisDescribeCollectionRequest req = new TigrisDescribeCollectionRequest(new DescribeCollectionRequest(){{
-branch = "string";
-collection = "string";
-options = new CollectionOptions();
-project = "string";
-schemaFormat = "string";
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionRequest req = new TigrisDescribeCollectionRequest(
+                new DescribeCollectionRequest(
+){{
+                    branch = "string";
+                    collection = "string";
+                    options = new CollectionOptions(
+);
+                    project = "string";
+                    schemaFormat = "string";
 
-            TigrisDescribeCollectionResponse res = sdk.collection.describe(req);
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisDescribeCollectionResponse res = sdk.collection.describe(req);
 
             if (res.describeCollectionResponse != null) {
                 // handle response
@@ -221,17 +248,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisDropCollectionRequest req = new TigrisDropCollectionRequest(new DropCollectionRequest(){{
-branch = "string";
-options = new CollectionOptions();
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionRequest req = new TigrisDropCollectionRequest(
+                new DropCollectionRequest(
+){{
+                    branch = "string";
+                    options = new CollectionOptions(
+);
 
-            TigrisDropCollectionResponse res = sdk.collection.drop(req);
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisDropCollectionResponse res = sdk.collection.drop(req);
 
             if (res.dropCollectionResponse != null) {
                 // handle response
@@ -282,29 +316,39 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisImportRequest req = new TigrisImportRequest(new ImportRequest(){{
-autogenerated = new String[]{{
-    add("string"),
-}};
-branch = "string";
-createCollection = false;
-documents = new com.tigrisdata.tigris_core.models.shared.Documents[]{{
-    add(new Documents(){{}}),
-}};
-options = new ImportRequestOptions(){{
-    writeOptions = new WriteOptions();
-}};
-primaryKey = new String[]{{
-    add("string"),
-}};
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisImportRequest req = new TigrisImportRequest(
+                new ImportRequest(
+){{
+                    autogenerated = new String[]{{
+                        add("string"),
+                    }};
+                    branch = "string";
+                    createCollection = false;
+                    documents = new com.tigrisdata.tigris_core.models.shared.Documents[]{{
+                        add(new Documents(
+                        ){{}}),
+                    }};
+                    options = new ImportRequestOptions(
+){{
+                        writeOptions = new WriteOptions(
+);
 
-            TigrisImportResponse res = sdk.collection.importDocuments(req);
+                    }};
+                    primaryKey = new String[]{{
+                        add("string"),
+                    }};
+
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisImportResponse res = sdk.collection.importDocuments(req);
 
             if (res.importResponse != null) {
                 // handle response
@@ -352,22 +396,32 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisInsertRequest req = new TigrisInsertRequest(new InsertRequest(){{
-branch = "string";
-documents = new com.tigrisdata.tigris_core.models.shared.InsertRequestDocuments[]{{
-    add(new InsertRequestDocuments(){{}}),
-}};
-options = new InsertRequestOptions(){{
-    writeOptions = new WriteOptions();
-}};
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisInsertRequest req = new TigrisInsertRequest(
+                new InsertRequest(
+){{
+                    branch = "string";
+                    documents = new com.tigrisdata.tigris_core.models.shared.InsertRequestDocuments[]{{
+                        add(new InsertRequestDocuments(
+                        ){{}}),
+                    }};
+                    options = new InsertRequestOptions(
+){{
+                        writeOptions = new WriteOptions(
+);
 
-            TigrisInsertResponse res = sdk.collection.insertDocuments(req);
+                    }};
+
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisInsertResponse res = sdk.collection.insertDocuments(req);
 
             if (res.insertResponse != null) {
                 // handle response
@@ -419,27 +473,39 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisReadRequest req = new TigrisReadRequest(new ReadRequest(){{
-branch = "string";
-fields = new Fields();
-filter = new ReadRequestFilter();
-options = new ReadRequestOptions(){{
-    collation = new Collation(){{
-        case_ = "string";
-    }};
-    limit = 649883L;
-    offset = "string";
-    skip = 11274L;
-}};
-sort = "string";
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisReadRequest req = new TigrisReadRequest(
+                new ReadRequest(
+){{
+                    branch = "string";
+                    fields = new Fields(
+);
+                    filter = new ReadRequestFilter(
+);
+                    options = new ReadRequestOptions(
+){{
+                        collation = new Collation(
+){{
+                            case_ = "string";
 
-            TigrisReadResponse res = sdk.collection.readDocuments(req);
+                        }};
+                        limit = 649883L;
+                        offset = "string";
+                        skip = 11274L;
+
+                    }};
+                    sort = "string";
+
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisReadResponse res = sdk.collection.readDocuments(req);
 
             if (res.streamingReadResponse != null) {
                 // handle response
@@ -485,22 +551,32 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisReplaceRequest req = new TigrisReplaceRequest(new ReplaceRequest(){{
-branch = "string";
-documents = new com.tigrisdata.tigris_core.models.shared.ReplaceRequestDocuments[]{{
-    add(new ReplaceRequestDocuments(){{}}),
-}};
-options = new ReplaceRequestOptions(){{
-    writeOptions = new WriteOptions();
-}};
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisReplaceRequest req = new TigrisReplaceRequest(
+                new ReplaceRequest(
+){{
+                    branch = "string";
+                    documents = new com.tigrisdata.tigris_core.models.shared.ReplaceRequestDocuments[]{{
+                        add(new ReplaceRequestDocuments(
+                        ){{}}),
+                    }};
+                    options = new ReplaceRequestOptions(
+){{
+                        writeOptions = new WriteOptions(
+);
 
-            TigrisReplaceResponse res = sdk.collection.replaceDocuments(req);
+                    }};
+
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisReplaceResponse res = sdk.collection.replaceDocuments(req);
 
             if (res.replaceResponse != null) {
                 // handle response
@@ -551,35 +627,47 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisSearchRequest req = new TigrisSearchRequest(new SearchRequest(){{
-branch = "string";
-collation = new Collation(){{
-    case_ = "string";
-}};
-excludeFields = new String[]{{
-    add("string"),
-}};
-facet = new Facet();
-fields = new SearchRequestFields();
-filter = new SearchRequestFilter();
-includeFields = new String[]{{
-    add("string"),
-}};
-page = 124504;
-pageSize = 87653;
-q = "string";
-searchFields = new String[]{{
-    add("string"),
-}};
-sort = new Sort();
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisSearchRequest req = new TigrisSearchRequest(
+                new SearchRequest(
+){{
+                    branch = "string";
+                    collation = new Collation(
+){{
+                        case_ = "string";
 
-            TigrisSearchResponse res = sdk.collection.searchDocuments(req);
+                    }};
+                    excludeFields = new String[]{{
+                        add("string"),
+                    }};
+                    facet = new Facet(
+);
+                    fields = new SearchRequestFields(
+);
+                    filter = new SearchRequestFilter(
+);
+                    includeFields = new String[]{{
+                        add("string"),
+                    }};
+                    page = 124504;
+                    pageSize = 87653;
+                    q = "string";
+                    searchFields = new String[]{{
+                        add("string"),
+                    }};
+                    sort = new Sort(
+);
+
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisSearchResponse res = sdk.collection.searchDocuments(req);
 
             if (res.streamingSearchResponse != null) {
                 // handle response
@@ -627,25 +715,38 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisUpdateRequest req = new TigrisUpdateRequest(new UpdateRequest(){{
-branch = "string";
-fields = new UpdateRequestFields();
-filter = new UpdateRequestFilter();
-options = new UpdateRequestOptions(){{
-    collation = new Collation(){{
-        case_ = "string";
-    }};
-    limit = 286496L;
-    writeOptions = new WriteOptions();
-}};
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisUpdateRequest req = new TigrisUpdateRequest(
+                new UpdateRequest(
+){{
+                    branch = "string";
+                    fields = new UpdateRequestFields(
+);
+                    filter = new UpdateRequestFilter(
+);
+                    options = new UpdateRequestOptions(
+){{
+                        collation = new Collation(
+){{
+                            case_ = "string";
 
-            TigrisUpdateResponse res = sdk.collection.updateDocuments(req);
+                        }};
+                        limit = 286496L;
+                        writeOptions = new WriteOptions(
+);
+
+                    }};
+
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisUpdateResponse res = sdk.collection.updateDocuments(req);
 
             if (res.updateResponse != null) {
                 // handle response

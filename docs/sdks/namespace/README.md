@@ -32,18 +32,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            com.tigrisdata.tigris_core.models.shared.CreateNamespaceRequest req = new CreateNamespaceRequest(){{
+            com.tigrisdata.tigris_core.models.shared.CreateNamespaceRequest req = new CreateNamespaceRequest(
+){{
                 code = 481196L;
                 id = "<ID>";
                 name = "string";
-            }};            
 
-            CreateNamespaceResponse res = sdk.namespace.create(req);
+            }};
+
+            com.tigrisdata.tigris_core.models.operations.CreateNamespaceResponse res = sdk.namespace.create(req);
 
             if (res.createNamespaceResponse != null) {
                 // handle response
@@ -84,12 +87,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            ManagementDescribeNamespacesResponse res = sdk.namespace.get();
+            com.tigrisdata.tigris_core.models.operations.ManagementDescribeNamespacesResponse res = sdk.namespace.get();
 
             if (res.describeNamespacesResponse != null) {
                 // handle response
@@ -127,17 +131,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            ManagementGetNamespaceMetadataRequest req = new ManagementGetNamespaceMetadataRequest(new GetNamespaceMetadataRequest(){{
-metadataKey = "string";
-value = new Value();
-}}, "string");            
+            com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataRequest req = new ManagementGetNamespaceMetadataRequest(
+                new GetNamespaceMetadataRequest(
+){{
+                    metadataKey = "string";
+                    value = new Value(
+);
 
-            ManagementGetNamespaceMetadataResponse res = sdk.namespace.getMetadata(req);
+                }},
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataResponse res = sdk.namespace.getMetadata(req);
 
             if (res.getNamespaceMetadataResponse != null) {
                 // handle response
@@ -181,17 +191,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            ManagementInsertNamespaceMetadataRequest req = new ManagementInsertNamespaceMetadataRequest(new InsertNamespaceMetadataRequest(){{
-metadataKey = "string";
-value = new InsertNamespaceMetadataRequestValue();
-}}, "string");            
+            com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataRequest req = new ManagementInsertNamespaceMetadataRequest(
+                new InsertNamespaceMetadataRequest(
+){{
+                    metadataKey = "string";
+                    value = new InsertNamespaceMetadataRequestValue(
+);
 
-            ManagementInsertNamespaceMetadataResponse res = sdk.namespace.insertMetadata(req);
+                }},
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataResponse res = sdk.namespace.insertMetadata(req);
 
             if (res.insertNamespaceMetadataResponse != null) {
                 // handle response
@@ -232,12 +248,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            ManagementListNamespacesResponse res = sdk.namespace.list();
+            com.tigrisdata.tigris_core.models.operations.ManagementListNamespacesResponse res = sdk.namespace.list();
 
             if (res.listNamespacesResponse != null) {
                 // handle response
@@ -275,17 +292,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            ManagementUpdateNamespaceMetadataRequest req = new ManagementUpdateNamespaceMetadataRequest(new UpdateNamespaceMetadataRequest(){{
-metadataKey = "string";
-value = new UpdateNamespaceMetadataRequestValue();
-}}, "string");            
+            com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataRequest req = new ManagementUpdateNamespaceMetadataRequest(
+                new UpdateNamespaceMetadataRequest(
+){{
+                    metadataKey = "string";
+                    value = new UpdateNamespaceMetadataRequestValue(
+);
 
-            ManagementUpdateNamespaceMetadataResponse res = sdk.namespace.updateMetadata(req);
+                }},
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataResponse res = sdk.namespace.updateMetadata(req);
 
             if (res.updateNamespaceMetadataResponse != null) {
                 // handle response

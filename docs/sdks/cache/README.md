@@ -36,18 +36,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheCreateCacheRequest req = new CacheCreateCacheRequest(new CreateCacheRequest(){{
-options = new CreateCacheOptions(){{
-    ttlMs = 481196L;
-}};
-}}, "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.CacheCreateCacheRequest req = new CacheCreateCacheRequest(
+                new CreateCacheRequest(
+){{
+                    options = new CreateCacheOptions(
+){{
+                        ttlMs = 481196L;
 
-            CacheCreateCacheResponse res = sdk.cache.create(req);
+                    }};
+
+                }},
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse res = sdk.cache.create(req);
 
             if (res.createCacheResponse != null) {
                 // handle response
@@ -90,14 +98,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheDeleteCacheRequest req = new CacheDeleteCacheRequest(new DeleteCacheRequest(), "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheRequest req = new CacheDeleteCacheRequest(
+                new DeleteCacheRequest(
+),
+                "string",
+                "string");
 
-            CacheDeleteCacheResponse res = sdk.cache.delete(req);
+            com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheResponse res = sdk.cache.delete(req);
 
             if (res.deleteCacheResponse != null) {
                 // handle response
@@ -140,14 +153,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheDelRequest req = new CacheDelRequest(new DelRequest(), "string", "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.CacheDelRequest req = new CacheDelRequest(
+                new DelRequest(
+),
+                "string",
+                "string",
+                "string");
 
-            CacheDelResponse res = sdk.cache.deleteKeys(req);
+            com.tigrisdata.tigris_core.models.operations.CacheDelResponse res = sdk.cache.deleteKeys(req);
 
             if (res.delResponse != null) {
                 // handle response
@@ -189,14 +208,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheGetRequest req = new CacheGetRequest("string", "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.CacheGetRequest req = new CacheGetRequest(
+                "string",
+                "string",
+                "string");
 
-            CacheGetResponse res = sdk.cache.getKey(req);
+            com.tigrisdata.tigris_core.models.operations.CacheGetResponse res = sdk.cache.getKey(req);
 
             if (res.getResponse != null) {
                 // handle response
@@ -239,16 +262,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheGetSetRequest req = new CacheGetSetRequest(new GetSetRequest(){{
-value = "string";
-}}, "string", "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.CacheGetSetRequest req = new CacheGetSetRequest(
+                new GetSetRequest(
+){{
+                    value = "string";
 
-            CacheGetSetResponse res = sdk.cache.getSetKey(req);
+                }},
+                "string",
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.CacheGetSetResponse res = sdk.cache.getSetKey(req);
 
             if (res.getSetResponse != null) {
                 // handle response
@@ -290,14 +320,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheListCachesRequest req = new CacheListCachesRequest("string");            
+            com.tigrisdata.tigris_core.models.operations.CacheListCachesRequest req = new CacheListCachesRequest(
+                "string");
 
-            CacheListCachesResponse res = sdk.cache.list(req);
+            com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse res = sdk.cache.list(req);
 
             if (res.listCachesResponse != null) {
                 // handle response
@@ -339,18 +371,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheKeysRequest req = new CacheKeysRequest("string", "string"){{
+            com.tigrisdata.tigris_core.models.operations.CacheKeysRequest req = new CacheKeysRequest(
+                "string",
+                "string"){{
                 count = 618311L;
                 cursor = 739921L;
                 pattern = "string";
-            }};            
 
-            CacheKeysResponse res = sdk.cache.listKeys(req);
+            }};
+
+            com.tigrisdata.tigris_core.models.operations.CacheKeysResponse res = sdk.cache.listKeys(req);
 
             if (res.keysResponse != null) {
                 // handle response
@@ -393,20 +429,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            CacheSetRequest req = new CacheSetRequest(new SetRequest(){{
-ex = 170966L;
-nx = false;
-px = 17597L;
-value = "string";
-xx = false;
-}}, "string", "string", "string");            
+            com.tigrisdata.tigris_core.models.operations.CacheSetRequest req = new CacheSetRequest(
+                new SetRequest(
+){{
+                    ex = 170966L;
+                    nx = false;
+                    px = 17597L;
+                    value = "string";
+                    xx = false;
 
-            CacheSetResponse res = sdk.cache.setKey(req);
+                }},
+                "string",
+                "string",
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.CacheSetResponse res = sdk.cache.setKey(req);
 
             if (res.setResponse != null) {
                 // handle response

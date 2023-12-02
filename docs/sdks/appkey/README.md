@@ -32,16 +32,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisDeleteAppKeyRequest req = new TigrisDeleteAppKeyRequest(new DeleteAppKeyRequest(){{
-id = "<ID>";
-}}, "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyRequest req = new TigrisDeleteAppKeyRequest(
+                new DeleteAppKeyRequest(
+){{
+                    id = "<ID>";
 
-            TigrisDeleteAppKeyResponse res = sdk.appKey.delete(req);
+                }},
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse res = sdk.appKey.delete(req);
 
             if (res.deleteAppKeyResponse != null) {
                 // handle response
@@ -83,14 +88,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisListAppKeysRequest req = new TigrisListAppKeysRequest("string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysRequest req = new TigrisListAppKeysRequest(
+                "string");
 
-            TigrisListAppKeysResponse res = sdk.appKey.list(req);
+            com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse res = sdk.appKey.list(req);
 
             if (res.listAppKeysResponse != null) {
                 // handle response
@@ -133,17 +140,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisRotateAppKeySecretRequest req = new TigrisRotateAppKeySecretRequest(new RotateAppKeyRequest(){{
-id = "<ID>";
-project = "string";
-}}, "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretRequest req = new TigrisRotateAppKeySecretRequest(
+                new RotateAppKeyRequest(
+){{
+                    id = "<ID>";
+                    project = "string";
 
-            TigrisRotateAppKeySecretResponse res = sdk.appKey.rotate(req);
+                }},
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse res = sdk.appKey.rotate(req);
 
             if (res.rotateAppKeyResponse != null) {
                 // handle response
@@ -186,17 +198,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisCreateAppKeyRequest req = new TigrisCreateAppKeyRequest(new CreateAppKeyRequest(){{
-description = "User-centric bifurcated product";
-name = "string";
-}}, "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyRequest req = new TigrisCreateAppKeyRequest(
+                new CreateAppKeyRequest(
+){{
+                    description = "User-centric bifurcated product";
+                    name = "string";
 
-            TigrisCreateAppKeyResponse res = sdk.appKey.tigrisCreateAppKey(req);
+                }},
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse res = sdk.appKey.tigrisCreateAppKey(req);
 
             if (res.createAppKeyResponse != null) {
                 // handle response
@@ -239,18 +256,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            TigrisUpdateAppKeyRequest req = new TigrisUpdateAppKeyRequest(new UpdateAppKeyRequest(){{
-description = "Optimized 24/7 middleware";
-id = "<ID>";
-name = "string";
-}}, "string");            
+            com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyRequest req = new TigrisUpdateAppKeyRequest(
+                new UpdateAppKeyRequest(
+){{
+                    description = "Optimized 24/7 middleware";
+                    id = "<ID>";
+                    name = "string";
 
-            TigrisUpdateAppKeyResponse res = sdk.appKey.update(req);
+                }},
+                "string");
+
+            com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse res = sdk.appKey.update(req);
 
             if (res.updateAppKeyResponse != null) {
                 // handle response

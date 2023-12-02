@@ -28,12 +28,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     bearerAuth = "";
                 }})
                 .build();
 
-            AuthGetAccessTokenResponse res = sdk.auth.get();
+            com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse res = sdk.auth.get();
 
             if (res.getAccessTokenResponse != null) {
                 // handle response
