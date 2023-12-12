@@ -45,7 +45,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security(
                 "string"){{
-                    bearerAuth = "";
+                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
@@ -112,7 +112,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security(
                 "string"){{
-                    bearerAuth = "";
+                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
@@ -185,7 +185,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security(
                 "string"){{
-                    bearerAuth = "";
+                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
@@ -250,7 +250,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security(
                 "string"){{
-                    bearerAuth = "";
+                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
@@ -318,7 +318,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security(
                 "string"){{
-                    bearerAuth = "";
+                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
@@ -398,7 +398,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security(
                 "string"){{
-                    bearerAuth = "";
+                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
@@ -475,7 +475,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security(
                 "string"){{
-                    bearerAuth = "";
+                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
@@ -553,7 +553,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security(
                 "string"){{
-                    bearerAuth = "";
+                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
@@ -629,7 +629,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security(
                 "string"){{
-                    bearerAuth = "";
+                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
@@ -717,7 +717,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security(
                 "string"){{
-                    bearerAuth = "";
+                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
