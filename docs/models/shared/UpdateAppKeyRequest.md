@@ -7,6 +7,6 @@ To update the description of the app key
 
 | Field                                      | Type                                       | Required                                   | Description                                |
 | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
-| `description`                              | *String*                                   | :heavy_minus_sign:                         | A new human readable app description       |
-| `id`                                       | *String*                                   | :heavy_minus_sign:                         | app key id - this is not allowed to update |
-| `name`                                     | *String*                                   | :heavy_minus_sign:                         | A new human readable app name              |
+| `description`                              | *Optional<? extends String>*               | :heavy_minus_sign:                         | A new human readable app description       |
+| `id`                                       | *Optional<? extends String>*               | :heavy_minus_sign:                         | app key id - this is not allowed to update |
+| `name`                                     | *Optional<? extends String>*               | :heavy_minus_sign:                         | A new human readable app name              |

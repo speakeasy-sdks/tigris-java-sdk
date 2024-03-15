@@ -1,5 +1,5 @@
 # Cache
-(*cache*)
+(*cache()*)
 
 ## Overview
 
@@ -26,40 +26,49 @@ Creates the cache
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.CacheCreateCacheRequest;
 import com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.CreateCacheOptions;
 import com.tigrisdata.tigris_core.models.shared.CreateCacheRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.CacheCreateCacheRequest req = new CacheCreateCacheRequest(
-                new CreateCacheRequest(
-){{
-                    options = new CreateCacheOptions(
-){{
-                        ttlMs = 481196L;
+            CacheCreateCacheRequest req = CacheCreateCacheRequest.builder()
+                .createCacheRequest(CreateCacheRequest.builder()
+                        .options(CreateCacheOptions.builder()
+                            .ttlMs(481196L)
+                            .build())
+                        .build())
+                .name("<value>")
+                .project("<value>")
+                .build();
 
-                    }};
+            CacheCreateCacheResponse res = sdk.cache().create()
+                .request(req)
+                .call();
 
-                }},
-                "string",
-                "string");
-
-            com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse res = sdk.cache.create(req);
-
-            if (res.createCacheResponse != null) {
+            if (res.createCacheResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -76,8 +85,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse](../../models/operations/CacheCreateCacheResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse>](../../models/operations/CacheCreateCacheResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## delete
 
@@ -89,32 +102,45 @@ Deletes the cache
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheRequest;
 import com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.DeleteCacheRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheRequest req = new CacheDeleteCacheRequest(
-                new DeleteCacheRequest(
-),
-                "string",
-                "string");
+            CacheDeleteCacheRequest req = CacheDeleteCacheRequest.builder()
+                .deleteCacheRequest(DeleteCacheRequest.builder()
+                        .build())
+                .name("<value>")
+                .project("<value>")
+                .build();
 
-            com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheResponse res = sdk.cache.delete(req);
+            CacheDeleteCacheResponse res = sdk.cache().delete()
+                .request(req)
+                .call();
 
-            if (res.deleteCacheResponse != null) {
+            if (res.deleteCacheResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -131,8 +157,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheResponse](../../models/operations/CacheDeleteCacheResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.CacheDeleteCacheResponse>](../../models/operations/CacheDeleteCacheResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## deleteKeys
 
@@ -144,33 +174,46 @@ Deletes an entry from cache
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.CacheDelRequest;
 import com.tigrisdata.tigris_core.models.operations.CacheDelResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.DelRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.CacheDelRequest req = new CacheDelRequest(
-                new DelRequest(
-),
-                "string",
-                "string",
-                "string");
+            CacheDelRequest req = CacheDelRequest.builder()
+                .delRequest(DelRequest.builder()
+                        .build())
+                .key("<value>")
+                .name("<value>")
+                .project("<value>")
+                .build();
 
-            com.tigrisdata.tigris_core.models.operations.CacheDelResponse res = sdk.cache.deleteKeys(req);
+            CacheDelResponse res = sdk.cache().deleteKeys()
+                .request(req)
+                .call();
 
-            if (res.delResponse != null) {
+            if (res.delResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -187,8 +230,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.CacheDelResponse](../../models/operations/CacheDelResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.CacheDelResponse>](../../models/operations/CacheDelResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## getKey
 
@@ -200,30 +247,43 @@ Reads an entry from cache
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.CacheGetRequest;
 import com.tigrisdata.tigris_core.models.operations.CacheGetResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.CacheGetRequest req = new CacheGetRequest(
-                "string",
-                "string",
-                "string");
+            CacheGetRequest req = CacheGetRequest.builder()
+                .key("<value>")
+                .name("<value>")
+                .project("<value>")
+                .build();
 
-            com.tigrisdata.tigris_core.models.operations.CacheGetResponse res = sdk.cache.getKey(req);
+            CacheGetResponse res = sdk.cache().getKey()
+                .request(req)
+                .call();
 
-            if (res.getResponse != null) {
+            if (res.getResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -240,8 +300,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.CacheGetResponse](../../models/operations/CacheGetResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.CacheGetResponse>](../../models/operations/CacheGetResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## getSetKey
 
@@ -253,36 +317,47 @@ Sets an entry in the cache and returns the previous value if exists
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.CacheGetSetRequest;
 import com.tigrisdata.tigris_core.models.operations.CacheGetSetResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.GetSetRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.CacheGetSetRequest req = new CacheGetSetRequest(
-                new GetSetRequest(
-){{
-                    value = "string";
+            CacheGetSetRequest req = CacheGetSetRequest.builder()
+                .getSetRequest(GetSetRequest.builder()
+                        .value("<value>")
+                        .build())
+                .key("<value>")
+                .name("<value>")
+                .project("<value>")
+                .build();
 
-                }},
-                "string",
-                "string",
-                "string");
+            CacheGetSetResponse res = sdk.cache().getSetKey()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.CacheGetSetResponse res = sdk.cache.getSetKey(req);
-
-            if (res.getSetResponse != null) {
+            if (res.getSetResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -299,8 +374,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.CacheGetSetResponse](../../models/operations/CacheGetSetResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.CacheGetSetResponse>](../../models/operations/CacheGetSetResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## list
 
@@ -312,28 +391,41 @@ Lists all the caches for the given project
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.CacheListCachesRequest;
 import com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.CacheListCachesRequest req = new CacheListCachesRequest(
-                "string");
+            CacheListCachesRequest req = CacheListCachesRequest.builder()
+                .project("<value>")
+                .build();
 
-            com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse res = sdk.cache.list(req);
+            CacheListCachesResponse res = sdk.cache().list()
+                .request(req)
+                .call();
 
-            if (res.listCachesResponse != null) {
+            if (res.listCachesResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -350,8 +442,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse](../../models/operations/CacheListCachesResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.CacheListCachesResponse>](../../models/operations/CacheListCachesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## listKeys
 
@@ -363,34 +459,45 @@ Lists all the key for this cache
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.CacheKeysRequest;
 import com.tigrisdata.tigris_core.models.operations.CacheKeysResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.CacheKeysRequest req = new CacheKeysRequest(
-                "string",
-                "string"){{
-                count = 618311L;
-                cursor = 739921L;
-                pattern = "string";
+            CacheKeysRequest req = CacheKeysRequest.builder()
+                .name("<value>")
+                .project("<value>")
+                .count(618311L)
+                .cursor(739921L)
+                .pattern("<value>")
+                .build();
 
-            }};
+            CacheKeysResponse res = sdk.cache().listKeys()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.CacheKeysResponse res = sdk.cache.listKeys(req);
-
-            if (res.keysResponse != null) {
+            if (res.keysResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -407,8 +514,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.CacheKeysResponse](../../models/operations/CacheKeysResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.CacheKeysResponse>](../../models/operations/CacheKeysResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## setKey
 
@@ -420,40 +531,51 @@ Sets an entry in the cache
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.CacheSetRequest;
 import com.tigrisdata.tigris_core.models.operations.CacheSetResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
 import com.tigrisdata.tigris_core.models.shared.SetRequest;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.CacheSetRequest req = new CacheSetRequest(
-                new SetRequest(
-){{
-                    ex = 170966L;
-                    nx = false;
-                    px = 17597L;
-                    value = "string";
-                    xx = false;
+            CacheSetRequest req = CacheSetRequest.builder()
+                .setRequest(SetRequest.builder()
+                        .ex(170966L)
+                        .nx(false)
+                        .px(17597L)
+                        .value("<value>")
+                        .xx(false)
+                        .build())
+                .key("<value>")
+                .name("<value>")
+                .project("<value>")
+                .build();
 
-                }},
-                "string",
-                "string",
-                "string");
+            CacheSetResponse res = sdk.cache().setKey()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.CacheSetResponse res = sdk.cache.setKey(req);
-
-            if (res.setResponse != null) {
+            if (res.setResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -470,5 +592,9 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.CacheSetResponse](../../models/operations/CacheSetResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.CacheSetResponse>](../../models/operations/CacheSetResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |

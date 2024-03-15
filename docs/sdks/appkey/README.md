@@ -1,5 +1,5 @@
 # AppKey
-(*appKey*)
+(*appKey()*)
 
 ## Overview
 
@@ -23,34 +23,45 @@ Delete an app key.
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyRequest;
 import com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.DeleteAppKeyRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyRequest req = new TigrisDeleteAppKeyRequest(
-                new DeleteAppKeyRequest(
-){{
-                    id = "<ID>";
+            TigrisDeleteAppKeyRequest req = TigrisDeleteAppKeyRequest.builder()
+                .deleteAppKeyRequest(DeleteAppKeyRequest.builder()
+                        .id("<id>")
+                        .build())
+                .project("<value>")
+                .build();
 
-                }},
-                "string");
+            TigrisDeleteAppKeyResponse res = sdk.appKey().delete()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse res = sdk.appKey.delete(req);
-
-            if (res.deleteAppKeyResponse != null) {
+            if (res.deleteAppKeyResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -67,8 +78,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse](../../models/operations/TigrisDeleteAppKeyResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.TigrisDeleteAppKeyResponse>](../../models/operations/TigrisDeleteAppKeyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## list
 
@@ -80,28 +95,41 @@ Lists all app keys visible to requesting actor.
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysRequest;
 import com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysRequest req = new TigrisListAppKeysRequest(
-                "string");
+            TigrisListAppKeysRequest req = TigrisListAppKeysRequest.builder()
+                .project("<value>")
+                .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse res = sdk.appKey.list(req);
+            TigrisListAppKeysResponse res = sdk.appKey().list()
+                .request(req)
+                .call();
 
-            if (res.listAppKeysResponse != null) {
+            if (res.listAppKeysResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -118,8 +146,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse](../../models/operations/TigrisListAppKeysResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.TigrisListAppKeysResponse>](../../models/operations/TigrisListAppKeysResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## rotate
 
@@ -131,35 +163,46 @@ Endpoint is used to rotate the secret for the app key.
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretRequest;
 import com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.RotateAppKeyRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretRequest req = new TigrisRotateAppKeySecretRequest(
-                new RotateAppKeyRequest(
-){{
-                    id = "<ID>";
-                    project = "string";
+            TigrisRotateAppKeySecretRequest req = TigrisRotateAppKeySecretRequest.builder()
+                .rotateAppKeyRequest(RotateAppKeyRequest.builder()
+                        .id("<id>")
+                        .project("<value>")
+                        .build())
+                .project("<value>")
+                .build();
 
-                }},
-                "string");
+            TigrisRotateAppKeySecretResponse res = sdk.appKey().rotate()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse res = sdk.appKey.rotate(req);
-
-            if (res.rotateAppKeyResponse != null) {
+            if (res.rotateAppKeyResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -176,8 +219,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse](../../models/operations/TigrisRotateAppKeySecretResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.TigrisRotateAppKeySecretResponse>](../../models/operations/TigrisRotateAppKeySecretResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## tigrisCreateAppKey
 
@@ -189,35 +236,46 @@ Create an app key.
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyRequest;
 import com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.CreateAppKeyRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyRequest req = new TigrisCreateAppKeyRequest(
-                new CreateAppKeyRequest(
-){{
-                    description = "User-centric bifurcated product";
-                    name = "string";
+            TigrisCreateAppKeyRequest req = TigrisCreateAppKeyRequest.builder()
+                .createAppKeyRequest(CreateAppKeyRequest.builder()
+                        .description("User-centric bifurcated product")
+                        .name("<value>")
+                        .build())
+                .project("<value>")
+                .build();
 
-                }},
-                "string");
+            TigrisCreateAppKeyResponse res = sdk.appKey().tigrisCreateAppKey()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse res = sdk.appKey.tigrisCreateAppKey(req);
-
-            if (res.createAppKeyResponse != null) {
+            if (res.createAppKeyResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -234,8 +292,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse](../../models/operations/TigrisCreateAppKeyResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.TigrisCreateAppKeyResponse>](../../models/operations/TigrisCreateAppKeyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## update
 
@@ -247,36 +309,47 @@ Update the description of an app key.
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyRequest;
 import com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
 import com.tigrisdata.tigris_core.models.shared.UpdateAppKeyRequest;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyRequest req = new TigrisUpdateAppKeyRequest(
-                new UpdateAppKeyRequest(
-){{
-                    description = "Optimized 24/7 middleware";
-                    id = "<ID>";
-                    name = "string";
+            TigrisUpdateAppKeyRequest req = TigrisUpdateAppKeyRequest.builder()
+                .updateAppKeyRequest(UpdateAppKeyRequest.builder()
+                        .description("Optimized 24/7 middleware")
+                        .id("<id>")
+                        .name("<value>")
+                        .build())
+                .project("<value>")
+                .build();
 
-                }},
-                "string");
+            TigrisUpdateAppKeyResponse res = sdk.appKey().update()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse res = sdk.appKey.update(req);
-
-            if (res.updateAppKeyResponse != null) {
+            if (res.updateAppKeyResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -293,5 +366,9 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse](../../models/operations/TigrisUpdateAppKeyResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.TigrisUpdateAppKeyResponse>](../../models/operations/TigrisUpdateAppKeyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |

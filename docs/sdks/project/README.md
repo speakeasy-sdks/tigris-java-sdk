@@ -1,5 +1,5 @@
 # Project
-(*project*)
+(*project()*)
 
 ## Overview
 
@@ -21,31 +21,44 @@ Creates a new project. Returns an AlreadyExists error with a status code 409 if 
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectRequest;
 import com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.CreateProjectRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectRequest req = new TigrisCreateProjectRequest(
-                new CreateProjectRequest(
-),
-                "string");
+            TigrisCreateProjectRequest req = TigrisCreateProjectRequest.builder()
+                .createProjectRequest(CreateProjectRequest.builder()
+                        .build())
+                .project("<value>")
+                .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectResponse res = sdk.project.create(req);
+            TigrisCreateProjectResponse res = sdk.project().create()
+                .request(req)
+                .call();
 
-            if (res.createProjectResponse != null) {
+            if (res.createProjectResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -62,8 +75,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectResponse](../../models/operations/TigrisCreateProjectResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.TigrisCreateProjectResponse>](../../models/operations/TigrisCreateProjectResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## deleteProject
 
@@ -75,31 +92,44 @@ Delete Project deletes all the collections in this project along with all of the
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectRequest;
 import com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.DeleteProjectRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectRequest req = new TigrisDeleteProjectRequest(
-                new DeleteProjectRequest(
-),
-                "string");
+            TigrisDeleteProjectRequest req = TigrisDeleteProjectRequest.builder()
+                .deleteProjectRequest(DeleteProjectRequest.builder()
+                        .build())
+                .project("<value>")
+                .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectResponse res = sdk.project.deleteProject(req);
+            TigrisDeleteProjectResponse res = sdk.project().deleteProject()
+                .request(req)
+                .call();
 
-            if (res.deleteProjectResponse != null) {
+            if (res.deleteProjectResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -116,8 +146,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectResponse](../../models/operations/TigrisDeleteProjectResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.TigrisDeleteProjectResponse>](../../models/operations/TigrisDeleteProjectResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## list
 
@@ -129,24 +163,35 @@ List returns all the projects.
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.TigrisListProjectsResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisListProjectsResponse res = sdk.project.list();
+            TigrisListProjectsResponse res = sdk.project().list()
+                .call();
 
-            if (res.listProjectsResponse != null) {
+            if (res.listProjectsResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -157,5 +202,9 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.TigrisListProjectsResponse](../../models/operations/TigrisListProjectsResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.TigrisListProjectsResponse>](../../models/operations/TigrisListProjectsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |

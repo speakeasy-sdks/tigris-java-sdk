@@ -1,5 +1,5 @@
 # Channel
-(*channel*)
+(*channel()*)
 
 ## Overview
 
@@ -24,29 +24,42 @@ Get the details about a channel
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelRequest;
 import com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelRequest req = new RealtimeGetRTChannelRequest(
-                "string",
-                "string");
+            RealtimeGetRTChannelRequest req = RealtimeGetRTChannelRequest.builder()
+                .channel("<value>")
+                .project("<value>")
+                .build();
 
-            com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelResponse res = sdk.channel.get(req);
+            RealtimeGetRTChannelResponse res = sdk.channel().get()
+                .request(req)
+                .call();
 
-            if (res.getRTChannelResponse != null) {
+            if (res.getRTChannelResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -63,8 +76,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelResponse](../../models/operations/RealtimeGetRTChannelResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelResponse>](../../models/operations/RealtimeGetRTChannelResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## getMessages
 
@@ -76,37 +93,48 @@ Get all messages for a channel
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesRequest;
 import com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesRequest req = new RealtimeReadMessagesRequest(
-                "string",
-                "string"){{
-                end = "string";
-                event = "string";
-                limit = 7235L;
-                sessionId = "string";
-                socketId = "string";
-                start = "string";
+            RealtimeReadMessagesRequest req = RealtimeReadMessagesRequest.builder()
+                .channel("<value>")
+                .project("<value>")
+                .end("<value>")
+                .event("<value>")
+                .limit(7235L)
+                .sessionId("<value>")
+                .socketId("<value>")
+                .start("<value>")
+                .build();
 
-            }};
+            RealtimeReadMessagesResponse res = sdk.channel().getMessages()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesResponse res = sdk.channel.getMessages(req);
-
-            if (res.readMessagesResponse != null) {
+            if (res.readMessagesResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -123,8 +151,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesResponse](../../models/operations/RealtimeReadMessagesResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.RealtimeReadMessagesResponse>](../../models/operations/RealtimeReadMessagesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## list
 
@@ -136,28 +168,41 @@ Get all channels for your application project
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsRequest;
 import com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsRequest req = new RealtimeGetRTChannelsRequest(
-                "string");
+            RealtimeGetRTChannelsRequest req = RealtimeGetRTChannelsRequest.builder()
+                .project("<value>")
+                .build();
 
-            com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsResponse res = sdk.channel.list(req);
+            RealtimeGetRTChannelsResponse res = sdk.channel().list()
+                .request(req)
+                .call();
 
-            if (res.getRTChannelsResponse != null) {
+            if (res.getRTChannelsResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -174,8 +219,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsResponse](../../models/operations/RealtimeGetRTChannelsResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.RealtimeGetRTChannelsResponse>](../../models/operations/RealtimeGetRTChannelsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## listSubscriptions
 
@@ -187,33 +236,44 @@ Get the subscriptions details about a channel
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsRequest;
 import com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsRequest req = new RealtimeListSubscriptionsRequest(
-                "string",
-                "string"){{
-                page = 994262;
-                pageSize = 462408;
+            RealtimeListSubscriptionsRequest req = RealtimeListSubscriptionsRequest.builder()
+                .channel("<value>")
+                .project("<value>")
+                .page(994262)
+                .pageSize(462408)
+                .build();
 
-            }};
+            RealtimeListSubscriptionsResponse res = sdk.channel().listSubscriptions()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsResponse res = sdk.channel.listSubscriptions(req);
-
-            if (res.listSubscriptionResponse != null) {
+            if (res.listSubscriptionResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -230,8 +290,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsResponse](../../models/operations/RealtimeListSubscriptionsResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.RealtimeListSubscriptionsResponse>](../../models/operations/RealtimeListSubscriptionsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## pushMessages
 
@@ -243,41 +307,51 @@ push messages to a single channel
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.RealtimeMessagesRequest;
 import com.tigrisdata.tigris_core.models.operations.RealtimeMessagesResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Message;
 import com.tigrisdata.tigris_core.models.shared.MessagesRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.RealtimeMessagesRequest req = new RealtimeMessagesRequest(
-                new MessagesRequest(
-){{
-                    channel = "string";
-                    messages = new com.tigrisdata.tigris_core.models.shared.Message[]{{
-                        add(new Message(
-                        ){{}}),
-                    }};
-                    project = "string";
+            RealtimeMessagesRequest req = RealtimeMessagesRequest.builder()
+                .messagesRequest(MessagesRequest.builder()
+                        .channel("<value>")
+                        .messages(java.util.List.of(
+                            Message.builder()
+                                .build()))
+                        .project("<value>")
+                        .build())
+                .channel("<value>")
+                .project("<value>")
+                .build();
 
-                }},
-                "string",
-                "string");
+            RealtimeMessagesResponse res = sdk.channel().pushMessages()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.RealtimeMessagesResponse res = sdk.channel.pushMessages(req);
-
-            if (res.messagesResponse != null) {
+            if (res.messagesResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -294,8 +368,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.RealtimeMessagesResponse](../../models/operations/RealtimeMessagesResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.RealtimeMessagesResponse>](../../models/operations/RealtimeMessagesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## realtimePresence
 
@@ -307,29 +385,42 @@ Presence about the channel
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.RealtimePresenceRequest;
 import com.tigrisdata.tigris_core.models.operations.RealtimePresenceResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.RealtimePresenceRequest req = new RealtimePresenceRequest(
-                "string",
-                "string");
+            RealtimePresenceRequest req = RealtimePresenceRequest.builder()
+                .channel("<value>")
+                .project("<value>")
+                .build();
 
-            com.tigrisdata.tigris_core.models.operations.RealtimePresenceResponse res = sdk.channel.realtimePresence(req);
+            RealtimePresenceResponse res = sdk.channel().realtimePresence()
+                .request(req)
+                .call();
 
-            if (res.presenceResponse != null) {
+            if (res.presenceResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -346,5 +437,9 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.RealtimePresenceResponse](../../models/operations/RealtimePresenceResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.RealtimePresenceResponse>](../../models/operations/RealtimePresenceResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |

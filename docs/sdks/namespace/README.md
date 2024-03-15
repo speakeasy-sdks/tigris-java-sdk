@@ -1,5 +1,5 @@
 # Namespace
-(*namespace*)
+(*namespace()*)
 
 ## Overview
 
@@ -24,33 +24,43 @@ Creates a new namespace, if it does not exist
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.CreateNamespaceResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.CreateNamespaceRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.shared.CreateNamespaceRequest req = new CreateNamespaceRequest(
-){{
-                code = 481196L;
-                id = "<ID>";
-                name = "string";
+            CreateNamespaceRequest req = CreateNamespaceRequest.builder()
+                .code(481196L)
+                .id("<id>")
+                .name("<value>")
+                .build();
 
-            }};
+            CreateNamespaceResponse res = sdk.namespace().create()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.CreateNamespaceResponse res = sdk.namespace.create(req);
-
-            if (res.createNamespaceResponse != null) {
+            if (res.createNamespaceResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -67,8 +77,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.CreateNamespaceResponse](../../models/operations/CreateNamespaceResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.CreateNamespaceResponse>](../../models/operations/CreateNamespaceResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## get
 
@@ -80,24 +94,35 @@ Get details for all namespaces
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.ManagementDescribeNamespacesResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.ManagementDescribeNamespacesResponse res = sdk.namespace.get();
+            ManagementDescribeNamespacesResponse res = sdk.namespace().get()
+                .call();
 
-            if (res.describeNamespacesResponse != null) {
+            if (res.describeNamespacesResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -108,8 +133,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.ManagementDescribeNamespacesResponse](../../models/operations/ManagementDescribeNamespacesResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.ManagementDescribeNamespacesResponse>](../../models/operations/ManagementDescribeNamespacesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## getMetadata
 
@@ -121,37 +150,48 @@ GetNamespaceMetadata inserts the user metadata object
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataRequest;
 import com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.GetNamespaceMetadataRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
 import com.tigrisdata.tigris_core.models.shared.Value;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataRequest req = new ManagementGetNamespaceMetadataRequest(
-                new GetNamespaceMetadataRequest(
-){{
-                    metadataKey = "string";
-                    value = new Value(
-);
+            ManagementGetNamespaceMetadataRequest req = ManagementGetNamespaceMetadataRequest.builder()
+                .getNamespaceMetadataRequest(GetNamespaceMetadataRequest.builder()
+                        .metadataKey("<value>")
+                        .value(Value.builder()
+                            .build())
+                        .build())
+                .metadataKey("<value>")
+                .build();
 
-                }},
-                "string");
+            ManagementGetNamespaceMetadataResponse res = sdk.namespace().getMetadata()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataResponse res = sdk.namespace.getMetadata(req);
-
-            if (res.getNamespaceMetadataResponse != null) {
+            if (res.getNamespaceMetadataResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -168,8 +208,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataResponse](../../models/operations/ManagementGetNamespaceMetadataResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.ManagementGetNamespaceMetadataResponse>](../../models/operations/ManagementGetNamespaceMetadataResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## insertMetadata
 
@@ -181,37 +225,48 @@ InsertNamespaceMetadata inserts the namespace metadata object
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataRequest;
 import com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.InsertNamespaceMetadataRequest;
 import com.tigrisdata.tigris_core.models.shared.InsertNamespaceMetadataRequestValue;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataRequest req = new ManagementInsertNamespaceMetadataRequest(
-                new InsertNamespaceMetadataRequest(
-){{
-                    metadataKey = "string";
-                    value = new InsertNamespaceMetadataRequestValue(
-);
+            ManagementInsertNamespaceMetadataRequest req = ManagementInsertNamespaceMetadataRequest.builder()
+                .insertNamespaceMetadataRequest(InsertNamespaceMetadataRequest.builder()
+                        .metadataKey("<value>")
+                        .value(InsertNamespaceMetadataRequestValue.builder()
+                            .build())
+                        .build())
+                .metadataKey("<value>")
+                .build();
 
-                }},
-                "string");
+            ManagementInsertNamespaceMetadataResponse res = sdk.namespace().insertMetadata()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataResponse res = sdk.namespace.insertMetadata(req);
-
-            if (res.insertNamespaceMetadataResponse != null) {
+            if (res.insertNamespaceMetadataResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -228,8 +283,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataResponse](../../models/operations/ManagementInsertNamespaceMetadataResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.ManagementInsertNamespaceMetadataResponse>](../../models/operations/ManagementInsertNamespaceMetadataResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## list
 
@@ -241,24 +300,35 @@ List all namespace
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.ManagementListNamespacesResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.ManagementListNamespacesResponse res = sdk.namespace.list();
+            ManagementListNamespacesResponse res = sdk.namespace().list()
+                .call();
 
-            if (res.listNamespacesResponse != null) {
+            if (res.listNamespacesResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -269,8 +339,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.ManagementListNamespacesResponse](../../models/operations/ManagementListNamespacesResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.ManagementListNamespacesResponse>](../../models/operations/ManagementListNamespacesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## updateMetadata
 
@@ -282,37 +356,48 @@ UpdateNamespaceMetadata updates the user metadata object
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataRequest;
 import com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
 import com.tigrisdata.tigris_core.models.shared.UpdateNamespaceMetadataRequest;
 import com.tigrisdata.tigris_core.models.shared.UpdateNamespaceMetadataRequestValue;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataRequest req = new ManagementUpdateNamespaceMetadataRequest(
-                new UpdateNamespaceMetadataRequest(
-){{
-                    metadataKey = "string";
-                    value = new UpdateNamespaceMetadataRequestValue(
-);
+            ManagementUpdateNamespaceMetadataRequest req = ManagementUpdateNamespaceMetadataRequest.builder()
+                .updateNamespaceMetadataRequest(UpdateNamespaceMetadataRequest.builder()
+                        .metadataKey("<value>")
+                        .value(UpdateNamespaceMetadataRequestValue.builder()
+                            .build())
+                        .build())
+                .metadataKey("<value>")
+                .build();
 
-                }},
-                "string");
+            ManagementUpdateNamespaceMetadataResponse res = sdk.namespace().updateMetadata()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataResponse res = sdk.namespace.updateMetadata(req);
-
-            if (res.updateNamespaceMetadataResponse != null) {
+            if (res.updateNamespaceMetadataResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -329,5 +414,9 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataResponse](../../models/operations/ManagementUpdateNamespaceMetadataResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.ManagementUpdateNamespaceMetadataResponse>](../../models/operations/ManagementUpdateNamespaceMetadataResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |

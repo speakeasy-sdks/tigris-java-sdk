@@ -1,5 +1,5 @@
 # Search
-(*search*)
+(*search()*)
 
 ## Overview
 
@@ -33,39 +33,50 @@ CreateById is used for indexing a single document. The API expects a single docu
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.SearchCreateByIdRequest;
 import com.tigrisdata.tigris_core.models.operations.SearchCreateByIdResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.CreateByIdRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.SearchCreateByIdRequest req = new SearchCreateByIdRequest(
-                new CreateByIdRequest(
-){{
-                    document = "string";
-                    id = "<ID>";
-                    index = "string";
-                    project = "string";
+            SearchCreateByIdRequest req = SearchCreateByIdRequest.builder()
+                .createByIdRequest(CreateByIdRequest.builder()
+                        .document("<value>")
+                        .id("<id>")
+                        .index("<value>")
+                        .project("<value>")
+                        .build())
+                .id("<value>")
+                .index("<value>")
+                .project("<value>")
+                .build();
 
-                }},
-                "string",
-                "string",
-                "string");
+            SearchCreateByIdResponse res = sdk.search().createDocument()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.SearchCreateByIdResponse res = sdk.search.createDocument(req);
-
-            if (res.createByIdResponse != null) {
+            if (res.createByIdResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -82,8 +93,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.SearchCreateByIdResponse](../../models/operations/SearchCreateByIdResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.SearchCreateByIdResponse>](../../models/operations/SearchCreateByIdResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## createDocuments
 
@@ -99,39 +114,49 @@ Create is used for indexing a single or multiple documents. The API expects an a
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.SearchCreateRequest;
 import com.tigrisdata.tigris_core.models.operations.SearchCreateResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.CreateDocumentRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.SearchCreateRequest req = new SearchCreateRequest(
-                new CreateDocumentRequest(
-){{
-                    documents = new String[]{{
-                        add("string"),
-                    }};
-                    index = "string";
-                    project = "string";
+            SearchCreateRequest req = SearchCreateRequest.builder()
+                .createDocumentRequest(CreateDocumentRequest.builder()
+                        .documents(java.util.List.of(
+                            "<value>"))
+                        .index("<value>")
+                        .project("<value>")
+                        .build())
+                .index("<value>")
+                .project("<value>")
+                .build();
 
-                }},
-                "string",
-                "string");
+            SearchCreateResponse res = sdk.search().createDocuments()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.SearchCreateResponse res = sdk.search.createDocuments(req);
-
-            if (res.createDocumentResponse != null) {
+            if (res.createDocumentResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -148,8 +173,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.SearchCreateResponse](../../models/operations/SearchCreateResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.SearchCreateResponse>](../../models/operations/SearchCreateResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## deleteDocuments
 
@@ -163,39 +192,49 @@ Delete one or more documents by id. Returns an array of status indicating the st
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.SearchDeleteRequest;
 import com.tigrisdata.tigris_core.models.operations.SearchDeleteResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.DeleteDocumentRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.SearchDeleteRequest req = new SearchDeleteRequest(
-                new DeleteDocumentRequest(
-){{
-                    ids = new String[]{{
-                        add("string"),
-                    }};
-                    index = "string";
-                    project = "string";
+            SearchDeleteRequest req = SearchDeleteRequest.builder()
+                .deleteDocumentRequest(DeleteDocumentRequest.builder()
+                        .ids(java.util.List.of(
+                            "<value>"))
+                        .index("<value>")
+                        .project("<value>")
+                        .build())
+                .index("<value>")
+                .project("<value>")
+                .build();
 
-                }},
-                "string",
-                "string");
+            SearchDeleteResponse res = sdk.search().deleteDocuments()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.SearchDeleteResponse res = sdk.search.deleteDocuments(req);
-
-            if (res.deleteDocumentResponse != null) {
+            if (res.deleteDocumentResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -212,8 +251,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.SearchDeleteResponse](../../models/operations/SearchDeleteResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.SearchDeleteResponse>](../../models/operations/SearchDeleteResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## deleteIndex
 
@@ -225,36 +268,47 @@ Deletes search index
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexRequest;
 import com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.DeleteIndexRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexRequest req = new SearchDeleteIndexRequest(
-                new DeleteIndexRequest(
-){{
-                    name = "string";
-                    project = "string";
+            SearchDeleteIndexRequest req = SearchDeleteIndexRequest.builder()
+                .deleteIndexRequest(DeleteIndexRequest.builder()
+                        .name("<value>")
+                        .project("<value>")
+                        .build())
+                .name("<value>")
+                .project("<value>")
+                .build();
 
-                }},
-                "string",
-                "string");
+            SearchDeleteIndexResponse res = sdk.search().deleteIndex()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexResponse res = sdk.search.deleteIndex(req);
-
-            if (res.deleteIndexResponse != null) {
+            if (res.deleteIndexResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -271,8 +325,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexResponse](../../models/operations/SearchDeleteIndexResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.SearchDeleteIndexResponse>](../../models/operations/SearchDeleteIndexResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## findDocuments
 
@@ -288,57 +346,63 @@ Searches an index for the documents matching the query. A search can be a term s
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.SearchSearchRequest;
 import com.tigrisdata.tigris_core.models.operations.SearchSearchResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Collation;
 import com.tigrisdata.tigris_core.models.shared.SearchIndexRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.SearchSearchRequest req = new SearchSearchRequest(
-                new SearchIndexRequest(
-){{
-                    collation = new Collation(
-){{
-                        case_ = "string";
+            SearchSearchRequest req = SearchSearchRequest.builder()
+                .searchIndexRequest(SearchIndexRequest.builder()
+                        .collation(Collation.builder()
+                            .case_("<value>")
+                            .build())
+                        .excludeFields(java.util.List.of(
+                            "<value>"))
+                        .facet("<value>")
+                        .filter("<value>")
+                        .includeFields(java.util.List.of(
+                            "<value>"))
+                        .index("<value>")
+                        .page(71364)
+                        .pageSize(998280)
+                        .project("<value>")
+                        .q("<value>")
+                        .searchFields(java.util.List.of(
+                            "<value>"))
+                        .sort("<value>")
+                        .build())
+                .index("<value>")
+                .project("<value>")
+                .build();
 
-                    }};
-                    excludeFields = new String[]{{
-                        add("string"),
-                    }};
-                    facet = "string";
-                    filter = "string";
-                    includeFields = new String[]{{
-                        add("string"),
-                    }};
-                    index = "string";
-                    page = 71364;
-                    pageSize = 998280;
-                    project = "string";
-                    q = "string";
-                    searchFields = new String[]{{
-                        add("string"),
-                    }};
-                    sort = "string";
+            SearchSearchResponse res = sdk.search().findDocuments()
+                .request(req)
+                .call();
 
-                }},
-                "string",
-                "string");
-
-            com.tigrisdata.tigris_core.models.operations.SearchSearchResponse res = sdk.search.findDocuments(req);
-
-            if (res.searchIndexResponse != null) {
+            if (res.searchIndexResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -355,8 +419,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.SearchSearchResponse](../../models/operations/SearchSearchResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.SearchSearchResponse>](../../models/operations/SearchSearchResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## getDocuments
 
@@ -369,34 +437,44 @@ Retrieves one or more documents by id. The response is an array of documents in 
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.SearchGetRequest;
 import com.tigrisdata.tigris_core.models.operations.SearchGetResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.SearchGetRequest req = new SearchGetRequest(
-                "string",
-                "string"){{
-                ids = new String[]{{
-                    add("string"),
-                }};
+            SearchGetRequest req = SearchGetRequest.builder()
+                .index("<value>")
+                .project("<value>")
+                .ids(java.util.List.of(
+                    "<value>"))
+                .build();
 
-            }};
+            SearchGetResponse res = sdk.search().getDocuments()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.SearchGetResponse res = sdk.search.getDocuments(req);
-
-            if (res.getDocumentResponse != null) {
+            if (res.getDocumentResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -413,8 +491,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.SearchGetResponse](../../models/operations/SearchGetResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.SearchGetResponse>](../../models/operations/SearchGetResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## getIndex
 
@@ -426,29 +508,42 @@ Get information about a search index
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.SearchGetIndexRequest;
 import com.tigrisdata.tigris_core.models.operations.SearchGetIndexResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.SearchGetIndexRequest req = new SearchGetIndexRequest(
-                "string",
-                "string");
+            SearchGetIndexRequest req = SearchGetIndexRequest.builder()
+                .name("<value>")
+                .project("<value>")
+                .build();
 
-            com.tigrisdata.tigris_core.models.operations.SearchGetIndexResponse res = sdk.search.getIndex(req);
+            SearchGetIndexResponse res = sdk.search().getIndex()
+                .request(req)
+                .call();
 
-            if (res.getIndexResponse != null) {
+            if (res.getIndexResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -465,8 +560,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.SearchGetIndexResponse](../../models/operations/SearchGetIndexResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.SearchGetIndexResponse>](../../models/operations/SearchGetIndexResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## listIndexes
 
@@ -478,33 +577,44 @@ List search indexes
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.SearchListIndexesRequest;
 import com.tigrisdata.tigris_core.models.operations.SearchListIndexesResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.SearchListIndexesRequest req = new SearchListIndexesRequest(
-                "string"){{
-                filterBranch = "string";
-                filterCollection = "string";
-                filterType = "string";
+            SearchListIndexesRequest req = SearchListIndexesRequest.builder()
+                .project("<value>")
+                .filterBranch("<value>")
+                .filterCollection("<value>")
+                .filterType("<value>")
+                .build();
 
-            }};
+            SearchListIndexesResponse res = sdk.search().listIndexes()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.SearchListIndexesResponse res = sdk.search.listIndexes(req);
-
-            if (res.listIndexesResponse != null) {
+            if (res.listIndexesResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -521,8 +631,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.SearchListIndexesResponse](../../models/operations/SearchListIndexesResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.SearchListIndexesResponse>](../../models/operations/SearchListIndexesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## queryDeleteDocuments
 
@@ -535,37 +649,48 @@ DeleteByQuery is used to delete documents that match the filter. A filter is req
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryRequest;
 import com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.DeleteByQueryRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryRequest req = new SearchDeleteByQueryRequest(
-                new DeleteByQueryRequest(
-){{
-                    filter = "string";
-                    index = "string";
-                    project = "string";
+            SearchDeleteByQueryRequest req = SearchDeleteByQueryRequest.builder()
+                .deleteByQueryRequest(DeleteByQueryRequest.builder()
+                        .filter("<value>")
+                        .index("<value>")
+                        .project("<value>")
+                        .build())
+                .index("<value>")
+                .project("<value>")
+                .build();
 
-                }},
-                "string",
-                "string");
+            SearchDeleteByQueryResponse res = sdk.search().queryDeleteDocuments()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryResponse res = sdk.search.queryDeleteDocuments(req);
-
-            if (res.deleteByQueryResponse != null) {
+            if (res.deleteByQueryResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -582,8 +707,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryResponse](../../models/operations/SearchDeleteByQueryResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.SearchDeleteByQueryResponse>](../../models/operations/SearchDeleteByQueryResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## replaceDocuments
 
@@ -598,39 +727,49 @@ Creates or replaces one or more documents. Each document is a JSON object. A doc
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceRequest;
 import com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.CreateOrReplaceDocumentRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceRequest req = new SearchCreateOrReplaceRequest(
-                new CreateOrReplaceDocumentRequest(
-){{
-                    documents = new String[]{{
-                        add("string"),
-                    }};
-                    index = "string";
-                    project = "string";
+            SearchCreateOrReplaceRequest req = SearchCreateOrReplaceRequest.builder()
+                .createOrReplaceDocumentRequest(CreateOrReplaceDocumentRequest.builder()
+                        .documents(java.util.List.of(
+                            "<value>"))
+                        .index("<value>")
+                        .project("<value>")
+                        .build())
+                .index("<value>")
+                .project("<value>")
+                .build();
 
-                }},
-                "string",
-                "string");
+            SearchCreateOrReplaceResponse res = sdk.search().replaceDocuments()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceResponse res = sdk.search.replaceDocuments(req);
-
-            if (res.createOrReplaceDocumentResponse != null) {
+            if (res.createOrReplaceDocumentResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -647,8 +786,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceResponse](../../models/operations/SearchCreateOrReplaceResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.SearchCreateOrReplaceResponse>](../../models/operations/SearchCreateOrReplaceResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## updateDocuments
 
@@ -663,39 +806,49 @@ Updates one or more documents by "id". Each document is required to have the
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.SearchUpdateRequest;
 import com.tigrisdata.tigris_core.models.operations.SearchUpdateResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
 import com.tigrisdata.tigris_core.models.shared.UpdateDocumentRequest;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.SearchUpdateRequest req = new SearchUpdateRequest(
-                new UpdateDocumentRequest(
-){{
-                    documents = new String[]{{
-                        add("string"),
-                    }};
-                    index = "string";
-                    project = "string";
+            SearchUpdateRequest req = SearchUpdateRequest.builder()
+                .updateDocumentRequest(UpdateDocumentRequest.builder()
+                        .documents(java.util.List.of(
+                            "<value>"))
+                        .index("<value>")
+                        .project("<value>")
+                        .build())
+                .index("<value>")
+                .project("<value>")
+                .build();
 
-                }},
-                "string",
-                "string");
+            SearchUpdateResponse res = sdk.search().updateDocuments()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.SearchUpdateResponse res = sdk.search.updateDocuments(req);
-
-            if (res.updateDocumentResponse != null) {
+            if (res.updateDocumentResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -712,8 +865,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.SearchUpdateResponse](../../models/operations/SearchUpdateResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.SearchUpdateResponse>](../../models/operations/SearchUpdateResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## updateIndex
 
@@ -725,38 +882,49 @@ Creates or updates search index
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexRequest;
 import com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.CreateOrUpdateIndexRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexRequest req = new SearchCreateOrUpdateIndexRequest(
-                new CreateOrUpdateIndexRequest(
-){{
-                    name = "string";
-                    onlyCreate = false;
-                    project = "string";
-                    schema = "string";
+            SearchCreateOrUpdateIndexRequest req = SearchCreateOrUpdateIndexRequest.builder()
+                .createOrUpdateIndexRequest(CreateOrUpdateIndexRequest.builder()
+                        .name("<value>")
+                        .onlyCreate(false)
+                        .project("<value>")
+                        .schema("<value>")
+                        .build())
+                .name("<value>")
+                .project("<value>")
+                .build();
 
-                }},
-                "string",
-                "string");
+            SearchCreateOrUpdateIndexResponse res = sdk.search().updateIndex()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexResponse res = sdk.search.updateIndex(req);
-
-            if (res.createOrUpdateIndexResponse != null) {
+            if (res.createOrUpdateIndexResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -773,5 +941,9 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexResponse](../../models/operations/SearchCreateOrUpdateIndexResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.SearchCreateOrUpdateIndexResponse>](../../models/operations/SearchCreateOrUpdateIndexResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |

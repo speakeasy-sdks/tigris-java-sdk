@@ -7,5 +7,5 @@ Pagination metadata for SearchResponse
 
 | Field                                           | Type                                            | Required                                        | Description                                     |
 | ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- |
-| `current`                                       | *Integer*                                       | :heavy_minus_sign:                              | Number representing the current page of results |
-| `size`                                          | *Integer*                                       | :heavy_minus_sign:                              | Maximum number of results per page              |
+| `current`                                       | *Optional<? extends Integer>*                   | :heavy_minus_sign:                              | Number representing the current page of results |
+| `size`                                          | *Optional<? extends Integer>*                   | :heavy_minus_sign:                              | Maximum number of results per page              |

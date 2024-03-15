@@ -7,5 +7,5 @@ Request creation of user app key
 
 | Field                            | Type                             | Required                         | Description                      |
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
-| `description`                    | *String*                         | :heavy_minus_sign:               | A human readable app description |
-| `name`                           | *String*                         | :heavy_minus_sign:               | A human readable app name        |
+| `description`                    | *Optional<? extends String>*     | :heavy_minus_sign:               | A human readable app description |
+| `name`                           | *Optional<? extends String>*     | :heavy_minus_sign:               | A human readable app name        |

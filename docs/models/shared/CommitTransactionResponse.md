@@ -5,4 +5,4 @@
 
 | Field                                   | Type                                    | Required                                | Description                             |
 | --------------------------------------- | --------------------------------------- | --------------------------------------- | --------------------------------------- |
-| `status`                                | *String*                                | :heavy_minus_sign:                      | Status of commit transaction operation. |
+| `status`                                | *Optional<? extends String>*            | :heavy_minus_sign:                      | Status of commit transaction operation. |

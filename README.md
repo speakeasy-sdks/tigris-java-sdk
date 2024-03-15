@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.tigrisdata.tigris_core:tigris-data:0.52.1'
+implementation 'com.tigrisdata.tigris_core:tigris-data:0.53.0'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -19,40 +19,49 @@ implementation 'com.tigrisdata.tigris_core:tigris-data:0.52.1'
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.CacheCreateCacheRequest;
 import com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.CreateCacheOptions;
 import com.tigrisdata.tigris_core.models.shared.CreateCacheRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.CacheCreateCacheRequest req = new CacheCreateCacheRequest(
-                new CreateCacheRequest(
-){{
-                    options = new CreateCacheOptions(
-){{
-                        ttlMs = 481196L;
+            CacheCreateCacheRequest req = CacheCreateCacheRequest.builder()
+                .createCacheRequest(CreateCacheRequest.builder()
+                        .options(CreateCacheOptions.builder()
+                            .ttlMs(481196L)
+                            .build())
+                        .build())
+                .name("<value>")
+                .project("<value>")
+                .build();
 
-                    }};
+            CacheCreateCacheResponse res = sdk.cache().create()
+                .request(req)
+                .call();
 
-                }},
-                "string",
-                "string");
-
-            com.tigrisdata.tigris_core.models.operations.CacheCreateCacheResponse res = sdk.cache.create(req);
-
-            if (res.createCacheResponse != null) {
+            if (res.createCacheResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -64,11 +73,11 @@ public class Application {
 <!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
 
-### [auth](docs/sdks/auth/README.md)
+### [auth()](docs/sdks/auth/README.md)
 
 * [get](docs/sdks/auth/README.md#get) - Access Token
 
-### [system](docs/sdks/system/README.md)
+### [system()](docs/sdks/system/README.md)
 
 * [getHealth](docs/sdks/system/README.md#gethealth) - Health Check
 * [getServerInfo](docs/sdks/system/README.md#getserverinfo) - Information about the server
@@ -76,7 +85,7 @@ public class Application {
 * [queryQuotaLimits](docs/sdks/system/README.md#queryquotalimits) - Queries current namespace quota limits
 * [queryTimeSeriesMetrics](docs/sdks/system/README.md#querytimeseriesmetrics) - Queries time series metrics
 
-### [namespace](docs/sdks/namespace/README.md)
+### [namespace()](docs/sdks/namespace/README.md)
 
 * [create](docs/sdks/namespace/README.md#create) - Creates a Namespace
 * [get](docs/sdks/namespace/README.md#get) - Describe the details of all namespaces
@@ -85,19 +94,19 @@ public class Application {
 * [list](docs/sdks/namespace/README.md#list) - Lists all Namespaces
 * [updateMetadata](docs/sdks/namespace/README.md#updatemetadata) - Updates Namespace Metadata
 
-### [user](docs/sdks/user/README.md)
+### [user()](docs/sdks/user/README.md)
 
 * [getMetadata](docs/sdks/user/README.md#getmetadata) - Reads the User Metadata
 * [insertMetadata](docs/sdks/user/README.md#insertmetadata) - Inserts User Metadata
 * [updateMetadata](docs/sdks/user/README.md#updatemetadata) - Updates User Metadata
 
-### [project](docs/sdks/project/README.md)
+### [project()](docs/sdks/project/README.md)
 
 * [create](docs/sdks/project/README.md#create) - Create Project
 * [deleteProject](docs/sdks/project/README.md#deleteproject) - Delete Project and all resources under project
 * [list](docs/sdks/project/README.md#list) - List Projects
 
-### [appKey](docs/sdks/appkey/README.md)
+### [appKey()](docs/sdks/appkey/README.md)
 
 * [delete](docs/sdks/appkey/README.md#delete) - Deletes the app key
 * [list](docs/sdks/appkey/README.md#list) - List all the app keys
@@ -105,7 +114,7 @@ public class Application {
 * [tigrisCreateAppKey](docs/sdks/appkey/README.md#tigriscreateappkey) - Creates the app key
 * [update](docs/sdks/appkey/README.md#update) - Updates the description of the app key
 
-### [cache](docs/sdks/cache/README.md)
+### [cache()](docs/sdks/cache/README.md)
 
 * [create](docs/sdks/cache/README.md#create) - Creates the cache
 * [delete](docs/sdks/cache/README.md#delete) - Deletes the cache
@@ -116,7 +125,7 @@ public class Application {
 * [listKeys](docs/sdks/cache/README.md#listkeys) - Lists all the key for this cache
 * [setKey](docs/sdks/cache/README.md#setkey) - Sets an entry in the cache
 
-### [database](docs/sdks/database/README.md)
+### [database()](docs/sdks/database/README.md)
 
 * [beginTransaction](docs/sdks/database/README.md#begintransaction) - Begin a transaction
 * [commitTransaction](docs/sdks/database/README.md#committransaction) - Commit a Transaction
@@ -127,7 +136,7 @@ public class Application {
 * [rollbackTransaction](docs/sdks/database/README.md#rollbacktransaction) - Rollback a transaction
 * [tigrisListBranches](docs/sdks/database/README.md#tigrislistbranches) - List database branches
 
-### [collection](docs/sdks/collection/README.md)
+### [collection()](docs/sdks/collection/README.md)
 
 * [create](docs/sdks/collection/README.md#create) - Create or update a collection
 * [deleteDocuments](docs/sdks/collection/README.md#deletedocuments) - Delete Documents
@@ -140,7 +149,7 @@ public class Application {
 * [searchDocuments](docs/sdks/collection/README.md#searchdocuments) - Search Documents.
 * [updateDocuments](docs/sdks/collection/README.md#updatedocuments) - Update Documents.
 
-### [channel](docs/sdks/channel/README.md)
+### [channel()](docs/sdks/channel/README.md)
 
 * [get](docs/sdks/channel/README.md#get) - Get the details about a channel
 * [getMessages](docs/sdks/channel/README.md#getmessages) - Get all messages for a channel
@@ -149,7 +158,7 @@ public class Application {
 * [pushMessages](docs/sdks/channel/README.md#pushmessages) - push messages to a single channel
 * [realtimePresence](docs/sdks/channel/README.md#realtimepresence) - Presence about the channel
 
-### [search](docs/sdks/search/README.md)
+### [search()](docs/sdks/search/README.md)
 
 * [createDocument](docs/sdks/search/README.md#createdocument) - Create a single document
 * [createDocuments](docs/sdks/search/README.md#createdocuments) - Create multiple documents
@@ -170,24 +179,208 @@ public class Application {
 <!-- Start Server Selection [server] -->
 ## Server Selection
 
-## Server Selection
-
 ### Select Server by Index
 
-You can override the default server globally using the `setServerIndex` option when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+You can override the default server globally by passing a server index to the `serverIndex` builder method when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
 
 | # | Server | Variables |
 | - | ------ | --------- |
 | 0 | `https://api.preview.tigrisdata.cloud` | None |
 | 1 | `http://localhost:8081` | None |
 
+#### Example
 
+```java
+package hello.world;
+
+import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
+import com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
+import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
+
+public class Application {
+
+    public static void main(String[] args) {
+        try {
+            SDK sdk = SDK.builder()
+                .serverIndex(1)
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
+                .build();
+
+            AuthGetAccessTokenResponse res = sdk.auth().get()
+                .call();
+
+            if (res.getAccessTokenResponse().isPresent()) {
+                // handle response
+            }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
 
 
 ### Override Server URL Per-Client
 
-The default server can also be overridden globally using the `setServerURL` option when initializing the SDK client instance. For example:
+The default server can also be overridden globally by passing a URL to the `serverURL` builder method when initializing the SDK client instance. For example:
+```java
+package hello.world;
+
+import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
+import com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
+import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
+
+public class Application {
+
+    public static void main(String[] args) {
+        try {
+            SDK sdk = SDK.builder()
+                .serverURL("https://api.preview.tigrisdata.cloud")
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
+                .build();
+
+            AuthGetAccessTokenResponse res = sdk.auth().get()
+                .call();
+
+            if (res.getAccessTokenResponse().isPresent()) {
+                // handle response
+            }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
 <!-- End Server Selection [server] -->
+
+<!-- Start Error Handling [errors] -->
+## Error Handling
+
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Exception type.
+
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
+
+### Example
+
+```java
+package hello.world;
+
+import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
+import com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
+import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
+
+public class Application {
+
+    public static void main(String[] args) {
+        try {
+            SDK sdk = SDK.builder()
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
+                .build();
+
+            AuthGetAccessTokenResponse res = sdk.auth().get()
+                .call();
+
+            if (res.getAccessTokenResponse().isPresent()) {
+                // handle response
+            }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+<!-- End Error Handling [errors] -->
+
+<!-- Start Authentication [security] -->
+## Authentication
+
+### Per-Client Security Schemes
+
+This SDK supports the following security scheme globally:
+
+| Name         | Type         | Scheme       |
+| ------------ | ------------ | ------------ |
+| `bearerAuth` | http         | HTTP Bearer  |
+
+You can set the security parameters through the `security` builder method when initializing the SDK client instance. For example:
+```java
+package hello.world;
+
+import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
+import com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
+import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
+
+public class Application {
+
+    public static void main(String[] args) {
+        try {
+            SDK sdk = SDK.builder()
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
+                .build();
+
+            AuthGetAccessTokenResponse res = sdk.auth().get()
+                .call();
+
+            if (res.getAccessTokenResponse().isPresent()) {
+                // handle response
+            }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+<!-- End Authentication [security] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

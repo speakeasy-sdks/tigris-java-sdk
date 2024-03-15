@@ -1,5 +1,5 @@
 # System
-(*system*)
+(*system()*)
 
 ## Overview
 
@@ -23,24 +23,31 @@ This endpoint can be used to check the liveness of the server.
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.HealthAPIHealthResponse;
-import com.tigrisdata.tigris_core.models.shared.Security;
+import com.tigrisdata.tigris_core.models.shared.*;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.HealthAPIHealthResponse res = sdk.system.getHealth();
+            HealthAPIHealthResponse res = sdk.system().getHealth()
+                .call();
 
-            if (res.healthCheckResponse != null) {
+            if (res.healthCheckResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -51,8 +58,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.HealthAPIHealthResponse](../../models/operations/HealthAPIHealthResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.HealthAPIHealthResponse>](../../models/operations/HealthAPIHealthResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## getServerInfo
 
@@ -64,24 +75,35 @@ Provides the information about the server. This information includes returning t
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.ObservabilityGetInfoResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.ObservabilityGetInfoResponse res = sdk.system.getServerInfo();
+            ObservabilityGetInfoResponse res = sdk.system().getServerInfo()
+                .call();
 
-            if (res.getInfoResponse != null) {
+            if (res.getInfoResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -92,8 +114,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.ObservabilityGetInfoResponse](../../models/operations/ObservabilityGetInfoResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.ObservabilityGetInfoResponse>](../../models/operations/ObservabilityGetInfoResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## observabilityQuotaUsage
 
@@ -105,28 +131,40 @@ Returns current namespace quota limits
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.QuotaUsageRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.shared.QuotaUsageRequest req = new QuotaUsageRequest(
-);
+            QuotaUsageRequest req = QuotaUsageRequest.builder()
+                .build();
 
-            com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageResponse res = sdk.system.observabilityQuotaUsage(req);
+            ObservabilityQuotaUsageResponse res = sdk.system().observabilityQuotaUsage()
+                .request(req)
+                .call();
 
-            if (res.quotaUsageResponse != null) {
+            if (res.quotaUsageResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -143,8 +181,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageResponse](../../models/operations/ObservabilityQuotaUsageResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaUsageResponse>](../../models/operations/ObservabilityQuotaUsageResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## queryQuotaLimits
 
@@ -156,28 +198,40 @@ Returns current namespace quota limits
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.QuotaLimitsRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.shared.QuotaLimitsRequest req = new QuotaLimitsRequest(
-);
+            QuotaLimitsRequest req = QuotaLimitsRequest.builder()
+                .build();
 
-            com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsResponse res = sdk.system.queryQuotaLimits(req);
+            ObservabilityQuotaLimitsResponse res = sdk.system().queryQuotaLimits()
+                .request(req)
+                .call();
 
-            if (res.quotaLimitsResponse != null) {
+            if (res.quotaLimitsResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -194,8 +248,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsResponse](../../models/operations/ObservabilityQuotaLimitsResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.ObservabilityQuotaLimitsResponse>](../../models/operations/ObservabilityQuotaLimitsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## queryTimeSeriesMetrics
 
@@ -207,7 +265,9 @@ Queries time series metrics
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.AdditionalFunction;
 import com.tigrisdata.tigris_core.models.shared.Aggregator;
 import com.tigrisdata.tigris_core.models.shared.Function;
@@ -216,47 +276,50 @@ import com.tigrisdata.tigris_core.models.shared.RollupFunction;
 import com.tigrisdata.tigris_core.models.shared.Security;
 import com.tigrisdata.tigris_core.models.shared.SpaceAggregation;
 import com.tigrisdata.tigris_core.models.shared.TigrisOperation;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.shared.QueryTimeSeriesMetricsRequest req = new QueryTimeSeriesMetricsRequest(
-){{
-                additionalFunctions = new com.tigrisdata.tigris_core.models.shared.AdditionalFunction[]{{
-                    add(new AdditionalFunction(
-                    ){{
-                        rollup = new RollupFunction(
-                        ){{}};
-                    }}),
-                }};
-                branch = "string";
-                collection = "string";
-                db = "string";
-                from = 262768L;
-                function = Function.NONE;
-                metricName = "string";
-                quantile = 3054.25f;
-                spaceAggregatedBy = new String[]{{
-                    add("string"),
-                }};
-                spaceAggregation = SpaceAggregation.MAX;
-                tigrisOperation = TigrisOperation.READ;
-                to = 424991L;
+            QueryTimeSeriesMetricsRequest req = QueryTimeSeriesMetricsRequest.builder()
+                .additionalFunctions(java.util.List.of(
+                    AdditionalFunction.builder()
+                        .build()))
+                .branch("<value>")
+                .collection("<value>")
+                .db("<value>")
+                .from(262768L)
+                .function(Function.NONE)
+                .metricName("<value>")
+                .quantile(3054.25f)
+                .spaceAggregatedBy(java.util.List.of(
+                    "<value>"))
+                .spaceAggregation(SpaceAggregation.MAX)
+                .tigrisOperation(TigrisOperation.READ)
+                .to(424991L)
+                .build();
 
-            }};
+            ObservabilityQueryTimeSeriesMetricsResponse res = sdk.system().queryTimeSeriesMetrics()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsResponse res = sdk.system.queryTimeSeriesMetrics(req);
-
-            if (res.queryTimeSeriesMetricsResponse != null) {
+            if (res.queryTimeSeriesMetricsResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -273,5 +336,9 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsResponse](../../models/operations/ObservabilityQueryTimeSeriesMetricsResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.ObservabilityQueryTimeSeriesMetricsResponse>](../../models/operations/ObservabilityQueryTimeSeriesMetricsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |

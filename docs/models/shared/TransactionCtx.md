@@ -7,5 +7,5 @@ Contains ID which uniquely identifies transaction This context is returned by Be
 
 | Field                                      | Type                                       | Required                                   | Description                                |
 | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
-| `id`                                       | *String*                                   | :heavy_minus_sign:                         | Unique for a single transactional request. |
-| `origin`                                   | *String*                                   | :heavy_minus_sign:                         | Serves as an internal identifier.          |
+| `id`                                       | *Optional<? extends String>*               | :heavy_minus_sign:                         | Unique for a single transactional request. |
+| `origin`                                   | *Optional<? extends String>*               | :heavy_minus_sign:                         | Serves as an internal identifier.          |

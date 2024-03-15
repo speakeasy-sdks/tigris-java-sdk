@@ -1,5 +1,5 @@
 # Database
-(*database*)
+(*database()*)
 
 ## Overview
 
@@ -28,37 +28,48 @@ Starts a new transaction and returns a transactional object. All reads/writes pe
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionRequest;
 import com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.BeginTransactionRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
 import com.tigrisdata.tigris_core.models.shared.TransactionOptions;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionRequest req = new TigrisBeginTransactionRequest(
-                new BeginTransactionRequest(
-){{
-                    branch = "string";
-                    options = new TransactionOptions(
-);
+            TigrisBeginTransactionRequest req = TigrisBeginTransactionRequest.builder()
+                .beginTransactionRequest(BeginTransactionRequest.builder()
+                        .branch("<value>")
+                        .options(TransactionOptions.builder()
+                            .build())
+                        .build())
+                .project("<value>")
+                .build();
 
-                }},
-                "string");
+            TigrisBeginTransactionResponse res = sdk.database().beginTransaction()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionResponse res = sdk.database.beginTransaction(req);
-
-            if (res.beginTransactionResponse != null) {
+            if (res.beginTransactionResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -75,8 +86,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionResponse](../../models/operations/TigrisBeginTransactionResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.TigrisBeginTransactionResponse>](../../models/operations/TigrisBeginTransactionResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## commitTransaction
 
@@ -89,34 +104,45 @@ Atomically commit all the changes performed in the context of the transaction. C
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionRequest;
 import com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.CommitTransactionRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionRequest req = new TigrisCommitTransactionRequest(
-                new CommitTransactionRequest(
-){{
-                    branch = "string";
+            TigrisCommitTransactionRequest req = TigrisCommitTransactionRequest.builder()
+                .commitTransactionRequest(CommitTransactionRequest.builder()
+                        .branch("<value>")
+                        .build())
+                .project("<value>")
+                .build();
 
-                }},
-                "string");
+            TigrisCommitTransactionResponse res = sdk.database().commitTransaction()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionResponse res = sdk.database.commitTransaction(req);
-
-            if (res.commitTransactionResponse != null) {
+            if (res.commitTransactionResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -133,8 +159,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionResponse](../../models/operations/TigrisCommitTransactionResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.TigrisCommitTransactionResponse>](../../models/operations/TigrisCommitTransactionResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## createBranch
 
@@ -146,32 +176,45 @@ Creates a new database branch, if not already existing.
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchRequest;
 import com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.CreateBranchRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchRequest req = new TigrisCreateBranchRequest(
-                new CreateBranchRequest(
-),
-                "string",
-                "string");
+            TigrisCreateBranchRequest req = TigrisCreateBranchRequest.builder()
+                .createBranchRequest(CreateBranchRequest.builder()
+                        .build())
+                .branch("<value>")
+                .project("<value>")
+                .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchResponse res = sdk.database.createBranch(req);
+            TigrisCreateBranchResponse res = sdk.database().createBranch()
+                .request(req)
+                .call();
 
-            if (res.createBranchResponse != null) {
+            if (res.createBranchResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -188,8 +231,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchResponse](../../models/operations/TigrisCreateBranchResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.TigrisCreateBranchResponse>](../../models/operations/TigrisCreateBranchResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## deleteBranch
 
@@ -202,32 +249,45 @@ Deletes a database branch, if exists.
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchRequest;
 import com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.DeleteBranchRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchRequest req = new TigrisDeleteBranchRequest(
-                new DeleteBranchRequest(
-),
-                "string",
-                "string");
+            TigrisDeleteBranchRequest req = TigrisDeleteBranchRequest.builder()
+                .deleteBranchRequest(DeleteBranchRequest.builder()
+                        .build())
+                .branch("<value>")
+                .project("<value>")
+                .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchResponse res = sdk.database.deleteBranch(req);
+            TigrisDeleteBranchResponse res = sdk.database().deleteBranch()
+                .request(req)
+                .call();
 
-            if (res.deleteBranchResponse != null) {
+            if (res.deleteBranchResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -244,8 +304,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchResponse](../../models/operations/TigrisDeleteBranchResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.TigrisDeleteBranchResponse>](../../models/operations/TigrisDeleteBranchResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## describe
 
@@ -258,36 +322,47 @@ This API returns information related to the project along with all the collectio
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseRequest;
 import com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.DescribeDatabaseRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseRequest req = new TigrisDescribeDatabaseRequest(
-                new DescribeDatabaseRequest(
-){{
-                    branch = "string";
-                    project = "string";
-                    schemaFormat = "string";
+            TigrisDescribeDatabaseRequest req = TigrisDescribeDatabaseRequest.builder()
+                .describeDatabaseRequest(DescribeDatabaseRequest.builder()
+                        .branch("<value>")
+                        .project("<value>")
+                        .schemaFormat("<value>")
+                        .build())
+                .project("<value>")
+                .build();
 
-                }},
-                "string");
+            TigrisDescribeDatabaseResponse res = sdk.database().describe()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseResponse res = sdk.database.describe(req);
-
-            if (res.describeDatabaseResponse != null) {
+            if (res.describeDatabaseResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -304,8 +379,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseResponse](../../models/operations/TigrisDescribeDatabaseResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.TigrisDescribeDatabaseResponse>](../../models/operations/TigrisDescribeDatabaseResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## listCollections
 
@@ -317,31 +396,42 @@ List all the collections present in the project passed in the request.
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsRequest;
 import com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsRequest req = new TigrisListCollectionsRequest(
-                "string"){{
-                branch = "string";
+            TigrisListCollectionsRequest req = TigrisListCollectionsRequest.builder()
+                .project("<value>")
+                .branch("<value>")
+                .build();
 
-            }};
+            TigrisListCollectionsResponse res = sdk.database().listCollections()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsResponse res = sdk.database.listCollections(req);
-
-            if (res.listCollectionsResponse != null) {
+            if (res.listCollectionsResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -358,8 +448,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsResponse](../../models/operations/TigrisListCollectionsResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.TigrisListCollectionsResponse>](../../models/operations/TigrisListCollectionsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## rollbackTransaction
 
@@ -372,34 +466,45 @@ Rollback transaction discards all the changes
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionRequest;
 import com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.RollbackTransactionRequest;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionRequest req = new TigrisRollbackTransactionRequest(
-                new RollbackTransactionRequest(
-){{
-                    branch = "string";
+            TigrisRollbackTransactionRequest req = TigrisRollbackTransactionRequest.builder()
+                .rollbackTransactionRequest(RollbackTransactionRequest.builder()
+                        .branch("<value>")
+                        .build())
+                .project("<value>")
+                .build();
 
-                }},
-                "string");
+            TigrisRollbackTransactionResponse res = sdk.database().rollbackTransaction()
+                .request(req)
+                .call();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionResponse res = sdk.database.rollbackTransaction(req);
-
-            if (res.rollbackTransactionResponse != null) {
+            if (res.rollbackTransactionResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -416,8 +521,12 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionResponse](../../models/operations/TigrisRollbackTransactionResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.TigrisRollbackTransactionResponse>](../../models/operations/TigrisRollbackTransactionResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |
 
 ## tigrisListBranches
 
@@ -429,28 +538,41 @@ List database branches
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.TigrisListBranchesRequest;
 import com.tigrisdata.tigris_core.models.operations.TigrisListBranchesResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisListBranchesRequest req = new TigrisListBranchesRequest(
-                "string");
+            TigrisListBranchesRequest req = TigrisListBranchesRequest.builder()
+                .project("<value>")
+                .build();
 
-            com.tigrisdata.tigris_core.models.operations.TigrisListBranchesResponse res = sdk.database.tigrisListBranches(req);
+            TigrisListBranchesResponse res = sdk.database().tigrisListBranches()
+                .request(req)
+                .call();
 
-            if (res.listBranchesResponse != null) {
+            if (res.listBranchesResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -467,5 +589,9 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.TigrisListBranchesResponse](../../models/operations/TigrisListBranchesResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.TigrisListBranchesResponse>](../../models/operations/TigrisListBranchesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |

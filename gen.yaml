@@ -5,12 +5,18 @@ generation:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
+    parameterOrderingFeb2024: false
+    requestResponseComponentNamesFeb2024: false
+  auth:
+    oAuth2ClientCredentialsEnabled: false
 java:
-  version: 0.52.1
+  version: 0.53.0
+  additionalDependencies: []
   artifactID: tigris-core
   companyEmail: info@mycompany.com
   companyName: My Company
   companyURL: www.mycompany.com
+  flattenGlobalSecurity: false
   githubURL: github.com/owner/repo
   groupID: com.tigrisdata
   imports:
@@ -26,3 +32,4 @@ java:
   ossrhURL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
   outputModelSuffix: output
   projectName: tigris-data
+  templateVersion: v2

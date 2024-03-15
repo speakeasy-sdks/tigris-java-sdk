@@ -1,5 +1,5 @@
 # Auth
-(*auth*)
+(*auth()*)
 
 ## Overview
 
@@ -21,24 +21,35 @@ Endpoint for receiving access token from Tigris Server. The endpoint requires Gr
 package hello.world;
 
 import com.tigrisdata.tigris_core.SDK;
+import com.tigrisdata.tigris_core.models.operations.*;
 import com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse;
+import com.tigrisdata.tigris_core.models.shared.*;
 import com.tigrisdata.tigris_core.models.shared.Security;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.Optional;
+import static java.util.Map.entry;
 
 public class Application {
+
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security(
-                "string"){{
-                    bearerAuth = "<YOUR_BEARER_TOKEN_HERE>";
-                }})
+                .security(Security.builder()
+                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
+                    .build())
                 .build();
 
-            com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse res = sdk.auth.get();
+            AuthGetAccessTokenResponse res = sdk.auth().get()
+                .call();
 
-            if (res.getAccessTokenResponse != null) {
+            if (res.getAccessTokenResponse().isPresent()) {
                 // handle response
             }
+        } catch (com.tigrisdata.tigris_core.models.errors.SDKError e) {
+            // handle exception
         } catch (Exception e) {
             // handle exception
         }
@@ -49,5 +60,9 @@ public class Application {
 
 ### Response
 
-**[com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse](../../models/operations/AuthGetAccessTokenResponse.md)**
+**[Optional<? extends com.tigrisdata.tigris_core.models.operations.AuthGetAccessTokenResponse>](../../models/operations/AuthGetAccessTokenResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | */*                    |

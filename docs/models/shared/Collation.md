@@ -5,6 +5,6 @@ A collation allows you to specify string comparison rules. Default is case-sensi
 
 ## Fields
 
-| Field              | Type               | Required           | Description        |
-| ------------------ | ------------------ | ------------------ | ------------------ |
-| `case_`            | *String*           | :heavy_minus_sign: | N/A                |
+| Field                        | Type                         | Required                     | Description                  |
+| ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
+| `case_`                      | *Optional<? extends String>* | :heavy_minus_sign:           | N/A                          |
