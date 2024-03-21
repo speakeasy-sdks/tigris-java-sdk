@@ -16,9 +16,9 @@ class SDKConfiguration {
     public int serverIdx = 0;
   	public String language = "java";
   	public String openapiDocVersion = "0.0.1";
-  	public String sdkVersion = "0.53.0";
-  	public String genVersion = "2.281.2";
-  	public String userAgent = "speakeasy-sdk/java 0.53.0 2.281.2 0.0.1 com.tigrisdata.tigris_core";
+  	public String sdkVersion = "0.54.0";
+  	public String genVersion = "2.286.4";
+  	public String userAgent = "speakeasy-sdk/java 0.54.0 2.286.4 0.0.1 com.tigrisdata.tigris_core";
   	
   	
     public Optional<RetryConfig> retryConfig = Optional.empty();
