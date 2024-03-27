@@ -11,7 +11,7 @@ Once published to a repository (local or otherwise), the SDK artifact is used as
 
 Gradle:
 ```groovy
-implementation 'com.tigrisdata.tigris_core:tigris-data:0.54.0'
+implementation 'com.tigrisdata.tigris_core:tigris-data:0.54.1'
 ```
 
 Maven:
@@ -19,7 +19,7 @@ Maven:
 <dependency>
     <groupId>com.tigrisdata.tigris_core</groupId>
     <artifactId>tigris-data</artifactId>
-    <version>0.54.0</version>
+    <version>0.54.1</version>
 </dependency>
 ```
 
