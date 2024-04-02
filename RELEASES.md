@@ -625,3 +625,11 @@ Based on:
 - Speakeasy CLI 1.227.0 (2.291.0) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [java v0.54.1] .
+
+## 2024-04-02 00:52:32
+### Changes
+Based on:
+- OpenAPI Doc 0.0.1 https://prod.speakeasyapi.dev/v1/apis/tigris-api/version/0.0.1/schema/download
+- Speakeasy CLI 1.231.1 (2.295.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [java v0.54.2] .
